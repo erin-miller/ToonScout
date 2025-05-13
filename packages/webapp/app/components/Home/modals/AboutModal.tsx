@@ -47,13 +47,13 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
           I really appreciate you taking the time to check the project out. If
           you ever see me in-game, please don't hesitate to say hello!
         </p>
-        <p className="text-base text-gray-700">
+        <div className="text-base text-gray-700">
           Special thanks to the following for advice, support, and/or
           contributions:
           <p>bnuy</p>
           <p>Cherie</p>
           <p>Aton (warmpoptart)</p>
-        </p>
+        </div>
       </div>
     </Modal>
   );
