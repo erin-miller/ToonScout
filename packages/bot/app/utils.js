@@ -83,3 +83,8 @@ export async function updateHidden(target) {
     console.error("Error during visibility update:", error);
   }
 }
+
+export function getToonRendition(local_toon, pose) {
+  const dna = local_toon.toon.style;
+  return `https://rendition.toontownrewritten.com/render/${dna}/${pose}/1024x1024.png`;
+}

@@ -2,16 +2,16 @@
   "name": "toonscout-bot",
   "version": "3.1.0",
   "description": "Display information about your current toon.",
-  "main": "app.js",
+  "main": "app/app.js",
   "type": "module",
   "engines": {
     "node": ">=20.x"
   },
   "scripts": {
-    "start": "cross-env node app.js",
-    "register": "cross-env  node install_commands.js",
-    "dev": "cross-env nodemon app.js",
-    "dev-register": "cross-env node install_commands.js"
+    "start": "cross-env node app/app.js",
+    "register": "cross-env node app/install_commands.js",
+    "dev": "cross-env nodemon app/app.js",
+    "dev-register": "cross-env node app/install_commands.js"
   },
   "author": "Erin Miller",
   "license": "MIT",

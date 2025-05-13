@@ -3,19 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 5000",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -p 5000",
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.2",
     "@vercel/analytics": "^1.4.1",
     "framer-motion": "^12.9.1",
     "next": "^15.3.1",
     "react": "^18.3.1",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
-    "scoutsite": "file:",
+    "tailwind-scrollbar": "^3.1.0",
     "toonscout-webapp": "file:"
   },
   "devDependencies": {
