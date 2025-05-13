@@ -4,7 +4,7 @@ import {
   InteractionType,
   InteractionResponseType,
 } from "discord-interactions";
-import { getUserId, validateUser } from "../utils.js";
+import { getUserId, validateUser } from "../util/user.js";
 
 const router = express.Router();
 const PUBLIC_KEY =
@@ -20,7 +20,7 @@ router.post("/", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
   }
 
   const targetUser = req.body.data.options?.find(
-    (option) => option.name === "user",
+    (option) => option.name === "user"
   )?.value;
   const targetToon = await validateUser(targetUser, req, res);
   if (!targetToon && targetUser) {
