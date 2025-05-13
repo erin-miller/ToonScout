@@ -1,0 +1,29 @@
+{
+  "name": "toonscout-backend",
+  "version": "1.0.0",
+  "description": "ToonScout's backend API service",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "discord-interactions": "^4.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^5.0.1",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.3",
+    "node-fetch": "^3.3.2",
+    "toonapi-calculator": "^2.1.0",
+    "toonscout-backend": "file:",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "author": "Erin Miller",
+  "license": "MIT"
+}

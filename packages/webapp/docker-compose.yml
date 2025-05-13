@@ -1,6 +1,6 @@
 services:
-  site:
-    container_name: ts-site
+  webapp:
+    container_name: ts-webapp
     build:
       context: .
       dockerfile: Dockerfile.dev

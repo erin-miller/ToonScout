@@ -1,4 +1,4 @@
-import { InstallGlobalCommands } from "../utils/discord.js";
+import { InstallGlobalCommands } from "../util/discord.js";
 import express from "express";
 
 const router = express.Router();
