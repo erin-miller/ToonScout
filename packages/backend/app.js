@@ -7,6 +7,8 @@ import corsMiddleware from "./middlewares/cors.js";
 import interactionsRouter from "./routes/interactions.js";
 import tokenRouter from "./routes/token.js";
 import utilityRouter from "./routes/utility.js";
+import botRouter from "./routes/bot.js";
+import scoutRouter from "./routes/scout.js";
 import { handleWebSocketConnection } from "./websocket.js";
 
 const app = express();
@@ -22,6 +24,8 @@ app.use(cookieParser());
 app.use("/interactions", interactionsRouter);
 app.use("/token", tokenRouter);
 app.use("/utility", utilityRouter);
+app.use("/bot", botRouter);
+app.use("/scout", scoutRouter);
 
 wss.on("connection", handleWebSocketConnection);
 

@@ -1,7 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition } from "../utils.js";
-import { getScoutToken } from "../db/scoutData/scoutService.js";
+import { getToonRendition, getScoutToken } from "../utils.js";
 
 const HIGHEST_LVL = 7;
 const organic = "<:organic:1292659435717787791>";
@@ -81,7 +80,7 @@ export const data = new SlashCommandBuilder()
     option
       .setName("user")
       .setDescription("(Optional) Get the specified user's toon info.")
-      .setRequired(false),
+      .setRequired(false)
   );
 
 export async function execute(req, res, target) {
@@ -127,11 +126,11 @@ function getGagInfo(toon) {
       // track exists, add info to allGags
       if (track.organic) {
         allGags.push(
-          `${organic} ${getEmoji(trackKey, track.gag.level)} ${track.gag.name}`,
+          `${organic} ${getEmoji(trackKey, track.gag.level)} ${track.gag.name}`
         );
       } else {
         allGags.push(
-          `${getEmoji(trackKey, track.gag.level)} ${track.gag.name}`,
+          `${getEmoji(trackKey, track.gag.level)} ${track.gag.name}`
         );
       }
     }

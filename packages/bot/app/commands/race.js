@@ -5,8 +5,7 @@ import {
   ButtonBuilder,
 } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition } from "../utils.js";
-import { getScoutToken } from "../db/scoutData/scoutService.js";
+import { getToonRendition, getScoutToken } from "../utils.js";
 import { RacingCalculator } from "toonapi-calculator";
 
 const trophyEmoji = "<:trophy:1301971567575699498>";
@@ -36,7 +35,7 @@ export const data = new SlashCommandBuilder()
     option
       .setName("user")
       .setDescription("(Optional) Get the specified user's toon info.")
-      .setRequired(false),
+      .setRequired(false)
   );
 
 export async function execute(req, res, target) {
@@ -44,7 +43,7 @@ export async function execute(req, res, target) {
 
   const row = new ActionRowBuilder().addComponents(
     getRefreshButton("home", target),
-    getAdviceButton(target),
+    getAdviceButton(target)
   );
 
   return res.send({
@@ -129,14 +128,14 @@ function getRefreshButton(type, target) {
 function getHomeRow(target) {
   return new ActionRowBuilder().addComponents(
     getRefreshButton("home", target),
-    getAdviceButton(target),
+    getAdviceButton(target)
   );
 }
 
 function getAdviceRow(target) {
   return new ActionRowBuilder().addComponents(
     getRefreshButton("advice", target),
-    getHomeButton(target),
+    getHomeButton(target)
   );
 }
 
@@ -162,14 +161,16 @@ function getHomeEmbed(item) {
     trophies.forEach((trophy) => {
       const completed = earned.find((item) => item[0] === trophy.name)[1];
 
-      const progress = `${trophy.progress.current}/${trophy.progress.required} ${trophyEmoji.repeat(completed)}\n`;
+      const progress = `${trophy.progress.current}/${
+        trophy.progress.required
+      } ${trophyEmoji.repeat(completed)}\n`;
       trophyNames += `${trophy.name}\n`;
       progNames += progress;
     });
 
     embed.addFields(
       { name: "Trophies", value: trophyNames, inline: true },
-      { name: "Progress", value: progNames, inline: true },
+      { name: "Progress", value: progNames, inline: true }
     );
   } else {
     embed.setDescription("You have maxed racing! Congratulations!");
@@ -205,7 +206,9 @@ function getTopTrophies(toon) {
   trophies = trophies
     .map(
       (t, index) =>
-        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${t.progress.required}\n${t.progress.difference} more to go!\n`,
+        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${
+          t.progress.required
+        }\n${t.progress.difference} more to go!\n`
     )
     .join("\n");
   return trophies !== "" ? trophies : "You have maxed racing! Congratulations!";

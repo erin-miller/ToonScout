@@ -1,11 +1,11 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { updateHidden } from "../db/scoutData/scoutService.js";
+import { updateHidden } from "../utils.js";
 
 export const data = new SlashCommandBuilder()
   .setName("hidden")
   .setDescription(
-    "Toggle your information visibility. If visible, others can view your toon.",
+    "Toggle your information visibility. If visible, others can view your toon."
   )
   .setIntegrationTypes(1)
   .setContexts([0, 1, 2]);

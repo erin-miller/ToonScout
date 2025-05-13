@@ -5,9 +5,8 @@ import {
   ButtonBuilder,
 } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition } from "../utils.js";
+import { getToonRendition, getScoutToken } from "../utils.js";
 import { SuitsCalculator } from "toonapi-calculator";
-import { getScoutToken } from "../db/scoutData/scoutService.js";
 
 const levels = {
   s: {
@@ -67,7 +66,7 @@ export const data = new SlashCommandBuilder()
     option
       .setName("user")
       .setDescription("(Optional) Get the specified user's toon info.")
-      .setRequired(false),
+      .setRequired(false)
   );
 
 export async function execute(req, res, target) {
@@ -77,7 +76,7 @@ export async function execute(req, res, target) {
     getSellButton(target),
     getCashButton(target),
     getLawButton(target),
-    getBossButton(target),
+    getBossButton(target)
   );
 
   return res.send({
@@ -168,7 +167,7 @@ function getBossRow(target) {
     getHomeButton(target),
     getSellButton(target),
     getCashButton(target),
-    getLawButton(target),
+    getLawButton(target)
   );
 }
 
@@ -178,7 +177,7 @@ function getLawRow(target) {
     getHomeButton(target),
     getSellButton(target),
     getCashButton(target),
-    getBossButton(target),
+    getBossButton(target)
   );
 }
 
@@ -188,7 +187,7 @@ function getCashRow(target) {
     getHomeButton(target),
     getSellButton(target),
     getLawButton(target),
-    getBossButton(target),
+    getBossButton(target)
   );
 }
 
@@ -198,7 +197,7 @@ function getSellRow(target) {
     getHomeButton(target),
     getCashButton(target),
     getLawButton(target),
-    getBossButton(target),
+    getBossButton(target)
   );
 }
 
@@ -208,7 +207,7 @@ function getHomeRow(target) {
     getSellButton(target),
     getCashButton(target),
     getLawButton(target),
-    getBossButton(target),
+    getBossButton(target)
   );
 }
 
@@ -222,14 +221,14 @@ function getHomeEmbed(item) {
     })
     .setTitle("Cog Suits")
     .setDescription(
-      "View your current suits or select department for more information.",
+      "View your current suits or select department for more information."
     )
     .setThumbnail(gear)
     .addFields(
       { name: "Sellbot", value: getBasicSuitInfo(toon.cogsuits, "s") },
       { name: "Cashbot", value: getBasicSuitInfo(toon.cogsuits, "m") },
       { name: "Lawbot", value: getBasicSuitInfo(toon.cogsuits, "l") },
-      { name: "Bossbot", value: getBasicSuitInfo(toon.cogsuits, "c") },
+      { name: "Bossbot", value: getBasicSuitInfo(toon.cogsuits, "c") }
     )
     .setTimestamp(item.modified);
 }
@@ -281,7 +280,10 @@ function getSuitEmbed(item, title, type) {
       })
       .setTitle(getBasicSuitInfo(suit, type))
       .setDescription(
-        `${simplifyNeeded(suit, type)} to go!\nProgress: ${simplifyPromo(suit, type)}`,
+        `${simplifyNeeded(suit, type)} to go!\nProgress: ${simplifyPromo(
+          suit,
+          type
+        )}`
       )
       .addFields(getSuitPath(suit, type))
       .setFooter({ text: `Facility earnings are an estimate.`, iconURL: gear })
@@ -371,7 +373,10 @@ function getBasicSuitInfo(toon, type) {
   const suitType = toon[type];
   if (suitType.hasDisguise) {
     const prestige = suitType.version == 2 ? " v2.0" : "";
-    return `${suitType.suit.name}, Level ${suitType.level} / ${getLevel(toon, type)}${prestige}`;
+    return `${suitType.suit.name}, Level ${suitType.level} / ${getLevel(
+      toon,
+      type
+    )}${prestige}`;
   }
   return "No disguise!";
 }

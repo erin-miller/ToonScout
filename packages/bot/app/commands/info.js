@@ -1,7 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition } from "../utils.js";
-import { getScoutToken } from "../db/scoutData/scoutService.js";
+import { getToonRendition, getScoutToken } from "../utils.js";
 
 export const data = new SlashCommandBuilder()
   .setName("info")
@@ -12,7 +11,7 @@ export const data = new SlashCommandBuilder()
     option
       .setName("user")
       .setDescription("(Optional) Get the specified user's toon info.")
-      .setRequired(false),
+      .setRequired(false)
   );
 
 export async function execute(req, res, target) {
@@ -27,7 +26,7 @@ export async function execute(req, res, target) {
     .setThumbnail(getToonRendition(toon, "waving"))
     .addFields(
       { name: "Laff", value: simplifyLaff(toon) },
-      { name: "Location", value: simplifyLocation(toon) },
+      { name: "Location", value: simplifyLocation(toon) }
     )
     .setTimestamp(item.modified);
 

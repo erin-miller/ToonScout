@@ -1,5 +1,4 @@
 import "dotenv/config";
-import { InstallGlobalCommands } from "./utils.js";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath, pathToFileURL } from "url";
@@ -21,7 +20,7 @@ for (const file of commandFiles) {
     commands.push(command.data.toJSON());
   } else {
     console.log(
-      `[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`,
+      `[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`
     );
   }
 }
@@ -29,4 +28,18 @@ for (const file of commandFiles) {
 const isProduction = process.env.NODE_ENV === "production";
 const APP_ID = isProduction ? process.env.APP_ID_PROD : process.env.APP_ID_DEV;
 
-InstallGlobalCommands(APP_ID, commands);
+try {
+  const response = await fetch(process.env.API_LINK + "/bot/install-commands", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ APP_ID, commands }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to install commands.");
+  }
+} catch (error) {
+  console.error("Error during install:", error);
+}

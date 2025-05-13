@@ -1,7 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition } from "../utils.js";
-import { getScoutToken } from "../db/scoutData/scoutService.js";
+import { getToonRendition, getScoutToken } from "../utils.js";
 
 const trooper = "https://i.imgur.com/eYjdODE.png";
 
@@ -14,7 +13,7 @@ export const data = new SlashCommandBuilder()
     option
       .setName("user")
       .setDescription("(Optional) Get the specified user's toon info.")
-      .setRequired(false),
+      .setRequired(false)
   );
 
 export async function execute(req, res, target) {

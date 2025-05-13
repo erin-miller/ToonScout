@@ -6,8 +6,7 @@ import {
 } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
 import { FishCalculator } from "toonapi-calculator";
-import { getToonRendition } from "../utils.js";
-import { getScoutToken } from "../db/scoutData/scoutService.js";
+import { getToonRendition, getScoutToken } from "../utils.js";
 
 const fisherman =
   "https://static.toontownrewritten.wiki/uploads/e/eb/Crocodile_fishing.png";
@@ -43,7 +42,7 @@ export const data = new SlashCommandBuilder()
     option
       .setName("user")
       .setDescription("(Optional) Get the specified user's toon info.")
-      .setRequired(false),
+      .setRequired(false)
   );
 
 export async function execute(req, res, target) {
@@ -51,7 +50,7 @@ export async function execute(req, res, target) {
   footer = getFooter(item.data);
   const row = new ActionRowBuilder().addComponents(
     getWhatButton(target),
-    getWhereButton(target),
+    getWhereButton(target)
   );
 
   return res.send({
@@ -133,7 +132,7 @@ function getHomeEmbed(item) {
         name: "Where?",
         value:
           "Find what locations give you the best\nchance at catching a new fish!",
-      },
+      }
     )
     .setFooter(footer)
     .setTimestamp(item.modified);
@@ -171,7 +170,9 @@ function getWhatEmbed(item) {
 
 function getFooter(toon) {
   return {
-    text: `You are 90% likely to catch in\nthe number of confident buckets.\n${getFishCount(toon.fish)}`,
+    text: `You are 90% likely to catch in\nthe number of confident buckets.\n${getFishCount(
+      toon.fish
+    )}`,
     iconURL: bucket,
   };
 }
@@ -214,7 +215,7 @@ function getRefreshButton(type, target) {
 function getHomeRow(target) {
   return new ActionRowBuilder().addComponents(
     getWhatButton(target),
-    getWhereButton(target),
+    getWhereButton(target)
   );
 }
 
@@ -222,7 +223,7 @@ function getWhatRow(target) {
   return new ActionRowBuilder().addComponents(
     getRefreshButton("what", target),
     getHomeButton(target),
-    getWhereButton(target),
+    getWhereButton(target)
   );
 }
 
@@ -230,7 +231,7 @@ function getWhereRow(target) {
   return new ActionRowBuilder().addComponents(
     getRefreshButton("where", target),
     getHomeButton(target),
-    getWhatButton(target),
+    getWhatButton(target)
   );
 }
 
@@ -257,7 +258,7 @@ function getFishInfo(toon, type) {
             total,
             buckets: { confBuckets },
           },
-        ]) => total > 0 && confBuckets > 0,
+        ]) => total > 0 && confBuckets > 0
       ) // Skip 0 values
       .slice(0, 5)
       .map(
@@ -269,11 +270,11 @@ function getFishInfo(toon, type) {
               buckets: { confBuckets, avgBuckets },
             },
           ],
-          index,
+          index
         ) =>
           `**${index + 1}. ${location} (${(total * 100).toFixed(2)}%)**` +
           `Confident Buckets: ${confBuckets}\n` +
-          `Average Buckets: ${avgBuckets}`,
+          `Average Buckets: ${avgBuckets}`
       )
       .join("\n\n"); // Single line space between entries
 
@@ -287,10 +288,12 @@ function getFishInfo(toon, type) {
       .slice(0, 5)
       .map(
         (fish, index) =>
-          `**${index + 1}. ${fish.name} (${(fish.probability * 100).toFixed(2)}%)**` +
+          `**${index + 1}. ${fish.name} (${(fish.probability * 100).toFixed(
+            2
+          )}%)**` +
           `Location: ${fish.location}\n` +
           `Confident Buckets: ${fish.buckets.confBuckets}\n` +
-          `Average Buckets: ${fish.buckets.avgBuckets}`,
+          `Average Buckets: ${fish.buckets.avgBuckets}`
       )
       .join("\n\n"); // Single line space between entries
 

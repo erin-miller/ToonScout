@@ -1,8 +1,7 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
 import { FlowerCalculator } from "toonapi-calculator";
-import { getScoutToken } from "../db/scoutData/scoutService.js";
-import { getToonRendition } from "../utils.js";
+import { getToonRendition, getScoutToken } from "../utils.js";
 
 const itos = {
   1: "One",
@@ -37,18 +36,18 @@ export const data = new SlashCommandBuilder()
     option
       .setName("combo")
       .setDescription(
-        "(1-8) What number jellybean combination are you looking for?",
+        "(1-8) What number jellybean combination are you looking for?"
       )
       .setRequired(true)
       .setMinValue(1)
-      .setMaxValue(8),
+      .setMaxValue(8)
   );
 
 export async function execute(req, res, target) {
   const item = await getScoutToken(target);
 
   const choice = req.body.data.options.find(
-    (option) => option.name === "combo",
+    (option) => option.name === "combo"
   ).value;
 
   return res.send({
