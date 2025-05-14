@@ -23,5 +23,17 @@ services:
       file: ./packages/webapp/docker-compose.yml
       service: webapp
 
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ts-ngrok
+    command: start --config /etc/ngrok.yml --all
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml:ro
+    depends_on:
+      - webapp
+      - bot
+    ports:
+      - "4040:4040"
+
 volumes:
   mongo-data:

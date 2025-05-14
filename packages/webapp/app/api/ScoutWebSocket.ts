@@ -1,7 +1,7 @@
 const MAX_SCOUT_ATTEMPTS = 10;
 const RECONNECT_DELAY = 10000;
 const SCOUT_LINK =
-  process.env.NEXT_PUBLIC_API_WSS || "wss://api.scouttoon.info";
+  process.env.NEXT_PUBLIC_BOT_WSS || "wss://bot.scouttoon.info";
 let scout: WebSocket | null = null;
 let scoutAttempts = 0;
 
@@ -28,7 +28,7 @@ export const initScoutWebSocket = () => {
     if (scoutAttempts < MAX_SCOUT_ATTEMPTS) {
       scoutAttempts++;
       console.log(
-        `Attempting to reconnect to Scout WebSocket in ${RECONNECT_DELAY} ms...`,
+        `Attempting to reconnect to Scout WebSocket in ${RECONNECT_DELAY} ms...`
       );
       setTimeout(connectScoutWebSocket, RECONNECT_DELAY);
     } else {
@@ -43,6 +43,6 @@ export const sendScoutData = (userId: string, data: any) => {
   if (scout && scout.readyState === WebSocket.OPEN) {
     scout.send(JSON.stringify({ userId, data }));
   } else {
-    console.error("Scout WebSocket connection is not open.");
+    console.error("Scout WebSocket connection is not open:", scout?.readyState);
   }
 };

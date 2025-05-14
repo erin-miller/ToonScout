@@ -16,7 +16,7 @@ router.post("/get-scout-token", async (req, res) => {
 
   try {
     const token = await getScoutToken(target);
-    return res.status(200).json(token);
+    return res.status(200).json({ token });
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Failed to get scout token" });
@@ -32,7 +32,7 @@ router.post("/store-scout-token", async (req, res) => {
 
   try {
     const count = await storeScoutToken(userId, data);
-    return res.status(200).json(count);
+    return res.status(200).json({ count });
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Failed to store scout token" });

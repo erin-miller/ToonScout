@@ -15,7 +15,7 @@ const generateRandomString = (length = 16) => {
 
 export const initOAuth = () => {
   const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
-  const uri = process.env.NEXT_PUBLIC_BASE_URI || "https://scouttoon.info/";
+  const uri = window.location.origin;
   const redirectUri = encodeURIComponent(uri);
   const scope = encodeURIComponent("identify");
 
@@ -23,7 +23,7 @@ export const initOAuth = () => {
   localStorage.setItem("oauth-state", randomState);
 
   const url = `https://discord.com/oauth2/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scope}&state=${btoa(
-    randomState,
+    randomState
   )}`;
 
   // Redirect to Discord authorization URL
