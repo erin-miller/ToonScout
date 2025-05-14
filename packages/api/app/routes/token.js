@@ -5,7 +5,6 @@ import {
 } from "../db/tokenData/tokenService.js";
 
 const router = express.Router();
-console.log(process.env.NODE_ENV);
 
 router.post("/store-token", async (req, res) => {
   const { userId, accessToken, expiresAt } = req.body;
