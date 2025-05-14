@@ -33,16 +33,9 @@ const FAQModal: React.FC<FAQModalProps> = ({ isOpen, onClose }) => {
         <div className="faq-container">
           <div className="faq-question">Is ToonScout open source?</div>
           <div className="faq-answer">
-            Yes! The Discord bot's source code can be found{" "}
+            Yes! The source code can be found{" "}
             <a
-              href="https://github.com/erin-miller/ToonScout-bot"
-              className="text-blue-400 hover:underline"
-            >
-              here
-            </a>
-            . The website's source code can be found{" "}
-            <a
-              href="https://github.com/erin-miller/ToonScout-site"
+              href="https://github.com/erin-miller/ToonScout"
               className="text-blue-400 hover:underline"
             >
               here
