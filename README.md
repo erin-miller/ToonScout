@@ -22,8 +22,10 @@ docker compose up
 
 The web app will be available at [localhost:5000](http://localhost:5000). The Discord bot runs on port `4000` and the API runs on port `3000`.
 
-To test Discord interactions locally, your Discord bot must allow for redirects from `localhost:5000`. This can be done in the [Discord Developer Portal](https://discord.com/developers/applications) by adding `http://localhost:5000` to the OAuh2 redirect URLs.
+To test Discord interactions locally, your Discord bot must allow for redirects from `localhost:5000`. This can be done in the [Discord Developer Portal](https://discord.com/developers/applications) by adding `http://localhost:5000` to the OAuth2 redirect URLs.
 
 Furthermore, two _optional_ network tunnels are established for the webapp and bot server with Ngrok, seen at [localhost:4040](http://localhost:4040). You need a [Ngrok auth token](https://dashboard.ngrok.com/get-started/your-authtoken) in `ngrok.yml` to run the tunnel.
 
 The tunnels are especially helpful for testing Discord interactions between the webapp and the bot. Please be patient as you first enter the tunnel, as Next.js has to build the app.
+
+Finally, ensure that you update necessary environment variables in each package's `.env` file as well as the root `.env.base` file. Each directory has a `.env.example` file that can be used as a template.
