@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition } from "../util/user.js";
+import { getToonRendition } from "../util/cmds.js";
 import { getScoutToken } from "../util/api.js";
 
 const HIGHEST_LVL = 7;

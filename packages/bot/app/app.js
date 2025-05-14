@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { loadCommands } from "./util/cmds.js";
+import { loadCommands } from "./util/discord.js";
 import { handleWebSocketConnection } from "./util/websocket.js";
 import express from "express";
 import { createServer } from "http";

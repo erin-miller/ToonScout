@@ -3,7 +3,7 @@ services:
     container_name: ts-api
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - "3000:3000"
     volumes:

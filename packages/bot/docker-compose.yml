@@ -3,7 +3,7 @@ services:
     container_name: ts-bot
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - "4000:4000"
     volumes:
