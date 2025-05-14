@@ -1,12 +1,12 @@
 {
-  "name": "toonscout-backend",
+  "name": "toonscout-api",
   "version": "1.0.0",
-  "description": "ToonScout's backend API service",
-  "main": "app.js",
+  "description": "ToonScout's API service",
+  "main": "app/app.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node app/app.js",
+    "dev": "nodemon app/app.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
@@ -18,7 +18,7 @@
     "mongoose": "^8.7.3",
     "node-fetch": "^3.3.2",
     "toonapi-calculator": "^2.1.0",
-    "toonscout-backend": "file:",
+    "toonscout-api": "file:",
     "ws": "^8.18.0"
   },
   "devDependencies": {

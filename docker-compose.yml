@@ -1,14 +1,14 @@
 services:
   api:
     extends:
-      file: ./packages/backend/docker-compose.yml
+      file: ./packages/api/docker-compose.yml
       service: api
     env_file:
       - .env.base
 
   mongo:
     extends:
-      file: ./packages/backend/docker-compose.yml
+      file: ./packages/api/docker-compose.yml
       service: mongo
 
   bot:
