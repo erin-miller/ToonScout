@@ -17,7 +17,8 @@ If you would like to contribute, please ask for assignments to issues or submit 
 Dev environments are set up using [Docker](https://docs.docker.com/desktop/). To run locally, run the following command in the root directory:
 
 ```bash
-docker compose up
+npm install # installs dev dependencies
+docker compose up --build # builds the containers for all packages
 ```
 
 The web app will be available at [localhost:5000](http://localhost:5000). The Discord bot runs on port `4000` and the API runs on port `3000`.
