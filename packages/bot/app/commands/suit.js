@@ -5,7 +5,8 @@ import {
   ButtonBuilder,
 } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition, getScoutToken } from "../utils.js";
+import { getToonRendition } from "../util/user.js";
+import { getScoutToken } from "../util/api.js";
 import { SuitsCalculator } from "toonapi-calculator";
 
 const levels = {

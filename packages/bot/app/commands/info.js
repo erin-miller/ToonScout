@@ -1,6 +1,7 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition, getScoutToken } from "../utils.js";
+import { getToonRendition } from "../util/user.js";
+import { getScoutToken } from "../util/api.js";
 
 export const data = new SlashCommandBuilder()
   .setName("info")

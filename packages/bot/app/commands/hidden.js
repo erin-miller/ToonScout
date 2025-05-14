@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { updateHidden } from "../utils.js";
+import { updateHidden } from "../util/api.js";
 
 export const data = new SlashCommandBuilder()
   .setName("hidden")

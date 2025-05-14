@@ -1,5 +1,9 @@
 import express from "express";
-import { getScoutToken, updateHidden } from "../db/scoutData/scoutService.js";
+import {
+  getScoutToken,
+  updateHidden,
+  storeScoutToken,
+} from "../db/scoutData/scoutService.js";
 
 const router = express.Router();
 
@@ -16,6 +20,22 @@ router.post("/get-scout-token", async (req, res) => {
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Failed to get scout token" });
+  }
+});
+
+router.post("/store-scout-token", async (req, res) => {
+  const { userId, data } = req.body;
+
+  if (!userId || !data) {
+    return res.status(400).json({ error: "Missing userId or data" });
+  }
+
+  try {
+    const count = await storeScoutToken(userId, data);
+    return res.status(200).json(count);
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: "Failed to store scout token" });
   }
 });
 

@@ -1,6 +1,6 @@
 # ToonScout
 
-## [Suggestions or bug reports? Submit here!](https://github.com/erin-miller/ToonScout-bot/issues)
+## [Suggestions or bug reports? Submit here!](https://github.com/erin-miller/ToonScout/issues)
 
 ToonScout is a web application and Discord bot that provides advising and information for Toontown Rewritten players. ToonScout is not affiliated with Toontown Rewritten or The Walt Disney Company.
 
@@ -14,10 +14,10 @@ If you have any questions or need help, please join the [ToonScout Discord serve
 
 If you would like to contribute, please ask for assignments to issues or submit a pull request.
 
-Dev environments are set up using Docker. To run locally, run the following command in the site and bot repositories:
+Dev environments are set up using Docker. To run locally, run the following command in the root directory:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
-Environment variables can be changed in `docker-compose.yml`.
+The web app will be available at [localhost:5000](http://localhost:5000). The Discord bot runs on port `4000` and the API runs on port `3000`.

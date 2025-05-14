@@ -1,4 +1,4 @@
-import { storeScoutToken } from "./db/scoutData/scoutService.js";
+import { storeScoutToken } from "../util/api.js";
 
 export function handleWebSocketConnection(ws) {
   ws.on("message", async (message) => {
@@ -10,7 +10,7 @@ export function handleWebSocketConnection(ws) {
 
     if (data.event !== "all") {
       ws.send(
-        JSON.stringify({ message: 'Event is not "all", skipping data entry.' }),
+        JSON.stringify({ message: 'Event is not "all", skipping data entry.' })
       );
       return;
     }

@@ -6,7 +6,8 @@ import {
 } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
 import { FishCalculator } from "toonapi-calculator";
-import { getToonRendition, getScoutToken } from "../utils.js";
+import { getToonRendition } from "../util/user.js";
+import { getScoutToken } from "../util/api.js";
 
 const fisherman =
   "https://static.toontownrewritten.wiki/uploads/e/eb/Crocodile_fishing.png";

@@ -1,6 +1,7 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition, getScoutToken } from "../utils.js";
+import { getToonRendition } from "../util/user.js";
+import { getScoutToken } from "../util/api.js";
 
 const HIGHEST_LVL = 7;
 const organic = "<:organic:1292659435717787791>";
