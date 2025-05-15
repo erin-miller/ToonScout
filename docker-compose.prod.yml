@@ -1,0 +1,18 @@
+services:
+  api:
+    extends:
+      file: ./packages/api/docker-compose.yml
+      service: api
+
+  mongo:
+    extends:
+      file: ./packages/api/docker-compose.yml
+      service: mongo
+
+  bot:
+    extends:
+      file: ./packages/bot/docker-compose.yml
+      service: bot
+
+volumes:
+    mongo-data:
