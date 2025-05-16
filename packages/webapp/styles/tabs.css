@@ -305,3 +305,29 @@
 .task-size {
   @apply w-52 h-52 sm:w-72 sm:h-72 md:h-80 md:w-80 2xl:w-96 2xl:h-96;
 }
+
+/* 
+
+    REWARDS
+
+*/
+
+.tab-reward-container {
+  @apply flex flex-row flex-grow w-full space-x-2 py-2 h-full;
+}
+
+.reward-container {
+  @apply flex flex-col w-2/12 justify-center items-center space-y-1;
+}
+
+.reward-btn {
+  @apply flex flex-col items-center justify-center w-full relative;
+}
+
+.base-image {
+  @apply w-28 object-contain;
+}
+
+.overlay-image {
+  @apply flex w-3/4 h-3/4 absolute object-contain;
+}

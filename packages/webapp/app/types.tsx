@@ -133,6 +133,21 @@ interface Racing {
   num: number;
 }
 
+interface Rewards {
+  sos: null | Record<string, number>;
+  unites: null | {
+    "Toon-Up": Record<string, number>;
+    "Gag-Up": Record<string, number>;
+    Jellybeans: Record<string, number>;
+  };
+  summons: null | Record<string, number>;
+  pinkslips: number;
+  remotes: null | {
+    "Damage Remote": Record<string, number>;
+    "Toon-Up Remote": Record<string, number>;
+  };
+}
+
 export interface ToonData {
   event: string;
   data: {
@@ -152,6 +167,7 @@ export interface ToonData {
     cogsuits: Record<string, Cogsuit>;
     golf: Golf[];
     racing: Racing[];
+    rewards: Rewards;
   };
 }
 

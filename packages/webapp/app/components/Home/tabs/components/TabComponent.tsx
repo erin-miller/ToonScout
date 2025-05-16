@@ -7,6 +7,7 @@ import {
   ActivityTab,
   InvasionsTab,
   GardenTab,
+  RewardsTab,
 } from "./TabList";
 import "/styles/tabs.css";
 import { useState } from "react";
@@ -74,6 +75,10 @@ const TabContainer = () => {
       component: GardenTab,
       tooltip:
         "Golden border flowers will progress your experience and allow you to grow higher bean combinations.",
+    },
+    {
+      title: "Rewards",
+      component: RewardsTab,
     },
   ];
 

@@ -6,6 +6,7 @@ import TasksTab from "../TasksTab";
 import ActivityTab from "../ActivityTab";
 import InvasionsTab from "../InvasionsTab";
 import GardenTab from "../GardenTab";
+import RewardsTab from "../RewardsTab";
 
 export {
   InfoTab,
@@ -16,4 +17,5 @@ export {
   ActivityTab,
   InvasionsTab,
   GardenTab,
+  RewardsTab,
 };
