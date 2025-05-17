@@ -138,4 +138,38 @@ router.get("/get-invasions", async (req, res) => {
   }
 });
 
+const rendition_cache = new Map();
+
+router.get("/get-rendition", async (req, res) => {
+  const url = req.query.url;
+
+  if (!url) {
+    return res.status(400).json({ error: "URL is required" });
+  }
+
+  if (rendition_cache[url]) {
+    res.setHeader("Content-Type", "image/webp");
+    return res.send(rendition_cache.get(url));
+  }
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": process.env.USER_AGENT,
+      },
+    });
+    if (!response.ok) {
+      return res.status(502).json({ error: "TTR failed to fetch rendition" });
+    }
+    const buffer = await response.arrayBuffer();
+    const imageBuffer = Buffer.from(buffer);
+    rendition_cache.set(url, imageBuffer);
+
+    res.setHeader("Content-Type", "image/webp");
+    return res.send(imageBuffer);
+  } catch (error) {
+    return res.status(500).json({ error: "Failed to fetch rendition" });
+  }
+});
+
 export default router;
