@@ -264,7 +264,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
           return (
             <div
               key={index}
-              className="grid grid-rows-4 text-xl dark:text-gray-100 bg-gray-100 dark:bg-gray-900 border-2 border-gray-600 shadow-md p-2 rounded-lg"
+              className="grid grid-rows-4 text-xl dark:text-blue-950 bg-gray-100 dark:bg-blue-400 border-2 border-gray-600 dark:border-blue-900 shadow-md p-2 rounded-lg"
               style={{ gridTemplateRows: "30px 30px 70px auto" }}
             >
               {/* sos type */}
@@ -288,10 +288,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
               {/* star count */}
               <div className="flex flex-row justify-end mt-1">
                 {Array.from({ length: entry?.stars || 0 }, (_, i) => (
-                  <FaStar
-                    key={i}
-                    className="text-amber-900 dark:text-amber-600 w-4 h-4"
-                  />
+                  <FaStar key={i} className="text-amber-900 w-4 h-4" />
                 ))}
               </div>
             </div>
