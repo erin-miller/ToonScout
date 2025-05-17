@@ -140,7 +140,15 @@ interface Rewards {
     "Gag-Up": Record<string, number>;
     Jellybeans: Record<string, number>;
   };
-  summons: null | Record<string, number>;
+  summons: null | Record<
+    string,
+    {
+      name: string;
+      single: boolean;
+      building: boolean;
+      invasion: boolean;
+    }
+  >;
   pinkslips: number;
   remotes: null | {
     "Damage Remote": Record<string, number>;
