@@ -309,7 +309,81 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
     return <div>Hmm.. something went wrong!</div>;
   };
 
-  const renderRemotes = () => {};
+  const renderRemotes = () => {
+    const remotes = toon.data.data.rewards.remotes;
+    if (!remotes) {
+      return <div>No remotes available.</div>;
+    }
+
+    return (
+      <div>
+        {Object.entries(remotes).map(([type, remoteData], outerIndex) => (
+          <div
+            key={outerIndex}
+            className="text-2xl text-blue-900 font-minnie text-left"
+          >
+            {outerIndex === 0 && (
+              <div className="font-bold mb-2">Damage Remotes</div>
+            )}
+            {outerIndex === 1 && (
+              <div className="font-bold mb-2 mt-4">Healing Remotes</div>
+            )}
+            <div className="grid grid-cols-3 gap-4">
+              {Object.entries(remoteData).map(([rating, count], index) => (
+                <div
+                  key={index}
+                  className={`grid md:grid-rows-2 text-xl dark:text-gray-100 bg-blue-400 border-2 border-blue-900 shadow-md p-2 rounded-lg`}
+                  style={{ gridTemplateRows: "30px auto" }}
+                >
+                  {/* remote stars */}
+                  <div className="flex flex-row justify-center mt-1">
+                    {Array.from({ length: parseInt(rating) || 0 }, (_, i) => (
+                      <div key={i} className="relative">
+                        <FaStar
+                          className="text-amber-700 hidden md:block md:w-7 md:h-7 absolute"
+                          style={{
+                            transform: `rotate(-15deg)`,
+                            zIndex: 0,
+                            left: -4,
+                            bottom: -1,
+                          }}
+                        />
+                        <FaStar
+                          className="text-amber-400 md:w-6 md:h-6 relative"
+                          style={{ transform: `rotate(-15deg)`, zIndex: 1 }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  {/* remote image */}
+                  <div className="flex items-center justify-center mt-2">
+                    {type.startsWith("Damage") ? (
+                      <img
+                        src="/rewards/remotes.png"
+                        className="w-16 md:w-24"
+                      />
+                    ) : (
+                      <img
+                        src="/rewards/remotesheal.png"
+                        className="w-16 md:w-24"
+                      />
+                    )}
+                  </div>
+                  {/* remote count */}
+                  <div className="flex justify-end items-end text-2xl lg:text-4xl 2xl:text-5xl">
+                    <span className="absolute text-blue-950">{count}</span>
+                    <span className="relative bottom-0.5 right-0.5 text-gray-100">
+                      {count}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const renders: Record<string, () => JSX.Element> = {
     SOS: renderSOS,
