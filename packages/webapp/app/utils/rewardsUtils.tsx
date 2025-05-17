@@ -138,11 +138,19 @@ export const renderSummons = (toon: StoredToonData) => {
     if (!invasion) missingTotal++;
   });
 
-  const deptColors = {
-    Bossbot: "border-amber-700",
-    Lawbot: "border-gray-800",
-    Cashbot: "border-green-700",
-    Sellbot: "border-purple-700",
+  const deptCardMap = {
+    Bossbot: "bg-[#b1a49b] border-[#877b75]",
+    Lawbot: "bg-[#A5B2C3] border-[#6a717a]",
+    Cashbot: "bg-[#96a5a1] border-[#6a7673]",
+    Sellbot: "bg-[#A4949F] border-[#74686e]",
+  };
+
+  // same as border colors
+  const deptOwnedMap = {
+    Bossbot: "text-[#877b75]",
+    Lawbot: "text-[#6a717a]",
+    Cashbot: "text-[#6a7673]",
+    Sellbot: "text-[#74686e]",
   };
 
   return (
@@ -156,18 +164,18 @@ export const renderSummons = (toon: StoredToonData) => {
             const cog = COGS.find(
               (c) => c.name === name || c.fullname === name
             );
-            const deptBorderColor =
-              deptColors[cog?.type as keyof typeof deptColors] ||
+            const mappedColor =
+              deptCardMap[cog?.type as keyof typeof deptCardMap] ||
               "bg-gray-1000";
 
             return (
               <div
                 key={key}
-                className={`grid grid-cols-2 text-sm bg-gray-100 border-2 ${deptBorderColor}  shadow-md p-2 rounded items-center`}
+                className={`grid grid-cols-2 text-sm border-2 ${mappedColor} text-white shadow-md p-2 rounded items-center`}
               >
                 {/* cog name and image */}
                 <div className="flex flex-col items-center justify-center">
-                  <div className="text-center text-xs truncate w-full">
+                  <div className="text-center text-sm truncate w-full">
                     {name}
                   </div>
                   <img
@@ -180,17 +188,23 @@ export const renderSummons = (toon: StoredToonData) => {
                 <div className="flex flex-col items-center space-y-1">
                   <HiMiniUser
                     className={`w-6 h-6 ${
-                      single ? "text-amber-500" : "text-gray-400"
+                      single
+                        ? "text-gray-100"
+                        : deptOwnedMap[cog?.type as keyof typeof deptOwnedMap]
                     }`}
                   />
                   <HiBuildingOffice
                     className={`w-6 h-6 ${
-                      building ? "text-amber-500" : "text-gray-400"
+                      building
+                        ? "text-gray-100"
+                        : deptOwnedMap[cog?.type as keyof typeof deptOwnedMap]
                     }`}
                   />
                   <HiUserGroup
                     className={`w-6 h-6 ${
-                      invasion ? "text-amber-500" : "text-gray-400"
+                      invasion
+                        ? "text-gray-100"
+                        : deptOwnedMap[cog?.type as keyof typeof deptOwnedMap]
                     }`}
                   />
                 </div>
