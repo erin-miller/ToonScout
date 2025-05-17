@@ -317,7 +317,7 @@
 }
 
 .reward-container {
-  @apply flex flex-col w-2/12 justify-center items-center space-y-1;
+  @apply flex flex-col w-2/12 space-y-1;
 }
 
 .reward-btn {
@@ -330,4 +330,14 @@
 
 .overlay-image {
   @apply flex w-3/4 h-3/4 absolute object-contain;
+}
+
+.reward-display {
+  @apply flex flex-col space-y-2 bg-blue-200 p-4 border-4 border-blue-400
+  shadow-md h-full rounded-xl
+  text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl;
+}
+
+.dark .reward-display {
+  @apply bg-gray-1000 border-pink-700;
 }

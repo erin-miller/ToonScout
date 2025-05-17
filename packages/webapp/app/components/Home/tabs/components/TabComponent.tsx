@@ -79,6 +79,7 @@ const TabContainer = () => {
     {
       title: "Rewards",
       component: RewardsTab,
+      disabled: !toon.data.data.rewards,
     },
   ];
 
