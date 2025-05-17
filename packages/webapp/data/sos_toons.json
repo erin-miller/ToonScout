@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Madam Chuckle",
+    "stars": 3,
+    "ability": "Heal",
+    "track": "Toon-Up",
+    "dna": "740705020000040004040415001515010400000000000000000000000000000000"
+  },
+  {
+    "name": "Daffy Don",
+    "stars": 4,
+    "ability": "Heal",
+    "track": "Toon-Up",
+    "dna": "740c000201010601068b1104000404010400000000000000000000000000000000"
+  },
+  {
+    "name": "Flippy",
+    "stars": 5,
+    "ability": "Heal",
+    "track": "Toon-Up",
+    "dna": "740101010103110311092011001111010400000000000000000000000000000000"
+  },
+  {
+    "name": "Clerk Will",
+    "stars": 3,
+    "ability": "Attack",
+    "track": "Trap",
+    "dna": "740f010201000b000b05000a000a0a010400000000000000000000000000000000"
+  },
+  {
+    "name": "Clerk Penny",
+    "stars": 4,
+    "ability": "Attack",
+    "track": "Trap",
+    "dna": "74120201000019001908050c000c0c010400000000000000000000000000000000"
+  },
+  {
+    "name": "Clerk Clara",
+    "stars": 5,
+    "ability": "Attack",
+    "track": "Trap",
+    "dna": "741101020001090109171502000202010400000000000000000000000000000000"
+  },
+  {
+    "name": "Stinky Ned",
+    "stars": 3,
+    "ability": "Luring",
+    "track": "Lure",
+    "dna": "7415000001000000008b0206000606010400000000000000000000000000000000"
+  },
+  {
+    "name": "Nancy Gas",
+    "stars": 4,
+    "ability": "Luring",
+    "track": "Lure",
+    "dna": "7412000001010101010e1b08000808010400000000000000000000000000000000"
+  },
+  {
+    "name": "Lil Oldman",
+    "stars": 5,
+    "ability": "Luring",
+    "track": "Lure",
+    "dna": "7411020101010501058b0915001515010400000000000000000000000000000000"
+  },
+  {
+    "name": "Barbara Seville",
+    "stars": 3,
+    "ability": "Attack",
+    "track": "Sound",
+    "dna": "7407020201011a011a0a1d17001717010400000000000000000000000000000000"
+  },
+  {
+    "name": "Sid Sonata",
+    "stars": 4,
+    "ability": "Attack",
+    "track": "Sound",
+    "dna": "7401010101000b000b8b0101000101010400000000000000000000000000000000"
+  },
+  {
+    "name": "Moe Zart",
+    "stars": 5,
+    "ability": "Attack",
+    "track": "Sound",
+    "dna": "7401000001000000008b010e000e0e010400000000000000000000000000000000"
+  },
+  {
+    "name": "Clumsy Ned",
+    "stars": 3,
+    "ability": "Attack",
+    "track": "Drop",
+    "dna": "740c020201010701078b0a0c000c0c010400000000000000000000000000000000"
+  },
+  {
+    "name": "Franz Neckvein",
+    "stars": 4,
+    "ability": "Attack",
+    "track": "Drop",
+    "dna": "740d000101000200028b0607000707010400000000000000000000000000000000"
+  },
+  {
+    "name": "Barnacle Bessie",
+    "stars": 5,
+    "ability": "Attack",
+    "track": "Drop",
+    "dna": "7414050200010c010c01190d000d0d010400000000000000000000000000000000"
+  },
+  {
+    "name": "Professor Guffaw",
+    "stars": 3,
+    "ability": "Restock",
+    "track": "Toon-Up",
+    "dna": "740005020000060006030704000404010400000000000000000000000000000000"
+  },
+  {
+    "name": "Clerk Ray",
+    "stars": 3,
+    "ability": "Restock",
+    "track": "Trap",
+    "dna": "740e010101010301038b070c000c0c010400000000000000000000000000000000"
+  },
+  {
+    "name": "Doctor Drift",
+    "stars": 3,
+    "ability": "Restock",
+    "track": "Lure",
+    "dna": "740902020001040104001b03000303010400000000000000000000000000000000"
+  },
+  {
+    "name": "Melody Wavers",
+    "stars": 3,
+    "ability": "Restock",
+    "track": "Sound",
+    "dna": "740e0201000103010308060e000e0e010400000000000000000000000000000000"
+  },
+  {
+    "name": "Baker Bridget",
+    "stars": 3,
+    "ability": "Restock",
+    "track": "Throw",
+    "dna": "740c00020000190019171504000404010400000000000000000000000000000000"
+  },
+  {
+    "name": "Sofie Squirt",
+    "stars": 3,
+    "ability": "Restock",
+    "track": "Squirt",
+    "dna": "7415020200001b001b1a150e000e0e010400000000000000000000000000000000"
+  },
+  {
+    "name": "Shelly Seaweed",
+    "stars": 3,
+    "ability": "Restock",
+    "track": "Drop",
+    "dna": "740c01010001030103191504000404010400000000000000000000000000000000"
+  },
+  {
+    "name": "Professor Pete",
+    "stars": 5,
+    "ability": "Restock",
+    "track": "All",
+    "dna": "7407010201000400048b0f12001212010400000000000000000000000000000000"
+  },
+  {
+    "name": "Soggy Bottom",
+    "stars": 3,
+    "ability": "Toons Hit",
+    "track": null,
+    "dna": "740b00010100080008050415001515010400000000000000000000000000000000"
+  },
+  {
+    "name": "Soggy Nell",
+    "stars": 4,
+    "ability": "Toons Hit",
+    "track": null,
+    "dna": "740301020001000100040c04000404010400000000000000000000000000000000"
+  },
+  {
+    "name": "Sticky Lou",
+    "stars": 5,
+    "ability": "Toons Hit",
+    "track": null,
+    "dna": "740c02000101080108050d04000404010400000000000000000000000000000000"
+  },
+  {
+    "name": "Flim Flam",
+    "stars": 3,
+    "ability": "Cogs Miss",
+    "track": null,
+    "dna": "740102020001170117070110001010010400000000000000000000000000000000"
+  },
+  {
+    "name": "Mr. Freeze",
+    "stars": 4,
+    "ability": "Cogs Miss",
+    "track": null,
+    "dna": "74000002010101010205070c000c0c010400000000000000000000000000000000"
+  },
+  {
+    "name": "Julius Wheezer",
+    "stars": 5,
+    "ability": "Cogs Miss",
+    "track": null,
+    "dna": "740c01010101010101050e12001212010400000000000000000000000000000000"
+  },
+  {
+    "name": "Rocky",
+    "stars": 5,
+    "ability": "Attack",
+    "track": "Throw",
+    "dna": "7406010101791b6c1b2c1b14001414010400000000000000000000000000000000"
+  },
+  {
+    "name": "Loopy Loopenloop",
+    "stars": 5,
+    "ability": "Attack",
+    "track": "Squirt",
+    "dna": "7412010201791b6c1b2c1b0e000e0e010400000000000000000000000000000000"
+  },
+  {
+    "name": "Lord Lowden Clear",
+    "stars": 5,
+    "ability": "Attack",
+    "track": null,
+    "dna": "7401010201791b6c1b2c1b02000202010400000000000000000000000000000000"
+  }
+]
