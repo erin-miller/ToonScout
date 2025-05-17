@@ -147,7 +147,7 @@ router.get("/get-rendition", async (req, res) => {
     return res.status(400).json({ error: "URL is required" });
   }
 
-  if (rendition_cache[url]) {
+  if (rendition_cache.has(url)) {
     res.setHeader("Content-Type", "image/webp");
     return res.send(rendition_cache.get(url));
   }
