@@ -57,7 +57,8 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
         <div className="reward-container">
           {rewardTypes.map((type) => {
             const rewardData = getRewardData();
-            const isLocked = !rewardData;
+            const isLocked =
+              !rewardData || Object.keys(rewardData).length === 0;
             const isPinkslip = type === "Pinkslips";
             const baseImage = `/images/ttr_t_gui_bat_rewardsMenu_tabButton_normal.png`;
             const secondaryImage = isLocked
@@ -69,7 +70,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
                 key={type}
                 className="reward-btn"
                 onClick={() => setSelectedReward(type)}
-                disabled={isPinkslip}
+                disabled={isPinkslip || isLocked}
               >
                 {isLocked ? (
                   <>
