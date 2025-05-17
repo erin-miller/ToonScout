@@ -15,6 +15,8 @@ import { useToonContext } from "@/app/context/ToonContext";
 import { StoredToonData } from "@/app/types";
 import { hasNoSuit } from "./utils";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { BsPiggyBankFill } from "react-icons/bs";
+import { PiTipJarFill } from "react-icons/pi";
 
 export interface TabProps {
   toon: StoredToonData;
@@ -208,6 +210,24 @@ const TabContainer = () => {
                 className="w-512 h-512"
                 onClick={handleImageClick}
               />
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-6">
+              <div className="flex items-center space-x-1">
+                <PiTipJarFill className="text-2xl text-pink-800" />
+                <span className="text-lg">
+                  {toon.data.data.beans.jar.current}
+                </span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <BsPiggyBankFill className="text-2xl text-pink-800" />
+                <span className="text-lg">
+                  {toon.data.data.beans.bank.current}
+                </span>
+              </div>
+            </div>
+            <div className="text-lg">
+              Cattlelog Series {toon.data.data.cattlelog.series} #
+              {toon.data.data.cattlelog.issue}
             </div>
           </div>
 
