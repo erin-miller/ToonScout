@@ -9,6 +9,6 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-      - ./packages/bot/.env:/app/.env
+      - .env:/app/.env
     environment:
       - NODE_ENV=production
