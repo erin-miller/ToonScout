@@ -7,7 +7,7 @@
       "min": 1,
       "max": 5
     },
-    "image": "cog_images/flunky.png"
+    "image": "cog_images/flunky.webp"
   },
   {
     "name": "Pencil Pusher",
@@ -17,7 +17,7 @@
       "min": 2,
       "max": 6
     },
-    "image": "cog_images/pencil_pusher.png"
+    "image": "cog_images/pencil_pusher.webp"
   },
   {
     "name": "Yesman",
@@ -28,7 +28,7 @@
       "min": 3,
       "max": 7
     },
-    "image": "cog_images/yes_man.png"
+    "image": "cog_images/yes_man.webp"
   },
   {
     "name": "Micromanager",
@@ -38,7 +38,7 @@
       "min": 4,
       "max": 8
     },
-    "image": "cog_images/micromanager.png"
+    "image": "cog_images/micromanager.webp"
   },
   {
     "name": "Downsizer",
@@ -48,7 +48,7 @@
       "min": 5,
       "max": 9
     },
-    "image": "cog_images/downsizer.png"
+    "image": "cog_images/downsizer.webp"
   },
   {
     "name": "Head Hunter",
@@ -58,7 +58,7 @@
       "min": 6,
       "max": 10
     },
-    "image": "cog_images/head_hunter.png"
+    "image": "cog_images/head_hunter.webp"
   },
   {
     "name": "Corporate Raider",
@@ -68,7 +68,7 @@
       "min": 7,
       "max": 11
     },
-    "image": "cog_images/corporate_raider.png"
+    "image": "cog_images/corporate_raider.webp"
   },
   {
     "name": "Big Cheese",
@@ -79,7 +79,7 @@
       "min": 8,
       "max": 12
     },
-    "image": "cog_images/the_big_cheese.png"
+    "image": "cog_images/the_big_cheese.webp"
   },
   {
     "name": "Bottom Feeder",
@@ -89,7 +89,7 @@
       "min": 1,
       "max": 5
     },
-    "image": "cog_images/bottom_feeder.png"
+    "image": "cog_images/bottom_feeder.webp"
   },
   {
     "name": "Bloodsucker",
@@ -99,7 +99,7 @@
       "min": 2,
       "max": 6
     },
-    "image": "cog_images/bloodsucker.png"
+    "image": "cog_images/bloodsucker.webp"
   },
   {
     "name": "Double Talker",
@@ -109,7 +109,7 @@
       "min": 3,
       "max": 7
     },
-    "image": "cog_images/double_talker.png"
+    "image": "cog_images/double_talker.webp"
   },
   {
     "name": "Ambulance Chaser",
@@ -119,7 +119,7 @@
       "min": 4,
       "max": 8
     },
-    "image": "cog_images/ambulance_chaser.png"
+    "image": "cog_images/ambulance_chaser.webp"
   },
   {
     "name": "Back Stabber",
@@ -130,7 +130,7 @@
       "min": 5,
       "max": 9
     },
-    "image": "cog_images/backstabber.png"
+    "image": "cog_images/backstabber.webp"
   },
   {
     "name": "Spin Doctor",
@@ -140,7 +140,7 @@
       "min": 6,
       "max": 10
     },
-    "image": "cog_images/spin_doctor.png"
+    "image": "cog_images/spin_doctor.webp"
   },
   {
     "name": "Legal Eagle",
@@ -150,7 +150,7 @@
       "min": 7,
       "max": 11
     },
-    "image": "cog_images/legal_eagle.png"
+    "image": "cog_images/legal_eagle.webp"
   },
   {
     "name": "Big Wig",
@@ -160,7 +160,7 @@
       "min": 8,
       "max": 12
     },
-    "image": "cog_images/big_wig.png"
+    "image": "cog_images/big_wig.webp"
   },
   {
     "name": "Short Change",
@@ -170,7 +170,7 @@
       "min": 1,
       "max": 5
     },
-    "image": "cog_images/short_change.png"
+    "image": "cog_images/short_change.webp"
   },
   {
     "name": "Penny Pincher",
@@ -180,7 +180,7 @@
       "min": 2,
       "max": 6
     },
-    "image": "cog_images/penny_pincher.png"
+    "image": "cog_images/penny_pincher.webp"
   },
   {
     "name": "Tightwad",
@@ -190,7 +190,7 @@
       "min": 3,
       "max": 7
     },
-    "image": "cog_images/tightwad.png"
+    "image": "cog_images/tightwad.webp"
   },
   {
     "name": "Bean Counter",
@@ -200,7 +200,7 @@
       "min": 4,
       "max": 8
     },
-    "image": "cog_images/bean_counter.png"
+    "image": "cog_images/bean_counter.webp"
   },
   {
     "name": "Number Cruncher",
@@ -210,7 +210,7 @@
       "min": 5,
       "max": 9
     },
-    "image": "cog_images/number_cruncher.png"
+    "image": "cog_images/number_cruncher.webp"
   },
   {
     "name": "Money Bags",
@@ -220,7 +220,7 @@
       "min": 6,
       "max": 10
     },
-    "image": "cog_images/money_bags.png"
+    "image": "cog_images/money_bags.webp"
   },
   {
     "name": "Loan Shark",
@@ -230,7 +230,7 @@
       "min": 7,
       "max": 11
     },
-    "image": "cog_images/loan_shark.png"
+    "image": "cog_images/loan_shark.webp"
   },
   {
     "name": "Robber Baron",
@@ -240,7 +240,7 @@
       "min": 8,
       "max": 12
     },
-    "image": "cog_images/robber_baron.png"
+    "image": "cog_images/robber_baron.webp"
   },
   {
     "name": "Cold Caller",
@@ -250,7 +250,7 @@
       "min": 1,
       "max": 5
     },
-    "image": "cog_images/cold_caller.png"
+    "image": "cog_images/cold_caller.webp"
   },
   {
     "name": "Telemarketer",
@@ -260,7 +260,7 @@
       "min": 2,
       "max": 6
     },
-    "image": "cog_images/telemarketer.png"
+    "image": "cog_images/telemarketer.webp"
   },
   {
     "name": "Name Dropper",
@@ -270,7 +270,7 @@
       "min": 3,
       "max": 7
     },
-    "image": "cog_images/name_dropper.png"
+    "image": "cog_images/name_dropper.webp"
   },
   {
     "name": "Glad Hander",
@@ -280,7 +280,7 @@
       "min": 4,
       "max": 8
     },
-    "image": "cog_images/glad_hander.png"
+    "image": "cog_images/glad_hander.webp"
   },
   {
     "name": "Mover & Shaker",
@@ -291,7 +291,7 @@
       "min": 5,
       "max": 9
     },
-    "image": "cog_images/mover_and_shaker.png"
+    "image": "cog_images/mover_and_shaker.webp"
   },
   {
     "name": "Two Face",
@@ -302,7 +302,7 @@
       "min": 6,
       "max": 10
     },
-    "image": "cog_images/two_face.png"
+    "image": "cog_images/two_face.webp"
   },
   {
     "name": "Mingler",
@@ -313,7 +313,7 @@
       "min": 7,
       "max": 11
     },
-    "image": "cog_images/the_mingler.png"
+    "image": "cog_images/the_mingler.webp"
   },
   {
     "name": "Mr. Hollywood",
@@ -323,6 +323,6 @@
       "min": 8,
       "max": 12
     },
-    "image": "cog_images/mr_hollywood.png"
+    "image": "cog_images/mr_hollywood.webp"
   }
 ]

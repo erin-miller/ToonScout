@@ -3,8 +3,16 @@ services:
     extends:
       file: ./packages/api/docker-compose.yml
       service: api
-    env_file:
-      - .env.base
+    develop:
+      watch:
+        - action: sync
+          path: ./packages/api
+          target: /app
+          ignore:
+            - node_modules/
+            - .git/
+        - action: rebuild
+          path: ./packages/api/package.json
 
   mongo:
     extends:
@@ -15,13 +23,22 @@ services:
     extends:
       file: ./packages/bot/docker-compose.dev.yml
       service: bot
-    env_file:
-      - .env.base
 
   webapp:
     extends:
       file: ./packages/webapp/docker-compose.yml
       service: webapp
+    develop:
+      watch:
+        - action: sync
+          path: ./packages/webapp
+          target: /app
+          ignore:
+            - node_modules/
+            - .next/
+            - .git/
+        - action: rebuild
+          path: ./packages/webapp/package.json
 
   ngrok:
     image: ngrok/ngrok:latest

@@ -3,11 +3,21 @@ services:
     container_name: ts-webapp
     build:
       context: .
-      dockerfile: ./Dockerfile.dev
+      dockerfile: Dockerfile.dev
     volumes:
-      - .:/app
-      - /app/.next
       - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
     ports:
       - "5000:5000"
-    env_file: .env
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - node_modules/
+            - .next/
+            - .git/
+        - action: rebuild
+          path: package.json
