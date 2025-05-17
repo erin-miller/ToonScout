@@ -9,15 +9,6 @@ import {
   renderRemotes,
 } from "@/app/utils/rewardsUtils";
 
-// https://rendition.toontownrewritten.com/render/{dna}/portrait/256x256.webp
-type SOSCard = {
-  name: string;
-  stars: number;
-  ability: string;
-  track: string | null;
-  dna: string;
-};
-
 const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   const rewardTypes = ["SOS", "Unites", "Summons", "Pinkslips", "Remotes"];
   const [selectedReward, setSelectedReward] = useState(rewardTypes[0]);

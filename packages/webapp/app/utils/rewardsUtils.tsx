@@ -26,8 +26,8 @@ export const getRendition = (url: string) => {
 
 export const renderSOS = (toon: StoredToonData) => {
   const sosCards = toon.data.data.rewards.sos;
-  if (!sosCards) {
-    return <div>No SOS cards available.</div>;
+  if (!sosCards || Object.keys(sosCards).length === 0) {
+    return <div>No SOS cards available!</div>;
   }
 
   return (
