@@ -176,6 +176,20 @@ export interface ToonData {
     golf: Golf[];
     racing: Racing[];
     rewards: Rewards;
+    beans: {
+      jar: {
+        current: number;
+        max: number;
+      };
+      bank: {
+        current: number;
+        max: number;
+      };
+    };
+    cattlelog: {
+      series: number;
+      issue: number;
+    };
   };
 }
 
