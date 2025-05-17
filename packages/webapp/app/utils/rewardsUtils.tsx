@@ -33,7 +33,8 @@ export const renderSOS = (toon: StoredToonData) => {
     <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3">
       {Object.entries(sosCards).map(([card, count], index) => {
         const entry = SOS_TOONS.find((sosToon) => sosToon.name === card);
-        const title = entry ? formatTrack(entry) : "ERR";
+        const title =
+          entry && entry.track !== null ? formatTrack(entry) : "ERR";
         return (
           <div
             key={index}
@@ -45,7 +46,11 @@ export const renderSOS = (toon: StoredToonData) => {
                 title.length > 10 ? "text-sm" : "text-lg"
               }`}
             >
-              {entry ? formatTrack(entry) : <span>ERR</span>}
+              {entry && entry.track !== null ? (
+                formatTrack(entry)
+              ) : (
+                <span>ERR</span>
+              )}
             </div>
             <div className="">{card}</div>
             <div className="flex justify-center">
