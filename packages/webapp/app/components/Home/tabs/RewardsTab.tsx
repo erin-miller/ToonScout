@@ -298,7 +298,9 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
 
   const renderSummons = () => {};
 
-  const renderPinkslips = () => {};
+  const renderPinkslips = () => {
+    return <div>Hmm.. something went wrong!</div>;
+  };
 
   const renderRemotes = () => {};
 
