@@ -326,7 +326,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
         {allUnites.map(({ type, variants }) => (
           <div
             key={type}
-            className="text-2xl dark:text-blue-950 bg-gray-100 dark:bg-blue-500 border-2 border-gray-600 dark:border-blue-900 shadow-md p-4 rounded-lg"
+            className="text-2xl dark:text-blue-950 bg-gray-100 dark:bg-blue-400 border-2 border-gray-600 dark:border-blue-900 shadow-md p-4 rounded-lg"
           >
             <div className="font-bold text-2xl mb-2">{type}</div>
             {variants && Object.entries(variants).length > 0 ? (
