@@ -12,6 +12,8 @@ import {
 const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   const rewardTypes = ["SOS", "Unites", "Summons", "Pinkslips", "Remotes"];
   const [selectedReward, setSelectedReward] = useState(rewardTypes[0]);
+  const [hoveredButton, setHoveredButton] = useState<string | null>(null);
+  const [clickedButton, setClickedButton] = useState<string | null>(null);
 
   if (!toon.data.data.rewards) {
     return <div>No rewards available.</div>;
@@ -60,25 +62,37 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
             const isLocked =
               !rewardData || Object.keys(rewardData).length === 0;
             const isPinkslip = type === "Pinkslips";
-            const baseImage = `/images/ttr_t_gui_bat_rewardsMenu_tabButton_normal.png`;
+            const baseImageNormal = `/images/ttr_t_gui_bat_rewardsMenu_tabButton_normal.png`;
+            const baseImageHover = `/images/ttr_t_gui_bat_rewardsMenu_tabButton_hover.png`;
+            const baseImageClick = `/images/ttr_t_gui_bat_rewardsMenu_tabButton_click.png`;
             const secondaryImage = isLocked
               ? "/images/ttr_t_gui_bat_rewardsMenu_tabButton_locked.png"
               : `/rewards/${type.toLowerCase()}.png`;
+
+            const getButtonImage = () => {
+              if (clickedButton === type) return baseImageClick;
+              if (hoveredButton === type) return baseImageHover;
+              return baseImageNormal;
+            };
 
             return (
               <button
                 key={type}
                 className="reward-btn"
-                onClick={() => setSelectedReward(type)}
+                onClick={() => {
+                  setSelectedReward(type);
+                }}
+                onMouseEnter={() => setHoveredButton(type)}
+                onMouseLeave={() => setHoveredButton(null)}
+                onMouseDown={() => setClickedButton(type)}
+                onMouseUp={() => setClickedButton(null)} // Reset clickedButton on mouse release
                 disabled={isPinkslip || isLocked}
               >
                 {isLocked ? (
-                  <>
-                    <img src={secondaryImage} className="base-image" />
-                  </>
+                  <img src={secondaryImage} className="base-image" />
                 ) : (
                   <>
-                    <img src={baseImage} className="base-image" />
+                    <img src={getButtonImage()} className="base-image" />
                     <img src={secondaryImage} className="overlay-image" />
                     {isPinkslip && (
                       <div className="text-2xl lg:text-4xl 2xl:text-5xl justify-end items-end">
