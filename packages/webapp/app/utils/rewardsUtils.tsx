@@ -4,6 +4,7 @@ import { HiMiniUser, HiBuildingOffice, HiUserGroup } from "react-icons/hi2";
 import { getCogImage } from "@/app/utils/invasionUtils";
 import { StoredToonData } from "../types";
 import SOS_TOONS from "@/data/sos_toons.json";
+import COGS from "@/data/cogs.json";
 
 // Helper: Get the track name for SOS cards
 export const formatTrack = (entry: { track: string; ability: string }) => {
@@ -129,58 +130,73 @@ export const renderSummons = (toon: StoredToonData) => {
 
   const placeHolderCog = "/cog_images/flunky.webp";
 
-  let missingSingle = 0;
-  let missingBldg = 0;
-  let missingInv = 0;
+  let missingTotal = 0;
 
   Object.entries(summons).forEach(([_, { single, building, invasion }]) => {
-    if (!single) missingSingle++;
-    if (!building) missingBldg++;
-    if (!invasion) missingInv++;
+    if (!single) missingTotal++;
+    if (!building) missingTotal++;
+    if (!invasion) missingTotal++;
   });
+
+  const deptColors = {
+    Bossbot: "border-amber-700",
+    Lawbot: "border-gray-800",
+    Cashbot: "border-green-700",
+    Sellbot: "border-purple-700",
+  };
 
   return (
     <div>
       <div className="text-xl text-left mb-2">
-        <p>
-          You need {missingSingle + missingBldg + missingInv} more CJs to max
-          your book!
-        </p>
+        <p>You need {missingTotal} more CJs to max your book!</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
         {Object.entries(summons).map(
-          ([key, { name, single, building, invasion }]) => (
-            <div
-              key={key}
-              className="grid grid-cols-2 text-sm bg-gray-100 dark:bg-gray-400 border-2 border-gray-600 dark:border-blue-800 shadow-md p-2 rounded items-center"
-            >
-              <div className="flex flex-col items-center justify-center">
-                <div className="text-center text-xs">{name}</div>
-                <img
-                  src={getCogImage(name) || placeHolderCog}
-                  alt={name}
-                  className="w-16 h-16"
-                />
+          ([key, { name, single, building, invasion }]) => {
+            const cog = COGS.find(
+              (c) => c.name === name || c.fullname === name
+            );
+            const deptBorderColor =
+              deptColors[cog?.type as keyof typeof deptColors] ||
+              "bg-gray-1000";
+
+            return (
+              <div
+                key={key}
+                className={`grid grid-cols-2 text-sm bg-gray-100 border-2 ${deptBorderColor}  shadow-md p-2 rounded items-center`}
+              >
+                {/* cog name and image */}
+                <div className="flex flex-col items-center justify-center">
+                  <div className="text-center text-xs truncate w-full">
+                    {name}
+                  </div>
+                  <img
+                    src={getCogImage(name) || placeHolderCog}
+                    alt={name}
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
+                {/* summon stats */}
+                <div className="flex flex-col items-center space-y-1">
+                  <HiMiniUser
+                    className={`w-6 h-6 ${
+                      single ? "text-amber-500" : "text-gray-400"
+                    }`}
+                  />
+                  <HiBuildingOffice
+                    className={`w-6 h-6 ${
+                      building ? "text-amber-500" : "text-gray-400"
+                    }`}
+                  />
+                  <HiUserGroup
+                    className={`w-6 h-6 ${
+                      invasion ? "text-amber-500" : "text-gray-400"
+                    }`}
+                  />
+                </div>
               </div>
-              <div className="flex flex-col items-center space-y-1">
-                <HiMiniUser
-                  className={`w-6 h-6 ${
-                    single ? "text-amber-500" : "text-gray-400"
-                  }`}
-                />
-                <HiBuildingOffice
-                  className={`w-6 h-6 ${
-                    building ? "text-amber-500" : "text-gray-400"
-                  }`}
-                />
-                <HiUserGroup
-                  className={`w-6 h-6 ${
-                    invasion ? "text-amber-500" : "text-gray-400"
-                  }`}
-                />
-              </div>
-            </div>
-          )
+            );
+          }
         )}
       </div>
     </div>
