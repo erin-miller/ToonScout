@@ -320,7 +320,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
         {Object.entries(remotes).map(([type, remoteData], outerIndex) => (
           <div
             key={outerIndex}
-            className="text-2xl text-blue-900 font-minnie text-left"
+            className="text-2xl text-blue-900 dark:text-pink-300 font-minnie text-left"
           >
             {outerIndex === 0 && (
               <div className="font-bold mb-2">Damage Remotes</div>
