@@ -275,10 +275,9 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
               <div className="">{card}</div>
               {/* sos photo */}
               <div className="flex justify-center">
-                <img
-                  src={`https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`}
-                  className="w-16 h-16"
-                />
+                {getRendition(
+                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
+                )}
               </div>
               {/* sos count */}
               <div className="card-count">{count} Remaining</div>
@@ -343,6 +342,13 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
     return entry.ability == "Restock"
       ? `${entry.ability} ${entry.track}`
       : entry.track;
+  };
+
+  const getRendition = (url: string) => {
+    const proxyUrl = `${
+      process.env.NEXT_PUBLIC_API_HTTP
+    }/utility/get-rendition?url=${encodeURIComponent(url)}`;
+    return <img src={proxyUrl} className="w-16 h-16" />;
   };
 
   return (
