@@ -301,7 +301,55 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
     );
   };
 
-  const renderUnites = () => {};
+  const renderUnites = () => {
+    const unites = toon.data.data.rewards.unites;
+    if (!unites) {
+      return <div>No unites available.</div>;
+    }
+
+    const order = ["Gag-Up", "Toon-Up", "Jellybeans"];
+    const orderedUnites = order.map((type) => ({
+      type,
+      variants: unites[type as keyof typeof unites] || null,
+    }));
+    const unorderedUnites = Object.keys(unites)
+      .filter((type) => !order.includes(type))
+      .map((type) => ({
+        type,
+        variants: unites[type as keyof typeof unites] || null,
+      }));
+
+    const allUnites = [...orderedUnites, ...unorderedUnites];
+
+    return (
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
+        {allUnites.map(({ type, variants }) => (
+          <div
+            key={type}
+            className="text-2xl dark:text-blue-950 bg-gray-100 dark:bg-blue-500 border-2 border-gray-600 dark:border-blue-900 shadow-md p-4 rounded-lg"
+          >
+            <div className="font-bold text-2xl mb-2">{type}</div>
+            {variants && Object.entries(variants).length > 0 ? (
+              <ul className="space-y-2">
+                {Object.entries(variants)
+                  .sort(([a], [b]) => a.localeCompare(b)) // sort variants alphabetically
+                  .map(([variant, quantity], index) => (
+                    <li key={index} className="flex justify-between space-x-2">
+                      <span className="text-xl">{variant}</span>
+                      <span className="text-xl">{quantity}</span>
+                    </li>
+                  ))}
+              </ul>
+            ) : (
+              <div className="text-gray-500 dark:text-blue-800">
+                You have none of these unites!
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const renderSummons = () => {};
 
