@@ -12,10 +12,9 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(req, res, target) {
   const hidden = await updateHidden(target);
-  const status = hidden ? "Hidden" : "Visible";
   const embed = new EmbedBuilder()
     .setColor("White")
-    .setDescription(`Your visiblity is now set to: **${status}**`);
+    .setDescription(`Your visiblity is now set to: **${hidden}**`);
 
   return res.send({
     type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
