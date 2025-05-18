@@ -8,7 +8,8 @@ import COGS from "@/data/cogs.json";
 
 // Helper: Get the track name for SOS cards
 export const formatTrack = (entry: { track: string; ability: string }) => {
-  if (!entry.track) {
+  if (entry.track == null) {
+    console.log("null:" + entry);
     return entry.ability;
   }
   return entry.ability === "Restock"
@@ -47,11 +48,7 @@ export const renderSOS = (toon: StoredToonData) => {
                 title.length > 10 ? "text-sm" : "text-lg"
               }`}
             >
-              {entry && entry.track !== null ? (
-                formatTrack(entry)
-              ) : (
-                <span>ERR</span>
-              )}
+              {title}
             </div>
             <div className="">{card}</div>
             <div className="flex justify-center">
