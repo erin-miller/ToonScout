@@ -58,7 +58,6 @@ export const renderSOS = (toon: StoredToonData) => {
               }`}
             >
               {title}
-              {title}
             </div>
             <div className="">{card}</div>
             <div className="flex justify-center">
