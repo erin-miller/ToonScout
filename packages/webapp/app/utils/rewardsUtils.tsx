@@ -6,10 +6,17 @@ import { StoredToonData } from "../types";
 import SOS_TOONS from "@/data/sos_toons.json";
 import COGS from "@/data/cogs.json";
 
+type SOSCard = {
+  name: string;
+  dna: string;
+  track: string | null;
+  ability: string | null;
+  stars: number;
+};
+
 // Helper: Get the track name for SOS cards
-export const formatTrack = (entry: { track: string; ability: string }) => {
+export const formatTrack = (entry: any) => {
   if (entry.track == null) {
-    console.log("null:" + entry);
     return entry.ability;
   }
   return entry.ability === "Restock"
@@ -36,7 +43,9 @@ export const renderSOS = (toon: StoredToonData) => {
       {Object.entries(sosCards).map(([card, count], index) => {
         const entry = SOS_TOONS.find((sosToon) => sosToon.name === card);
         const title =
-          entry && entry.track !== null ? formatTrack(entry) : "ERR";
+          entry && (entry.track !== null || entry.ability !== null)
+            ? formatTrack(entry)
+            : "ERR";
         return (
           <div
             key={index}
