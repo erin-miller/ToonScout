@@ -3,6 +3,7 @@ import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "../../animations/AnimatedTab";
 import "/styles/tabs.css";
 import ExpContainer from "./components/ExpContainer";
+import Image from "next/image";
 
 const GagsTab: React.FC<TabProps> = ({ toon }) => {
   const tracks = Object.keys(toon.data.data.gags);
@@ -53,11 +54,13 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
                       )}
                       {/* gag slot */}
                       {isImageVisible ? (
-                        <img
+                        <Image
                           src={`/gags/${track.toLowerCase()}-${
                             gagIndex + 1
                           }.png`}
-                          aria-label={`${track} gag ${gagIndex + 1}`}
+                          alt={`${track} gag ${gagIndex + 1}`}
+                          width={48}
+                          height={48}
                           className="w-8 xl:w-10 2xl:w-12 object-contain"
                         />
                       ) : null}

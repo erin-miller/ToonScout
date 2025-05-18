@@ -1,5 +1,6 @@
 import React from "react";
 import LoadingDots from "@/app/components/animations/LoadingDots";
+import Image from "next/image";
 import "/styles/gamesteps.css";
 
 const GameSteps: React.FC = () => (
@@ -26,7 +27,13 @@ const GameSteps: React.FC = () => (
 const Step: React.FC<{ title: string; image: string }> = ({ title, image }) => (
   <div className="step-card">
     <h2 className="step-name">{title}</h2>
-    <img src={image} alt={title} className="mx-auto" />
+    <Image
+      src={image}
+      alt={title}
+      className="mx-auto"
+      width={256}
+      height={256}
+    />
   </div>
 );
 

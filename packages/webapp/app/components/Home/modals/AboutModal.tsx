@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "../../Modal";
+import Image from "next/image";
 
 interface AboutModalProps {
   isOpen: boolean;
@@ -14,25 +15,33 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
       <h3 className="text-3xl mb-2 minnie-title">Hi there!</h3>
       <div className="flex mt-4 items-center justify-center overflow-x-auto privacy-scrollbar">
         <div className="flex space-x-4">
-          <img
+          <Image
             src="/images/sunny.png"
             alt="Sunny"
             className="w-auto max-h-64 rounded-lg shadow-lg"
+            width={256}
+            height={256}
           />
-          <img
+          <Image
             src="/images/rainy.png"
             alt="Rainy"
             className="w-auto max-h-64 rounded-lg shadow-lg"
+            width={256}
+            height={256}
           />
-          <img
+          <Image
             src="/images/meerkataclysm.png"
             alt="Meerkataclysm"
             className="w-auto max-h-64 rounded-lg shadow-lg"
+            width={256}
+            height={256}
           />
-          <img
+          <Image
             src="/images/cloudy.png"
             alt="Cloudy"
             className="w-auto max-h-64 rounded-lg shadow-lg"
+            width={256}
+            height={256}
           />
         </div>
       </div>

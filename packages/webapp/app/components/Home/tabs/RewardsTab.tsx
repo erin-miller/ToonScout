@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
 import {
@@ -89,11 +90,29 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
                 disabled={isPinkslip || isLocked}
               >
                 {isLocked ? (
-                  <img src={secondaryImage} className="base-image" />
+                  <Image
+                    src={secondaryImage}
+                    className="base-image"
+                    alt={type + " locked"}
+                    width={112}
+                    height={112}
+                  />
                 ) : (
                   <>
-                    <img src={getButtonImage()} className="base-image" />
-                    <img src={secondaryImage} className="overlay-image" />
+                    <Image
+                      src={getButtonImage()}
+                      className="base-image"
+                      alt={type + " base"}
+                      width={112}
+                      height={112}
+                    />
+                    <Image
+                      src={secondaryImage}
+                      className="overlay-image"
+                      alt={type + " overlay"}
+                      width={84}
+                      height={84}
+                    />
                     {isPinkslip && (
                       <div className="text-2xl lg:text-4xl 2xl:text-5xl justify-end items-end">
                         <span className="absolute bottom-1.5 right-2.5 text-blue-950 ">

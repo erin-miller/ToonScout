@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Image from "next/image";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
 import { TabProps } from "./components/TabComponent";
 const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
@@ -94,10 +95,12 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
           className={`flex items-center justify-start w-full overflow-hidden rounded-lg shadow-lg border-4 border-${borderColor}`}
         >
           <div className="flex w-full h-full bg-violet-50 dark:bg-gray-1000 shadow-sm p-2">
-            <img
+            <Image
               src={`/flowers/${name}.png`}
               alt={name}
-              className={`w-16 h-16 object-contain rounded-full border-4 border-${borderColor}`}
+              width={64}
+              height={64}
+              className={`object-contain rounded-full border-4 border-${borderColor}`}
             />
             {/* right side of image */}
             <div className="flex flex-col items-start justify-start w-full h-full ml-2">
@@ -105,10 +108,12 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
               <div className="flex flex-row w-full gap-0.5">
                 {flowerCombo.map((combo: string, index: number) => {
                   return (
-                    <img
+                    <Image
                       src={`/flowers/jellybeans/${combo}.svg`}
                       alt={combo.slice(0, 1).toUpperCase()}
-                      className="w-6 h-6 object-contain"
+                      width={24}
+                      height={24}
+                      className="object-contain"
                       key={index}
                     />
                   );

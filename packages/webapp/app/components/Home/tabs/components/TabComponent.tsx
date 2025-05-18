@@ -17,6 +17,7 @@ import { hasNoSuit } from "./utils";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { BsPiggyBankFill } from "react-icons/bs";
 import { PiTipJarFill } from "react-icons/pi";
+import Image from "next/image";
 
 export interface TabProps {
   toon: StoredToonData;
@@ -204,9 +205,11 @@ const TabContainer = () => {
               </p>
             </div>
             <div className="toon-photo">
-              <img
+              <Image
                 src={getImage()}
                 alt={`${toon.data.data.toon.name} in pose ${pose}`}
+                width={512}
+                height={512}
                 className="w-512 h-512"
                 onClick={handleImageClick}
               />

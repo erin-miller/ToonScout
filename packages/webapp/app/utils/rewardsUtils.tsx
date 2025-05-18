@@ -5,6 +5,7 @@ import { getCogImage } from "@/app/utils/invasionUtils";
 import { StoredToonData } from "../types";
 import SOS_TOONS from "@/data/sos_toons.json";
 import COGS from "@/data/cogs.json";
+import Image from "next/image";
 
 type SOSCard = {
   name: string;
@@ -29,7 +30,16 @@ export const getRendition = (url: string) => {
   const proxyUrl = `${
     process.env.NEXT_PUBLIC_API_HTTP
   }/utility/get-rendition?url=${encodeURIComponent(url)}`;
-  return <img src={proxyUrl} className="w-16 h-16" />;
+  return (
+    <Image
+      src={proxyUrl}
+      className="w-16 h-16"
+      alt="SOS Card"
+      width={64}
+      height={64}
+      unoptimized
+    />
+  );
 };
 
 export const renderSOS = (toon: StoredToonData) => {
@@ -184,10 +194,12 @@ export const renderSummons = (toon: StoredToonData) => {
                   <div className="text-center text-sm truncate w-full">
                     {name}
                   </div>
-                  <img
+                  <Image
                     src={getCogImage(name) || placeHolderCog}
                     alt={name}
                     className="w-16 h-16 object-contain"
+                    width={64}
+                    height={64}
                   />
                 </div>
                 {/* summon stats */}
@@ -274,11 +286,20 @@ export const renderRemotes = (toon: StoredToonData) => {
                 </div>
                 <div className="flex items-center justify-center mt-2">
                   {type.startsWith("Damage") ? (
-                    <img src="/rewards/remotes.png" className="w-16 md:w-24" />
+                    <Image
+                      src="/rewards/remotes.png"
+                      className="w-16 md:w-24"
+                      alt="Damage Remote"
+                      width={96}
+                      height={96}
+                    />
                   ) : (
-                    <img
+                    <Image
                       src="/rewards/remotesheal.png"
                       className="w-16 md:w-24"
+                      alt="Heal Remote"
+                      width={96}
+                      height={96}
                     />
                   )}
                 </div>

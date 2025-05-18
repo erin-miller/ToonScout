@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { TabProps } from "./components/TabComponent";
 import { findSuit, getSuitName, hasNoSuit } from "./components/utils";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
+import Image from "next/image";
 const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
 
 interface PromotionPath {
@@ -136,7 +137,13 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             aria-selected={dept === deptChars.sellbot}
             disabled={!toon.data.data.cogsuits[deptChars.sellbot]?.hasDisguise}
           >
-            <img src="/images/emblem_sell.png" className="dept-photo" />
+            <Image
+              src="/images/emblem_sell.png"
+              className="dept-photo"
+              alt="Sellbot"
+              width={96}
+              height={96}
+            />
           </button>
           <button
             onClick={() => setDept(deptChars.cashbot)}
@@ -144,7 +151,13 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             aria-selected={dept === deptChars.cashbot}
             disabled={!toon.data.data.cogsuits[deptChars.cashbot]?.hasDisguise}
           >
-            <img src="/images/emblem_cash.png" className="dept-photo" />
+            <Image
+              src="/images/emblem_cash.png"
+              className="dept-photo"
+              alt="Cashbot"
+              width={96}
+              height={96}
+            />
           </button>
           <button
             onClick={() => setDept(deptChars.lawbot)}
@@ -152,7 +165,13 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             aria-selected={dept === deptChars.lawbot}
             disabled={!toon.data.data.cogsuits[deptChars.lawbot]?.hasDisguise}
           >
-            <img src="/images/emblem_law.png" className="dept-photo" />
+            <Image
+              src="/images/emblem_law.png"
+              className="dept-photo"
+              alt="Lawbot"
+              width={96}
+              height={96}
+            />
           </button>
           <button
             onClick={() => setDept(deptChars.bossbot)}
@@ -160,7 +179,13 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             aria-selected={dept === deptChars.bossbot}
             disabled={!toon.data.data.cogsuits[deptChars.bossbot]?.hasDisguise}
           >
-            <img src="/images/emblem_boss.png" className="dept-photo" />
+            <Image
+              src="/images/emblem_boss.png"
+              className="dept-photo"
+              alt="Bossbot"
+              width={96}
+              height={96}
+            />
           </button>
         </div>
         <div className="suit-container">

@@ -1,5 +1,6 @@
 import React from "react";
 import Toast from "./Toast";
+import Image from "next/image";
 
 interface InvasionToastProps {
   show: boolean;
@@ -27,10 +28,12 @@ const InvasionToast: React.FC<InvasionToastProps> = ({
       duration={duration}
     >
       {cogIcon && (
-        <img
+        <Image
           src={cogIcon}
           alt="Cog Icon"
-          className="w-10 h-10 rounded-full bg-white mr-2"
+          width={40}
+          height={40}
+          className="rounded-full bg-white mr-2"
         />
       )}
     </Toast>

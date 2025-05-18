@@ -14,6 +14,13 @@ const nextConfig = {
     NEXT_PUBLIC_BOT_WSS: process.env.NEXT_PUBLIC_BOT_WSS,
     // Add more as needed
   },
+  images: {
+    domains: [
+      "rendition.toontownrewritten.com",
+      "cdn.toontownrewritten.com",
+      "localhost",
+    ],
+  },
 };
 
 export default nextConfig;

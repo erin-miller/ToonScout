@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "../../Modal";
+import Image from "next/image";
 
 interface GameStepsModalProps {
   isOpen: boolean;
@@ -31,7 +32,13 @@ const GameStepsModal: React.FC<GameStepsModalProps> = ({ isOpen, onClose }) => {
 const Step: React.FC<{ title: string; image: string }> = ({ title, image }) => (
   <div className="text-2xl">
     <h2 className="pb-2 ">{title}</h2>
-    <img src={image} alt={title} className="mx-auto" />
+    <Image
+      src={image}
+      alt={title}
+      className="mx-auto"
+      width={256}
+      height={256}
+    />
   </div>
 );
 

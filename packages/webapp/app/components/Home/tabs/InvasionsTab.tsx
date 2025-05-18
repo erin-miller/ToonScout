@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
+import Image from "next/image";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "../../animations/AnimatedTab";
 import { useInvasionContext } from "@/app/context/InvasionContext";
@@ -110,9 +111,11 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                       {(() => {
                         const img = getCogImage(invasion.cog);
                         return img ? (
-                          <img
+                          <Image
                             src={img}
                             alt={invasion.cog}
+                            width={48}
+                            height={48}
                             className="inline-block w-12 h-12 rounded-full border-2 border-pink-200 bg-white shadow-md"
                             style={{ objectFit: "cover" }}
                           />
