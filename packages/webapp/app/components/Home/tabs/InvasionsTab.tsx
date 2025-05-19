@@ -16,6 +16,11 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
   const [now, setNow] = useState(Date.now());
   const [displayedInvasions, setDisplayedInvasions] = useState(invasions);
 
+  // Track previous estimatedTimeLeft for each invasion
+  const prevTimeLeftRef = React.useRef<
+    Record<string, number | null | undefined>
+  >({});
+
   // Update every second for live elapsed time
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 1000);
@@ -34,6 +39,30 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
     if (prevKeys !== newKeys) {
       setDisplayedInvasions(invasions);
     }
+  }, [invasions]);
+
+  useEffect(() => {
+    // When invasions update, debounce small increases in estimatedTimeLeft
+    const updated = displayedInvasions.map((inv) => {
+      const key = `${inv.cog}|${inv.district}`;
+      const prev = prevTimeLeftRef.current[key];
+      const curr = inv.estimatedTimeLeft;
+      if (
+        typeof prev === "number" &&
+        typeof curr === "number" &&
+        curr > prev &&
+        curr - prev < 120 // less than 2 minutes increase
+      ) {
+        // Keep the previous value to avoid jitter
+        return { ...inv, estimatedTimeLeft: prev };
+      } else {
+        // Update to new value
+        prevTimeLeftRef.current[key] = curr;
+        return inv;
+      }
+    });
+    setDisplayedInvasions(updated);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [invasions]);
 
   // Get relevant invasions for the current toon's tasks
@@ -77,6 +106,20 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
       .padStart(2, "0")}`;
   }
 
+  // Helper to format time left as HH:MM:SS, MM:SS, or SS
+  function formatTimeLeft(secondsLeft: number) {
+    if (secondsLeft <= 0) return "Invasion ending soon...";
+    const hr = Math.floor(secondsLeft / 3600);
+    const min = Math.floor((secondsLeft % 3600) / 60);
+    const sec = Math.floor(secondsLeft % 60);
+    if (hr > 0)
+      return `${hr}:${min.toString().padStart(2, "0")}:${sec
+        .toString()
+        .padStart(2, "0")}`;
+    if (min > 0) return `${min}:${sec.toString().padStart(2, "0")}`;
+    return `${sec}s`;
+  }
+
   return (
     <AnimatedTabContent>
       <div className="flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-2">
@@ -92,6 +135,14 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                 (rel) =>
                   rel.cog === invasion.cog && rel.district === invasion.district
               );
+              // Calculate time left if available
+              let timeLeft = null;
+              if (
+                typeof invasion.estimatedTimeLeft === "number" &&
+                invasion.estimatedTimeLeft > Math.floor(now / 1000)
+              ) {
+                timeLeft = invasion.estimatedTimeLeft - Math.floor(now / 1000);
+              }
               return (
                 <motion.div
                   key={`${invasion.asOf}-${invasion.district}-${invasion.cog}`}
@@ -168,6 +219,16 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                         </span>
                       </span>
                     </div>
+                    {typeof timeLeft === "number" && (
+                      <div className="flex items-center gap-1">
+                        <span className="inline-block font-bold text-blue-700 dark:text-blue-300">
+                          Est. Time Left:
+                        </span>
+                        <span className="font-mono">
+                          {formatTimeLeft(timeLeft)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               );

@@ -5,6 +5,7 @@ import {
   FlowerCalculator,
 } from "toonapi-calculator";
 import fetch from "node-fetch";
+import { LRUCache } from "lru-cache";
 
 const router = express.Router();
 
@@ -92,50 +93,26 @@ router.post("/get-garden", async (req, res) => {
   }
 });
 
-// In-memory cache for invasions
-let cachedInvasions = null;
-let lastFetchTime = 0;
-const INVASION_CACHE_MS = 60 * 1000; // 60 seconds
-
-/**
- * @typedef {Object} InvasionDetails
- * @property {number} asOf - Timestamp when invasion info was updated
- * @property {string} type - The cog type (e.g., "Ambulance Chaser", "Bottom Feeder")
- * @property {string} progress - Current invasion progress as "current/total" (e.g., "1498/3000")
- * @property {number} startTimestamp - Unix timestamp when the invasion started
- */
-
-/**
- * @typedef {Object} TTRInvasionResponse
- * @property {null|string} error - Error message if any, null if successful
- * @property {Object.<string, InvasionDetails>} invasions - Map of district names to invasion details
- * @property {number} lastUpdated - Unix timestamp of when the data was last updated
- */
-
 // Proxy TTR invasions API with in-memory caching and CORS
+let getCachedInvasions;
+(async () => {
+  const invasionHelpers = await import("./invasionHelpers.js");
+  getCachedInvasions = invasionHelpers.getCachedInvasions;
+})();
+
 router.get("/get-invasions", async (req, res) => {
   res.set("Cache-Control", "public, max-age=60"); // Allow clients/proxies to cache for 60 seconds
   const now = Date.now();
   if (cachedInvasions && now - lastFetchTime < INVASION_CACHE_MS) {
     return res.status(200).json(cachedInvasions);
   }
-  try {
-    const response = await fetch(
-      "https://www.toontownrewritten.com/api/invasions",
-      {
-        headers: { "User-Agent": process.env.USER_AGENT },
-      }
-    );
-    if (!response.ok) {
-      return res.status(502).json({ error: "Failed to fetch from TTR API" });
-    }
-    const data = await response.json();
-    cachedInvasions = data;
-    lastFetchTime = now;
-    return res.status(200).json(data);
-  } catch (error) {
-    return res.status(500).json({ error: error.message });
+  const apiResponse = await getCachedInvasions();
+  if (apiResponse.error) {
+    // 502 for fetch error, 500 for other errors
+    const status = apiResponse.error.includes("fetch") ? 502 : 500;
+    return res.status(status).json(apiResponse);
   }
+  return res.status(200).json(apiResponse);
 });
 
 const MAX_IMAGE_SIZE_BYTES = 512 * 1024; // 512 KB

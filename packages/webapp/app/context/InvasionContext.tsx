@@ -17,6 +17,8 @@ const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
  * @property {string} type - The cog type (e.g., "Ambulance Chaser", "Bottom Feeder")
  * @property {string} progress - Current invasion progress as "current/total" (e.g., "1498/3000")
  * @property {number} startTimestamp - Unix timestamp when the invasion started
+ * @property {number|null} estimatedTimeLeft - Estimated time left for the invasion to end
+ * @property {number} rate - Rate of progress for the invasion
  */
 
 /**
@@ -37,6 +39,8 @@ interface InvasionData {
   progress: string;
   startTimestamp: number;
   district: string;
+  estimatedTimeLeft?: number | null;
+  rate?: number;
 }
 
 // TypeScript interface for the API response
@@ -48,6 +52,8 @@ interface TTRInvasionResponse {
       type: string;
       progress: string;
       startTimestamp: number;
+      estimatedTimeLeft?: number | null;
+      rate?: number;
     };
   };
   lastUpdated: number;
@@ -95,6 +101,8 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
             progress: invasion.progress,
             startTimestamp: invasion.startTimestamp,
             district,
+            estimatedTimeLeft: invasion.estimatedTimeLeft,
+            rate: invasion.rate,
           })
         );
 
