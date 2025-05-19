@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import { recordRate, getHistoricalRate } from "./invasionHistory.js";
 
 /**
  * @typedef {Object} InvasionDetails
@@ -12,6 +13,10 @@ import fetch from "node-fetch";
  * @typedef {Object} InvasionStats
  * @property {number} rate - Estimated cogs defeated per minute
  * @property {number|null} estimatedTimeLeft - Unix timestamp (seconds) when invasion is expected to end, or null if unknown
+ * @property {boolean} usedHistorical - Whether historical rate was used
+ * @property {number|null} historicalRate - Historical average rate
+ * @property {number} historicalSampleSize - Sample size for historical rate
+ * @property {string|null} speedStatus - Speed status compared to historical rate
  */
 
 /**
@@ -22,6 +27,10 @@ import fetch from "node-fetch";
  * @property {number} startTimestamp
  * @property {number} rate
  * @property {number|null} estimatedTimeLeft
+ * @property {boolean} usedHistorical
+ * @property {number|null} historicalRate
+ * @property {number} historicalSampleSize
+ * @property {string|null} speedStatus
  */
 
 /**
@@ -51,31 +60,76 @@ function parseProgress(progress) {
  * @param {string} district
  * @param {InvasionDetails} invasion
  * @param {Object.<string, InvasionDetails>} prevInvasions
- * @returns {InvasionStats}
+ * @returns {Promise<InvasionStats>}
  */
-function estimateInvasionStats(district, invasion, prevInvasions) {
+async function estimateInvasionStats(district, invasion, prevInvasions) {
   const [current, total] = parseProgress(invasion.progress);
   const prev = prevInvasions[district];
   let rate = 100; // default cogs/min
   let estimatedTimeLeft = null;
+  let usedHistorical = false;
+  let historicalRate = null;
+  let historicalSampleSize = 0;
+  let speedStatus = null;
+  // Use historical if invasion is new (<10min) or no prev data
   if (
-    prev &&
-    prev.type === invasion.type &&
-    prev.startTimestamp === invasion.startTimestamp
+    !prev ||
+    prev.type !== invasion.type ||
+    prev.startTimestamp !== invasion.startTimestamp ||
+    invasion.asOf - invasion.startTimestamp < 600
   ) {
+    // Try to use historical average
+    const { avg, n } = await getHistoricalRate(
+      district,
+      invasion.type,
+      total,
+      invasion.asOf
+    );
+    if (avg) {
+      rate = avg;
+      usedHistorical = true;
+      historicalRate = avg;
+      historicalSampleSize = n;
+    }
+  } else {
     const [prevCurrent] = parseProgress(prev.progress);
     const deltaCogs = current - prevCurrent;
     const deltaTime = (invasion.asOf - prev.asOf) / 60; // seconds to minutes
     if (deltaCogs > 0 && deltaTime > 0) {
       rate = deltaCogs / deltaTime;
+      await recordRate(district, invasion.type, total, invasion.asOf, rate);
     }
+    // Get historical for speed comparison
+    const { avg, n } = await getHistoricalRate(
+      district,
+      invasion.type,
+      total,
+      invasion.asOf
+    );
+    if (avg) {
+      historicalRate = avg;
+      historicalSampleSize = n;
+    }
+  }
+  // Speed status
+  if (historicalRate) {
+    if (rate > historicalRate * 1.2) speedStatus = "Faster than Usual";
+    else if (rate < historicalRate * 0.8) speedStatus = "Slower than Usual";
+    else speedStatus = "About Average";
   }
   const cogsLeft = total - current;
   if (rate > 0) {
     const minsLeft = cogsLeft / rate;
     estimatedTimeLeft = Math.round(invasion.asOf + minsLeft * 60); // asOf is a timestamp in seconds
   }
-  return { rate: Math.round(rate), estimatedTimeLeft };
+  return {
+    rate: Math.round(rate),
+    estimatedTimeLeft,
+    usedHistorical,
+    historicalRate: historicalRate ? Math.round(historicalRate) : null,
+    historicalSampleSize,
+    speedStatus,
+  };
 }
 
 /**
@@ -85,10 +139,14 @@ function estimateInvasionStats(district, invasion, prevInvasions) {
  * @param {string|null} [error=null] - Error message if any
  * @returns {ApiTTRInvasionResponse}
  */
-function formatApiInvasionResponse(data, prevInvasions, error = null) {
+async function formatApiInvasionResponse(data, prevInvasions, error = null) {
   const invasionsWithStats = {};
   for (const [district, invasion] of Object.entries(data.invasions || {})) {
-    const stats = estimateInvasionStats(district, invasion, prevInvasions);
+    const stats = await estimateInvasionStats(
+      district,
+      invasion,
+      prevInvasions
+    );
     invasionsWithStats[district] = { ...invasion, ...stats };
   }
   return {
@@ -125,7 +183,10 @@ async function getCachedInvasions() {
     }
     /** @type {TTRInvasionResponse} */
     const data = await response.json();
-    const apiResponse = formatApiInvasionResponse(data, global.prevInvasions);
+    const apiResponse = await formatApiInvasionResponse(
+      data,
+      global.prevInvasions
+    );
     cachedInvasions = apiResponse;
     lastFetchTime = now;
     global.prevInvasions = { ...data.invasions };

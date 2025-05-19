@@ -3,7 +3,12 @@ import Image from "next/image";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "../../animations/AnimatedTab";
 import { useInvasionContext } from "@/app/context/InvasionContext";
-import { FaGlobe, FaClock, FaHourglassStart } from "react-icons/fa";
+import {
+  FaGlobe,
+  FaClock,
+  FaHourglassStart,
+  FaTachometerAlt,
+} from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   getCogImage,
@@ -14,8 +19,6 @@ import {
 const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
   const { invasions, loading } = useInvasionContext();
   const [now, setNow] = useState(Date.now());
-  const [displayedInvasions, setDisplayedInvasions] = useState(invasions);
-
   // Track previous estimatedTimeLeft for each invasion
   const prevTimeLeftRef = React.useRef<
     Record<string, number | null | undefined>
@@ -27,42 +30,25 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
     return () => clearInterval(interval);
   }, []);
 
-  // Only update displayedInvasions if the set of (cog+district) keys changes
-  useEffect(() => {
-    const getKeys = (arr: typeof invasions) =>
-      arr
-        .map((inv) => `${inv.cog}|${inv.district}`)
-        .sort()
-        .join(",");
-    const prevKeys = getKeys(displayedInvasions);
-    const newKeys = getKeys(invasions);
-    if (prevKeys !== newKeys) {
-      setDisplayedInvasions(invasions);
-    }
-  }, [invasions]);
-
-  useEffect(() => {
-    // When invasions update, debounce small increases in estimatedTimeLeft
-    const updated = displayedInvasions.map((inv) => {
+  // Debounce small increases in estimatedTimeLeft, but do not mutate the invasions list
+  const debouncedInvasions = useMemo(() => {
+    return invasions.map((inv) => {
       const key = `${inv.cog}|${inv.district}`;
       const prev = prevTimeLeftRef.current[key];
       const curr = inv.estimatedTimeLeft;
+      let estimatedTimeLeft = curr;
       if (
         typeof prev === "number" &&
         typeof curr === "number" &&
         curr > prev &&
         curr - prev < 120 // less than 2 minutes increase
       ) {
-        // Keep the previous value to avoid jitter
-        return { ...inv, estimatedTimeLeft: prev };
+        estimatedTimeLeft = prev;
       } else {
-        // Update to new value
         prevTimeLeftRef.current[key] = curr;
-        return inv;
       }
+      return { ...inv, estimatedTimeLeft };
     });
-    setDisplayedInvasions(updated);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [invasions]);
 
   // Get relevant invasions for the current toon's tasks
@@ -70,24 +56,24 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
     if (!toon?.data?.data?.tasks) return [];
     return getRelevantInvasionsForTasks(
       toon.data.data.tasks,
-      displayedInvasions
+      debouncedInvasions
     );
-  }, [toon, displayedInvasions]);
+  }, [toon, debouncedInvasions]);
 
   // Resort invasions: relevant at the top
   const sortedInvasions = useMemo(() => {
-    if (!relevantInvasions.length) return displayedInvasions;
+    if (!relevantInvasions.length) return debouncedInvasions;
     const relevantKeys = new Set(
       relevantInvasions.map((inv) => `${inv.cog}|${inv.district}`)
     );
-    const relevant = displayedInvasions.filter((inv) =>
+    const relevant = debouncedInvasions.filter((inv) =>
       relevantKeys.has(`${inv.cog}|${inv.district}`)
     );
-    const others = displayedInvasions.filter(
+    const others = debouncedInvasions.filter(
       (inv) => !relevantKeys.has(`${inv.cog}|${inv.district}`)
     );
     return [...relevant, ...others];
-  }, [displayedInvasions, relevantInvasions]);
+  }, [debouncedInvasions, relevantInvasions]);
 
   // Helper to parse progress string like "123/500"
   function parseProgress(progress: string) {
@@ -124,8 +110,13 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
     <AnimatedTabContent>
       <div className="flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-2">
         {loading ? (
-          <div className="text-center">Loading...</div>
-        ) : displayedInvasions.length > 0 ? (
+          <div className="flex items-center justify-center py-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-500"></div>
+            <span className="ml-3 text-gray-600 dark:text-gray-400">
+              Loading invasions...
+            </span>
+          </div>
+        ) : sortedInvasions.length > 0 ? (
           <AnimatePresence initial={false}>
             {sortedInvasions.map((invasion) => {
               const { current, total } = parseProgress(invasion.progress);
@@ -151,10 +142,10 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                   exit={{ y: -40, opacity: 0 }}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   layout
-                  className={`p-4 border-2 rounded-xl bg-white dark:bg-gray-1100 shadow-md space-y-2 ${
+                  className={`p-4 border-2 rounded-xl bg-white dark:bg-gray-800 shadow-md space-y-3 transition-all duration-300 hover:shadow-lg ${
                     isRelevant
-                      ? "border-yellow-400 border-2 dark:ring-yellow-500"
-                      : ""
+                      ? "border-yellow-400 ring-2 ring-yellow-200 dark:ring-yellow-600"
+                      : "border-gray-200 dark:border-gray-600"
                   }`}
                 >
                   <div className="flex flex-row items-center justify-between gap-2">
@@ -181,23 +172,58 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                         )}
                       </h3>
                     </div>
-                    <div
-                      className="flex items-center gap-2 text-blue-900 dark:text-blue-300"
-                      style={{ alignSelf: "flex-start" }}
-                    >
-                      <FaGlobe className="inline-block mr-1" />
-                      <span className="font-semibold">{invasion.district}</span>
+                    <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2 text-blue-900 dark:text-blue-300">
+                        <FaGlobe className="inline-block mr-1" />
+                        <span className="font-semibold">
+                          {invasion.district}
+                        </span>
+                      </div>
+                      {/* Speed indicator */}
+                      {typeof invasion.speedStatus === "string" && (
+                        <div
+                          className={`inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                            invasion.speedStatus === "Faster than Usual"
+                              ? "bg-green-100 text-green-800 border border-green-200 dark:bg-green-900 dark:text-green-200 dark:border-green-700"
+                              : invasion.speedStatus === "Slower than Usual"
+                              ? "bg-red-100 text-red-800 border border-red-200 dark:bg-red-900 dark:text-red-200 dark:border-red-700"
+                              : "bg-gray-100 text-gray-700 border border-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600"
+                          }`}
+                          title={invasion.speedStatus}
+                        >
+                          <span className="text-lg">
+                            {invasion.speedStatus === "Faster than Usual" &&
+                              "⚡"}
+                            {invasion.speedStatus === "Slower than Usual" &&
+                              "🐢"}
+                            {invasion.speedStatus === "About Average" && "🙂"}
+                          </span>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">
+                            Speed:
+                          </span>
+                          <span className="font-semibold">
+                            {invasion.speedStatus === "Faster than Usual" &&
+                              "Fast"}
+                            {invasion.speedStatus === "Slower than Usual" &&
+                              "Slow"}
+                            {invasion.speedStatus === "About Average" &&
+                              "Normal"}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col items-center w-full">
                     <div className="text-center text-base font-medium mb-1">
                       Progress: {invasion.progress} ({percent.toFixed(0)}%)
                     </div>
-                    <div className="w-full max-w-xs h-4 bg-gray-200 dark:bg-gray-900 rounded-full overflow-hidden mb-1">
-                      <div
-                        className="h-full bg-pink-600 dark:bg-pink-400 transition-all duration-500"
-                        style={{ width: percent + "%" }}
-                      ></div>
+                    <div className="w-full max-w-xs h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-1">
+                      <motion.div
+                        className="h-full bg-pink-600 dark:bg-pink-400 transition-all duration-500 rounded-full"
+                        initial={{ width: 0 }}
+                        animate={{ width: `${percent}%` }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                      />
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-gray-700 dark:text-gray-200 text-sm mt-2">
@@ -219,23 +245,33 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                         </span>
                       </span>
                     </div>
-                    {typeof timeLeft === "number" && (
-                      <div className="flex items-center gap-1">
-                        <span className="inline-block font-bold text-blue-700 dark:text-blue-300">
-                          Est. Time Left:
-                        </span>
-                        <span className="font-mono">
-                          {formatTimeLeft(timeLeft)}
-                        </span>
-                      </div>
-                    )}
+                    <div className="flex items-center gap-1">
+                      <span className="inline-block font-bold text-blue-700 dark:text-blue-300">
+                        Est. Time Left:
+                      </span>
+                      <span className="font-mono">
+                        {typeof timeLeft === "number"
+                          ? formatTimeLeft(timeLeft)
+                          : "Invasion ending soon..."}
+                      </span>
+                    </div>
                   </div>
                 </motion.div>
               );
             })}
           </AnimatePresence>
         ) : (
-          <div>No active invasions</div>
+          <div className="text-center py-12">
+            <div className="mb-4">
+              <FaGlobe size={48} className="mx-auto text-gray-400" />
+            </div>
+            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">
+              No Active Invasions
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Check back later for new invasions to appear!
+            </p>
+          </div>
         )}
       </div>
     </AnimatedTabContent>
