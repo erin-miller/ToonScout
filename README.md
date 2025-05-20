@@ -10,7 +10,7 @@ You can access ToonScout at [scouttoon.info](https://scouttoon.info).
 
 If you have any questions or need help, please join the [ToonScout Discord server](https://discord.gg/Qb929SrdRP) and open a ticket.
 
-## Contributing
+# Contributing
 
 If you would like to contribute, please ask for assignments to issues or submit a pull request.
 
@@ -36,23 +36,19 @@ To test Discord interactions locally, your Discord bot must allow for redirects 
 
 Furthermore, two _optional_ network tunnels are established for the webapp and bot server with Ngrok, seen at [localhost:4040](http://localhost:4040). You need a [Ngrok auth token](https://dashboard.ngrok.com/get-started/your-authtoken) in `ngrok.yml` to run the tunnel.
 
-The tunnels are especially helpful for testing Discord interactions between the webapp and the bot. Please be patient as you first enter the tunnel, as Next.js has to build the app.
+The tunnels are especially helpful for testing Discord interactions between the webapp and the bot. Please be patient as you first enter the webapp tunnel, as Next.js has to build the app.
 
-Finally, ensure that you update necessary environment variables in each package's `.env` file as well as the root `.env.base` file. Each directory has a `.env.example` file that can be used as a template.
-
-# Hot Reload with Docker Compose
+## Hot Reload with Docker Compose
 
 This repo supports hot reload for both the webapp and API using Docker Compose's `develop: watch:` feature.
 
-## Quick Start
+### Quick Start
 
 1. **Start dev environment with hot reload:**
 
    ```sh
    docker compose up --watch
    ```
-
-   (Run from the repo root)
 
 2. **Edit code in `packages/webapp` or `packages/api`.**
    - Changes sync automatically and trigger reloads in the containers.
