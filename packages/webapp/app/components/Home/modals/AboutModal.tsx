@@ -17,6 +17,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
       <div className="flex mt-4 items-center justify-center overflow-x-auto privacy-scrollbar">
         <div className="flex space-x-4">
           <Image
+            unoptimized
             src={imageAssets.sunny}
             alt="Sunny"
             className="w-auto max-h-64 rounded-lg shadow-lg"
@@ -24,6 +25,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
             height={256}
           />
           <Image
+            unoptimized
             src={imageAssets.rainy}
             alt="Rainy"
             className="w-auto max-h-64 rounded-lg shadow-lg"
@@ -31,6 +33,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
             height={256}
           />
           <Image
+            unoptimized
             src={imageAssets.meerkataclysm}
             alt="Meerkataclysm"
             className="w-auto max-h-64 rounded-lg shadow-lg"
@@ -38,6 +41,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
             height={256}
           />
           <Image
+            unoptimized
             src={imageAssets.cloudy}
             alt="Cloudy"
             className="w-auto max-h-64 rounded-lg shadow-lg"

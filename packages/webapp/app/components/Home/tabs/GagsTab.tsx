@@ -54,6 +54,7 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
                       {/* gag slot */}
                       {isImageVisible && gagImage && (
                         <Image
+                          unoptimized
                           src={gagImage}
                           alt={`${track} gag ${gagIndex + 1}`}
                           width={48}

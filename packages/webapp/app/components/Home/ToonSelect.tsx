@@ -53,6 +53,7 @@ const ToonSelect = () => {
         onClick={handleDropdown}
       >
         <Image
+          unoptimized
           src={getImage(curr?.data.data.toon.style)}
           alt="Toon Portrait"
           width={48}
@@ -69,6 +70,7 @@ const ToonSelect = () => {
                 onClick={handleToonSelect(index)}
               >
                 <Image
+                  unoptimized
                   src={getImage(toon.data.data.toon.style)}
                   alt="Toon Portrait"
                   className="hidden lg:block w-10 h-10 rounded-full border-2 border-pink-300 bg-pink-100 dark:bg-pink-900"

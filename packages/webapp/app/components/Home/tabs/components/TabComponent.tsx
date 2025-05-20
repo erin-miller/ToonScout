@@ -114,10 +114,12 @@ const TabContainer = () => {
     "waving",
   ];
 
-  // Preload all pose images using hidden <Image /> components for optimal Next.js caching
+  // Preload all pose images using hidden <Image
+unoptimized /> components for optimal Next.js caching
   const dna = toon.data.data.toon.style;
   const preloadImages = poses.map((poseName) => (
     <Image
+unoptimized
       key={poseName}
       src={`https://rendition.toontownrewritten.com/render/${dna}/${poseName}/1024x1024.png`}
       alt={toon.data.data.toon.name + " preload " + poseName}
@@ -153,7 +155,8 @@ const TabContainer = () => {
 
   return (
     <div>
-      {/* Preload all pose images using hidden <Image /> components */}
+      {/* Preload all pose images using hidden <Image
+unoptimized /> components */}
       {preloadImages}
       {/* list of tabs */}
       <div>
@@ -222,6 +225,7 @@ const TabContainer = () => {
             </div>
             <div className="toon-photo">
               <Image
+unoptimized
                 src={getImage()}
                 alt={`${toon.data.data.toon.name} in pose ${pose}`}
                 width={512}

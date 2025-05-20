@@ -34,6 +34,7 @@ export const getRendition = (url: string) => {
   }/utility/get-rendition?url=${encodeURIComponent(url)}`;
   return (
     <Image
+      unoptimized
       src={proxyUrl}
       className="w-16 h-16"
       alt="SOS Card"
@@ -197,6 +198,7 @@ export const renderSummons = (toon: StoredToonData) => {
                     {name}
                   </div>
                   <Image
+                    unoptimized
                     src={getCogImage(name) || placeHolderCog}
                     alt={name}
                     className="w-16 h-16 object-contain"
@@ -289,6 +291,7 @@ export const renderRemotes = (toon: StoredToonData) => {
                 <div className="flex items-center justify-center mt-2">
                   {type.startsWith("Damage") ? (
                     <Image
+                      unoptimized
                       src={rewardImages.remotes}
                       className="w-16 md:w-24"
                       alt="Damage Remote"
@@ -297,6 +300,7 @@ export const renderRemotes = (toon: StoredToonData) => {
                     />
                   ) : (
                     <Image
+                      unoptimized
                       src={rewardImages.remotesheal}
                       className="w-16 md:w-24"
                       alt="Heal Remote"

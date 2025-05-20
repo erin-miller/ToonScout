@@ -146,6 +146,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
         {tasks.map((task, index) => (
           <div key={index} className="task-container">
             <Image
+              unoptimized
               src={imageAssets.task}
               className="task-size"
               alt="Task"

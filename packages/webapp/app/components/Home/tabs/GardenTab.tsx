@@ -98,6 +98,7 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
         >
           <div className="flex w-full h-full bg-violet-50 dark:bg-gray-1000 shadow-sm p-2">
             <Image
+              unoptimized
               src={flowerImages[flowerKey(name)]}
               alt={name}
               width={64}
@@ -111,6 +112,7 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
                 {flowerCombo.map((combo: string, index: number) => {
                   return (
                     <Image
+                      unoptimized
                       src={`/flowers/jellybeans/${combo}.svg`}
                       alt={combo.slice(0, 1).toUpperCase()}
                       width={24}

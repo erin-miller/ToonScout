@@ -139,6 +139,7 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             disabled={!toon.data.data.cogsuits[deptChars.sellbot]?.hasDisguise}
           >
             <Image
+              unoptimized
               src={imageAssets.emblem_sell}
               className="dept-photo"
               alt="Sellbot"
@@ -153,6 +154,7 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             disabled={!toon.data.data.cogsuits[deptChars.cashbot]?.hasDisguise}
           >
             <Image
+              unoptimized
               src={imageAssets.emblem_cash}
               className="dept-photo"
               alt="Cashbot"
@@ -167,6 +169,7 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             disabled={!toon.data.data.cogsuits[deptChars.lawbot]?.hasDisguise}
           >
             <Image
+              unoptimized
               src={imageAssets.emblem_law}
               className="dept-photo"
               alt="Lawbot"
@@ -181,6 +184,7 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
             disabled={!toon.data.data.cogsuits[deptChars.bossbot]?.hasDisguise}
           >
             <Image
+              unoptimized
               src={imageAssets.emblem_boss}
               className="dept-photo"
               alt="Bossbot"

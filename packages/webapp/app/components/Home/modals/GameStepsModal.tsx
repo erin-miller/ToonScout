@@ -38,6 +38,7 @@ const Step: React.FC<{ title: string; image: StaticImageData }> = ({
   <div className="text-2xl">
     <h2 className="pb-2 ">{title}</h2>
     <Image
+      unoptimized
       src={image}
       alt={title}
       className="mx-auto"

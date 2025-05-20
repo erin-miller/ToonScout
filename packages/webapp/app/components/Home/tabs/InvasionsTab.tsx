@@ -112,6 +112,7 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                         const img = getCogImage(invasion.cog);
                         return img ? (
                           <Image
+                            unoptimized
                             src={img}
                             alt={invasion.cog}
                             width={48}

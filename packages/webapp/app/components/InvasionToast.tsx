@@ -29,6 +29,7 @@ const InvasionToast: React.FC<InvasionToastProps> = ({
     >
       {cogIcon && (
         <Image
+          unoptimized
           src={cogIcon}
           alt="Cog Icon"
           width={40}

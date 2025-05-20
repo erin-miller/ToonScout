@@ -32,6 +32,7 @@ const Step: React.FC<{ title: string; image: StaticImageData }> = ({
   <div className="step-card">
     <h2 className="step-name">{title}</h2>
     <Image
+      unoptimized
       src={image}
       alt={title}
       className="mx-auto"

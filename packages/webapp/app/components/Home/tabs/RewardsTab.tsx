@@ -93,6 +93,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
               >
                 {isLocked ? (
                   <Image
+                    unoptimized
                     src={secondaryImage}
                     className="base-image"
                     alt={type + " locked"}
@@ -102,6 +103,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
                 ) : (
                   <>
                     <Image
+                      unoptimized
                       src={getButtonImage()}
                       className="base-image"
                       alt={type + " base"}
@@ -109,6 +111,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
                       height={112}
                     />
                     <Image
+                      unoptimized
                       src={secondaryImage}
                       className="overlay-image"
                       alt={type + " overlay"}
