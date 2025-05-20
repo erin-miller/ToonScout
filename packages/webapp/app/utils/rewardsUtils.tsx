@@ -62,44 +62,50 @@ export const renderSOS = (toon: StoredToonData) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3">
-      {Object.entries(sosCards).map(([card, count], index) => {
-        const entry = SOS_TOONS.find((sosToon) => sosToon.name === card);
-        const title =
-          entry && (entry.track !== null || entry.ability !== null)
-            ? formatTrack(entry)
-            : "ERR";
-        const cardTitleColor = trackColors[title as keyof typeof trackColors];
-        return (
-          <div
-            key={index}
-            className="grid grid-rows-4 text-xl dark:text-gray-200 bg-gray-100 dark:bg-gray-900 border-2 border-gray-600 dark:border-pink-200 shadow-md p-2 rounded-lg"
-            style={{ gridTemplateRows: "30px 30px 70px auto" }}
-          >
+      {Object.entries(sosCards)
+        .sort(([a], [b]) => {
+          const entryA = SOS_TOONS.find((sosToon) => sosToon.name === a);
+          const entryB = SOS_TOONS.find((sosToon) => sosToon.name === b);
+          return (entryB?.stars || 0) - (entryA?.stars || 0);
+        })
+        .map(([card, count], index) => {
+          const entry = SOS_TOONS.find((sosToon) => sosToon.name === card);
+          const title =
+            entry && (entry.track !== null || entry.ability !== null)
+              ? formatTrack(entry)
+              : "ERR";
+          const cardTitleColor = trackColors[title as keyof typeof trackColors];
+          return (
             <div
-              className={`font-minnie ${cardTitleColor} ${
-                title.length > 10 ? "text-sm" : "text-lg"
-              }`}
+              key={index}
+              className="grid grid-rows-4 text-xl dark:text-gray-200 bg-gray-100 dark:bg-gray-900 border-2 border-gray-600 dark:border-pink-200 shadow-md p-2 rounded-lg"
+              style={{ gridTemplateRows: "30px 30px 70px auto" }}
             >
-              {title}
+              <div
+                className={`font-minnie ${cardTitleColor} ${
+                  title.length > 10 ? "text-sm" : "text-lg"
+                }`}
+              >
+                {title}
+              </div>
+              <div className="">{card}</div>
+              <div className="flex justify-center">
+                {getRendition(
+                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
+                )}
+              </div>
+              <div className="card-count">{count} Remaining</div>
+              <div className="flex flex-row justify-end mt-1">
+                {Array.from({ length: entry?.stars || 0 }, (_, i) => (
+                  <FaStar
+                    key={i}
+                    className="text-amber-900 dark:text-amber-300 w-4 h-4"
+                  />
+                ))}
+              </div>
             </div>
-            <div className="">{card}</div>
-            <div className="flex justify-center">
-              {getRendition(
-                `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
-              )}
-            </div>
-            <div className="card-count">{count} Remaining</div>
-            <div className="flex flex-row justify-end mt-1">
-              {Array.from({ length: entry?.stars || 0 }, (_, i) => (
-                <FaStar
-                  key={i}
-                  className="text-amber-900 dark:text-amber-300 w-4 h-4"
-                />
-              ))}
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
     </div>
   );
 };
