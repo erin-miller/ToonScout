@@ -16,6 +16,15 @@ const Disclaimer: React.FC = () => {
       <div className="absolute left-3 top-2.5 bg-blue-400 text-white text-sm font-bold px-2 py-1 rounded-full shadow-md">
         {version}
       </div>
+      <div className="absolute right-3 top-2.5">
+        <a
+          href="https://ko-fi.com/cozziejam"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/kofi_symbol.svg" alt="Ko-fi" className="h-7 w-7" />
+        </a>
+      </div>
       <div className="space-x-4">
         <button onClick={() => openModal("about")} className="modal-btn">
           About
