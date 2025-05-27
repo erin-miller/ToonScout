@@ -4,9 +4,9 @@ interface SystemBannerProps {
 }
 
 const SystemBannerType: { [key: string]: string } = {
-  INFO: "blue-300",
-  WARNING: "orange-300",
-  ERROR: "red-300",
+  INFO: "bg-blue-300",
+  WARNING: "bg-orange-300",
+  ERROR: "bg-red-300",
 };
 
 const SystemBanner: React.FC<SystemBannerProps> = ({ isOpen, onClose }) => {
@@ -22,7 +22,7 @@ const SystemBanner: React.FC<SystemBannerProps> = ({ isOpen, onClose }) => {
   if (!msg) return null;
   return (
     <div
-      className={`w-full h-full py-0.3 px-6 flex items-center justify-center bg-${SystemBannerType[type]} flex-wrap`}
+      className={`w-full h-full py-0.3 px-6 flex items-center justify-center ${SystemBannerType[type]} flex-wrap`}
     >
       <button
         onClick={onClose}

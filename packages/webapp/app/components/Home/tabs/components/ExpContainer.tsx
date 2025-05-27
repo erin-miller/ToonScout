@@ -40,9 +40,12 @@ const ExpContainer: React.FC<ExpContainerProps> = ({ track, toonData }) => {
     setProgress(calculateProgress());
   }, [track, toonData]);
 
+  const trackBg = `bg-${track.toLowerCase()}`;
+  const trackText = `text-${track.toLowerCase()}`;
+
   return (
     <div
-      className={`relative bg-${track.toLowerCase()} rounded-lg items-center justify-center text-xl lg:text-md 2xl:text-xl`}
+      className={`relative ${trackBg} rounded-lg items-center justify-center text-xl lg:text-md 2xl:text-xl`}
     >
       {/* Background overlay */}
       <div
@@ -53,7 +56,7 @@ const ExpContainer: React.FC<ExpContainerProps> = ({ track, toonData }) => {
       ></div>
 
       {/* Content */}
-      <div className={`relative z-10 text-${track.toLowerCase()}`}>
+      <div className={`relative z-10 ${trackText}`}>
         <div className="text-black opacity-90 rounded-lg">
           {formatExp(track)}
         </div>
