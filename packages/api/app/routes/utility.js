@@ -138,18 +138,58 @@ router.get("/get-invasions", async (req, res) => {
   }
 });
 
+const MAX_IMAGE_SIZE_BYTES = 512 * 1024; // 512 KB
+
+/**
+ * Validates that a URL is a valid rendition/cdn TTR URL.
+ * @param {string} url
+ * @returns {boolean}
+ */
+function validateURL(url) {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    return (
+      (parsed.hostname === "rendition.toontownrewritten.com" ||
+        parsed.hostname === "cdn.toontownrewritten.com") &&
+      parsed.protocol === "https:"
+    );
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Validates that the image size is within allowed limits.
+ * @param {number} size
+ * @returns {boolean}
+ */
+function validateImageSize(size) {
+  return size > 0 && size <= MAX_IMAGE_SIZE_BYTES;
+}
+
 const rendition_cache = new Map();
 
 router.get("/get-rendition", async (req, res) => {
   const url = req.query.url;
+  if (!validateURL(url)) {
+    return res.status(400).json({ error: "Invalid URL" });
+  }
+
   if (!url) {
     return res.status(400).json({ error: "URL is required" });
   }
 
+  // Check if cached image is within size limits
   if (rendition_cache.has(url)) {
+    const cachedImage = rendition_cache.get(url);
+    if (!validateImageSize(cachedImage.length)) {
+      rendition_cache.delete(url); // Remove invalid cache
+      return res.status(413).json({ error: "Cached image too large" });
+    }
     res.setHeader("Content-Type", "image/webp");
     res.setHeader("Cache-Control", "public, max-age=31536000"); // 1 year
-    return res.send(rendition_cache.get(url));
+    return res.send(cachedImage);
   }
 
   try {
@@ -161,8 +201,20 @@ router.get("/get-rendition", async (req, res) => {
     if (!response.ok) {
       return res.status(502).json({ error: "TTR failed to fetch rendition" });
     }
+
+    // Check content-length header if present
+    const contentLength = response.headers.get("content-length");
+    if (contentLength && !validateImageSize(Number(contentLength))) {
+      return res.status(413).json({ error: "Image too large" });
+    }
+
     const buffer = await response.arrayBuffer();
     const imageBuffer = Buffer.from(buffer);
+
+    if (!validateImageSize(imageBuffer.length)) {
+      return res.status(413).json({ error: "Image too large" });
+    }
+
     rendition_cache.set(url, imageBuffer);
 
     res.setHeader("Content-Type", "image/webp");
