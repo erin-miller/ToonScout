@@ -91,10 +91,11 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
   const renderFlowers = (flowers: FlowerResponse[], borderColor: string) => {
     return flowers.map((flower: FlowerResponse, index: number) => {
       const { name, combo: flowerCombo } = flower;
+      const formattedBorder = `border-${borderColor}`;
       return (
         <div
           key={index}
-          className={`flex items-center justify-start w-full overflow-hidden rounded-lg shadow-lg border-4 border-${borderColor}`}
+          className={`flex items-center justify-start w-full overflow-hidden rounded-lg shadow-lg border-4 ${formattedBorder}`}
         >
           <div className="flex w-full h-full bg-violet-50 dark:bg-gray-1000 shadow-sm p-2">
             <Image
@@ -102,7 +103,7 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
               alt={name}
               width={64}
               height={64}
-              className={`object-contain rounded-full border-4 border-${borderColor}`}
+              className={`object-contain rounded-full border-4 ${formattedBorder}`}
             />
             {/* right side of image */}
             <div className="flex flex-col items-start justify-start w-full h-full ml-2">

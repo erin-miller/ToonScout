@@ -14,17 +14,19 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
       <div className="container mx-auto">
         {tracks.map((track) => {
           const trackData = toon.data.data.gags[track];
+          const trackBg = `bg-${track.toLowerCase()}`;
+          const trackText = `text-${track.toLowerCase()}`;
 
           const maxLevel = trackData?.gag.level || 0;
 
           return (
             <div
               key={track}
-              className={`flex items-center bg-${track.toLowerCase()} rounded-3xl py-2 space-x-1 shadow-lg relative overflow-hidden inline-flex max-w-max pr-4`}
+              className={`flex items-center ${trackBg} rounded-3xl py-2 space-x-1 shadow-lg relative overflow-hidden inline-flex max-w-max pr-4`}
             >
               <div className="hidden sm:flex lg:hidden xl:flex flex-col px-2">
                 <h3
-                  className={`w-36 font-bold uppercase text-xl lg:text-lg xl:text-xl 2xl:text-2xl text-${track.toLowerCase()} text-left`}
+                  className={`w-36 font-bold uppercase text-xl lg:text-lg xl:text-xl 2xl:text-2xl ${trackText} text-left`}
                 >
                   <div className="text-black opacity-70 rounded-lg">
                     {track}

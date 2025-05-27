@@ -244,12 +244,12 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
               {rarity && rarity.length > 0 ? (
                 rarity.map((item, index) => {
                   const itemRarity = RARITY_INDEX[FISH_RARITY[item.name]];
-                  const rarityColor = RARITY_COLORS[itemRarity];
+                  const rarityColor = `bg-${RARITY_COLORS[itemRarity]}-500`;
                   return (
                     <div className="fish" key={index}>
                       <div className="fish-info w-2/3 text-left gap-2">
                         <div
-                          className={`flex items-center justify-center rounded-full w-8 text-base bg-${rarityColor}-500 dark:grayscale-[30%]`}
+                          className={`flex items-center justify-center rounded-full w-8 text-base ${rarityColor} dark:grayscale-[30%]`}
                         >
                           {itemRarity}
                         </div>
@@ -283,12 +283,12 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
                 caught &&
                 caught.map((fish, index) => {
                   const itemRarity = RARITY_INDEX[FISH_RARITY[fish]];
-                  const rarityColor = RARITY_COLORS[itemRarity];
+                  const rarityColor = `bg-${RARITY_COLORS[itemRarity]}-500`;
                   return (
                     <div className="fish uncaught-fish" key={index}>
                       <div className="flex justify-center items-center text-pink-900">
                         <div
-                          className={`rounded-full w-8 text-base bg-${rarityColor}-500 opacity-60 dark:opacity-80 text-pink-800 dark:text-gray-1000 dark:grayscale-[30%]`}
+                          className={`rounded-full w-8 text-base ${rarityColor} opacity-60 dark:opacity-80 text-pink-800 dark:text-gray-1000 dark:grayscale-[30%]`}
                         >
                           {itemRarity}
                         </div>
