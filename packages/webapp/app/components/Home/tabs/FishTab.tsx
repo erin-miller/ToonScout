@@ -22,12 +22,12 @@ const RARITY_INDEX: { [key: number]: "VC" | "C" | "R" | "VR" | "ER" | "UR" } = {
 };
 
 const RARITY_COLORS = {
-  VC: "green",
-  C: "blue",
-  R: "yellow",
-  VR: "orange",
-  ER: "red",
-  UR: "purple",
+  VC: "bg-green-500",
+  C: "bg-blue-500",
+  R: "bg-yellow-500",
+  VR: "bg-orange-500",
+  ER: "bg-red-500",
+  UR: "bg-purple-500",
 };
 
 const FISH_RARITY: { [key: string]: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 } = {
@@ -244,7 +244,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
               {rarity && rarity.length > 0 ? (
                 rarity.map((item, index) => {
                   const itemRarity = RARITY_INDEX[FISH_RARITY[item.name]];
-                  const rarityColor = `bg-${RARITY_COLORS[itemRarity]}-500`;
+                  const rarityColor = RARITY_COLORS[itemRarity];
                   return (
                     <div className="fish" key={index}>
                       <div className="fish-info w-2/3 text-left gap-2">
@@ -283,7 +283,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
                 caught &&
                 caught.map((fish, index) => {
                   const itemRarity = RARITY_INDEX[FISH_RARITY[fish]];
-                  const rarityColor = `bg-${RARITY_COLORS[itemRarity]}-500`;
+                  const rarityColor = RARITY_COLORS[itemRarity];
                   return (
                     <div className="fish uncaught-fish" key={index}>
                       <div className="flex justify-center items-center text-pink-900">

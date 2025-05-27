@@ -9,13 +9,33 @@ import { gagImages, GagTrack } from "@/assets/gags/index";
 const GagsTab: React.FC<TabProps> = ({ toon }) => {
   const tracks = Object.keys(toon.data.data.gags);
 
+  const bgMap = {
+    "Toon-Up": "bg-toon-up",
+    Trap: "bg-trap",
+    Lure: "bg-lure",
+    Sound: "bg-sound",
+    Throw: "bg-throw",
+    Squirt: "bg-squirt",
+    Drop: "bg-drop",
+  };
+
+  const textMap = {
+    "Toon-Up": "text-toon-up",
+    Trap: "text-trap",
+    Lure: "text-lure",
+    Sound: "text-sound",
+    Throw: "text-throw",
+    Squirt: "text-squirt",
+    Drop: "text-drop",
+  };
+
   return (
     <AnimatedTabContent>
       <div className="container mx-auto">
         {tracks.map((track) => {
           const trackData = toon.data.data.gags[track];
-          const trackBg = `bg-${track.toLowerCase()}`;
-          const trackText = `text-${track.toLowerCase()}`;
+          const trackBg = bgMap[track as keyof typeof bgMap];
+          const trackText = textMap[track as keyof typeof textMap];
 
           const maxLevel = trackData?.gag.level || 0;
 
