@@ -18,7 +18,8 @@
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.3",
     "node-fetch": "^3.3.2",
-    "toonapi-calculator": "^2.1.0",
+    "toonapi-calculator": "^2.1.1",
+    "toonscout-api": "file:",
     "ws": "^8.18.0"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import Image from "next/image";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
