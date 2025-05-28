@@ -84,7 +84,7 @@ export const renderSOS = (toon: StoredToonData) => {
               {/* tooltip */}
               {entry?.description && (
                 <div className="absolute px-2 group">
-                  <span className="border-4 border-gray-500 text-gray-500 dark:border-pink-100 rounded-full w-6 h-6 flex items-center justify-center text-base">
+                  <span className="border-4 border-gray-500 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center text-base">
                     ?
                   </span>
                   <div
