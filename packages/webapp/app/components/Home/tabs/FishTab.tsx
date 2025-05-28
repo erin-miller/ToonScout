@@ -22,12 +22,12 @@ const RARITY_INDEX: { [key: number]: "VC" | "C" | "R" | "VR" | "ER" | "UR" } = {
 };
 
 const RARITY_COLORS = {
-  VC: "green",
-  C: "blue",
-  R: "yellow",
-  VR: "orange",
-  ER: "red",
-  UR: "purple",
+  VC: "bg-green-500",
+  C: "bg-blue-500",
+  R: "bg-yellow-500",
+  VR: "bg-orange-500",
+  ER: "bg-red-500",
+  UR: "bg-purple-500",
 };
 
 const FISH_RARITY: { [key: string]: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 } = {
@@ -249,7 +249,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
                     <div className="fish" key={index}>
                       <div className="fish-info w-2/3 text-left gap-2">
                         <div
-                          className={`flex items-center justify-center rounded-full w-8 text-base bg-${rarityColor}-500 dark:grayscale-[30%]`}
+                          className={`flex items-center justify-center rounded-full w-8 text-base ${rarityColor} dark:grayscale-[30%]`}
                         >
                           {itemRarity}
                         </div>
@@ -288,7 +288,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
                     <div className="fish uncaught-fish" key={index}>
                       <div className="flex justify-center items-center text-pink-900">
                         <div
-                          className={`rounded-full w-8 text-base bg-${rarityColor}-500 opacity-60 dark:opacity-80 text-pink-800 dark:text-gray-1000 dark:grayscale-[30%]`}
+                          className={`rounded-full w-8 text-base ${rarityColor} opacity-60 dark:opacity-80 text-pink-800 dark:text-gray-1000 dark:grayscale-[30%]`}
                         >
                           {itemRarity}
                         </div>

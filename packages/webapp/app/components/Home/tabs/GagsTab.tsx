@@ -9,22 +9,44 @@ import { gagImages, GagTrack } from "@/assets/gags/index";
 const GagsTab: React.FC<TabProps> = ({ toon }) => {
   const tracks = Object.keys(toon.data.data.gags);
 
+  const bgMap = {
+    "Toon-Up": "bg-toon-up",
+    Trap: "bg-trap",
+    Lure: "bg-lure",
+    Sound: "bg-sound",
+    Throw: "bg-throw",
+    Squirt: "bg-squirt",
+    Drop: "bg-drop",
+  };
+
+  const textMap = {
+    "Toon-Up": "text-toon-up",
+    Trap: "text-trap",
+    Lure: "text-lure",
+    Sound: "text-sound",
+    Throw: "text-throw",
+    Squirt: "text-squirt",
+    Drop: "text-drop",
+  };
+
   return (
     <AnimatedTabContent>
       <div className="container mx-auto">
         {tracks.map((track) => {
           const trackData = toon.data.data.gags[track];
+          const trackBg = bgMap[track as keyof typeof bgMap];
+          const trackText = textMap[track as keyof typeof textMap];
 
           const maxLevel = trackData?.gag.level || 0;
 
           return (
             <div
               key={track}
-              className={`flex items-center bg-${track.toLowerCase()} rounded-3xl py-2 space-x-1 shadow-lg relative overflow-hidden inline-flex max-w-max pr-4`}
+              className={`flex items-center ${trackBg} rounded-3xl py-2 space-x-1 shadow-lg relative overflow-hidden inline-flex max-w-max pr-4`}
             >
               <div className="hidden sm:flex lg:hidden xl:flex flex-col px-2">
                 <h3
-                  className={`w-36 font-bold uppercase text-xl lg:text-lg xl:text-xl 2xl:text-2xl text-${track.toLowerCase()} text-left`}
+                  className={`w-36 font-bold uppercase text-xl lg:text-lg xl:text-xl 2xl:text-2xl ${trackText} text-left`}
                 >
                   <div className="text-black opacity-70 rounded-lg">
                     {track}
