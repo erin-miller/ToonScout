@@ -8,6 +8,7 @@ import COGS from "@/data/cogs.json";
 import Image from "next/image";
 import { cogImages } from "@/assets/cog_images";
 import { rewardImages } from "@/assets/rewards";
+import CardFlip from "@/app/components/animations/CardFlip";
 
 type SOSCard = {
   name: string;
@@ -52,7 +53,7 @@ export const renderSOS = (toon: StoredToonData) => {
 
   const trackColors = {
     "Toon-Up": "text-toon-up",
-    Trap: "text-[#edc900] dark:text-trap", // way too much contrast on default; using hex of darker instead
+    Trap: "text-[#edc900] dark:text-trap",
     Lure: "text-lure",
     Sound: "text-sound",
     Throw: "text-throw",
@@ -61,7 +62,7 @@ export const renderSOS = (toon: StoredToonData) => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3">
+    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3 auto-rows-fr">
       {Object.entries(sosCards)
         .sort(([a], [b]) => {
           const entryA = SOS_TOONS.find((sosToon) => sosToon.name === a);
@@ -75,31 +76,17 @@ export const renderSOS = (toon: StoredToonData) => {
               ? formatTrack(entry)
               : "ERR";
           const cardTitleColor = trackColors[title as keyof typeof trackColors];
-          return (
+
+          const [flipStatus, setFlipStatus] = React.useState(false);
+          const toggleFlip = () => setFlipStatus(!flipStatus);
+
+          // Front content
+          const cardFront = (
             <div
               key={index}
-              className="grid grid-rows-4 text-xl dark:text-gray-200 bg-gray-100 dark:bg-gray-900 border-2 border-gray-600 dark:border-pink-200 shadow-md p-2 rounded-lg"
+              className="grid grid-rows-4 text-xl dark:text-blue-950 bg-gray-100 dark:bg-blue-400 border-2 border-gray-600 dark:border-blue-900 shadow-md p-2 rounded-lg"
               style={{ gridTemplateRows: "30px 30px 70px auto" }}
             >
-              {/* tooltip */}
-              {entry?.description && (
-                <div className="absolute px-2 group">
-                  <span className="border-4 border-gray-500 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center text-base">
-                    ?
-                  </span>
-                  <div
-                    className="hidden group-hover:block absolute shadow-lg text-base 
-                  bg-white border border-gray-700 text-gray-900 p-2 
-                  transform -translate-x-3 w-64 text-center"
-                  >
-                    {/* map \n to line breaks */}
-                    {entry?.description.split("\n").map((line, index) => (
-                      <div key={index}>{line}</div>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {/* sos type */}
               <div
                 className={`font-minnie ${cardTitleColor} ${
                   title.length > 10 ? "text-sm" : "text-lg"
@@ -107,27 +94,59 @@ export const renderSOS = (toon: StoredToonData) => {
               >
                 {title}
               </div>
-
-              {/* toon name */}
               <div className="">{card}</div>
-              {/* toon image */}
               <div className="flex justify-center">
                 {getRendition(
                   `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
                 )}
               </div>
-              {/* remaining cards */}
               <div className="card-count">{count} Remaining</div>
-              {/* star display */}
               <div className="flex flex-row justify-end mt-1">
                 {Array.from({ length: entry?.stars || 0 }, (_, i) => (
-                  <FaStar
-                    key={i}
-                    className="text-amber-900 dark:text-amber-300 w-4 h-4"
-                  />
+                  <FaStar key={i} className="text-amber-900 w-4 h-4" />
                 ))}
               </div>
+              <button
+                className="relative bottom-2 left-2 px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
+                onClick={toggleFlip}
+              >
+                Flip
+              </button>
             </div>
+          );
+
+          const cardBack = (
+            <div className="">
+              <div className="flex justify-start bg-red-200 rounded-lg border-2 border-red-500">
+                {getRendition(
+                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
+                )}
+              </div>
+              <div className="mt-2">
+                {entry?.description
+                  ? entry.description.split("\n").map((line, idx) => (
+                      <p key={idx} className="text-sm">
+                        {line}
+                      </p>
+                    ))
+                  : "No additional details available."}
+              </div>
+              <button
+                className="relative bottom-2 left-2 px-3 py-1 bg-red-500 text-white text-sm rounded hover:bg-red-600"
+                onClick={toggleFlip}
+              >
+                Flip
+              </button>
+            </div>
+          );
+
+          return (
+            <CardFlip
+              key={index}
+              cardFront={cardFront}
+              cardBack={cardBack}
+              isFlipped={flipStatus}
+            />
           );
         })}
     </div>
