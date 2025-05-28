@@ -80,12 +80,15 @@ export const renderSOS = (toon: StoredToonData) => {
           const [flipStatus, setFlipStatus] = React.useState(false);
           const toggleFlip = () => setFlipStatus(!flipStatus);
 
-          // Front content
           const cardFront = (
-            <div
+            <button
               key={index}
-              className="grid grid-rows-4 text-xl dark:text-blue-950 bg-gray-100 dark:bg-blue-400 border-2 border-gray-600 dark:border-blue-900 shadow-md p-2 rounded-lg"
+              className="grid grid-rows-4 text-xl w-full h-full
+              dark:text-gray-200 bg-gray-100 dark:bg-gray-900 
+              border-2 border-gray-600 dark:border-pink-200
+              shadow-md p-2 rounded-lg"
               style={{ gridTemplateRows: "30px 30px 70px auto" }}
+              onClick={toggleFlip}
             >
               <div
                 className={`font-minnie ${cardTitleColor} ${
@@ -103,41 +106,47 @@ export const renderSOS = (toon: StoredToonData) => {
               <div className="card-count">{count} Remaining</div>
               <div className="flex flex-row justify-end mt-1">
                 {Array.from({ length: entry?.stars || 0 }, (_, i) => (
-                  <FaStar key={i} className="text-amber-900 w-4 h-4" />
+                  <FaStar
+                    key={i}
+                    className="text-amber-900 dark:text-amber-300 w-4 h-4"
+                  />
                 ))}
               </div>
-              <button
-                className="relative bottom-2 left-2 px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
-                onClick={toggleFlip}
-              >
-                Flip
-              </button>
-            </div>
+            </button>
           );
 
           const cardBack = (
-            <div className="">
-              <div className="flex justify-start bg-red-200 rounded-lg border-2 border-red-500">
+            <button
+              className="flex flex-col text-xl w-full h-full
+              dark:text-gray-200 bg-gray-100 dark:bg-gray-900 
+              border-2 border-gray-600 dark:border-pink-200
+              shadow-md p-2 rounded-lg"
+              onClick={toggleFlip}
+            >
+              <div className="flex justify-start rounded-lg border-2 border-pink-500">
+                {/* photo */}
                 {getRendition(
                   `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
                 )}
+                {/* name */}
+                <div className="flex font-minnie text-xl justify-center text-center items-center">
+                  {card}
+                </div>
               </div>
-              <div className="mt-2">
+              {/* description */}
+              <div className="mt-1">
                 {entry?.description
                   ? entry.description.split("\n").map((line, idx) => (
-                      <p key={idx} className="text-sm">
+                      <p
+                        key={idx}
+                        className={idx === 0 ? "text-lg" : "text-base"}
+                      >
                         {line}
                       </p>
                     ))
                   : "No additional details available."}
               </div>
-              <button
-                className="relative bottom-2 left-2 px-3 py-1 bg-red-500 text-white text-sm rounded hover:bg-red-600"
-                onClick={toggleFlip}
-              >
-                Flip
-              </button>
-            </div>
+            </button>
           );
 
           return (

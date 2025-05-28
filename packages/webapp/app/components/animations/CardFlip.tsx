@@ -12,35 +12,34 @@ const CardFlip: React.FC<CardFlipProps> = ({
   isFlipped,
 }) => {
   return (
-    <div style={{ perspective: "1000px" }} className="test-outline h-full">
+    <div
+      className="h-52 transition-transform duration-500"
+      style={{
+        transformStyle: "preserve-3d",
+        transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        perspective: "1000px",
+      }}
+    >
+      {/* front */}
       <div
-        className="relative h-full transition-transform duration-500"
+        className="absolute h-full w-full"
         style={{
-          transformStyle: "preserve-3d",
-          transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+          backfaceVisibility: "hidden",
+          transform: "rotateY(0deg)",
         }}
       >
-        {/* front */}
-        <div
-          className="absolute h-full w-full"
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(0deg)",
-          }}
-        >
-          {cardFront}
-        </div>
+        {cardFront}
+      </div>
 
-        {/* back */}
-        <div
-          className="absolute h-full w-full"
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-          }}
-        >
-          {cardBack}
-        </div>
+      {/* back */}
+      <div
+        className="absolute h-full w-full"
+        style={{
+          backfaceVisibility: "hidden",
+          transform: "rotateY(180deg)",
+        }}
+      >
+        {cardBack}
       </div>
     </div>
   );
