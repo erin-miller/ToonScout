@@ -107,17 +107,18 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
             {/* right side of image */}
             <div className="flex flex-col items-start justify-start w-full h-full ml-2">
               <div className="text-lg dark:text-white">{name}</div>
-              <div className="flex flex-row w-full gap-0.5">
+              <div className="flex flex-row w-full gap-1">
                 {flowerCombo.map((combo: string, index: number) => {
                   return (
-                    <Image
-                      src={`/flowers/jellybeans/${combo}.svg`}
-                      alt={combo.slice(0, 1).toUpperCase()}
-                      width={24}
-                      height={24}
-                      className="object-contain"
-                      key={index}
-                    />
+                    <div key={index} className="flex flex-row gap-0.5">
+                      <Image
+                        src={`/flowers/jellybeans/${combo}.svg`}
+                        alt={combo.slice(0, 1).toUpperCase()}
+                        width={24}
+                        height={24}
+                        className="object-contain"
+                      />
+                    </div>
                   );
                 })}
               </div>

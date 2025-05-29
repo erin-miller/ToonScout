@@ -8,6 +8,7 @@ import COGS from "@/data/cogs.json";
 import Image from "next/image";
 import { cogImages } from "@/assets/cog_images";
 import { rewardImages } from "@/assets/rewards";
+import CardFlip from "@/app/components/animations/CardFlip";
 
 type SOSCard = {
   name: string;
@@ -50,42 +51,104 @@ export const renderSOS = (toon: StoredToonData) => {
     return <div>No SOS cards available!</div>;
   }
 
+  const trackColors = {
+    "Toon-Up": "text-toon-up",
+    Trap: "text-[#edc900] dark:text-trap",
+    Lure: "text-lure",
+    Sound: "text-sound",
+    Throw: "text-throw",
+    Squirt: "text-squirt",
+    Drop: "text-drop",
+  };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3">
-      {Object.entries(sosCards).map(([card, count], index) => {
-        const entry = SOS_TOONS.find((sosToon) => sosToon.name === card);
-        const title =
-          entry && (entry.track !== null || entry.ability !== null)
-            ? formatTrack(entry)
-            : "ERR";
-        return (
-          <div
-            key={index}
-            className="grid grid-rows-4 text-xl dark:text-blue-950 bg-gray-100 dark:bg-blue-400 border-2 border-gray-600 dark:border-blue-900 shadow-md p-2 rounded-lg"
-            style={{ gridTemplateRows: "30px 30px 70px auto" }}
-          >
+    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3 auto-rows-fr">
+      {Object.entries(sosCards)
+        .sort(([a], [b]) => {
+          const entryA = SOS_TOONS.find((sosToon) => sosToon.name === a);
+          const entryB = SOS_TOONS.find((sosToon) => sosToon.name === b);
+          return (entryB?.stars || 0) - (entryA?.stars || 0);
+        })
+        .map(([card, count], index) => {
+          const entry = SOS_TOONS.find((sosToon) => sosToon.name === card);
+          const title =
+            entry && (entry.track !== null || entry.ability !== null)
+              ? formatTrack(entry)
+              : "ERR";
+          const cardTitleColor = trackColors[title as keyof typeof trackColors];
+
+          const [flipStatus, setFlipStatus] = React.useState(false);
+          const toggleFlip = () => setFlipStatus(!flipStatus);
+
+          // Front content
+          const cardFront = (
             <div
-              className={`font-minnie text-${entry?.track} ${
-                title.length > 10 ? "text-sm" : "text-lg"
-              }`}
+              key={index}
+              className="grid grid-rows-4 text-xl dark:text-blue-950 bg-gray-100 dark:bg-blue-400 border-2 border-gray-600 dark:border-blue-900 shadow-md p-2 rounded-lg"
+              style={{ gridTemplateRows: "30px 30px 70px auto" }}
             >
-              {title}
+              <div
+                className={`font-minnie ${cardTitleColor} ${
+                  title.length > 10 ? "text-sm" : "text-lg"
+                }`}
+              >
+                {title}
+              </div>
+              <div className="">{card}</div>
+              <div className="flex justify-center">
+                {getRendition(
+                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
+                )}
+              </div>
+              <div className="card-count">{count} Remaining</div>
+              <div className="flex flex-row justify-end mt-1">
+                {Array.from({ length: entry?.stars || 0 }, (_, i) => (
+                  <FaStar key={i} className="text-amber-900 w-4 h-4" />
+                ))}
+              </div>
+              <button
+                className="relative bottom-2 left-2 px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
+                onClick={toggleFlip}
+              >
+                Flip
+              </button>
             </div>
-            <div className="">{card}</div>
-            <div className="flex justify-center">
-              {getRendition(
-                `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
-              )}
+          );
+
+          const cardBack = (
+            <div className="">
+              <div className="flex justify-start bg-red-200 rounded-lg border-2 border-red-500">
+                {getRendition(
+                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
+                )}
+              </div>
+              <div className="mt-2">
+                {entry?.description
+                  ? entry.description.split("\n").map((line, idx) => (
+                      <p key={idx} className="text-sm">
+                        {line}
+                      </p>
+                    ))
+                  : "No additional details available."}
+              </div>
+              <button
+                className="relative bottom-2 left-2 px-3 py-1 bg-red-500 text-white text-sm rounded hover:bg-red-600"
+                onClick={toggleFlip}
+              >
+                Flip
+              </button>
             </div>
-            <div className="card-count">{count} Remaining</div>
-            <div className="flex flex-row justify-end mt-1">
-              {Array.from({ length: entry?.stars || 0 }, (_, i) => (
-                <FaStar key={i} className="text-amber-900 w-4 h-4" />
-              ))}
-            </div>
-          </div>
-        );
-      })}
+          );
+
+          return (
+            <CardFlip
+              key={index}
+              cardFront={cardFront}
+              cardBack={cardBack}
+              isFlipped={flipStatus}
+            />
+          );
+        })}
     </div>
   );
 };
