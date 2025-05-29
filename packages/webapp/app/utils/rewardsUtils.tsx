@@ -310,6 +310,18 @@ export const renderRemotes = (toon: StoredToonData) => {
     return <div>No remotes available.</div>;
   }
 
+  const healingByStar = {
+    1: rewardImages.remotesheal1,
+    2: rewardImages.remotesheal2,
+    3: rewardImages.remotesheal3,
+  };
+
+  const damageByStar = {
+    1: rewardImages.remotes1,
+    2: rewardImages.remotes2,
+    3: rewardImages.remotes3,
+  };
+
   return (
     <div>
       {Object.entries(remotes).map(([type, remoteData], outerIndex) => (
@@ -352,17 +364,25 @@ export const renderRemotes = (toon: StoredToonData) => {
                 <div className="flex items-center justify-center mt-2">
                   {type.startsWith("Damage") ? (
                     <Image
-                      src={rewardImages.remotes}
+                      src={
+                        damageByStar[
+                          parseInt(rating) as keyof typeof damageByStar
+                        ] || rewardImages.remotes
+                      }
                       className="w-16 md:w-24"
-                      alt="Damage Remote"
+                      alt={`Damage Remote ${rating}`}
                       width={96}
                       height={96}
                     />
                   ) : (
                     <Image
-                      src={rewardImages.remotesheal}
+                      src={
+                        healingByStar[
+                          parseInt(rating) as keyof typeof healingByStar
+                        ] || rewardImages.remotesheal
+                      }
                       className="w-16 md:w-24"
-                      alt="Heal Remote"
+                      alt={`Healing Remote ${rating}`}
                       width={96}
                       height={96}
                     />
