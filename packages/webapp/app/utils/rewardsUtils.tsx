@@ -39,6 +39,7 @@ export const getRendition = (url: string) => {
 
 export const renderSOS = (
   toon: StoredToonData,
+  selectedSort: string,
   flipStates: Record<string, boolean>,
   toggleFlip: (card: string) => void
 ) => {
@@ -46,6 +47,21 @@ export const renderSOS = (
   if (!sosCards || Object.keys(sosCards).length === 0) {
     return <div>No SOS cards available!</div>;
   }
+
+  // filter sos cards based on selected sort
+  const filtered = Object.fromEntries(
+    Object.entries(sosCards).filter(([card]) => {
+      if (selectedSort === "All") return true;
+      const entry = SOS_TOONS.find((sosToon) => sosToon.name === card);
+      if (selectedSort === "Restock") {
+        return entry?.ability === "Restock";
+      }
+      if (selectedSort === "Other") {
+        return entry?.ability == "Cogs Miss" || entry?.ability == "Toons Hit";
+      }
+      return entry?.track === selectedSort && entry?.ability !== "Restock";
+    })
+  );
 
   const trackColors = {
     "Toon-Up": "text-toon-up",
@@ -59,7 +75,7 @@ export const renderSOS = (
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3 auto-rows-fr">
-      {Object.entries(sosCards)
+      {Object.entries(filtered)
         .sort(([a], [b]) => {
           const entryA = SOS_TOONS.find((sosToon) => sosToon.name === a);
           const entryB = SOS_TOONS.find((sosToon) => sosToon.name === b);
