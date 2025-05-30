@@ -100,9 +100,11 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
     ];
 
     return (
-      <div className="relative text-2xl text-pink-900 text-left">
+      <div className="relative text-2xl text-pink-900 dark:text-gray-100 text-left">
         <button
-          className="flex items-center justify-between rounded-md px-4 py-1.5 min-w-[10rem] border-2 border-blue-600 bg-blue-50"
+          className="flex items-center justify-between rounded-md px-4 py-1.5 min-w-[10rem] 
+          border-2 border-blue-600
+          bg-blue-50 dark:bg-gray-900"
           onClick={() => setDropdownOpen((prev) => !prev)}
         >
           <span>{selectedSort}</span>
@@ -111,7 +113,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
         {dropdownOpen && (
           <motion.ul
             className="absolute z-10 min-w-[10rem] w-full top-0 left-0
-            bg-blue-50 border-2 border-blue-600 rounded-md shadow-lg right-0"
+            bg-blue-50 dark:bg-gray-900 border-2 border-blue-600 rounded-md shadow-lg right-0"
           >
             {sortOptions.map((option) => (
               <li
