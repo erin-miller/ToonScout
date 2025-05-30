@@ -10,14 +10,6 @@ import { cogImages } from "@/assets/cog_images";
 import { rewardImages } from "@/assets/rewards";
 import CardFlip from "@/app/components/animations/CardFlip";
 
-type SOSCard = {
-  name: string;
-  dna: string;
-  track: string | null;
-  ability: string | null;
-  stars: number;
-};
-
 // Helper: Get the track name for SOS cards
 export const formatTrack = (entry: any) => {
   if (entry.track == null) {
@@ -45,7 +37,11 @@ export const getRendition = (url: string) => {
   );
 };
 
-export const renderSOS = (toon: StoredToonData) => {
+export const renderSOS = (
+  toon: StoredToonData,
+  flipStates: Record<string, boolean>,
+  toggleFlip: (card: string) => void
+) => {
   const sosCards = toon.data.data.rewards.sos;
   if (!sosCards || Object.keys(sosCards).length === 0) {
     return <div>No SOS cards available!</div>;
@@ -77,9 +73,6 @@ export const renderSOS = (toon: StoredToonData) => {
               : "ERR";
           const cardTitleColor = trackColors[title as keyof typeof trackColors];
 
-          const [flipStatus, setFlipStatus] = React.useState(false);
-          const toggleFlip = () => setFlipStatus(!flipStatus);
-
           const cardFront = (
             <button
               key={index}
@@ -88,7 +81,7 @@ export const renderSOS = (toon: StoredToonData) => {
               border-2 border-gray-600 dark:border-pink-200
               shadow-md p-2 rounded-lg"
               style={{ gridTemplateRows: "30px 30px 70px auto" }}
-              onClick={toggleFlip}
+              onClick={() => toggleFlip(card)}
             >
               <div
                 className={`font-minnie ${cardTitleColor} ${
@@ -121,7 +114,7 @@ export const renderSOS = (toon: StoredToonData) => {
               dark:text-gray-200 bg-gray-100 dark:bg-gray-900 
               border-2 border-gray-600 dark:border-pink-200
               shadow-md p-2 rounded-lg"
-              onClick={toggleFlip}
+              onClick={() => toggleFlip(card)}
             >
               <div className="flex justify-start rounded-lg border-2 border-pink-500">
                 {/* photo */}
@@ -154,7 +147,7 @@ export const renderSOS = (toon: StoredToonData) => {
               key={index}
               cardFront={cardFront}
               cardBack={cardBack}
-              isFlipped={flipStatus}
+              isFlipped={flipStates[card]}
             />
           );
         })}

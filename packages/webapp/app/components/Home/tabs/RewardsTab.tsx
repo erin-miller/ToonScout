@@ -13,17 +13,33 @@ import { rewardImages } from "@/assets/rewards";
 import { imageAssets } from "@/assets/images";
 
 const RewardsTab: React.FC<TabProps> = ({ toon }) => {
+  if (!toon.data.data.rewards) {
+    return <div>No rewards available.</div>;
+  }
+
   const rewardTypes = ["SOS", "Unites", "Summons", "Pinkslips", "Remotes"];
   const [selectedReward, setSelectedReward] = useState(rewardTypes[0]);
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
   const [clickedButton, setClickedButton] = useState<string | null>(null);
 
-  if (!toon.data.data.rewards) {
-    return <div>No rewards available.</div>;
-  }
+  // flip states for SOS cards
+  const sosCards = toon.data.data.rewards.sos || {};
+  const [flipStates, setFlipStates] = useState<Record<string, boolean>>(
+    Object.keys(sosCards).reduce((acc, card) => {
+      acc[card] = false;
+      return acc;
+    }, {} as Record<string, boolean>)
+  );
+
+  const toggleFlip = (card: string) => {
+    setFlipStates((prev) => ({
+      ...prev,
+      [card]: !prev[card],
+    }));
+  };
 
   const renders: Record<string, () => JSX.Element> = {
-    SOS: () => renderSOS(toon),
+    SOS: () => renderSOS(toon, flipStates, toggleFlip),
     Unites: () => renderUnites(toon),
     Summons: () => renderSummons(toon),
     Pinkslips: renderPinkslips,
@@ -43,7 +59,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
       case "Remotes":
         return [toon.data.data.rewards.remotes];
       default:
-        return null;
+        return <div>No rewards available.</div>;
     }
   };
 
