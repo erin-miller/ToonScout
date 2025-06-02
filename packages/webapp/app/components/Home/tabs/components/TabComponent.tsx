@@ -158,7 +158,7 @@ const TabContainer = () => {
       {/* list of tabs */}
       <div>
         {/* full tab list for larger screens */}
-        <div className="tab-container hidden lg:flex">
+        <div className="tab-container hidden xl:flex">
           {TabList.map((tab) => (
             <button
               key={tab.title}
@@ -173,7 +173,7 @@ const TabContainer = () => {
         </div>
 
         {/* paginated tab list for smaller screens */}
-        <div className="tab-container flex lg:hidden">
+        <div className="tab-container flex xl:hidden">
           <button
             className="rounded-lg tab-btn"
             onClick={handlePrevPage}
