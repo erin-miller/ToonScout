@@ -48,6 +48,7 @@ const connectWebSocket = () => {
         sessionStorage.setItem("ttauth-state", token);
       }
       socket.send(JSON.stringify({ authorization: token, name: "ToonScout" }));
+      socket.send(JSON.stringify({ request: "all" }));
       startContinuousRequests();
     });
 
