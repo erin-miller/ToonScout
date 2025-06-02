@@ -249,7 +249,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
                     <div className="fish" key={index}>
                       <div className="fish-info w-2/3 text-left gap-2">
                         <div
-                          className={`flex items-center justify-center rounded-full w-8 text-base ${rarityColor} dark:grayscale-[30%]`}
+                          className={`flex-shrink-0 flex items-center justify-center rounded-full w-8 text-base ${rarityColor} dark:grayscale-[30%]`}
                         >
                           {itemRarity}
                         </div>
