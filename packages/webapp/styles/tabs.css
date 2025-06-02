@@ -57,7 +57,7 @@
 
 */
 .activity-info-container {
-  @apply flex justify-center text-sm sm:text-lg 2xl:text-2xl space-x-1 sm:space-x-4 pb-2 text-nowrap;
+  @apply flex justify-center text-sm sm:text-lg 2xl:text-2xl space-x-1 sm:space-x-2 pb-2 text-nowrap;
 }
 
 .activity-bubble {
