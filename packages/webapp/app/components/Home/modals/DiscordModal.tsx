@@ -22,9 +22,9 @@ const DiscordModal: React.FC<DiscordModalProps> = ({ isOpen, onClose }) => {
 
   const handleClick = () => {
     window.open(
-      "https://discord.com/oauth2/authorize?client_id=1286517155315322950",
+      `https://discord.com/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}`,
       "_blank",
-      "noopener noreferrer",
+      "noopener noreferrer"
     );
   };
 

@@ -8,7 +8,7 @@ const trooper = "https://i.imgur.com/eYjdODE.png";
 export const data = new SlashCommandBuilder()
   .setName("tasks")
   .setDescription("Show an overview of one or all your tasks.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
   .addUserOption((option) =>
     option

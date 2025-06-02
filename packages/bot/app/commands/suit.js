@@ -61,7 +61,7 @@ const bossIcon = "https://scouttoon.info/images/emblem_boss.png";
 export const data = new SlashCommandBuilder()
   .setName("suit")
   .setDescription("Find information about your cog suits.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
   .addUserOption((option) =>
     option

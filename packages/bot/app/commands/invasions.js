@@ -4,7 +4,7 @@ import { InteractionResponseType } from "discord-interactions";
 export const data = new SlashCommandBuilder()
   .setName("invasions")
   .setDescription("Show invasion status in all districts.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2]);
 
 export async function execute(req, res, target) {

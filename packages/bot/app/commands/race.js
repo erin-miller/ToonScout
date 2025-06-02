@@ -30,7 +30,7 @@ const order = [
 export const data = new SlashCommandBuilder()
   .setName("race")
   .setDescription("Get advising on what trophies to go for next.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
   .addUserOption((option) =>
     option

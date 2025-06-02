@@ -6,7 +6,7 @@ import { getScoutToken } from "../util/api.js";
 export const data = new SlashCommandBuilder()
   .setName("info")
   .setDescription("Show your toon's name, laff, and location.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
   .addUserOption((option) =>
     option

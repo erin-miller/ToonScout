@@ -31,7 +31,7 @@ const FLOWER_INDEX = {
 export const data = new SlashCommandBuilder()
   .setName("garden")
   .setDescription("Get flower jellybean combinations.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
   .addIntegerOption((option) =>
     option

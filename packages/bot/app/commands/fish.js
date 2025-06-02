@@ -37,7 +37,7 @@ let footer = "";
 export const data = new SlashCommandBuilder()
   .setName("fish")
   .setDescription("Get advising on catching new fish.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
   .addUserOption((option) =>
     option
