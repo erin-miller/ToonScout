@@ -53,6 +53,7 @@ export interface Task {
   };
   reward: string;
   deletable: boolean;
+  type: string;
 }
 
 interface FishAlbumEntry {

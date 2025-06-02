@@ -85,6 +85,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
         progress: `${task.to.zone}, ${task.to.neighborhood}`,
         reward: task.reward,
         deletable: task.deletable,
+        type: task.type,
       };
     } else {
       // not a visit task, don't display npc values
@@ -94,6 +95,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
         location: task.objective.where,
         reward: task.reward,
         deletable: task.deletable,
+        type: task.type,
       };
     }
   }
@@ -159,7 +161,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
 
               {task.deletable && (
                 <span className="hidden 2xl:flex absolute inset-0 font-semibold text-blue-900 -rotate-[25deg] translate-x-[70px] translate-y-[-40px]">
-                  Just for fun!
+                  {task.type}
                 </span>
               )}
               {/* red index bubble */}
