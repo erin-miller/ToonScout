@@ -4,7 +4,7 @@ import { InteractionResponseType } from "discord-interactions";
 export const data = new SlashCommandBuilder()
   .setName("sillymeter")
   .setDescription("Get the silly meter status.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2]);
 
 export async function execute(req, res, target) {

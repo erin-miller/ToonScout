@@ -75,7 +75,7 @@ const GAG_INDEX = {
 export const data = new SlashCommandBuilder()
   .setName("gags")
   .setDescription("Show an overview of one or all your gags.")
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
   .addUserOption((option) =>
     option

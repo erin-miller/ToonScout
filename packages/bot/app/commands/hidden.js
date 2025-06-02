@@ -7,7 +7,7 @@ export const data = new SlashCommandBuilder()
   .setDescription(
     "Toggle your information visibility. If visible, others can view your toon."
   )
-  .setIntegrationTypes(1)
+  .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2]);
 
 export async function execute(req, res, target) {
