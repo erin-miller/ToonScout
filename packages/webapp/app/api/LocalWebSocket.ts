@@ -95,6 +95,7 @@ const connectWebSocket = () => {
 
     socket.addEventListener("error", (error) => {
       cleanupWebSocket(port);
+      console.error(`WebSocket error on ${port}:`, error);
     });
 
     socket.addEventListener("close", () => {
