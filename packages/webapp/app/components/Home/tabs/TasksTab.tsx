@@ -162,6 +162,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
                   Just for fun!
                 </span>
               )}
+              {/* red index bubble */}
               <div className="flex absolute top-4 left-4 justify-center items-center">
                 <span
                   className="hidden 2xl:flex items-center justify-center w-8 h-8 border-4 shadow-lg
@@ -171,15 +172,21 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
                   {getIndex(index)}
                 </span>
               </div>
-              <h3 className="task-title">{task.title}</h3>
-              <div className="flex flex-col justify-center items-center flex-grow">
-                {task.location && (
-                  <p className="task-location">{task.location}</p>
-                )}
-                {task.progress && renderProgress(task.progress)}
-              </div>
-              <div className="mt-auto pb-4">
-                {task.reward && <p className="task-reward">{task.reward}</p>}
+              {/* task content */}
+              <div
+                className="md:grid gap-0 2xl:gap-12"
+                style={{ gridTemplateRows: "130px 90px 30px" }}
+              >
+                <h3 className="task-title">{task.title}</h3>
+                <div className="flex flex-col justify-center items-center">
+                  {task.location && (
+                    <p className="task-location">{task.location}</p>
+                  )}
+                  {task.progress && renderProgress(task.progress)}
+                </div>
+                <div className="mt-auto pb-4">
+                  {task.reward && <p className="task-reward">{task.reward}</p>}
+                </div>
               </div>
             </div>
           </div>
