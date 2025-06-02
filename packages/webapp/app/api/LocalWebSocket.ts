@@ -42,10 +42,12 @@ const connectWebSocket = () => {
     sockets[port] = socket;
 
     socket.addEventListener("open", () => {
-      socket.send(
-        JSON.stringify({ authorization: initAuthToken(), name: "ToonScout" })
-      );
-      socket.send(JSON.stringify({ request: "all" }));
+      let token = sessionStorage.getItem("ttauth-state");
+      if (token === null) {
+        token = initAuthToken();
+        sessionStorage.setItem("ttauth-state", token);
+      }
+      socket.send(JSON.stringify({ authorization: token, name: "ToonScout" }));
       startContinuousRequests();
     });
 
