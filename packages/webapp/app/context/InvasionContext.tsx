@@ -40,7 +40,6 @@ interface InvasionData {
   startTimestamp: number;
   district: string;
   estimatedEndTime?: number | null;
-  rate?: number;
 }
 
 // TypeScript interface for the API response
@@ -102,7 +101,6 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
             startTimestamp: invasion.startTimestamp,
             district,
             estimatedEndTime: invasion.estimatedEndTime,
-            rate: invasion.rate,
           })
         );
 

@@ -100,12 +100,16 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
         ) : (
           <div className="text-center py-12">
             <div className="mb-4">
-              <FaGlobe size={48} className="mx-auto text-gray-400" />
+              <FaGlobe
+                size={48}
+                className="mx-auto text-gray-300 dark:text-gray-400 drop-shadow-sm"
+                style={{ filter: "drop-shadow(0 1px 4px #eab30888)" }}
+              />
             </div>
-            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">
+            <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-pink-900 dark:text-pink-200 font-bold mb-2 drop-shadow-sm">
               No Active Invasions
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-lg md:text-xl font-semibold text-pink-900 dark:text-pink-200">
               Check back later for new invasions to appear!
             </p>
           </div>
