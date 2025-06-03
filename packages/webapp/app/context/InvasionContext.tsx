@@ -19,10 +19,6 @@ const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
  * @property {number} startTimestamp - Unix timestamp when the invasion started
  * @property {number|null} estimatedTimeLeft - Estimated time left for the invasion to end
  * @property {number} rate - Rate of progress for the invasion
- * @property {string} speedStatus - Speed status of the invasion
- * @property {number|null} historicalRate - Historical rate of progress
- * @property {number} historicalSampleSize - Sample size for historical data
- * @property {boolean} usedHistorical - Whether historical data was used
  */
 
 /**
@@ -43,12 +39,8 @@ interface InvasionData {
   progress: string;
   startTimestamp: number;
   district: string;
-  estimatedTimeLeft?: number | null;
+  estimatedEndTime?: number | null;
   rate?: number;
-  speedStatus?: string;
-  historicalRate?: number | null;
-  historicalSampleSize?: number;
-  usedHistorical?: boolean;
 }
 
 // TypeScript interface for the API response
@@ -60,12 +52,8 @@ interface TTRInvasionResponse {
       type: string;
       progress: string;
       startTimestamp: number;
-      estimatedTimeLeft?: number | null;
+      estimatedEndTime?: number | null;
       rate?: number;
-      speedStatus?: string;
-      historicalRate?: number | null;
-      historicalSampleSize?: number;
-      usedHistorical?: boolean;
     };
   };
   lastUpdated: number;
@@ -113,12 +101,8 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
             progress: invasion.progress,
             startTimestamp: invasion.startTimestamp,
             district,
-            estimatedTimeLeft: invasion.estimatedTimeLeft,
+            estimatedEndTime: invasion.estimatedEndTime,
             rate: invasion.rate,
-            speedStatus: invasion.speedStatus,
-            historicalRate: invasion.historicalRate,
-            historicalSampleSize: invasion.historicalSampleSize,
-            usedHistorical: invasion.usedHistorical,
           })
         );
 

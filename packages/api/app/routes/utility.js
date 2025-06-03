@@ -4,8 +4,7 @@ import {
   SuitsCalculator,
   FlowerCalculator,
 } from "toonapi-calculator";
-import fetch from "node-fetch";
-import { LRUCache } from "lru-cache";
+import { getInvasions } from "./invasionHelpers.js";
 
 const router = express.Router();
 
@@ -93,26 +92,20 @@ router.post("/get-garden", async (req, res) => {
   }
 });
 
-// Proxy TTR invasions API with in-memory caching and CORS
-let getCachedInvasions;
-(async () => {
-  const invasionHelpers = await import("./invasionHelpers.js");
-  getCachedInvasions = invasionHelpers.getCachedInvasions;
-})();
+let cachedInvasions = null;
+let lastFetchTime = 0;
+const INVASION_CACHE_MS = 60 * 1000;
 
 router.get("/get-invasions", async (req, res) => {
-  res.set("Cache-Control", "public, max-age=60"); // Allow clients/proxies to cache for 60 seconds
-  const now = Date.now();
-  if (cachedInvasions && now - lastFetchTime < INVASION_CACHE_MS) {
-    return res.status(200).json(cachedInvasions);
+  res.set("Cache-Control", "public, max-age=60");
+  if (cachedInvasions && Date.now() - lastFetchTime < INVASION_CACHE_MS) {
+    return res.json(cachedInvasions);
   }
-  const apiResponse = await getCachedInvasions();
-  if (apiResponse.error) {
-    // 502 for fetch error, 500 for other errors
-    const status = apiResponse.error.includes("fetch") ? 502 : 500;
-    return res.status(status).json(apiResponse);
-  }
-  return res.status(200).json(apiResponse);
+  const apiResponse = await getInvasions();
+  if (apiResponse.error) return res.status(500).json(apiResponse);
+  cachedInvasions = apiResponse;
+  lastFetchTime = Date.now();
+  res.json(apiResponse);
 });
 
 const MAX_IMAGE_SIZE_BYTES = 512 * 1024; // 512 KB
