@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useMemo } from "react";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "../../animations/AnimatedTab";
 import { useInvasionContext } from "@/app/context/InvasionContext";
@@ -10,15 +10,9 @@ import InvasionCard from "./InvasionCard";
 
 const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
   const { invasions, loading } = useInvasionContext();
-  const [now, setNow] = useState(Date.now());
   const prevTimeLeftRef = React.useRef<
     Record<string, number | null | undefined>
   >({});
-
-  useEffect(() => {
-    const interval = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   const debouncedInvasions = useMemo(() => {
     return invasions.map((inv) => {
@@ -81,17 +75,13 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
                 (rel) =>
                   rel.cog === invasion.cog && rel.district === invasion.district
               );
-              let timeLeft = null;
-              if (typeof invasion.estimatedEndTime === "number") {
-                timeLeft = invasion.estimatedEndTime - Math.floor(now / 1000);
-              }
               return (
                 <InvasionCard
                   key={`${invasion.asOf}-${invasion.district}-${invasion.cog}`}
                   invasion={invasion}
                   percent={percent}
                   isRelevant={isRelevant}
-                  timeLeft={timeLeft}
+                  estimatedEndTime={invasion.estimatedEndTime}
                   formatTimeLeft={formatTimeLeft}
                 />
               );

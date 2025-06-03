@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGlobe, FaClock } from "react-icons/fa";
@@ -8,7 +8,7 @@ interface InvasionCardProps {
   invasion: any;
   percent: number;
   isRelevant: boolean;
-  timeLeft: number | null;
+  estimatedEndTime?: number | null;
   formatTimeLeft: (secondsLeft: number) => string;
 }
 
@@ -16,9 +16,25 @@ const InvasionCard: React.FC<InvasionCardProps> = ({
   invasion,
   percent,
   isRelevant,
-  timeLeft,
+  estimatedEndTime,
   formatTimeLeft,
 }) => {
+  const [timeLeft, setTimeLeft] = useState<number | null>(
+    typeof estimatedEndTime === "number"
+      ? estimatedEndTime - Math.floor(Date.now() / 1000)
+      : null
+  );
+
+  useEffect(() => {
+    if (typeof estimatedEndTime !== "number") return;
+    const update = () => {
+      setTimeLeft(estimatedEndTime - Math.floor(Date.now() / 1000));
+    };
+    update();
+    const interval = setInterval(update, 1000);
+    return () => clearInterval(interval);
+  }, [estimatedEndTime]);
+
   return (
     <motion.div
       key={`${invasion.asOf}-${invasion.district}-${invasion.cog}`}

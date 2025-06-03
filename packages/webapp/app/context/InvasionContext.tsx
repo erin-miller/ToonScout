@@ -103,7 +103,6 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
             estimatedEndTime: invasion.estimatedEndTime,
           })
         );
-
         // Set the invasions state
         setInvasions(transformed);
 
