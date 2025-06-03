@@ -37,23 +37,12 @@ function calculateEstimatedEndTime(invasion, district) {
     return invasion.startTimestamp + 10800;
   }
 
-  // Normal invasion: max duration is total cogs * 0.7 seconds
-  if (!invasion.startTimestamp || !invasion.asOf) return null;
-  const elapsed = invasion.asOf - invasion.startTimestamp;
-  if (elapsed <= 0) return null;
-  // Use a minimum time window to avoid overestimating rate at the start
-  const minElapsed = Math.max(elapsed, 120); // at least 2 minutes
-  const rate = current / minElapsed; // cogs per second
-  if (rate <= 0) return null;
-  const remaining = total - current;
-  const secondsLeftByRate = Math.round(remaining / rate);
-  const maxPossibleTime = Math.round(total * 0.7); // 0.7 * total cogs
-  const secondsLeftByMax = maxPossibleTime - elapsed;
-  const bestEstimate = Math.max(
-    0,
-    Math.min(secondsLeftByRate, secondsLeftByMax)
-  );
-  const estimatedEndTime = invasion.asOf + bestEstimate;
+  // Normal invasion: estimate based on max possible time scaled by progress
+  if (!invasion.startTimestamp) return null;
+  const maxPossibleTime = total * 0.7; // 0.7 * total cogs
+  const progressPercent = current / total;
+  const estimatedDuration = Math.round(maxPossibleTime * progressPercent);
+  const estimatedEndTime = invasion.startTimestamp + estimatedDuration;
   invasionEstimateCache.set(cacheKey, estimatedEndTime);
   return estimatedEndTime;
 }
