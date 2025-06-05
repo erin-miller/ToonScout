@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
     if (userId && activeIndex !== undefined) {
       sendScoutData(userId, toons[activeIndex]?.data);
     }
-  }, [toon?.data, activeIndex]);
+  }, [toon?.data, activeIndex, userId]);
 
   return (
     <div className="page-container">
