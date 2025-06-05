@@ -23,6 +23,16 @@ services:
     extends:
       file: ./packages/bot/docker-compose.dev.yml
       service: bot
+    develop:
+      watch:
+        - action: sync
+          path: ./packages/bot
+          target: /app
+          ignore:
+            - node_modules/
+            - .git/
+        - action: rebuild
+          path: ./packages/bot/package.json
 
   webapp:
     extends:
