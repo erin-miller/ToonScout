@@ -7,6 +7,8 @@ on:
     paths:
       - 'packages/api/**'
       - 'packages/bot/**'
+    workflow_dispatch:
+    
 jobs:
   deploy:
     runs-on: ubuntu-22.04
