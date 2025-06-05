@@ -10,3 +10,15 @@ services:
       - .:/app
       - /app/node_modules
       - .env:/app/.env
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - node_modules/
+            - .git/
+        - action: rebuild
+          path: package.json
