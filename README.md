@@ -40,7 +40,7 @@ The tunnels are especially helpful for testing Discord interactions between the 
 
 ## Hot Reload with Docker Compose
 
-This repo supports hot reload for both the webapp and API using Docker Compose's `develop: watch:` feature.
+This repo supports hot reload for the webapp, bot and API using Docker Compose's `develop: watch:` feature.
 
 ### Quick Start
 
