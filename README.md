@@ -50,7 +50,7 @@ This repo supports hot reload for the webapp, bot and API using Docker Compose's
    docker compose up --watch
    ```
 
-2. **Edit code in `packages/webapp` or `packages/api`.**
+2. **Edit code in `packages/webapp`, `packages/bot` or `packages/api`.**
    - Changes sync automatically and trigger reloads in the containers.
 
 **Note:** Hot reload is for development only.
