@@ -19,9 +19,14 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
           PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
         run: |
-          ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST "
-          set -e && \
-          cd $PROJECT_DIR && \
-          git pull origin main && \
-          docker compose -f docker-compose.prod.yml up --build -d
-          "
+          ssh -C -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST '
+            set -e
+            echo "=== [DEBUG] Date: $(date) ==="
+            cd $PROJECT_DIR
+            echo "=== [DEBUG] Syncing with remote repository... ==="
+            time git pull origin main
+            echo "=== [DEBUG] Rebuilding docker containers... ==="
+            time docker compose -f docker-compose.prod.yml up --build -d
+            echo "=== [DEBUG] Checking running containers... ==="
+            docker ps -a
+          '
