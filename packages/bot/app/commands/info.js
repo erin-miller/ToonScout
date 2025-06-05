@@ -27,7 +27,9 @@ export async function execute(req, res, target) {
     .setThumbnail(getToonRendition(toon, "waving"))
     .addFields(
       { name: "Laff", value: simplifyLaff(toon) },
-      { name: "Location", value: simplifyLocation(toon) }
+      { name: "Location", value: simplifyLocation(toon) },
+      { name: "Cattlelog", value: simplifyCattlelog(toon) },
+      { name: "Jellybeans", value: simplifyJellybeans(toon) }
     )
     .setTimestamp(item.modified);
 
@@ -50,4 +52,12 @@ function simplifyLocation(toon) {
     msg += `, ${loc.neighborhood}`;
   }
   return msg;
+}
+
+function simplifyCattlelog(toon) {
+  return `Series ${toon.cattlelog.series} Issue #${toon.cattlelog.issue}`;
+}
+
+function simplifyJellybeans(toon) {
+  return `Jar: ${toon.beans.jar.current}\nBank: ${toon.beans.bank.current}`;
 }
