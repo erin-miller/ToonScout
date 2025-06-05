@@ -22,12 +22,9 @@ export const formatTrack = (entry: any) => {
 
 // Helper: Get the rendition image for SOS cards
 export const getRendition = (url: string) => {
-  const proxyUrl = `${
-    process.env.NEXT_PUBLIC_API_HTTP
-  }/utility/get-rendition?url=${encodeURIComponent(url)}`;
   return (
     <Image
-      src={proxyUrl}
+      src={url}
       className="w-16 h-16"
       alt="SOS Card"
       width={64}
