@@ -9,7 +9,13 @@ export const data = new SlashCommandBuilder()
   .setName("garden")
   .setDescription("Get gardening advice and view your stats.")
   .setIntegrationTypes([0, 1])
-  .setContexts([0, 1, 2]);
+  .setContexts([0, 1, 2])
+  .addUserOption((option) =>
+    option
+      .setName("user")
+      .setDescription("(Optional) Get the specified user's toon info.")
+      .setRequired(false)
+  );
 
 export async function execute(req, res, target) {
   const item = await getScoutToken(target);
