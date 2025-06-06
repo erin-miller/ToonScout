@@ -16,12 +16,15 @@ jobs:
 
     steps:
       - name: Set up SSH key
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_KEY: ${{ secrets.VPS_KEY }}
         run: |
           echo "=== [DEBUG] Setting up SSH key..."
           mkdir -p ~/.ssh
-          echo "${{ secrets.VPS_KEY }}" > ~/.ssh/id_ed25519
+          printf "%s\n" "$VPS_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan $VPS_HOST >> ~/.ssh/known_hosts
 
       - name: Execute deployment via SSH
         env:
@@ -29,7 +32,7 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
           PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
         run: |
-          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
+          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST
             set -e
             echo "=== [DEBUG] Date: \$(date) ==="
             cd \$PROJECT_DIR
@@ -39,4 +42,3 @@ jobs:
             time docker compose -f docker-compose.prod.yml up --build -d
             echo "=== [DEBUG] Checking running containers... ==="
             docker ps -a
-          EOF
