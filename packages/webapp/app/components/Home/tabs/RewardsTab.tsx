@@ -139,16 +139,12 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
         {/* reward select */}
         <div className="reward-container">
           {rewardTypes.map((type) => {
-            const rewardData = getRewardData();
-            const isLocked =
-              !rewardData || Object.keys(rewardData).length === 0;
             const isPinkslip = type === "Pinkslips";
             const baseImageNormal = imageAssets.ttr_tab_normal;
             const baseImageHover = imageAssets.ttr_tab_hover;
             const baseImageClick = imageAssets.ttr_tab_click;
-            const secondaryImage = isLocked
-              ? imageAssets.ttr_tab_locked
-              : rewardImages[type.toLowerCase() as keyof typeof rewardImages];
+            const secondaryImage =
+              rewardImages[type.toLowerCase() as keyof typeof rewardImages];
 
             const getButtonImage = () => {
               if (clickedButton === type) return baseImageClick;
@@ -166,45 +162,35 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
                 onMouseEnter={() => setHoveredButton(type)}
                 onMouseLeave={() => setHoveredButton(null)}
                 onMouseDown={() => setClickedButton(type)}
-                onMouseUp={() => setClickedButton(null)} // Reset clickedButton on mouse release
-                disabled={isPinkslip || isLocked}
+                onMouseUp={() => setClickedButton(null)}
+                disabled={isPinkslip}
               >
-                {isLocked ? (
+                <>
                   <Image
-                    src={secondaryImage}
+                    src={getButtonImage()}
                     className="base-image"
-                    alt={type + " locked"}
+                    alt={type + " base"}
                     width={112}
                     height={112}
                   />
-                ) : (
-                  <>
-                    <Image
-                      src={getButtonImage()}
-                      className="base-image"
-                      alt={type + " base"}
-                      width={112}
-                      height={112}
-                    />
-                    <Image
-                      src={secondaryImage}
-                      className="overlay-image"
-                      alt={type + " overlay"}
-                      width={84}
-                      height={84}
-                    />
-                    {isPinkslip && (
-                      <div className="text-2xl lg:text-4xl 2xl:text-5xl justify-end items-end">
-                        <span className="absolute bottom-1.5 right-2.5 text-blue-950 ">
-                          {toon.data.data.rewards.pinkslips}
-                        </span>
-                        <span className="absolute bottom-2 right-3 text-gray-100">
-                          {toon.data.data.rewards.pinkslips}
-                        </span>
-                      </div>
-                    )}
-                  </>
-                )}
+                  <Image
+                    src={secondaryImage}
+                    className="overlay-image"
+                    alt={type + " overlay"}
+                    width={84}
+                    height={84}
+                  />
+                  {isPinkslip && (
+                    <div className="text-2xl lg:text-4xl 2xl:text-5xl justify-end items-end">
+                      <span className="absolute bottom-1.5 right-2.5 text-blue-950 ">
+                        {toon.data.data.rewards.pinkslips}
+                      </span>
+                      <span className="absolute bottom-2 right-3 text-gray-100">
+                        {toon.data.data.rewards.pinkslips}
+                      </span>
+                    </div>
+                  )}
+                </>
               </button>
             );
           })}
