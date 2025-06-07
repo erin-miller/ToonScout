@@ -57,13 +57,13 @@ function updateInvasionDataCache(invasion, district) {
 }
 
 function calculateInvasionRates(dataPoints, startTimestamp) {
-  if (dataPoints.length < 2) {
+  if (dataPoints.length < 4) {
     return { currentRate: null, avgRate: null, isReliable: false };
   }
-  // Current rate: last 3 data points for responsiveness
-  const recentPoints = dataPoints.slice(-3);
+  // Current rate: last 5 data points for responsiveness
+  const recentPoints = dataPoints.slice(-5);
   let currentRate = null;
-  if (recentPoints.length >= 2) {
+  if (recentPoints.length >= 4) {
     const first = recentPoints[0];
     const last = recentPoints[recentPoints.length - 1];
     const timeElapsed = last.timestamp - first.timestamp;
@@ -84,7 +84,7 @@ function calculateInvasionRates(dataPoints, startTimestamp) {
   }
   // Rate is reliable if we have enough data points and consistent rates
   const isReliable =
-    dataPoints.length >= 3 &&
+    dataPoints.length >= 5 &&
     currentRate &&
     avgRate &&
     Math.abs(currentRate - avgRate) / avgRate < 0.5; // Within 50% of each other
@@ -141,11 +141,11 @@ function calculateEstimatedEndTime(invasion, district) {
   if (!cacheEntry) return null;
   const maxDuration = cacheEntry.maxDuration;
   const absoluteEndTime = invasion.startTimestamp + maxDuration;
-  // If very early in invasion (<5% progress or <3 data points), use baseline defeat rate
+  // If very early in invasion (<5% progress or <5 data points), use baseline defeat rate
   const progressPercent = current / total;
   if (
     progressPercent < 0.05 ||
-    (cacheEntry.dataPoints && cacheEntry.dataPoints.length < 3)
+    (cacheEntry.dataPoints && cacheEntry.dataPoints.length < 5)
   ) {
     const remaining = total - current;
     const baselineSeconds = Math.ceil(remaining / BASELINE_COGS_PER_SEC);
