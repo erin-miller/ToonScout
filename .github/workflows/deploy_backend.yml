@@ -32,14 +32,15 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
           PROJECT_DIR: /var/www/ToonScout
         run: |
-          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST
+          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST "
             set -e
-            echo "=== [DEBUG] Date: $(date) ==="
-            echo "=== [DEBUG] Moving to $PROJECT_DIR... ==="
+            echo '=== [DEBUG] Date: ' \$(date)
+            echo '=== [DEBUG] Moving to $PROJECT_DIR... ==='
             cd $PROJECT_DIR
-            echo "=== [DEBUG] Syncing with remote repository... ==="
+            echo '=== [DEBUG] Syncing with remote repository... ==='
             time git pull origin main
-            echo "=== [DEBUG] Rebuilding docker containers... ==="
+            echo '=== [DEBUG] Rebuilding docker containers... ==='
             time docker compose -f docker-compose.prod.yml up --build -d
-            echo "=== [DEBUG] Checking running containers... ==="
+            echo '=== [DEBUG] Checking running containers... ==='
             docker ps -a
+          "
