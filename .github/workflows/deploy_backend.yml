@@ -35,6 +35,7 @@ jobs:
           ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST
             set -e
             echo "=== [DEBUG] Date: $(date) ==="
+            echo "=== [DEBUG] Moving to $PROJECT_DIR... ==="
             cd $PROJECT_DIR
             echo "=== [DEBUG] Syncing with remote repository... ==="
             time git pull origin main
