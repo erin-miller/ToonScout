@@ -1,14 +1,12 @@
 name: Deploy to Backend VPS
 
 on:
-  workflow_dispatch:
-  # Uncomment the below to enable auto-deploy on push
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - 'packages/api/**'
-  #     - 'packages/bot/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/api/**'
+      - 'packages/bot/**'
 
 jobs:
   deploy:
