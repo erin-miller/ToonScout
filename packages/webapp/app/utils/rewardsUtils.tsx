@@ -129,13 +129,11 @@ export const renderSOS = (
               shadow-md p-2 rounded-lg"
               onClick={() => toggleFlip(card)}
             >
-              <div className="flex justify-start rounded-lg border-2 border-pink-500">
-                {/* photo */}
-                {getRendition(
-                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
-                )}
+              <div className="flex justify-center items-center min-h-16 rounded-lg border-2 border-pink-500">
                 {/* name */}
-                <div className="flex font-minnie text-xl justify-center text-center items-center">
+                <div
+                  className={`flex font-minnie justify-center text-center items-center text-lg`}
+                >
                   {card}
                 </div>
               </div>
@@ -143,10 +141,7 @@ export const renderSOS = (
               <div className="mt-1">
                 {entry?.description
                   ? entry.description.split("\n").map((line, idx) => (
-                      <p
-                        key={idx}
-                        className={idx === 0 ? "text-lg" : "text-base"}
-                      >
+                      <p key={idx} className={"text-base"}>
                         {line}
                       </p>
                     ))
