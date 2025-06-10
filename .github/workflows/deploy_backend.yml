@@ -34,8 +34,8 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST
             set -e
-            echo "=== [DEBUG] Date: \$(date) ==="
-            cd \$PROJECT_DIR
+            echo "=== [DEBUG] Date: $(date) ==="
+            cd $PROJECT_DIR
             echo "=== [DEBUG] Syncing with remote repository... ==="
             time git pull origin main
             echo "=== [DEBUG] Rebuilding docker containers... ==="
