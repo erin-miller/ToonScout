@@ -37,7 +37,7 @@ const InvasionCard: React.FC<InvasionCardProps> = ({
 
   return (
     <motion.div
-      key={`${invasion.asOf}-${invasion.district}-${invasion.cog}`}
+      key={`${invasion.district}-${invasion.cog}-${invasion.startTimestamp}`}
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -40, opacity: 0 }}

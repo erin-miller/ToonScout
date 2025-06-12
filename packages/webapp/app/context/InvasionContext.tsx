@@ -59,7 +59,7 @@ interface TTRInvasionResponse {
 }
 
 // Intervals in milliseconds
-const LIVE_DATA_INTERVAL = 60000; // 60 seconds for live data
+const LIVE_DATA_INTERVAL = 30000; // 30 seconds for live data
 
 const InvasionContext = createContext<InvasionContextType>({
   invasions: [],
@@ -71,25 +71,23 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [invasions, setInvasions] = useState<InvasionData[]>([]);
   const [loading, setLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<number>(0);
   const prevInvasions = useRef<InvasionData[]>([]);
 
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
     let isFirstFetch = true;
+    let nextInterval = LIVE_DATA_INTERVAL;
 
     const fetchInvasions = async () => {
       try {
         if (isFirstFetch) setLoading(true);
 
-        // Always use live endpoint now
         const endpoint = `${API_LINK}/utility/get-invasions`;
-
         const response = await fetch(endpoint, {
           cache: "no-store",
         });
-
         if (!response.ok) throw new Error("Network response was not ok");
-
         const data = (await response.json()) as TTRInvasionResponse;
         if (data.error) return;
 
@@ -103,12 +101,20 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
             estimatedEndTime: invasion.estimatedEndTime,
           })
         );
-        // Set the invasions state
-        setInvasions(transformed);
+        if (data.lastUpdated !== lastUpdated) {
+          setInvasions(transformed);
+          setLastUpdated(data.lastUpdated);
+        }
 
         prevInvasions.current = transformed;
+
+        // Dynamically adjust next poll interval based on TTR's lastUpdated
+        const nowSec = Math.floor(Date.now() / 1000);
+        const ttrDelay = Math.max(10, 65 - (nowSec - data.lastUpdated)); // poll at least every 10s, but try to sync with TTR (which updates about every 60-65s)
+        nextInterval = ttrDelay * 1000;
+        if (interval) clearInterval(interval);
+        interval = setInterval(fetchInvasions, nextInterval);
       } catch (e) {
-        // Optionally handle error
         console.error("Error fetching invasions:", e);
       } finally {
         if (isFirstFetch) setLoading(false);
@@ -116,11 +122,7 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
       }
     };
 
-    // Initial fetch
     fetchInvasions();
-
-    // Set interval for live data
-    interval = setInterval(fetchInvasions, LIVE_DATA_INTERVAL);
 
     return () => {
       if (interval) clearInterval(interval);
