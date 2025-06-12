@@ -5,7 +5,7 @@
     "ability": "Heal",
     "track": "Toon-Up",
     "dna": "740705020000040004040415001515010400000000000000000000000000000000",
-    "description": "Heals all Toons:\n+60 laff to one Toon\n+30 laff to two Toons\n+20 laff to three Toons\n+15 laff to four Toons"
+    "description": "+60 laff to one Toon\n+30 laff to two Toons\n+20 laff to three Toons\n+15 laff to four Toons"
   },
   {
     "name": "Daffy Don",
@@ -13,7 +13,7 @@
     "ability": "Heal",
     "track": "Toon-Up",
     "dna": "740c000201010601068b1104000404010400000000000000000000000000000000",
-    "description": "Heals all Toons:\n+120 laff to one Toon\n+60 laff to two Toons\n+40 laff to three Toons\n+30 laff to four Toons"
+    "description": "+120 laff to one Toon\n+60 laff to two Toons\n+40 laff to three Toons\n+30 laff to four Toons"
   },
   {
     "name": "Flippy",
@@ -21,7 +21,7 @@
     "ability": "Heal",
     "track": "Toon-Up",
     "dna": "740101010103110311092011001111010400000000000000000000000000000000",
-    "description": "Heals all Toons:\n+180 laff to one Toon\n+90 laff to two Toons\n+60 laff to three Toons\n+45 laff to four Toons"
+    "description": "+180 laff to one Toon\n+90 laff to two Toons\n+60 laff to three Toons\n+45 laff to four Toons"
   },
   {
     "name": "Clerk Will",
