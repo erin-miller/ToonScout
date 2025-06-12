@@ -60,7 +60,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
         <div className="text-base text-gray-700">
           Special thanks to the following for advice, support, and/or
           contributions:
-          <p>bnuy</p>
+          <p>hopja</p>
           <p>Cherie</p>
           <p>Aton (warmpoptart)</p>
         </div>
