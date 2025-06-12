@@ -314,7 +314,11 @@ export const renderPinkslips = () => {
   return <div>Hmm.. something went wrong!</div>;
 };
 
-export const renderRemotes = (toon: StoredToonData) => {
+export const renderRemotes = (
+  toon: StoredToonData,
+  flipStates: Record<string, boolean>,
+  toggleFlip: (card: string) => void
+) => {
   const remotes = toon.data.data.rewards.remotes;
   if (!remotes) {
     return <div>No remotes available.</div>;
@@ -332,80 +336,154 @@ export const renderRemotes = (toon: StoredToonData) => {
     3: rewardImages.remotes3,
   };
 
+  const expireMap = {
+    1: 45,
+    2: 90,
+    3: 150,
+  };
+
+  const dmgEffects = {
+    1: 45,
+    2: 60,
+    3: 75,
+  };
+
+  const healEffects = {
+    1: 15,
+    2: 20,
+    3: 25,
+  };
+
+  const getEffectValue = (type: string, rating: string) => {
+    if (type.startsWith("Damage")) {
+      return `Damage: ${
+        dmgEffects[parseInt(rating) as keyof typeof dmgEffects]
+      }`;
+    } else if (type.startsWith("Healing")) {
+      return `Healing: ${
+        healEffects[parseInt(rating) as keyof typeof healEffects]
+      }`;
+    } else {
+      return "ERROR";
+    }
+  };
+
   return (
     <div>
       {Object.entries(remotes).map(([type, remoteData], outerIndex) => (
         <div
           key={outerIndex}
-          className="text-2xl text-blue-900 dark:text-pink-300 font-minnie text-left"
+          className={`text-2xl text-blue-900 dark:text-pink-300 font-minnie text-left ${
+            outerIndex === 1 ? "md:mb-4" : ""
+          }`}
         >
           {outerIndex === 0 && (
             <div className="font-bold mb-2">Damage Remotes</div>
           )}
           {outerIndex === 1 && (
-            <div className="font-bold mb-2 mt-4">Healing Remotes</div>
+            <div className="font-bold mb-2 mt-6">Healing Remotes</div>
           )}
-          <div className="grid grid-cols-3 gap-4">
-            {Object.entries(remoteData).map(([rating, count], index) => (
-              <div
-                key={index}
-                className={`grid md:grid-rows-2 text-xl dark:text-gray-100 bg-blue-400 border-2 border-blue-900 shadow-md p-2 rounded-lg`}
-                style={{ gridTemplateRows: "30px auto" }}
-              >
-                <div className="flex flex-row justify-center mt-1">
-                  {Array.from({ length: parseInt(rating) || 0 }, (_, i) => (
-                    <div key={i} className="relative">
-                      <FaStar
-                        className="text-amber-700 hidden md:block md:w-7 md:h-7 absolute"
-                        style={{
-                          transform: `rotate(-15deg)`,
-                          zIndex: 0,
-                          left: -4,
-                          bottom: -1,
-                        }}
+          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4">
+            {Object.entries(remoteData).map(([rating, count], index) => {
+              const cardKey = `${type}-${rating}`;
+
+              const cardFront = (
+                <div
+                  className={`grid md:grid-rows-2 auto-rows-fr text-xl 
+                    dark:text-gray-100 bg-blue-400 border-2 border-blue-900 
+                    shadow-md p-2 rounded-lg cursor-pointer
+                    min-h-48 lg:min-h-56`}
+                  style={{ gridTemplateRows: "30px auto" }}
+                  onClick={() => toggleFlip(cardKey)}
+                >
+                  <div className="flex flex-row justify-center mt-1">
+                    {Array.from({ length: parseInt(rating) || 0 }, (_, i) => (
+                      <div key={i} className="relative">
+                        <FaStar
+                          className="text-amber-700 hidden md:block md:w-7 md:h-7 absolute"
+                          style={{
+                            transform: `rotate(-15deg)`,
+                            zIndex: 0,
+                            left: -4,
+                            bottom: -1,
+                          }}
+                        />
+                        <FaStar
+                          className="text-amber-400 md:w-6 md:h-6 relative"
+                          style={{ transform: `rotate(-15deg)`, zIndex: 1 }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-center mt-2">
+                    {type.startsWith("Damage") ? (
+                      <Image
+                        src={
+                          damageByStar[
+                            parseInt(rating) as keyof typeof damageByStar
+                          ] || rewardImages.remotes
+                        }
+                        className="w-16 md:w-24"
+                        alt={`Damage Remote ${rating}`}
+                        width={96}
+                        height={96}
                       />
-                      <FaStar
-                        className="text-amber-400 md:w-6 md:h-6 relative"
-                        style={{ transform: `rotate(-15deg)`, zIndex: 1 }}
+                    ) : (
+                      <Image
+                        src={
+                          healingByStar[
+                            parseInt(rating) as keyof typeof healingByStar
+                          ] || rewardImages.remotesheal
+                        }
+                        className="w-16 md:w-24"
+                        alt={`Healing Remote ${rating}`}
+                        width={96}
+                        height={96}
                       />
+                    )}
+                  </div>
+                  <div className="flex justify-end items-end text-2xl lg:text-4xl xl:text-5xl">
+                    <span className="absolute text-blue-950">{count}</span>
+                    <span className="relative bottom-0.5 right-0.5 text-gray-100">
+                      {count}
+                    </span>
+                  </div>
+                </div>
+              );
+
+              const cardBack = (
+                <div
+                  className={`grid text-sm 2xl:text-xl auto-rows-fr 
+                    dark:text-gray-100 bg-blue-400 
+                    border-2 border-blue-900 shadow-md p-2 rounded-lg cursor-pointer
+                    min-h-48 lg:min-h-56`}
+                  onClick={() => toggleFlip(cardKey)}
+                >
+                  <div className="flex flex-col justify-center items-center text-center text-gray-100">
+                    <div className="text-amber-200">
+                      {rating} star {type.split(" ")[0]}
                     </div>
-                  ))}
+                    <div className="flex flex-col mt-2 font-impress">
+                      <span>Rounds: {parseInt(rating) + 1}</span>
+                      <span>{getEffectValue(type, rating)}</span>
+                      <span>
+                        Damage on Expire:{" "}
+                        {expireMap[parseInt(rating) as keyof typeof expireMap]}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center mt-2">
-                  {type.startsWith("Damage") ? (
-                    <Image
-                      src={
-                        damageByStar[
-                          parseInt(rating) as keyof typeof damageByStar
-                        ] || rewardImages.remotes
-                      }
-                      className="w-16 md:w-24"
-                      alt={`Damage Remote ${rating}`}
-                      width={96}
-                      height={96}
-                    />
-                  ) : (
-                    <Image
-                      src={
-                        healingByStar[
-                          parseInt(rating) as keyof typeof healingByStar
-                        ] || rewardImages.remotesheal
-                      }
-                      className="w-16 md:w-24"
-                      alt={`Healing Remote ${rating}`}
-                      width={96}
-                      height={96}
-                    />
-                  )}
-                </div>
-                <div className="flex justify-end items-end text-2xl lg:text-4xl 2xl:text-5xl">
-                  <span className="absolute text-blue-950">{count}</span>
-                  <span className="relative bottom-0.5 right-0.5 text-gray-100">
-                    {count}
-                  </span>
-                </div>
-              </div>
-            ))}
+              );
+
+              return (
+                <CardFlip
+                  key={index}
+                  cardFront={cardFront}
+                  cardBack={cardBack}
+                  isFlipped={flipStates[cardKey]}
+                />
+              );
+            })}
           </div>
         </div>
       ))}

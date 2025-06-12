@@ -30,26 +30,46 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
 
   // flip states for SOS cards
   const sosCards = toon.data.data.rewards.sos || {};
-  const [flipStates, setFlipStates] = useState<Record<string, boolean>>(
+  const [sosFlipStates, setSOSFlipStates] = useState<Record<string, boolean>>(
     Object.keys(sosCards).reduce((acc, card) => {
       acc[card] = false;
       return acc;
     }, {} as Record<string, boolean>)
   );
 
-  const toggleFlip = (card: string) => {
-    setFlipStates((prev) => ({
+  const toggleSOSFlip = (card: string) => {
+    setSOSFlipStates((prev) => ({
       ...prev,
       [card]: !prev[card],
     }));
   };
 
+  // flip states for remotes
+  const remotes = toon.data.data.rewards.remotes || [];
+  const [remoteFlipStates, setRemoteFlipStates] = useState<
+    Record<string, boolean>
+  >(
+    Array.isArray(remotes)
+      ? remotes.reduce((acc: Record<string, boolean>, remote: string) => {
+          acc[remote] = false;
+          return acc;
+        }, {} as Record<string, boolean>)
+      : {}
+  );
+
+  const toggleRemoteFlip = (remote: string) => {
+    setRemoteFlipStates((prev) => ({
+      ...prev,
+      [remote]: !prev[remote],
+    }));
+  };
+
   const renders: Record<string, () => JSX.Element> = {
-    SOS: () => renderSOS(toon, selectedSort, flipStates, toggleFlip),
+    SOS: () => renderSOS(toon, selectedSort, sosFlipStates, toggleSOSFlip),
     Unites: () => renderUnites(toon),
     Summons: () => renderSummons(toon),
     Pinkslips: renderPinkslips,
-    Remotes: () => renderRemotes(toon),
+    Remotes: () => renderRemotes(toon, remoteFlipStates, toggleRemoteFlip),
   };
 
   const extraRenders: Record<string, () => JSX.Element> = {
