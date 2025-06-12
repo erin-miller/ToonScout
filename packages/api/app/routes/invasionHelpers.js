@@ -57,13 +57,13 @@ function updateInvasionDataCache(invasion, district) {
 }
 
 function calculateInvasionRates(dataPoints, startTimestamp) {
-  if (dataPoints.length < 2) {
+  if (dataPoints.length < 4) {
     return { currentRate: null, avgRate: null, isReliable: false };
   }
-  // Current rate: last 3 data points for responsiveness
-  const recentPoints = dataPoints.slice(-3);
+  // Current rate: last 5 data points for responsiveness
+  const recentPoints = dataPoints.slice(-5);
   let currentRate = null;
-  if (recentPoints.length >= 2) {
+  if (recentPoints.length >= 4) {
     const first = recentPoints[0];
     const last = recentPoints[recentPoints.length - 1];
     const timeElapsed = last.timestamp - first.timestamp;
@@ -84,7 +84,7 @@ function calculateInvasionRates(dataPoints, startTimestamp) {
   }
   // Rate is reliable if we have enough data points and consistent rates
   const isReliable =
-    dataPoints.length >= 3 &&
+    dataPoints.length >= 5 &&
     currentRate &&
     avgRate &&
     Math.abs(currentRate - avgRate) / avgRate < 0.5; // Within 50% of each other
@@ -116,6 +116,10 @@ function estimateEndTimeByProgress(
   return null;
 }
 
+// Baseline defeat rate for fallback (cogs per minute)
+const BASELINE_COGS_PER_MIN = 80;
+const BASELINE_COGS_PER_SEC = BASELINE_COGS_PER_MIN / 60;
+
 function calculateEstimatedEndTime(invasion, district) {
   const now = invasion.asOf || Math.floor(Date.now() / 1000);
   if (!invasion.progress || !invasion.progress.includes("/")) return null;
@@ -130,14 +134,24 @@ function calculateEstimatedEndTime(invasion, district) {
   // Handle mega invasions - always use fixed 3-hour duration
   if (total === MEGA_INVASION_COGS && invasion.startTimestamp) {
     const endTime = invasion.startTimestamp + MEGA_INVASION_DURATION;
-    return Math.floor(endTime);
+    return Math.max(now, Math.floor(endTime));
   }
   // Update cache with new data point
   const cacheEntry = updateInvasionDataCache(invasion, district);
   if (!cacheEntry) return null;
   const maxDuration = cacheEntry.maxDuration;
   const absoluteEndTime = invasion.startTimestamp + maxDuration;
-  // Strategy 1: Use actual defeat rate if reliable - which means we have at least 3 data points
+  // If very early in invasion (<5% progress or <5 data points), use baseline defeat rate
+  const progressPercent = current / total;
+  if (
+    progressPercent < 0.05 ||
+    (cacheEntry.dataPoints && cacheEntry.dataPoints.length < 5)
+  ) {
+    const remaining = total - current;
+    const baselineSeconds = Math.ceil(remaining / BASELINE_COGS_PER_SEC);
+    return Math.max(now, now + baselineSeconds);
+  }
+  // Strategy 1: Use actual defeat rate if reliable
   if (cacheEntry.isRateReliable) {
     const endTime = estimateEndTimeByRate(
       now,
@@ -146,7 +160,7 @@ function calculateEstimatedEndTime(invasion, district) {
       cacheEntry.currentRate,
       absoluteEndTime
     );
-    if (endTime !== null) return Math.floor(endTime);
+    if (endTime !== null) return Math.max(now, Math.floor(endTime));
   }
   // Strategy 2: Use average rate if available but not fully reliable
   if (cacheEntry.avgRate > 0) {
@@ -157,9 +171,9 @@ function calculateEstimatedEndTime(invasion, district) {
       cacheEntry.avgRate,
       absoluteEndTime
     );
-    if (endTime !== null) return Math.floor(endTime);
+    if (endTime !== null) return Math.max(now, Math.floor(endTime));
   }
-  // Strategy 3: Early invasion - use progress scaling
+  // Strategy 3: Use progress scaling
   const progressEndTime = estimateEndTimeByProgress(
     now,
     current,
@@ -167,9 +181,22 @@ function calculateEstimatedEndTime(invasion, district) {
     invasion.startTimestamp,
     maxDuration
   );
-  if (progressEndTime !== null) return Math.floor(progressEndTime);
-  // Strategy 4: Fallback to maximum duration
-  return Math.floor(absoluteEndTime);
+  // If the progress-based estimate is in the past or too short, fallback to baseline defeat rate
+  if (progressEndTime !== null) {
+    if (
+      (progressEndTime < now || progressEndTime - now < 60) &&
+      current < total
+    ) {
+      const remaining = total - current;
+      const baselineSeconds = Math.ceil(remaining / BASELINE_COGS_PER_SEC);
+      return Math.max(now, now + baselineSeconds);
+    }
+    return Math.max(now, Math.floor(progressEndTime));
+  }
+  // Fallback: baseline defeat rate
+  const remaining = total - current;
+  const baselineSeconds = Math.ceil(remaining / BASELINE_COGS_PER_SEC);
+  return Math.max(now, now + baselineSeconds);
 }
 
 async function getInvasions() {
@@ -224,4 +251,5 @@ export {
   getMaxInvasionDuration,
   MEGA_INVASION_COGS,
   NORMAL_INVASION_MAX_RATE,
+  calculateEstimatedEndTime,
 };

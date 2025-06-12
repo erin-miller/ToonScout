@@ -77,7 +77,7 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
               );
               return (
                 <InvasionCard
-                  key={`${invasion.asOf}-${invasion.district}-${invasion.cog}`}
+                  key={`${invasion.district}-${invasion.cog}-${invasion.startTimestamp}`}
                   invasion={invasion}
                   percent={percent}
                   isRelevant={isRelevant}

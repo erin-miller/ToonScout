@@ -94,10 +94,10 @@ router.post("/get-garden", async (req, res) => {
 
 let cachedInvasions = null;
 let lastFetchTime = 0;
-const INVASION_CACHE_MS = 60 * 1000;
+const INVASION_CACHE_MS = 30 * 1000; // 30 seconds
 
 router.get("/get-invasions", async (req, res) => {
-  res.set("Cache-Control", "public, max-age=60");
+  res.set("Cache-Control", "public, max-age=30");
   if (cachedInvasions && Date.now() - lastFetchTime < INVASION_CACHE_MS) {
     return res.json(cachedInvasions);
   }
