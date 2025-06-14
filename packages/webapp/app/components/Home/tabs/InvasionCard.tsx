@@ -43,9 +43,9 @@ const InvasionCard: React.FC<InvasionCardProps> = ({
       exit={{ y: -40, opacity: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       layout
-      className={`p-4 border-2 rounded-xl bg-white dark:bg-gray-1100 shadow-md space-y-3 transition-all duration-300 hover:shadow-lg ${
+      className={`p-4 border-4 rounded-xl bg-white dark:bg-gray-1100 shadow-md space-y-3 transition-all duration-300 ${
         isRelevant
-          ? "border-yellow-400 ring-2 ring-yellow-200 dark:ring-yellow-600"
+          ? "border-yellow-400"
           : "border-gray-200 dark:border-gray-600"
       }`}
     >
@@ -67,7 +67,7 @@ const InvasionCard: React.FC<InvasionCardProps> = ({
           <h3 className="font-bold text-xl md:text-2xl text-pink-700 dark:text-pink-300 flex items-center gap-2 mt-0">
             {sanitizeCogName(invasion.cog)}
             {isRelevant && (
-              <span className="ml-2 px-2 py-0.5 rounded bg-yellow-200 text-yellow-900 text-xs font-semibold">
+              <span className="ml-2 px-3 py-1 rounded bg-yellow-200 text-yellow-900 text-base font-bold">
                 Relevant
               </span>
             )}
