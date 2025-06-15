@@ -24,6 +24,13 @@ export async function execute(req, res, target) {
   const days = calc.getDaysToUpgrade();
   const comboLevel = calc.getComboLevel();
 
+  let desc;
+  if (days === null) {
+    desc = "You've maxed your shovel! Congratulations!";
+  } else {
+    desc = `**${days}** days until next shovel upgrade!\n\nPlant the flowers below to gain experience.`;
+  }
+
   const embed = new EmbedBuilder()
     .setColor("Green")
     .setAuthor({
@@ -31,9 +38,7 @@ export async function execute(req, res, target) {
       iconURL: getToonRendition(toon, "laffmeter"),
     })
     .setTitle("Gardening")
-    .setDescription(
-      `**${days}** days until next shovel upgrade!\n\nPlant the flowers below to gain experience.`
-    )
+    .setDescription(desc)
     .addFields(getCombo(toon.flowers, comboLevel))
     .setFooter({
       text: `${toon.flowers.shovel.name} • ${toon.flowers.wateringCan.name}`,
