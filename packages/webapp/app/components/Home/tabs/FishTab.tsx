@@ -243,7 +243,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
             <div className="fishtank fish-scrollbar">
               {rarity && rarity.length > 0 ? (
                 rarity.map((item, index) => {
-                  const itemRarity = RARITY_INDEX[FISH_RARITY[item.name]];
+                  const itemRarity = RARITY_INDEX[item.rarity];
                   const rarityColor = RARITY_COLORS[itemRarity];
                   return (
                     <div className="fish" key={index}>
