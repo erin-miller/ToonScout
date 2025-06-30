@@ -21,7 +21,8 @@ router.post("/get-fish", async (req, res) => {
     const rarity = calc.sortBestRarity();
     const caught = calc.getCaught();
     const catchable = calc.getCatchable();
-    const fishData = { rarity, caught, catchable };
+    const locations = calc.sortBestLocation();
+    const fishData = { rarity, caught, catchable, locations };
 
     if (fishData) {
       return res.status(200).json(fishData);
