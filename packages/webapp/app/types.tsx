@@ -71,6 +71,7 @@ export interface FishRarity {
     avgBuckets: number;
     avgTime: number;
   };
+  rarity: number;
 }
 
 interface Fish {
