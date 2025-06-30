@@ -63,6 +63,8 @@ function getCogNameVariants(cog: any) {
   names.forEach((n) => {
     // edge case of Movers & Shakers instead of just Mover & Shakers
     if (n.startsWith("Mover")) n = n.replace("Mover", "Movers");
+    // edge case of ...Man -> ...Men
+    if (n.startsWith("Yes")) n = n.replace("man", "men");
     if (!n.endsWith("s")) names.push(n + "s");
   });
   return names.map(normalize);
