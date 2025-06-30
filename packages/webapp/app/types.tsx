@@ -65,13 +65,23 @@ export interface FishRarity {
   name: string;
   probability: number;
   location: string;
-  buckets: {
-    confBuckets: number;
-    confTime: number;
-    avgBuckets: number;
-    avgTime: number;
-  };
+  buckets: FishBuckets;
   rarity: number;
+}
+
+export type LocRarity = [
+  string,
+  {
+    total: number;
+    buckets: FishBuckets;
+  }
+];
+
+export interface FishBuckets {
+  confBuckets: number;
+  confTime: number;
+  avgBuckets: number;
+  avgTime: number;
 }
 
 interface Fish {

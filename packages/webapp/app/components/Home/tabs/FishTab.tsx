@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
 import { TabProps } from "./components/TabComponent";
 import { sumFish } from "./components/utils";
-import { FishRarity } from "@/app/types";
+import { FishBuckets, FishRarity, LocRarity } from "@/app/types";
 import { FaCog } from "react-icons/fa";
 import ToonSettingsModal from "../modals/ToonSettingsModal";
 import { useToonContext } from "@/app/context/ToonContext";
@@ -108,7 +108,12 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
   const [rarity, setRarity] = useState<FishRarity[] | null>(null);
   const [caught, setCaught] = useState<string[]>([]);
   const [catchable, setCatchable] = useState<number>(70);
+  const [locations, setLocations] = useState<LocRarity[] | null>(null);
   const [showSettingsModal, setShowSettingsModal] = useState<boolean>(false);
+
+  const [displayType, setDisplayType] = useState<1 | 2>(() => {
+    return JSON.parse(localStorage.getItem("fishDisplayType") || "1");
+  });
 
   const [bucketType, setBucketType] = useState<1 | 2>(() => {
     return JSON.parse(localStorage.getItem("bucketType") || "1");
@@ -123,6 +128,13 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
   });
 
   window.addEventListener("fishChange", (event) => {
+    const storedFishDisplay = parseInt(
+      localStorage.getItem("fishDisplayType") || "1"
+    );
+    if (storedFishDisplay !== displayType) {
+      setDisplayType(storedFishDisplay as 1 | 2);
+    }
+
     const storedBucketType = parseInt(
       localStorage.getItem("bucketType") || "1"
     );
@@ -149,23 +161,25 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
     setShowSettingsModal(!showSettingsModal);
   };
 
+  const probabilityType = displayType === 1 ? "the fish" : "a new fish";
+
   const probabilityTooltip =
     bucketType === 1
-      ? "The average toon will catch the fish in the amount of buckets listed."
-      : "You have a 90% chance to catch the fish in the amount of buckets listed.";
+      ? `The average toon will catch ${probabilityType} in the amount of buckets listed.`
+      : `You have a 90% chance to catch ${probabilityType} in the amount of buckets listed.`;
 
-  const getBuckets = (fish: FishRarity) => {
+  const getBuckets = (item: FishBuckets) => {
     if (bucketType === 1) {
-      return fish.buckets.avgBuckets;
+      return item.avgBuckets;
     }
-    return fish.buckets.confBuckets;
+    return item.confBuckets;
   };
 
-  const getTime = (fish: FishRarity) => {
+  const getTime = (item: FishBuckets) => {
     if (bucketType === 1) {
-      return processTime(fish.buckets.avgTime);
+      return processTime(item.avgTime);
     }
-    return processTime(fish.buckets.confTime);
+    return processTime(item.confTime);
   };
 
   const processTime = (time: number) => {
@@ -191,6 +205,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
       }
       const data = await response.json();
       setCaught(data.caught);
+      setLocations(data.locations);
       setRarity(data.rarity);
       setCatchable(data.catchable.length);
     };
@@ -212,7 +227,9 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
           </div>
           <div className="fish-table relative">
             <div className="flex text-xl md:text-2xl xl:text-3xl pb-2 ml-5 mr-9 space-x-2">
-              <div className="fish-table-header w-2/3">Fish</div>
+              {displayType == 1 && (
+                <div className="fish-table-header w-2/3">Fish</div>
+              )}
               <div className="fish-table-header w-2/3">Location</div>
               <div className="fish-table-header w-2/3">
                 Probability
@@ -241,45 +258,49 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
             </div>
 
             <div className="fishtank fish-scrollbar">
-              {rarity && rarity.length > 0 ? (
-                rarity.map((item, index) => {
-                  const itemRarity = RARITY_INDEX[item.rarity];
-                  const rarityColor = RARITY_COLORS[itemRarity];
-                  return (
-                    <div className="fish" key={index}>
-                      <div className="fish-info w-2/3 text-left gap-2">
-                        <div
-                          className={`flex-shrink-0 flex items-center justify-center rounded-full w-8 text-base ${rarityColor} dark:grayscale-[30%]`}
-                        >
-                          {itemRarity}
+              {/* per fish displays */}
+              {displayType == 1 &&
+                (rarity && rarity.length > 0 ? (
+                  rarity.map((item, index) => {
+                    const itemRarity = RARITY_INDEX[item.rarity];
+                    const rarityColor = RARITY_COLORS[itemRarity];
+                    return (
+                      <div className="fish" key={index}>
+                        <div className="fish-info w-2/3 text-left gap-2">
+                          <div
+                            className={`flex-shrink-0 flex items-center justify-center rounded-full w-8 text-base ${rarityColor} dark:grayscale-[30%]`}
+                          >
+                            {itemRarity}
+                          </div>
+                          {item.name}
                         </div>
-                        {item.name}
-                      </div>
 
-                      <div className="fish-info w-2/3 text-left">
-                        {item.location}
-                      </div>
+                        <div className="fish-info w-2/3 text-left">
+                          {item.location}
+                        </div>
 
-                      <div className="fish-info w-2/3 text-left">
-                        <span>
-                          {(item.probability * 100).toFixed(2)}% or{" "}
-                          {getBuckets(item)} buckets
-                        </span>
+                        <div className="fish-info w-2/3 text-left">
+                          <span>
+                            {(item.probability * 100).toFixed(2)}% or{" "}
+                            {getBuckets(item.buckets)} buckets
+                          </span>
+                        </div>
+                        <div
+                          className={`fish-info w-1/3 text-left ${
+                            showTime ? "opacity-100" : "opacity-0"
+                          }`}
+                        >
+                          <span>{getTime(item.buckets)}</span>
+                        </div>
                       </div>
-                      <div
-                        className={`fish-info w-1/3 text-left ${
-                          showTime ? "opacity-100" : "opacity-0"
-                        }`}
-                      >
-                        <span>{getTime(item)}</span>
-                      </div>
-                    </div>
-                  );
-                })
-              ) : (
-                <p className="fish">No new fish available to catch!</p>
-              )}
-              {showCaught &&
+                    );
+                  })
+                ) : (
+                  <p className="fish">No new fish available to catch!</p>
+                ))}
+
+              {displayType == 1 &&
+                showCaught &&
                 caught &&
                 caught.map((fish, index) => {
                   const itemRarity = RARITY_INDEX[FISH_RARITY[fish]];
@@ -297,6 +318,38 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
                     </div>
                   );
                 })}
+
+              {/* per location displays */}
+              {displayType == 2 &&
+                (locations && locations.length > 0 ? (
+                  locations.map((location, index) => {
+                    const { total, buckets } = location[1];
+                    return (
+                      <div className="fish" key={index}>
+                        <div className="fish-info w-2/3 text-left">
+                          {location[0]}
+                        </div>
+
+                        <div className="fish-info w-2/3 text-left">
+                          <span>
+                            {(total * 100).toFixed(2)}% or {getBuckets(buckets)}{" "}
+                            buckets
+                          </span>
+                        </div>
+
+                        <div
+                          className={`fish-info w-1/3 text-left ${
+                            showTime ? "opacity-100" : "opacity-0"
+                          }`}
+                        >
+                          <span>{getTime(buckets)}</span>
+                        </div>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <p className="fish">No location data available!</p>
+                ))}
             </div>
           </div>
         </div>

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import SettingsItem from "./SettingsItem";
 
 const FishSettingsItem: React.FC = () => {
+  const [fishDisplayType, setFishDisplayType] = useState<1 | 2>(() => {
+    return JSON.parse(localStorage.getItem("fishDisplayType") || "1");
+  });
+
   const [bucketType, setBucketType] = useState<1 | 2>(() => {
     return JSON.parse(localStorage.getItem("bucketType") || "1");
   });
@@ -15,15 +19,54 @@ const FishSettingsItem: React.FC = () => {
   });
 
   useEffect(() => {
+    localStorage.setItem("fishDisplayType", JSON.stringify(fishDisplayType));
     localStorage.setItem("bucketType", JSON.stringify(bucketType));
     localStorage.setItem("showCaught", JSON.stringify(showCaught));
     localStorage.setItem("showTime", JSON.stringify(showTime));
     window.dispatchEvent(new Event("fishChange"));
-  }, [bucketType, showCaught, showTime]);
+  }, [fishDisplayType, bucketType, showCaught, showTime]);
 
   return (
     <SettingsItem label="Fishing">
       <div className="space-y-4">
+        {/* Fish Display Type */}
+        <div>
+          <div className="font-semibold text-lg">Type of Advising</div>
+          <div className="flex items-center space-x-2">
+            <input
+              type="radio"
+              name="fishDisplayType"
+              id="byFish"
+              checked={fishDisplayType === 1}
+              onChange={() => setFishDisplayType(1)}
+              className="w-5 h-5 cursor-pointer"
+            />
+            <label
+              className="text-lg cursor-pointer hover:text-blue-600"
+              htmlFor="byFish"
+            >
+              Per Fish
+            </label>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <input
+              type="radio"
+              name="fishDisplayType"
+              id="byLocation"
+              checked={fishDisplayType === 2}
+              onChange={() => setFishDisplayType(2)}
+              className="w-5 h-5 cursor-pointer"
+            />
+            <label
+              className="text-lg cursor-pointer hover:text-blue-600"
+              htmlFor="byLocation"
+            >
+              Per Location
+            </label>
+          </div>
+        </div>
+
         {/* Bucket Type */}
         <div>
           <div className="font-semibold text-lg">Bucket Type</div>
