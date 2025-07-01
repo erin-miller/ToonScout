@@ -213,6 +213,10 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
     getFish();
   }, [toon?.data]);
 
+  const isLocEmpty = () => {
+    return !locations || locations.every((location) => location[1].total === 0);
+  };
+
   return (
     <>
       <AnimatedTabContent>
@@ -321,7 +325,7 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
 
               {/* per location displays */}
               {displayType == 2 &&
-                (locations && locations.length > 0 ? (
+                (locations && !isLocEmpty() ? (
                   locations.map((location, index) => {
                     const { total, buckets } = location[1];
                     return (
