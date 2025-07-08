@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5000",
+      "webRoot": "${workspaceFolder}/packages/webapp",
+      "sourceMapPathOverrides": {
+        "/app/app/*": "${webRoot}/app/*",
+        "/app/*": "${webRoot}/app/*",
+        "webpack:///*": "${webRoot}/*",
+        "webpack-internal:///*": "${webRoot}/*",
+        "*": "${webRoot}/*"
+      }
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Dockerized API",
+      "address": "localhost",
+      "port": 9229,
+      "restart": true,
+      "localRoot": "${workspaceFolder}/packages/api",
+      "remoteRoot": "/app",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
