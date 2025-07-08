@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
+      - '9229:9229'
     volumes:
       - /app/node_modules
     depends_on:
