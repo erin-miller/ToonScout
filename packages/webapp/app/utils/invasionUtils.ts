@@ -80,7 +80,18 @@ for (const cog of cogsData) {
 
 // Helper: Get image path for a cog name
 export function getCogImage(cogName: string): StaticImageData | undefined {
-  const norm = normalize(cogName);
+  let baseCogName = cogName;
+  if (cogName.includes("(Skelecog)")) {
+    baseCogName = cogName.replace(/\s*\(Skelecog\)\s*$/i, "").trim();
+    return cogImages.skelecog;
+  }
+
+  if (cogName.includes("Version 2.0")) {
+    baseCogName = cogName.replace(/^Version 2\.0\s*/i, "").trim();
+  }
+
+  // For regular cogs and version 2.0 cogs, find the base cog image
+  const norm = normalize(baseCogName);
   const canonical = cogNameMap[norm] || norm;
   const cog = cogsData.find(
     (c: any) => c.name === canonical || c.fullname === canonical
