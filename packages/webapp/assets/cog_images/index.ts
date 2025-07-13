@@ -31,6 +31,7 @@ import theMingler from "./the_mingler.webp";
 import tightwad from "./tightwad.webp";
 import twoFace from "./two_face.webp";
 import yesMan from "./yes_man.webp";
+import skelecog from "./skelecog.webp";
 
 export const cogImages = {
   ambulance_chaser: ambulanceChaser,
@@ -65,4 +66,5 @@ export const cogImages = {
   tightwad: tightwad,
   two_face: twoFace,
   yes_man: yesMan,
+  skelecog: skelecog,
 };

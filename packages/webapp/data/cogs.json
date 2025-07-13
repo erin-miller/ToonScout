@@ -324,5 +324,15 @@
       "max": 12
     },
     "image": "cog_images/mr_hollywood.webp"
+  },
+  {
+    "name": "Skelecog",
+    "type": "N/A",
+    "tier": 0,
+    "level_range": {
+      "min": 1,
+      "max": 12
+    },
+    "image": "cog_images/skelecog.webp"
   }
 ]
