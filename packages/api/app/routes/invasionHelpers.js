@@ -120,10 +120,21 @@ function estimateEndTimeByProgress(
 const BASELINE_COGS_PER_MIN = 80;
 const BASELINE_COGS_PER_SEC = BASELINE_COGS_PER_MIN / 60;
 
+function isSkelecogInvasion(invasion) {
+  return invasion.type && invasion.type.toLowerCase().includes("skelecog");
+}
+
 function calculateEstimatedEndTime(invasion, district) {
   const now = invasion.asOf || Math.floor(Date.now() / 1000);
   if (!invasion.progress || !invasion.progress.includes("/")) return null;
   const [current, total] = invasion.progress.split("/").map(Number);
+  
+  // Check for skelecog invasions first, before validating current
+  if (isSkelecogInvasion(invasion) && invasion.startTimestamp && total) {
+    const endTime = invasion.startTimestamp + MEGA_INVASION_DURATION;
+    return Math.max(now, Math.floor(endTime));
+  }
+  
   if (!current || !total) return null;
   const cacheKey = getInvasionCacheKey(invasion, district);
   // Clean up cache if invasion is complete
