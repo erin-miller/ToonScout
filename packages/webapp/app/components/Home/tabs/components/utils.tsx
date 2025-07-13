@@ -1,9 +1,6 @@
 import { StoredToonData } from "@/app/types";
 import { golf_trophies } from "@/data/golf_trophies";
 import { race_trophies } from "@/data/race_trophies";
-import { cogImages } from "@/assets/cog_images";
-import type { StaticImageData } from "next/image";
-const cogsData = require("@/data/cogs.json");
 
 export const displaySuit = (toon: StoredToonData, type: string) => {
   if (!toon.data.data.cogsuits[type].hasDisguise) {
@@ -129,78 +126,3 @@ export const sumFlowers = (toon: StoredToonData) => {
   }
   return count;
 };
-
-// Utility: Normalize a string for matching
-function normalize(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/[^a-z0-9 ]/g, "")
-    .trim();
-}
-
-// Utility: Get all possible names/aliases/plurals for each cog
-function getCogNameVariants(cog: any) {
-  const names = [cog.name];
-  if (cog.fullname) names.push(cog.fullname);
-  // Add plural forms (simple heuristic)
-  names.forEach((n) => {
-    if (!n.endsWith("s")) names.push(n + "s");
-  });
-  return names.map(normalize);
-}
-
-// Build a map of all cog name variants to canonical cog name
-const cogNameMap: Record<string, string> = {};
-for (const cog of cogsData) {
-  for (const variant of getCogNameVariants(cog)) {
-    cogNameMap[variant] = cog.name;
-  }
-}
-
-// Helper: Get image for a cog name
-export function getCogImage(cogName: string): StaticImageData | undefined {
-  const norm = normalize(cogName);
-  const canonical = cogNameMap[norm] || norm;
-  // Convert canonical to camelCase to match keys in cogImages
-  const camelCase = canonical
-    .replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase())
-    .replace(/^./, (str) => str.toLowerCase());
-  return cogImages[camelCase as keyof typeof cogImages];
-}
-
-// Advanced: Find relevant invasions for user's tasks using cog dictionary
-export function getRelevantInvasionsForTasks(
-  tasks: import("@/app/types").Task[],
-  invasions: { cog: string; [key: string]: any }[]
-) {
-  // Filter out completed tasks
-  const incompleteTasks = tasks.filter((task) => {
-    // Check if the task has progress tracking
-    if (
-      task.objective?.progress &&
-      typeof task.objective.progress.current === "number" &&
-      typeof task.objective.progress.target === "number"
-    ) {
-      // Only include tasks that aren't complete
-      return task.objective.progress.current < task.objective.progress.target;
-    }
-    // If there's no progress tracking, include the task by default
-    return true;
-  });
-
-  return invasions.filter((invasion) => {
-    const invasionNorm = normalize(invasion.cog);
-    // Try to resolve invasion cog to canonical name
-    const invasionKey = cogNameMap[invasionNorm] || invasionNorm;
-    return incompleteTasks.some((task) => {
-      const objText = task.objective.text || "";
-      // Check if any cog variant is in the task text
-      return Object.keys(cogNameMap).some((variant) => {
-        return (
-          cogNameMap[variant] === invasionKey &&
-          normalize(objText).includes(variant)
-        );
-      });
-    });
-  });
-}
