@@ -1,5 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
+import { sanitize } from "../util/cmds.js"
 
 export const data = new SlashCommandBuilder()
   .setName("sillymeter")
@@ -24,7 +25,7 @@ export async function execute(req, res, target) {
 
       const rewards = meter.rewards.map((team, index) => ({
         name: team,
-        value: meter.rewardDescriptions[index],
+        value: sanitize(meter.rewardDescriptions[index].replace("TPBold", " ")),
         inline: false,
       }));
 

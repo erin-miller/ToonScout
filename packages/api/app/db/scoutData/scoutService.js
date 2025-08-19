@@ -63,6 +63,6 @@ export async function updateHidden(userId) {
 function sanitize(data) {
   let obj = JSON.parse(data);
   let cleaned = JSON.stringify(obj);
-  cleaned = cleaned.replace(/\\u[0-9a-fA-F]{4}/g, "");
+  cleaned = cleaned.replace(/\\u[0-9a-fA-F]{4}/g, "").replace(/[\u0000-\u001F\u007F�]/g, "");
   return cleaned;
 }
