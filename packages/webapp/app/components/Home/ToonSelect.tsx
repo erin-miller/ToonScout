@@ -3,6 +3,7 @@ import { useToonContext } from "@/app/context/ToonContext";
 import AnimatedTabContent from "../animations/AnimatedTab";
 import { FaCog } from "react-icons/fa";
 import ToonSettingsModal from "./modals/ToonSettingsModal";
+import DeleteAllModal from "./modals/DeleteAllModal";
 import { StoredToonData } from "@/app/types";
 import { MAX_TOONS } from "@/app/context/ToonContext";
 import Image from "next/image";
@@ -11,6 +12,7 @@ const ToonSelect = () => {
   const { toons, activeIndex, setActiveIndex } = useToonContext();
   const [isOpen, setOpen] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isDelModalOpen, setDelModalOpen] = useState(false);
   const [selectedToon, setSelectedToon] = useState<StoredToonData | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const curr = toons[activeIndex];
@@ -92,6 +94,14 @@ const ToonSelect = () => {
             ))}
             <div className="hidden lg:block items-center text-center justify-center w-full p-2">
               {getRemaining()}
+              <button
+                className="flex mt-1 items-center justify-center text-sm bg-red-200 w-full rounded hover:bg-red-300 text-red-900"
+                onClick={() => {
+                  setDelModalOpen(true);
+                }}
+              >
+                <span>Delete Unlocked Toons</span>
+              </button>
             </div>
           </div>
         </AnimatedTabContent>
@@ -102,6 +112,12 @@ const ToonSelect = () => {
           index={selectedIndex}
           isOpen={isModalOpen}
           onClose={() => setModalOpen(false)}
+        />
+      )}
+      {isDelModalOpen && (
+        <DeleteAllModal
+          isOpen={isDelModalOpen}
+          onClose={() => setDelModalOpen(false)}
         />
       )}
     </div>
