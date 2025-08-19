@@ -73,13 +73,13 @@ function getTaskType(task) {
     // not a visit task, don't display npc values
     return {
       name: `${task.objective.text}${getForFun(task)}`,
-      value: `Progress: ${progress}\nReward: ${task.reward}`,
+      value: `Progress: ${progress}\n${task.reward}`,
     };
   } else {
     // display npc values for a visit task
     return {
       name: `Visit ${task.to.name} in ${task.to.building}`,
-      value: `Location: ${task.to.zone}, ${task.to.neighborhood}\nReward: ${task.reward}`,
+      value: `Location: ${task.to.zone}, ${task.to.neighborhood}\n${task.reward}`,
     };
   }
 }
