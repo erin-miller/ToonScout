@@ -9,13 +9,13 @@
 }
 
 .step-container {
-  @apply md:flex justify-center items-center
+  @apply md:grid grid-cols-2 justify-center items-center
       md:space-x-8 space-y-8 md:space-y-0;
 }
 
 .step-card {
   @apply bg-gray-100 p-6 rounded-lg shadow-md border border-gray-300
-      flex flex-col max-w-xl;
+      flex flex-col max-w-xl h-full;
 }
 
 .dark .step-card {
