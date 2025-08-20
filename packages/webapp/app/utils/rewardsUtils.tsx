@@ -2,13 +2,14 @@ import React from "react";
 import { FaStar } from "react-icons/fa6";
 import { HiMiniUser, HiBuildingOffice, HiUserGroup } from "react-icons/hi2";
 import { getCogImage } from "@/app/utils/invasionUtils";
-import { StoredToonData } from "../types";
+import { StoredToonData, Rewards } from "../types";
 import SOS_TOONS from "@/data/sos_toons.json";
 import COGS from "@/data/cogs.json";
 import Image from "next/image";
 import { cogImages } from "@/assets/cog_images";
 import { rewardImages } from "@/assets/rewards";
 import CardFlip from "@/app/components/animations/CardFlip";
+import ProgressBar from "../components/Home/tabs/components/ProgressBar";
 
 // Helper: Get the track name for SOS cards
 export const formatTrack = (entry: any) => {
@@ -33,6 +34,57 @@ export const getRendition = (url: string) => {
     />
   );
 };
+
+// Helpers: reward sums
+export const sumSos = (rewards: Rewards) =>
+  rewards.sos
+    ? Object.values(rewards.sos).reduce((sum, value) => sum + value, 0)
+    : 0;
+
+export const sumUnites = (rewards: Rewards) =>
+  rewards.unites
+    ? Object.values(rewards.unites).reduce((sum, category) => {
+        return (
+          sum +
+          Object.values(category).reduce(
+            (categorySum, value) => categorySum + value,
+            0
+          )
+        );
+      }, 0)
+    : 0;
+
+export const sumSummons = (rewards: Rewards) =>
+  rewards.summons
+    ? Object.values(rewards.summons).reduce((sum, summon) => {
+        return (
+          sum +
+          (summon.single ? 1 : 0) +
+          (summon.building ? 1 : 0) +
+          (summon.invasion ? 1 : 0)
+        );
+      }, 0)
+    : 0;
+
+export const sumRemotes = (rewards: Rewards) =>
+  rewards.remotes
+    ? Object.values(rewards.remotes).reduce((sum, category) => {
+        return (
+          sum +
+          Object.values(category).reduce(
+            (categorySum, value) => categorySum + value,
+            0
+          )
+        );
+      }, 0)
+    : 0;
+
+export const sumRewards = (rewards: Rewards) =>
+  sumSos(rewards) +
+  sumUnites(rewards) +
+  sumSummons(rewards) +
+  sumRemotes(rewards) +
+  rewards.pinkslips;
 
 export const renderSOS = (
   toon: StoredToonData,
@@ -218,16 +270,9 @@ export const renderSummons = (toon: StoredToonData) => {
   if (!summons) {
     return <div>No summons available.</div>;
   }
+  const MAX_SUMMONS = 96;
 
   const placeHolderCog = cogImages.flunky;
-
-  let missingTotal = 0;
-
-  Object.entries(summons).forEach(([_, { single, building, invasion }]) => {
-    if (!single) missingTotal++;
-    if (!building) missingTotal++;
-    if (!invasion) missingTotal++;
-  });
 
   const deptCardMap = {
     Bossbot: "bg-[#b1a49b] border-[#877b75]",
@@ -247,7 +292,12 @@ export const renderSummons = (toon: StoredToonData) => {
   return (
     <div>
       <div className="text-xl text-left mb-2">
-        <p>You need {missingTotal} more CJs to max your book!</p>
+        <ProgressBar
+          currExp={sumSummons(toon.data.data.rewards)}
+          maxExp={MAX_SUMMONS}
+          type="togo"
+          item="CJs"
+        />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
         {Object.entries(summons).map(
