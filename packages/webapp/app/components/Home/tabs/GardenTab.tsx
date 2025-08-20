@@ -4,6 +4,7 @@ import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
 import { TabProps } from "./components/TabComponent";
 import { flowerImages } from "@/assets/flowers";
 import { flowerKey } from "@/assets/flowers/flowerKey";
+import ProgressBar from "./components/ProgressBar";
 const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
 
 interface FlowerResponse {
@@ -147,24 +148,8 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
               <div className="flex items-center h-full">{shovel}</div>
             </div>
           </div>
-          {/* progress bar, inherited from ExpContainer */}
           <div className="flex w-full items-center justify-center mb-2">
-            <div
-              className={`flex relative w-full bg-orange-300 border-2 border-amber-600 rounded-lg items-center justify-center text-xl lg:text-md 2xl:text-xl`}
-            >
-              {/* Background overlay */}
-              <div
-                className="absolute inset-0 z-0 h-full bg-orange-700 opacity-20"
-                style={{
-                  width: `${(currExp / maxExp) * 100}%`,
-                }}
-              ></div>
-
-              {/* progress */}
-              <div className={`relative z-10 text-amber-950 text-2xl`}>
-                {currExp} / {maxExp}
-              </div>
-            </div>
+            <ProgressBar currExp={currExp} maxExp={maxExp} />
           </div>
           {/* flowers */}
           <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-2">
