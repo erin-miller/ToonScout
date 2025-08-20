@@ -7,6 +7,7 @@ type ProgressBarProps = {
   overlayColor?: string;
   textColor?: string;
   type?: "default" | "togo";
+  item?: string;
 };
 
 const ProgressBar: React.FC<ProgressBarProps> = ({
@@ -16,11 +17,12 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   overlayColor = "bg-orange-700",
   textColor = "text-amber-950",
   type = "default",
+  item = "",
 }) => {
   const progressText =
     type === "default"
       ? `${currExp} / ${maxExp}`
-      : `${maxExp - currExp} to go!`;
+      : `${maxExp - currExp} ${item} to go!`;
 
   return (
     <div
