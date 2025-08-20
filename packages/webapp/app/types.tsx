@@ -145,7 +145,7 @@ interface Racing {
   num: number;
 }
 
-interface Rewards {
+export interface Rewards {
   sos: null | Record<string, number>;
   unites: null | {
     "Toon-Up": Record<string, number>;
