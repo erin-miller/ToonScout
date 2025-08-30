@@ -221,19 +221,7 @@ export const renderUnites = (toon: StoredToonData) => {
     return <div>No unites available.</div>;
   }
 
-  const order = ["Gag-Up", "Toon-Up", "Jellybeans"];
-  const orderedUnites = order.map((type) => ({
-    type,
-    variants: unites[type as keyof typeof unites] || null,
-  }));
-  const unorderedUnites = Object.keys(unites)
-    .filter((type) => !order.includes(type))
-    .map((type) => ({
-      type,
-      variants: unites[type as keyof typeof unites] || null,
-    }));
-
-  const allUnites = [...orderedUnites, ...unorderedUnites];
+  const allUnites = sortUnites(unites);
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
@@ -540,3 +528,24 @@ export const renderRemotes = (
     </div>
   );
 };
+
+export function sortUnites(unites: {
+  "Toon-Up": Record<string, number>;
+  "Gag-Up": Record<string, number>;
+  Jellybeans: Record<string, number>;
+}) {
+  const order = ["Gag-Up", "Toon-Up", "Jellybeans"];
+  const orderedUnites = order.map((type) => ({
+    type,
+    variants: unites[type as keyof typeof unites] || null,
+  }));
+  const unorderedUnites = Object.keys(unites)
+    .filter((type) => !order.includes(type))
+    .map((type) => ({
+      type,
+      variants: unites[type as keyof typeof unites] || null,
+    }));
+
+  const allUnites = [...orderedUnites, ...unorderedUnites];
+  return allUnites;
+}
