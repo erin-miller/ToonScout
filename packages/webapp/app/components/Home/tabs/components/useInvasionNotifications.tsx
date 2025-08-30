@@ -9,31 +9,11 @@ import {
   getCogImage,
 } from "@/app/utils/invasionUtils";
 import InvasionToast from "@/app/components/InvasionToast";
-import { cogImages } from "@/assets/cog_images";
 import type { StaticImageData } from "next/image";
-
-function playNotificationSound(repeat: number, interval: number) {
-  let played = 0;
-  const playAudio = () => {
-    const audio = new Audio("/sounds/notify.mp3");
-    audio.play().catch(() => {});
-    played++;
-    if (played < repeat) {
-      setTimeout(playAudio, interval * 1000);
-    }
-  };
-  playAudio();
-}
-
-function showNativeNotification(title: string, body: string) {
-  if (
-    typeof window !== "undefined" &&
-    "Notification" in window &&
-    Notification.permission === "granted"
-  ) {
-    new Notification(title, { body });
-  }
-}
+import {
+  playNotificationSound,
+  showNativeNotification,
+} from "@/app/utils/notificationUtils";
 
 export function useInvasionNotifications({
   notificationsEnabled,

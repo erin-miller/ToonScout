@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TabProps } from "./components/TabComponent";
-import { findSuit, getSuitName, hasNoSuit } from "./components/utils";
+import { findSuit, getSuitName, hasNoSuit } from "../../../utils/tabUtils";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
 import Image from "next/image";
 import { imageAssets } from "@/assets/images";

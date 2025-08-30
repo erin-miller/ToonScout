@@ -5,12 +5,12 @@ import { ToonProvider } from "@/app/context/ToonContext";
 import { ConnectionProvider } from "@/app/context/ConnectionContext";
 import { DiscordProvider } from "@/app/context/DiscordContext";
 import { ActivePortsProvider } from "../context/ActivePortsContext";
+import { InvasionProvider } from "@/app/context/InvasionContext";
 import {
-  InvasionProvider,
   NotificationToastWrapper,
-} from "@/app/context/InvasionContext";
-import { ToastProvider } from "@/app/context/ToastContext";
-import { useNotificationSettingsPoll } from "@/app/utils/invasionUtils";
+  ToastProvider,
+} from "@/app/context/ToastContext";
+import { useNotificationSettingsPoll } from "../utils/notificationUtils";
 
 interface ProvidersProps {
   children: ReactNode;

@@ -13,7 +13,7 @@ import "/styles/tabs.css";
 import { useState, useEffect } from "react";
 import { useToonContext } from "@/app/context/ToonContext";
 import { StoredToonData } from "@/app/types";
-import { hasNoSuit } from "./utils";
+import { hasNoSuit } from "../../../../utils/tabUtils";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { BsPiggyBankFill } from "react-icons/bs";
 import { PiTipJarFill } from "react-icons/pi";

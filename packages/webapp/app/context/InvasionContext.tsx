@@ -142,18 +142,3 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
 };
 
 export const useInvasionContext = () => useContext(InvasionContext);
-export function NotificationToastWrapper({
-  notifSettings,
-  children,
-}: {
-  notifSettings: any;
-  children: ReactNode;
-}) {
-  const { toast } = useInvasionNotifications(notifSettings);
-  return (
-    <>
-      {children}
-      {toast}
-    </>
-  );
-}

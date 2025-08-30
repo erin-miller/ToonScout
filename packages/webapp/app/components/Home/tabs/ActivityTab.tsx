@@ -8,7 +8,7 @@ import {
   getRaceTrophies,
   sumGolf,
   sumRace,
-} from "./components/utils";
+} from "../../../utils/tabUtils";
 
 const ActivityTab: React.FC<TabProps> = ({ toon }) => {
   const trophyIcon = (earned: number) => {

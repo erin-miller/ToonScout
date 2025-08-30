@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
 import {
   getNotificationSettings,
   setNotificationSettings,
-} from "@/app/utils/invasionUtils";
+} from "@/app/utils/notificationUtils";
+import { useState, useEffect } from "react";
 
 export function useTaskTabNotifications() {
   // Use utility to initialize all notification settings
