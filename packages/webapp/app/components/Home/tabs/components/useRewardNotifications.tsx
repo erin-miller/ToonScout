@@ -1,0 +1,146 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useToonContext } from "@/app/context/ToonContext";
+import { Rewards } from "@/app/types";
+import {
+  playNotificationSound,
+  showNativeNotification,
+} from "@/app/utils/notificationUtils";
+import Toast from "@/app/components/Toast";
+import { sortUnites, sumUnites } from "@/app/utils/rewardsUtils";
+
+interface RewardNotificationSettings {
+  notificationsEnabled: boolean;
+  toastEnabled: boolean;
+  soundEnabled: boolean;
+  toastPersistent: boolean;
+  nativeNotifEnabled: boolean;
+}
+
+export function useRewardNotifications({
+  notificationsEnabled,
+  toastEnabled,
+  soundEnabled,
+  toastPersistent,
+  nativeNotifEnabled,
+}: RewardNotificationSettings) {
+  const { toons, activeIndex } = useToonContext();
+  const activeToon = toons[activeIndex];
+  const prevRewards = useRef<Rewards | null>(
+    activeToon?.data.data.rewards || null
+  );
+  const [showToast, setShowToast] = useState(false);
+  const [toastMsg, setToastMsg] = useState("");
+
+  // Centralized notification logic
+  const handleNotification = useCallback(
+    (
+      msg: string,
+      options: {
+        playSound?: boolean;
+        repeat?: number;
+        interval?: number;
+        showToast?: boolean;
+        nativeNotif?: boolean;
+      }
+    ) => {
+      if (options.showToast) {
+        setToastMsg(msg);
+        setShowToast(true);
+      }
+      if (options.playSound && options.repeat && options.repeat > 0) {
+        playNotificationSound(options.repeat, options.interval || 1);
+      }
+      if (options.nativeNotif) {
+        showNativeNotification("ToonScout Reward Alert", msg);
+      }
+    },
+    []
+  );
+
+  // Listen for reward notification events
+  useEffect(() => {
+    console.log("Reward notification listener initialized");
+    const handleRewardNotification = (event: CustomEvent) => {
+      console.log("Reward notification received:", event.detail);
+      if (!notificationsEnabled) return;
+      const { message, showToast, playSound } = event.detail;
+      handleNotification(message, {
+        showToast,
+        playSound,
+        nativeNotif: nativeNotifEnabled,
+      });
+    };
+    window.addEventListener(
+      "rewardNotification",
+      handleRewardNotification as EventListener
+    );
+    return () =>
+      window.removeEventListener(
+        "rewardNotification",
+        handleRewardNotification as EventListener
+      );
+  }, [notificationsEnabled, handleNotification, nativeNotifEnabled]);
+
+  useEffect(() => {
+    if (!notificationsEnabled || !activeToon) return;
+
+    const rewards = activeToon.data.data.rewards;
+    const unites = rewards.unites;
+
+    if (
+      unites &&
+      prevRewards.current &&
+      sumUnites(prevRewards.current) != sumUnites(rewards)
+    ) {
+      const newUnite = uniteDiff(prevRewards.current, rewards);
+      if (newUnite && newUnite.currAmount > newUnite.prevAmount) {
+        handleNotification(`You've earned a ${newUnite.unite} unite!`, {
+          showToast: toastEnabled,
+          playSound: soundEnabled,
+          nativeNotif: nativeNotifEnabled,
+        });
+      }
+    }
+
+    prevRewards.current = rewards;
+  }, [
+    toons,
+    activeIndex,
+    notificationsEnabled,
+    toastEnabled,
+    soundEnabled,
+    nativeNotifEnabled,
+    toastPersistent,
+  ]);
+
+  const uniteDiff = (prevBase: Rewards, currBase: Rewards) => {
+    const curr = currBase.unites;
+    const prev = prevBase.unites;
+
+    for (const category in curr) {
+      if (prev && !prev[category as keyof typeof prev]) continue; // skip new categories if needed
+      for (const unite in curr[category as keyof typeof curr]) {
+        const prevAmount = prev
+          ? prev[category as keyof typeof prev][unite] || 0
+          : 0;
+        const currAmount = curr[category as keyof typeof curr][unite] || 0;
+        if (prevAmount !== currAmount) {
+          return { category, unite, prevAmount, currAmount };
+        }
+      }
+    }
+    return null; // no changes
+  };
+
+  const toast = (
+    <Toast
+      message={toastMsg}
+      show={showToast}
+      onClose={() => setShowToast(false)}
+      persistent={toastPersistent || true}
+    />
+  );
+  return { toast };
+}
