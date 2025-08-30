@@ -6,6 +6,8 @@ import React, {
   useCallback,
 } from "react";
 import Toast from "@/app/components/Toast";
+import { useInvasionNotifications } from "../components/Home/tabs/components/useInvasionNotifications";
+import { useRewardNotifications } from "../components/Home/tabs/components/useRewardNotifications";
 
 interface ToastContextType {
   triggerToast: (
@@ -44,3 +46,21 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export const useToast = () => useContext(ToastContext);
+
+export function NotificationToastWrapper({
+  notifSettings,
+  children,
+}: {
+  notifSettings: any;
+  children: ReactNode;
+}) {
+  const { toast: invToast } = useInvasionNotifications(notifSettings);
+  const { toast: rewToast } = useRewardNotifications(notifSettings);
+  return (
+    <>
+      {children}
+      {invToast}
+      {rewToast}
+    </>
+  );
+}

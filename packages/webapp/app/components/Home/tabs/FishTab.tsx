@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
 import { TabProps } from "./components/TabComponent";
-import { sumFish } from "./components/utils";
+import { sumFish } from "../../../utils/tabUtils";
 import { FishBuckets, FishRarity, LocRarity } from "@/app/types";
 import { FaCog } from "react-icons/fa";
 import ToonSettingsModal from "../modals/ToonSettingsModal";

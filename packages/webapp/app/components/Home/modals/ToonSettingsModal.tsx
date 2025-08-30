@@ -13,7 +13,7 @@ import {
 import FishSettingsItem from "./SettingsItems/FishSettingsItem";
 import GardenSettingsItem from "./SettingsItems/GardenSettingsItem";
 import NotificationSettingsItem from "./SettingsItems/NotificationSettingsItem";
-import { getNotificationSettings } from "@/app/utils/invasionUtils";
+import { getNotificationSettings } from "@/app/utils/notificationUtils";
 
 type SettingsModalProps = {
   toon: StoredToonData | null;

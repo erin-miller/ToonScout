@@ -7,7 +7,7 @@ import {
   sumRace,
   sumGolf,
   hasNoSuit,
-} from "./components/utils";
+} from "../../../utils/tabUtils";
 import { TabComponent, TabProps } from "./components/TabComponent";
 import FishTab from "./FishTab";
 import ActivityTab from "./ActivityTab";

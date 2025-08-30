@@ -3,7 +3,7 @@ import SettingsItem from "./SettingsItem";
 import {
   getNotificationSettings,
   setNotificationSettings,
-} from "@/app/utils/invasionUtils";
+} from "@/app/utils/notificationUtils";
 
 const NotificationSettingsItem: React.FC = () => {
   // Notification settings state
