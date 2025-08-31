@@ -51,7 +51,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
   };
 
   const getLockedStatus = (index: number) => {
-    return toons[index]?.locked ?? false;
+    console.log(toons[index]?.locked);
+    return toons[index]?.locked;
   };
 
   const rewards = toon.data.data.rewards;
@@ -69,13 +70,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
               onClick={() => toggleLock(index)}
             >
               {getLockedStatus(index) ? (
-                <FaUnlock className="text-green-500 text-2xl" />
-              ) : (
                 <FaLock className="text-red-500 text-2xl" />
+              ) : (
+                <FaUnlock className="text-green-500 text-2xl" />
               )}
             </button>
             <span>
-              Currently {getLockedStatus(index) ? "Unlocked" : "Locked"}
+              Currently {getLockedStatus(index) ? "Locked" : "Unlocked"}
             </span>
           </div>
           {/* stats */}
