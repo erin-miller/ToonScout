@@ -49,10 +49,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className="px-2 items-start justify-start text-left">
-        <h3 className="text-3xl font-bold text-gray-900">
-          {toon.data.data.toon.name}
-        </h3>
+      <div className="px-2 items-start justify-start text-left text-gray-900 dark:text-white">
+        <h3 className="text-3xl font-bold">{toon.data.data.toon.name}</h3>
         <div className="flex flex-col items-start gap-2 mb-4">
           {/* individual settings */}
           {/* lock */}
@@ -75,9 +73,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
           {/* global settings */}
           <div className="grid md:grid-cols-2 md:space-x-6 mt-5">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 ">
-                Tab Settings
-              </h3>
+              <h3 className="text-3xl font-bold ">Tab Settings</h3>
 
               <FishSettingsItem />
               <GardenSettingsItem />
@@ -85,9 +81,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
 
             <div>
               <div className="flex flex-row gap-3">
-                <h3 className="text-3xl font-bold text-gray-900">
-                  Notifications
-                </h3>
+                <h3 className="text-3xl font-bold ">Notifications</h3>
                 {/* toggle */}
                 <div className="flex">
                   <button
