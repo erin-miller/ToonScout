@@ -34,7 +34,7 @@ export async function handleOAuthToken(fragment: URLSearchParams) {
 async function storeToken(
   userId: string,
   accessToken: string,
-  expiresAt: string
+  expiresAt: string,
 ) {
   try {
     const response = await fetch(
@@ -46,7 +46,7 @@ async function storeToken(
         },
         body: JSON.stringify({ userId, accessToken, expiresAt }),
         credentials: "include", // Include cookies in the request
-      }
+      },
     );
 
     if (!response.ok) {

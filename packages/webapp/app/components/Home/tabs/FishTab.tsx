@@ -129,28 +129,28 @@ const FishTab: React.FC<TabProps> = ({ toon }) => {
 
   window.addEventListener("fishChange", (event) => {
     const storedFishDisplay = parseInt(
-      localStorage.getItem("fishDisplayType") || "1"
+      localStorage.getItem("fishDisplayType") || "1",
     );
     if (storedFishDisplay !== displayType) {
       setDisplayType(storedFishDisplay as 1 | 2);
     }
 
     const storedBucketType = parseInt(
-      localStorage.getItem("bucketType") || "1"
+      localStorage.getItem("bucketType") || "1",
     );
     if (storedBucketType !== bucketType) {
       setBucketType(storedBucketType as 1 | 2);
     }
 
     const storedShowCaught = JSON.parse(
-      localStorage.getItem("showCaught") || "false"
+      localStorage.getItem("showCaught") || "false",
     );
     if (storedShowCaught !== showCaught) {
       setShowCaught(storedShowCaught);
     }
 
     const storedShowTime = JSON.parse(
-      localStorage.getItem("showTime") || "false"
+      localStorage.getItem("showTime") || "false",
     );
     if (storedShowTime !== showTime) {
       setShowTime(storedShowTime);

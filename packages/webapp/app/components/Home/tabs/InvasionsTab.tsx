@@ -38,20 +38,20 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
     if (!toon?.data?.data?.tasks) return [];
     return getRelevantInvasionsForTasks(
       toon.data.data.tasks,
-      debouncedInvasions
+      debouncedInvasions,
     );
   }, [toon, debouncedInvasions]);
 
   const sortedInvasions = useMemo(() => {
     if (!relevantInvasions.length) return debouncedInvasions;
     const relevantKeys = new Set(
-      relevantInvasions.map((inv) => `${inv.cog}|${inv.district}`)
+      relevantInvasions.map((inv) => `${inv.cog}|${inv.district}`),
     );
     const relevant = debouncedInvasions.filter((inv) =>
-      relevantKeys.has(`${inv.cog}|${inv.district}`)
+      relevantKeys.has(`${inv.cog}|${inv.district}`),
     );
     const others = debouncedInvasions.filter(
-      (inv) => !relevantKeys.has(`${inv.cog}|${inv.district}`)
+      (inv) => !relevantKeys.has(`${inv.cog}|${inv.district}`),
     );
     return [...relevant, ...others];
   }, [debouncedInvasions, relevantInvasions]);
@@ -73,7 +73,8 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
               const percent = Math.floor((current / total) * 100);
               const isRelevant = relevantInvasions.some(
                 (rel) =>
-                  rel.cog === invasion.cog && rel.district === invasion.district
+                  rel.cog === invasion.cog &&
+                  rel.district === invasion.district,
               );
               return (
                 <InvasionCard

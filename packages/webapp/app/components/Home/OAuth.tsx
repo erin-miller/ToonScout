@@ -23,7 +23,7 @@ export const initOAuth = () => {
   localStorage.setItem("oauth-state", randomState);
 
   const url = `https://discord.com/oauth2/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scope}&state=${btoa(
-    randomState
+    randomState,
   )}`;
 
   // Redirect to Discord authorization URL

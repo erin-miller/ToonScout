@@ -10,7 +10,7 @@ export type GagTrack =
 function getGagImages(track: GagTrack): string[] {
   return Array.from(
     { length: 7 },
-    (_, i) => require(`./${track}-${i + 1}.png`).default
+    (_, i) => require(`./${track}-${i + 1}.png`).default,
   );
 }
 

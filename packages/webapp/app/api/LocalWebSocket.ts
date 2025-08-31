@@ -17,7 +17,7 @@ export const initWebSocket = (
   setIsConnectedFn: (isConnected: boolean) => void,
   addActivePortFn: (port: number) => void,
   removeActivePortFn: (port: number) => void,
-  addToonFn: (data: any) => void
+  addToonFn: (data: any) => void,
 ) => {
   setIsConnected = setIsConnectedFn;
   addActivePort = addActivePortFn;
@@ -68,7 +68,7 @@ const connectWebSocket = () => {
           // check if this toon exists in the storage
           const toonIndex = curr.findIndex(
             (stored: StoredToonData) =>
-              stored.data.data.toon.id == toon.data.toon.id
+              stored.data.data.toon.id == toon.data.toon.id,
           );
 
           if (toonIndex !== -1) {
@@ -80,7 +80,7 @@ const connectWebSocket = () => {
           const portIndex = curr.findIndex(
             (stored: StoredToonData) =>
               stored.port === port &&
-              stored.data.data.toon.id != toon.data.toon.id
+              stored.data.data.toon.id != toon.data.toon.id,
           );
 
           if (portIndex !== -1) {

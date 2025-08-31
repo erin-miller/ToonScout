@@ -48,25 +48,25 @@ export const getNotificationSettings = (): NotificationSettings => ({
     typeof window !== "undefined"
       ? JSON.parse(
           localStorage.getItem(NOTIFICATION_KEYS.notificationsEnabled) ||
-            "false"
+            "false",
         )
       : false,
   toastEnabled:
     typeof window !== "undefined"
       ? JSON.parse(
-          localStorage.getItem(NOTIFICATION_KEYS.toastEnabled) || "true"
+          localStorage.getItem(NOTIFICATION_KEYS.toastEnabled) || "true",
         )
       : true,
   soundEnabled:
     typeof window !== "undefined"
       ? JSON.parse(
-          localStorage.getItem(NOTIFICATION_KEYS.soundEnabled) || "true"
+          localStorage.getItem(NOTIFICATION_KEYS.soundEnabled) || "true",
         )
       : true,
   toastPersistent:
     typeof window !== "undefined"
       ? JSON.parse(
-          localStorage.getItem(NOTIFICATION_KEYS.toastPersistent) || "false"
+          localStorage.getItem(NOTIFICATION_KEYS.toastPersistent) || "false",
         )
       : false,
   soundRepeat:
@@ -77,55 +77,55 @@ export const getNotificationSettings = (): NotificationSettings => ({
     typeof window !== "undefined"
       ? parseInt(
           localStorage.getItem(NOTIFICATION_KEYS.soundRepeatInterval) || "10",
-          10
+          10,
         )
       : 10,
   nativeNotifEnabled:
     typeof window !== "undefined"
       ? JSON.parse(
-          localStorage.getItem(NOTIFICATION_KEYS.nativeNotifEnabled) || "false"
+          localStorage.getItem(NOTIFICATION_KEYS.nativeNotifEnabled) || "false",
         )
       : false,
 });
 
 export const setNotificationSettings = (
-  settings: Partial<NotificationSettings>
+  settings: Partial<NotificationSettings>,
 ) => {
   if (typeof window === "undefined") return;
   if (settings.notificationsEnabled !== undefined)
     localStorage.setItem(
       NOTIFICATION_KEYS.notificationsEnabled,
-      JSON.stringify(settings.notificationsEnabled)
+      JSON.stringify(settings.notificationsEnabled),
     );
   if (settings.toastEnabled !== undefined)
     localStorage.setItem(
       NOTIFICATION_KEYS.toastEnabled,
-      JSON.stringify(settings.toastEnabled)
+      JSON.stringify(settings.toastEnabled),
     );
   if (settings.soundEnabled !== undefined)
     localStorage.setItem(
       NOTIFICATION_KEYS.soundEnabled,
-      JSON.stringify(settings.soundEnabled)
+      JSON.stringify(settings.soundEnabled),
     );
   if (settings.toastPersistent !== undefined)
     localStorage.setItem(
       NOTIFICATION_KEYS.toastPersistent,
-      JSON.stringify(settings.toastPersistent)
+      JSON.stringify(settings.toastPersistent),
     );
   if (settings.soundRepeat !== undefined)
     localStorage.setItem(
       NOTIFICATION_KEYS.soundRepeat,
-      settings.soundRepeat.toString()
+      settings.soundRepeat.toString(),
     );
   if (settings.soundRepeatInterval !== undefined)
     localStorage.setItem(
       NOTIFICATION_KEYS.soundRepeatInterval,
-      settings.soundRepeatInterval.toString()
+      settings.soundRepeatInterval.toString(),
     );
   if (settings.nativeNotifEnabled !== undefined)
     localStorage.setItem(
       NOTIFICATION_KEYS.nativeNotifEnabled,
-      JSON.stringify(settings.nativeNotifEnabled)
+      JSON.stringify(settings.nativeNotifEnabled),
     );
 };
 

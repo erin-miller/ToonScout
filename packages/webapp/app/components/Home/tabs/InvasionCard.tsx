@@ -22,16 +22,26 @@ const InvasionCard: React.FC<InvasionCardProps> = ({
   const [timeLeft, setTimeLeft] = useState<number | null>(
     typeof estimatedEndTime === "number"
       ? estimatedEndTime - Math.floor(Date.now() / 1000)
-      : null
+      : null,
   );
 
   // Check if this is a skelecog invasion
-  const isSkelecog = invasion.cog && invasion.cog.toLowerCase().includes("skelecog");
-  
+  const isSkelecog =
+    invasion.cog && invasion.cog.toLowerCase().includes("skelecog");
+
   // For skelecog invasions, calculate progress based on time elapsed since no progress is provided
-  const skelecogProgress = isSkelecog && invasion.startTimestamp 
-    ? Math.min(100, Math.max(0, ((Math.floor(Date.now() / 1000) - invasion.startTimestamp) / 10800) * 100))
-    : 0;
+  const skelecogProgress =
+    isSkelecog && invasion.startTimestamp
+      ? Math.min(
+          100,
+          Math.max(
+            0,
+            ((Math.floor(Date.now() / 1000) - invasion.startTimestamp) /
+              10800) *
+              100,
+          ),
+        )
+      : 0;
 
   useEffect(() => {
     if (typeof estimatedEndTime !== "number") return;
@@ -91,10 +101,9 @@ const InvasionCard: React.FC<InvasionCardProps> = ({
       {/* Progress and bar first, then Est. Time Left at bottom right, Start Time at bottom left */}
       <div className="flex flex-col items-center w-full gap-2 mt-2">
         <div className="text-center text-base font-medium mb-1">
-          {isSkelecog 
+          {isSkelecog
             ? `Progress: ${skelecogProgress.toFixed(0)}%`
-            : `Progress: ${invasion.progress} (${percent.toFixed(0)}%)`
-          }
+            : `Progress: ${invasion.progress} (${percent.toFixed(0)}%)`}
         </div>
         <div className="w-full max-w-xs h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-1">
           <motion.div

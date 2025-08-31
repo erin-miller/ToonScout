@@ -48,7 +48,7 @@ export const sumUnites = (rewards: Rewards) =>
           sum +
           Object.values(category).reduce(
             (categorySum, value) => categorySum + value,
-            0
+            0,
           )
         );
       }, 0)
@@ -73,7 +73,7 @@ export const sumRemotes = (rewards: Rewards) =>
           sum +
           Object.values(category).reduce(
             (categorySum, value) => categorySum + value,
-            0
+            0,
           )
         );
       }, 0)
@@ -90,7 +90,7 @@ export const renderSOS = (
   toon: StoredToonData,
   selectedSort: string,
   flipStates: Record<string, boolean>,
-  toggleFlip: (card: string) => void
+  toggleFlip: (card: string) => void,
 ) => {
   const sosCards = toon.data.data.rewards.sos;
   if (!sosCards || Object.keys(sosCards).length === 0) {
@@ -109,7 +109,7 @@ export const renderSOS = (
         return entry?.ability == "Cogs Miss" || entry?.ability == "Toons Hit";
       }
       return entry?.track === selectedSort && entry?.ability !== "Restock";
-    })
+    }),
   );
 
   const trackColors = {
@@ -158,7 +158,7 @@ export const renderSOS = (
               <div className="">{card}</div>
               <div className="flex justify-center">
                 {getRendition(
-                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
+                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`,
                 )}
               </div>
               <div className="card-count">{count} Remaining</div>
@@ -291,7 +291,7 @@ export const renderSummons = (toon: StoredToonData) => {
         {Object.entries(summons).map(
           ([key, { name, single, building, invasion }]) => {
             const cog = COGS.find(
-              (c) => c.name === name || c.fullname === name
+              (c) => c.name === name || c.fullname === name,
             );
             const mappedColor =
               deptCardMap[cog?.type as keyof typeof deptCardMap] ||
@@ -341,7 +341,7 @@ export const renderSummons = (toon: StoredToonData) => {
                 </div>
               </div>
             );
-          }
+          },
         )}
       </div>
     </div>
@@ -355,7 +355,7 @@ export const renderPinkslips = () => {
 export const renderRemotes = (
   toon: StoredToonData,
   flipStates: Record<string, boolean>,
-  toggleFlip: (card: string) => void
+  toggleFlip: (card: string) => void,
 ) => {
   const remotes = toon.data.data.rewards.remotes;
   if (!remotes) {
