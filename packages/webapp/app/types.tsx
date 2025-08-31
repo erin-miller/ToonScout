@@ -74,7 +74,7 @@ export type LocRarity = [
   {
     total: number;
     buckets: FishBuckets;
-  }
+  },
 ];
 
 export interface FishBuckets {

@@ -99,7 +99,7 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
             startTimestamp: invasion.startTimestamp,
             district,
             estimatedEndTime: invasion.estimatedEndTime,
-          })
+          }),
         );
         if (data.lastUpdated !== lastUpdated) {
           setInvasions(transformed);

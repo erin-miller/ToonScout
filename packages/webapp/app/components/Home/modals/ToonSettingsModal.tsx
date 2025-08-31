@@ -41,7 +41,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
   // notifs
   const initialSettings = getNotificationSettings();
   const [notificationsEnabled, setNotificationsEnabled] = useState<boolean>(
-    initialSettings.notificationsEnabled
+    initialSettings.notificationsEnabled,
   );
 
   const toggleLock = (index: number) => {
@@ -51,7 +51,6 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
   };
 
   const getLockedStatus = (index: number) => {
-    console.log(toons[index]?.locked);
     return toons[index]?.locked;
   };
 

@@ -92,7 +92,7 @@ const TabContainer = () => {
   const totalPages = Math.ceil(TabList.length / MAX_TABS);
   const visibleTabs = TabList.slice(
     currPage * MAX_TABS,
-    (currPage + 1) * MAX_TABS
+    (currPage + 1) * MAX_TABS,
   );
 
   // change pages if the toon has no suits so that the tab is disabled properly

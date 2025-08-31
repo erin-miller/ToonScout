@@ -49,14 +49,14 @@ export const ToonProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const addToon = (newToon: StoredToonData) => {
     const sanitized: StoredToonData = JSON.parse(
-      sanitize(JSON.stringify(newToon))
+      sanitize(JSON.stringify(newToon)),
     );
 
     setToons((prevToons) => {
       let newToons = [...prevToons];
 
       const existingIndex = newToons.findIndex(
-        (toon) => toon?.data?.data.toon.id === sanitized?.data?.data.toon?.id
+        (toon) => toon?.data?.data.toon.id === sanitized?.data?.data.toon?.id,
       );
 
       if (existingIndex !== -1) {
@@ -84,7 +84,7 @@ export const ToonProvider: React.FC<{ children: React.ReactNode }> = ({
   const deleteToon = (toon: StoredToonData) => {
     setToons((prevToons) => {
       const newToons = prevToons.filter(
-        (t) => t?.data?.data.toon.id !== toon?.data?.data.toon.id
+        (t) => t?.data?.data.toon.id !== toon?.data?.data.toon.id,
       );
       return newToons;
     });
@@ -105,7 +105,7 @@ export const ToonProvider: React.FC<{ children: React.ReactNode }> = ({
       activeIndex,
       setActiveIndex,
     }),
-    [toons, activeIndex]
+    [toons, activeIndex],
   );
 
   return <ToonContext.Provider value={value}>{children}</ToonContext.Provider>;

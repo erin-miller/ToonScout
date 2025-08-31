@@ -31,7 +31,7 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
   // listen if settings are changed in localstorage
   window.addEventListener("flowerChange", (event) => {
     const storedFlowerType = parseInt(
-      localStorage.getItem("flowerType") || "1"
+      localStorage.getItem("flowerType") || "1",
     );
     if (storedFlowerType !== flowerType) {
       setFlowerType(storedFlowerType);
@@ -85,7 +85,7 @@ const GardenTab: React.FC<TabProps> = ({ toon }) => {
   const removeDupes = (arr: FlowerResponse[]) => {
     return arr.filter(
       (flower) =>
-        !progress.some((progFlower) => progFlower.name === flower.name)
+        !progress.some((progFlower) => progFlower.name === flower.name),
     );
   };
 
