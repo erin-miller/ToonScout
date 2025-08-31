@@ -61,9 +61,7 @@ export function useRewardNotifications({
 
   // Listen for reward notification events
   useEffect(() => {
-    console.log("Reward notification listener initialized");
     const handleRewardNotification = (event: CustomEvent) => {
-      console.log("Reward notification received:", event.detail);
       if (!notificationsEnabled) return;
       const { message, showToast, playSound } = event.detail;
       handleNotification(message, {

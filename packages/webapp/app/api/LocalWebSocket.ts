@@ -118,8 +118,6 @@ function cleanupWebSocket(port: number) {
     sockets[port] = null;
   }
   updateConnectionStatus();
-  // try to reconnect
-  connectWebSocket();
 }
 
 function startContinuousRequests() {
