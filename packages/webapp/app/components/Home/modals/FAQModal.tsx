@@ -15,6 +15,18 @@ const FAQModal: React.FC<FAQModalProps> = ({ isOpen, onClose }) => {
       <div className="space-y-8 pt-2">
         <div className="faq-container">
           <div className="faq-question">
+            Help! It won't connect to Toontown Rewritten!
+          </div>
+          <div className="faq-answer">
+            First, ensure that you have Companion Apps enabled in-game. If you
+            have an adblocker enabled, it will block the connection. If
+            ToonScout still won't connect, please contact me by checking out the
+            contact button at the bottom of the page!
+          </div>
+        </div>
+
+        <div className="faq-container">
+          <div className="faq-question">
             How does ToonScout get my toon's information?
           </div>
           <div className="faq-answer">
