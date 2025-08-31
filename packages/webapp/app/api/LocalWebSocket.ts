@@ -95,7 +95,6 @@ const connectWebSocket = () => {
 
     socket.addEventListener("error", (error) => {
       cleanupWebSocket(port);
-      console.error(`WebSocket error on ${port}:`, error);
     });
 
     socket.addEventListener("close", () => {
@@ -118,6 +117,9 @@ function cleanupWebSocket(port: number) {
     socket.removeEventListener("close", () => {});
     sockets[port] = null;
   }
+  updateConnectionStatus();
+  // try to reconnect
+  connectWebSocket();
 }
 
 function startContinuousRequests() {
