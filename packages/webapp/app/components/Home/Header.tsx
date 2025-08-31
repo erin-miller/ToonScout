@@ -8,7 +8,9 @@ import { useConnectionContext } from "@/app/context/ConnectionContext";
 import { useActivePortsContext } from "@/app/context/ActivePortsContext";
 import { useToonContext } from "@/app/context/ToonContext";
 import { FaArrowsRotate } from "react-icons/fa6";
+import { FaCog } from "react-icons/fa";
 import { useState } from "react";
+import ToonSettingsModal from "./modals/ToonSettingsModal";
 
 interface HeaderProps {
   userId?: string | null;
@@ -27,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({
 
   // for force resync
   const { setIsConnected } = useConnectionContext();
-  const { addToon } = useToonContext();
+  const { addToon, toons, activeIndex } = useToonContext();
   const { addPort, removePort } = useActivePortsContext();
 
   return (
@@ -61,6 +63,9 @@ const Header: React.FC<HeaderProps> = ({
       </div>
 
       <div className="text-right space-x-2 text-white text-blue-900 items-center">
+        <button className="home-btn" onClick={() => openModal("settings")}>
+          <FaCog className="w-8 h-8" />
+        </button>
         <button className="home-btn" onClick={() => openModal("discord")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +111,14 @@ const Header: React.FC<HeaderProps> = ({
       )}
       {activeModal == "connect" && (
         <GameStepsModal isOpen={true} onClose={closeModal} />
+      )}
+      {activeModal == "settings" && (
+        <ToonSettingsModal
+          toon={toons[activeIndex]}
+          isOpen={true}
+          onClose={closeModal}
+          index={activeIndex}
+        />
       )}
     </div>
   );
