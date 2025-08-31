@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "../../Modal";
-import { StoredToonData } from "@/app/types";
+import { Rewards, StoredToonData } from "@/app/types";
 import { useToonContext } from "@/app/context/ToonContext";
 import {
   FaLock,
@@ -14,6 +14,13 @@ import FishSettingsItem from "./SettingsItems/FishSettingsItem";
 import GardenSettingsItem from "./SettingsItems/GardenSettingsItem";
 import NotificationSettingsItem from "./SettingsItems/NotificationSettingsItem";
 import { getNotificationSettings } from "@/app/utils/notificationUtils";
+import {
+  sumRemotes,
+  sumRewards,
+  sumSos,
+  sumSummons,
+  sumUnites,
+} from "@/app/utils/rewardsUtils";
 
 type SettingsModalProps = {
   toon: StoredToonData | null;
@@ -47,12 +54,14 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
     return toons[index]?.locked ?? false;
   };
 
+  const rewards = toon.data.data.rewards;
+
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="px-2 items-start justify-start text-left text-gray-900 dark:text-white">
+        {/* individual settings and stats*/}
         <h3 className="text-3xl font-bold">{toon.data.data.toon.name}</h3>
         <div className="flex flex-col items-start gap-2 mb-4">
-          {/* individual settings */}
           {/* lock */}
           <div className="flex gap-2">
             <button
@@ -68,6 +77,17 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
             <span>
               Currently {getLockedStatus(index) ? "Unlocked" : "Locked"}
             </span>
+          </div>
+          {/* stats */}
+          <div>
+            <div className="grid md:grid-cols-3 gap-1">
+              <span>{sumSos(rewards)} SOS cards</span>
+              <span>{sumUnites(rewards)} Unites</span>
+              <span>{sumSummons(rewards)} Summons</span>
+              <span>{rewards.pinkslips} Pinkslips</span>
+              <span>{sumRemotes(rewards)} Remotes</span>
+              <span>{sumRewards(rewards)} total rewards</span>
+            </div>
           </div>
 
           {/* global settings */}
