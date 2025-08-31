@@ -11,7 +11,6 @@ type DeleteAllModalProps = {
 const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   const { toons, deleteToon } = useToonContext();
-  const lockedToons = toons.filter((toon) => toon.locked);
   const unlockedToons = toons.filter((toon) => !toon.locked);
 
   const confirm = () => {
@@ -26,7 +25,7 @@ const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="px-2 items-center justify-center text-center">
-        {lockedToons.length >= 1 ? (
+        {unlockedToons.length >= 1 ? (
           <>
             <p>
               Are you sure you want to{" "}
