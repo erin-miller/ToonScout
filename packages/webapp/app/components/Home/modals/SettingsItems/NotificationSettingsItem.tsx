@@ -117,7 +117,7 @@ const NotificationSettingsItem: React.FC = () => {
           <select
             value={soundRepeat}
             onChange={(e) => setSoundRepeat(Number(e.target.value))}
-            className="ml-2 px-1 rounded bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700"
+            className="ml-2 px-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700"
           >
             <option value={1}>Once</option>
             <option value={3}>Repeat 3 times</option>
@@ -133,7 +133,7 @@ const NotificationSettingsItem: React.FC = () => {
                 max={60}
                 value={soundRepeatInterval}
                 onChange={(e) => setSoundRepeatInterval(Number(e.target.value))}
-                className="ml-2 px-1 rounded bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700"
+                className="ml-2 px-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700"
               />
             </p>
           )}
