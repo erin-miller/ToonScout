@@ -12,9 +12,10 @@ const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   const { toons, deleteToon } = useToonContext();
   const lockedToons = toons.filter((toon) => toon.locked);
+  const unlockedToons = toons.filter((toon) => !toon.locked);
 
   const confirm = () => {
-    lockedToons.forEach((toon) => deleteToon(toon));
+    unlockedToons.forEach((toon) => deleteToon(toon));
     onClose();
   };
 
@@ -32,7 +33,7 @@ const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
               <strong>delete the following unlocked toons?</strong>
             </p>
             <ol className="list-disc list-inside">
-              {lockedToons.map((lockedToon, idx) => (
+              {unlockedToons.map((lockedToon, idx) => (
                 <li key={idx}>{lockedToon.data.data.toon.name}</li>
               ))}
             </ol>
