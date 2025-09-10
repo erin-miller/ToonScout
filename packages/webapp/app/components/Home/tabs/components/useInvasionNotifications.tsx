@@ -37,7 +37,7 @@ export function useInvasionNotifications({
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [cogIcon, setCogIcon] = useState<StaticImageData | undefined>(
-    undefined
+    undefined,
   );
   const prevRelevantKeys = useRef<string[]>([]);
   const [dismissedCogs, setDismissedCogs] = useState<string[]>([]);
@@ -63,7 +63,7 @@ export function useInvasionNotifications({
         interval?: number;
         showToast?: boolean;
         nativeNotif?: boolean;
-      }
+      },
     ) => {
       if (options.showToast) {
         setToastMsg(msg);
@@ -77,7 +77,7 @@ export function useInvasionNotifications({
         showNativeNotification("ToonScout Invasion Alert", msg);
       }
     },
-    []
+    [],
   );
 
   // Listen for custom invasion notification events (works across all tabs)
@@ -104,12 +104,12 @@ export function useInvasionNotifications({
     };
     window.addEventListener(
       "invasionNotification",
-      handleInvasionNotification as EventListener
+      handleInvasionNotification as EventListener,
     );
     return () =>
       window.removeEventListener(
         "invasionNotification",
-        handleInvasionNotification as EventListener
+        handleInvasionNotification as EventListener,
       );
   }, [
     notificationsEnabled,
@@ -128,14 +128,14 @@ export function useInvasionNotifications({
     const tasks = toons[activeIndex].data.data.tasks;
     const relevant = getRelevantInvasionsForTasks(tasks, invasions);
     const relevantKeys = relevant.map(
-      (i) => `${sanitizeCogName(i.cog)}|${i.district}`
+      (i) => `${sanitizeCogName(i.cog)}|${i.district}`,
     );
     setActiveCogs(relevant.map((i) => sanitizeCogName(i.cog)));
     // Find new relevant invasions (not previously active or dismissed)
     const newKeys = relevantKeys.filter(
       (key) =>
         !prevRelevantKeys.current.includes(key) &&
-        !dismissedCogs.includes(key.split("|")[0])
+        !dismissedCogs.includes(key.split("|")[0]),
     );
     const newCogDistricts = newKeys.map((key) => {
       const [cog, district] = key.split("|");
@@ -162,18 +162,20 @@ export function useInvasionNotifications({
           repeat: soundRepeat,
           interval: soundRepeatInterval,
           nativeNotif: nativeNotifEnabled,
-        }
+        },
       );
     }
     // If a relevant invasion is no longer present, clear toast and sound
     const goneKeys = prevRelevantKeys.current.filter(
-      (key) => !relevantKeys.includes(key)
+      (key) => !relevantKeys.includes(key),
     );
     if (goneKeys.length > 0 || relevantKeys.length === 0) {
       setShowToast(false);
       clearSoundInterval();
       setDismissedCogs((prev) =>
-        prev.filter((cog) => !goneKeys.some((key) => key.startsWith(cog + "|")))
+        prev.filter(
+          (cog) => !goneKeys.some((key) => key.startsWith(cog + "|")),
+        ),
       );
     }
     prevRelevantKeys.current = relevantKeys;

@@ -35,7 +35,7 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
 
     if (!currAvail || !toon.data.data.cogsuits[dept]?.hasDisguise) {
       const firstAvail = avail.find(
-        (department) => toon.data.data.cogsuits[department]?.hasDisguise
+        (department) => toon.data.data.cogsuits[department]?.hasDisguise,
       );
       if (firstAvail) {
         setDept(firstAvail);
@@ -71,10 +71,13 @@ const SuitTab: React.FC<TabProps> = ({ toon }) => {
   const sortPath = () => {
     if (!promo || !suit || suit.promotion?.current >= suit.promotion?.target)
       return [];
-    const counts = promo.path.reduce((acc, activity) => {
-      acc[activity] = (acc[activity] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const counts = promo.path.reduce(
+      (acc, activity) => {
+        acc[activity] = (acc[activity] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
     return Object.entries(counts).map(([activity, count]) => ({
       activity,

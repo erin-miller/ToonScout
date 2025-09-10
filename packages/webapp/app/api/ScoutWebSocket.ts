@@ -28,7 +28,7 @@ export const initScoutWebSocket = () => {
     if (scoutAttempts < MAX_SCOUT_ATTEMPTS) {
       scoutAttempts++;
       console.log(
-        `Attempting to reconnect to Scout WebSocket in ${RECONNECT_DELAY} ms...`
+        `Attempting to reconnect to Scout WebSocket in ${RECONNECT_DELAY} ms...`,
       );
       setTimeout(connectScoutWebSocket, RECONNECT_DELAY);
     } else {

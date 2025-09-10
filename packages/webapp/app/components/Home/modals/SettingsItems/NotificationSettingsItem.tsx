@@ -9,23 +9,23 @@ const NotificationSettingsItem: React.FC = () => {
   // Notification settings state
   const initialSettings = getNotificationSettings();
   const [notificationsEnabled, setNotificationsEnabled] = useState<boolean>(
-    initialSettings.notificationsEnabled
+    initialSettings.notificationsEnabled,
   );
   const [toastEnabled, setToastEnabled] = useState(
-    initialSettings.toastEnabled
+    initialSettings.toastEnabled,
   );
   const [soundEnabled, setSoundEnabled] = useState(
-    initialSettings.soundEnabled
+    initialSettings.soundEnabled,
   );
   const [toastPersistent, setToastPersistent] = useState(
-    initialSettings.toastPersistent
+    initialSettings.toastPersistent,
   );
   const [soundRepeat, setSoundRepeat] = useState(initialSettings.soundRepeat);
   const [soundRepeatInterval, setSoundRepeatInterval] = useState(
-    initialSettings.soundRepeatInterval
+    initialSettings.soundRepeatInterval,
   );
   const [nativeNotifEnabled, setNativeNotifEnabled] = useState(
-    initialSettings.nativeNotifEnabled
+    initialSettings.nativeNotifEnabled,
   );
 
   useEffect(() => {

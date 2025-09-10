@@ -12,7 +12,7 @@ import { useRewardNotifications } from "../components/Home/tabs/components/useRe
 interface ToastContextType {
   triggerToast: (
     message: string,
-    options?: { children?: React.ReactNode }
+    options?: { children?: React.ReactNode },
   ) => void;
 }
 
@@ -32,7 +32,7 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
       setCustomContent(options?.children);
       setShow(true);
     },
-    []
+    [],
   );
 
   return (

@@ -12,7 +12,7 @@ export function sanitizeCogName(name: string) {
 // Advanced: Find relevant invasions for user's tasks using cog dictionary
 export function getRelevantInvasionsForTasks(
   tasks: import("@/app/types").Task[],
-  invasions: { cog: string; [key: string]: any }[]
+  invasions: { cog: string; [key: string]: any }[],
 ) {
   // Filter out completed tasks
   const incompleteTasks = tasks.filter((task) => {
@@ -94,7 +94,7 @@ export function getCogImage(cogName: string): StaticImageData | undefined {
   const norm = normalize(baseCogName);
   const canonical = cogNameMap[norm] || norm;
   const cog = cogsData.find(
-    (c: any) => c.name === canonical || c.fullname === canonical
+    (c: any) => c.name === canonical || c.fullname === canonical,
   );
   if (!cog || !cog.image) return undefined;
   const match = cog.image.match(/cog_images\/(.*)\.webp$/);

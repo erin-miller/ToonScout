@@ -36,13 +36,13 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
 
   const renderStats = (
     data: { name: string; num: number }[],
-    trophyData: typeof golf_trophies | typeof race_trophies
+    trophyData: typeof golf_trophies | typeof race_trophies,
   ) => {
     return (
       <ul className="space-y-2">
         {data.map((item, index) => {
           const trophy = trophyData.find(
-            (trophy) => trophy.description === item.name
+            (trophy) => trophy.description === item.name,
           );
 
           let curr = item.num.toString();

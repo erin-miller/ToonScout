@@ -31,10 +31,13 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   // flip states for SOS cards
   const sosCards = toon.data.data.rewards.sos || {};
   const [sosFlipStates, setSOSFlipStates] = useState<Record<string, boolean>>(
-    Object.keys(sosCards).reduce((acc, card) => {
-      acc[card] = false;
-      return acc;
-    }, {} as Record<string, boolean>)
+    Object.keys(sosCards).reduce(
+      (acc, card) => {
+        acc[card] = false;
+        return acc;
+      },
+      {} as Record<string, boolean>,
+    ),
   );
 
   const toggleSOSFlip = (card: string) => {
@@ -50,11 +53,14 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
     Record<string, boolean>
   >(
     Array.isArray(remotes)
-      ? remotes.reduce((acc: Record<string, boolean>, remote: string) => {
-          acc[remote] = false;
-          return acc;
-        }, {} as Record<string, boolean>)
-      : {}
+      ? remotes.reduce(
+          (acc: Record<string, boolean>, remote: string) => {
+            acc[remote] = false;
+            return acc;
+          },
+          {} as Record<string, boolean>,
+        )
+      : {},
   );
 
   const toggleRemoteFlip = (remote: string) => {
