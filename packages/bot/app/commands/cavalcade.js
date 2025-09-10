@@ -3,8 +3,12 @@ import { InteractionResponseType } from "discord-interactions";
 import { carnivalEnums, carnivalStatus } from "../util/cmds.js";
 
 const hoodIds = {
-    1: "Donald's Dock",
     2: "Toontown Central",
+    1: "Donald's Dock",
+    5: "Daisy's Gardens",
+    4: "Minnie's Melodyland",
+    3: "The Brrrgh",
+    9: "Donald's Dreamland",
 }
 
 export const data = new SlashCommandBuilder()
