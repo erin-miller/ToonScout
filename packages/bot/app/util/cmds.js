@@ -15,3 +15,19 @@ export function sanitize(data) {
     .replace(/\\u[0-9a-fA-F]{4}/g, "") // Remove Unicode escape sequences
     .replace(/[\u0000-\u001F\u007F�]/g, ""); // Remove control characters
 }
+
+export const carnivalEnums = {
+  INACTIVE: "inactive",    // Holiday not running
+  RECHARGING: "recharging", // Holiday is running, but the parade isn't scheduled/running
+  IN_TRANSIT: "in-transit", // Parade is scheduled but not running
+  ACTIVE: "active",        // Parade is running
+};
+
+export const carnivalStatus = async () => {
+  const response = await fetch("https://toontownrewritten.com/api/cavalcade");
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(JSON.stringify(data));
+  }
+  return data;
+} 
