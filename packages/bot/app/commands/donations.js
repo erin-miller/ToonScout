@@ -1,6 +1,7 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { carnivalEnums, carnivalStatus } from "../util/cmds.js";
+import { carnivalStatus } from "../util/api.js";
+import { carnivalEnums } from "../util/cmds.js"
 
 export const data = new SlashCommandBuilder()
     .setName("donations")
@@ -22,9 +23,10 @@ export async function execute(req, res, target) {
 }
 
 const getFund = async () => {
-    const status = await carnivalStatus()
+    const res = await carnivalStatus()
+    const status = res.status
     if (status == null || status.paradeStatus == carnivalEnums.INACTIVE) {
-        return "The Cartoonival isn't active right now!"
+        return res.message
     }
 
     const response = await fetch('https://toontownrewritten.com/api/riggydonations');

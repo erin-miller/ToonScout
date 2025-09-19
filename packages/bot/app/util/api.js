@@ -64,3 +64,23 @@ export async function updateHidden(target) {
     console.error("Error during visibility update:", error);
   }
 }
+
+export async function carnivalStatus() {
+  try {
+    const response = await fetch(API_LINK + "/utility/get-cavalcade", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Cavalcade information could not be retrieved.");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error during cavalcade retrieval:", error);
+  }
+}
