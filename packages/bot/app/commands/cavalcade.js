@@ -25,19 +25,21 @@ export async function execute(req, res, target) {
 const cavalcadeStatus = async () => {
     const res = await carnivalStatus();
     const status = res.status
-    if (status == null || status.paradeStatus == carnivalEnums.INACTIVE) {
+    const timestamp = `<t:${res.timestamp}:t>`
+
+    if (status == null || status == carnivalEnums.INACTIVE) {
         return res.message
     }
 
-    if (status.paradeStatus == carnivalEnums.RECHARGING) {
-        return res.message + ` come back at ${res.timestamp} to find out the next location!`
+    if (status == carnivalEnums.RECHARGING) {
+        return res.message + ` come back at ${timestamp} to find out the next location!`
     }
 
-    if (status.paradeStatus == carnivalEnums.IN_TRANSIT) {
-        return res.message + ` starting at ${res.timestamp}!`
+    if (status == carnivalEnums.IN_TRANSIT) {
+        return res.message + ` starting at ${timestamp}!`
     }
 
-    if (status.paradeStatus == carnivalEnums.ACTIVE) {
+    if (status == carnivalEnums.ACTIVE) {
         return res.message
     }
 
