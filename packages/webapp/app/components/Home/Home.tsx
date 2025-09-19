@@ -9,12 +9,16 @@ import { useToonContext } from "@/app/context/ToonContext";
 import GameSteps from "../GameSteps";
 import Chuckle from "../eggs/Chuckle";
 import SystemBanner from "./SystemBanner";
+import EventBanner from "./EventBanner";
+
+const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
 
 const Home = () => {
   const { userId, setUserId } = useDiscordContext();
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const { toons } = useToonContext();
   const [isBannerOpen, setIsBannerOpen] = useState(true);
+  const [isEventBannerOpen, setIsEventBannerOpen] = useState(false);
 
   useEffect(() => {
     const checkAccessToken = async () => {
@@ -23,7 +27,7 @@ const Home = () => {
         {
           method: "GET",
           credentials: "include",
-        },
+        }
       );
 
       if (response.ok) {
@@ -53,10 +57,39 @@ const Home = () => {
     } else {
       checkAccessToken();
     }
+
+    const checkEventStatus = () => {
+      fetch(API_LINK + "/utility/get-cavalcade", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          if (!response.ok) {
+            return false;
+          }
+          return response.json();
+        })
+        .then((data) => {
+          if (data.status && data.status !== "inactive") {
+            setIsEventBannerOpen(true);
+          }
+        })
+        .catch((error) => {
+          console.error("Error checking event status:", error);
+        });
+    };
+
+    checkEventStatus();
   }, []);
 
   const handleCloseBanner = () => {
     setIsBannerOpen(false);
+  };
+
+  const handleCloseEventBanner = () => {
+    setIsEventBannerOpen(false);
   };
 
   return (
@@ -70,6 +103,13 @@ const Home = () => {
 
         {isBannerOpen && (
           <SystemBanner isOpen={isBannerOpen} onClose={handleCloseBanner} />
+        )}
+
+        {isEventBannerOpen && (
+          <EventBanner
+            isOpen={isEventBannerOpen}
+            onClose={handleCloseEventBanner}
+          />
         )}
 
         {toons && toons.length > 0 ? (

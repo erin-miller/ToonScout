@@ -1,3 +1,5 @@
+import Banner from "@/app/components/Banner";
+
 interface SystemBannerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -21,19 +23,12 @@ const SystemBanner: React.FC<SystemBannerProps> = ({ isOpen, onClose }) => {
   const msg = process.env.NEXT_PUBLIC_SYSTEM_BANNER_MSG;
   if (!msg) return null;
   return (
-    <div
-      className={`w-full h-full py-0.3 px-6 flex items-center justify-center ${SystemBannerType[type]} flex-wrap`}
-    >
-      <button
-        onClick={onClose}
-        className="text-xl text-red-700 hover:text-red-900 mr-2"
-      >
-        &times;
-      </button>
-      <h1 className="text-gray-1000 dark:text-gray-1200 py-0.3">
-        <span className="text-xl font-semibold">{msg}</span>
-      </h1>
-    </div>
+    <Banner
+      isOpen={isOpen}
+      onClose={onClose}
+      msg={msg}
+      className={`${SystemBannerType[type]}`}
+    />
   );
 };
 
