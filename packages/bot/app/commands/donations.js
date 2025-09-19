@@ -34,5 +34,5 @@ const getFund = async () => {
         throw new Error(JSON.stringify(data));
     }
     const data = await response.json();
-    return `**${data.total}** tokens have been donated!`;
+    return `**${data.tokensDonated}** tokens have been donated!`;
 }
