@@ -26,12 +26,15 @@ const EventBanner: React.FC<EventBannerProps> = ({
     { hour: "numeric", minute: "2-digit", hour12: true }
   );
 
+  let display = msg.replaceAll("*", "");
+
   if (status == carnivalEnums.RECHARGING) {
-    msg = msg + ` come back at ${localTime} to find out the next location!`;
+    display =
+      display + ` come back at ${localTime} to find out the next location!`;
   }
 
   if (status == carnivalEnums.IN_TRANSIT) {
-    msg = msg + ` starting at ${localTime}!`;
+    display = display + ` starting at ${localTime}!`;
   }
 
   if (!isOpen) return null;
@@ -39,8 +42,9 @@ const EventBanner: React.FC<EventBannerProps> = ({
     <Banner
       isOpen={isOpen}
       onClose={onClose}
-      msg={msg}
+      msg={display}
       className={`bg-blue-300`}
+      enableBtn={false}
     />
   );
 };
