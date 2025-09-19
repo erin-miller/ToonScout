@@ -109,4 +109,81 @@ router.get("/get-invasions", async (req, res) => {
   res.json(apiResponse);
 });
 
+const carnivalEnums = {
+  INACTIVE: "inactive",    // Holiday not running
+  RECHARGING: "recharging", // Holiday is running, but the parade isn't scheduled/running
+  IN_TRANSIT: "in-transit", // Parade is scheduled but not running
+  ACTIVE: "active",        // Parade is running
+};
+
+const carnivalStatus = async () => {
+  const response = await fetch("https://toontownrewritten.com/api/cavalcade");
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(JSON.stringify(data));
+  }
+  return data;
+}
+
+const hoodIds = {
+  2: "Toontown Central",
+  1: "Donald's Dock",
+  5: "Daisy's Gardens",
+  4: "Minnie's Melodyland",
+  3: "The Brrrgh",
+  9: "Donald's Dreamland",
+}
+
+router.get("/get-cavalcade", async (req, res) => {
+  try {
+    const status = await carnivalStatus();
+    if (status == null || status.paradeStatus === carnivalEnums.INACTIVE) {
+      return res.json({
+        message: "The Cartoonival isn't active right now!",
+        timestamp: null,
+        status: null
+      });
+    }
+
+    const getNextTime = (status) => {
+      const now = new Date();
+      const nextTime = new Date();
+      if (status === carnivalEnums.RECHARGING) {
+        if (now.getMinutes() < 25) {
+          nextTime.setMinutes(25, 0, 0);
+        } else {
+          nextTime.setHours(now.getHours() + 1, 25, 0, 0);
+        }
+      } else if (status === carnivalEnums.IN_TRANSIT) {
+        if (now.getMinutes() < 30) {
+          nextTime.setMinutes(30, 0, 0);
+        } else {
+          nextTime.setHours(now.getHours() + 1, 30, 0, 0);
+        }
+      }
+      return Math.floor(nextTime.getTime() / 1000);
+    };
+
+    let message = "";
+    let timestamp = null;
+
+    if (status.paradeStatus === carnivalEnums.RECHARGING) {
+      timestamp = getNextTime(carnivalEnums.RECHARGING);
+      message = `The Cavalcade is currently recharging...`;
+    } else if (status.paradeStatus === carnivalEnums.IN_TRANSIT) {
+      const locIdx = String(status.paradeLocation).charAt(0);
+      timestamp = getNextTime(carnivalEnums.IN_TRANSIT);
+      message = `The Cavalcade will be at **${status.paradeLocationString}, ${hoodIds[locIdx]}**`;
+    } else if (status.paradeStatus === carnivalEnums.ACTIVE) {
+      const locIdx = String(status.paradeLocation).charAt(0);
+      message = `The Cavalcade is currently running in **${status.paradeLocationString}, ${hoodIds[locIdx]}**!`;
+    }
+
+    res.json({ message, timestamp, status: status.paradeStatus });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error", error: error.message });
+  }
+});
+
 export default router;
