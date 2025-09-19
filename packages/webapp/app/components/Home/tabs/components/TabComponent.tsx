@@ -17,6 +17,7 @@ import { hasNoSuit } from "../../../../utils/tabUtils";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { BsPiggyBankFill } from "react-icons/bs";
 import { PiTipJarFill } from "react-icons/pi";
+import { BiSolidParty } from "react-icons/bi";
 import Image from "next/image";
 
 export interface TabProps {
@@ -92,7 +93,7 @@ const TabContainer = () => {
   const totalPages = Math.ceil(TabList.length / MAX_TABS);
   const visibleTabs = TabList.slice(
     currPage * MAX_TABS,
-    (currPage + 1) * MAX_TABS,
+    (currPage + 1) * MAX_TABS
   );
 
   // change pages if the toon has no suits so that the tab is disabled properly
@@ -244,6 +245,14 @@ const TabContainer = () => {
                 </span>
               </div>
             </div>
+            {toon.data.data.tokens ? (
+              <div className="flex items-center justify-center space-x-1">
+                <BiSolidParty className="text-2xl text-pink-800" />
+                <span className="text-lg">{toon.data.data.tokens} Tokens</span>
+              </div>
+            ) : (
+              <></>
+            )}
             <div className="text-lg">
               Cattlelog Series {toon.data.data.cattlelog.series} #
               {toon.data.data.cattlelog.issue}
