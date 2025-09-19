@@ -22,6 +22,7 @@ const Home = () => {
   const [eventMsg, setEventMsg] = useState("");
   const [eventTimestamp, setEventTimestamp] = useState("");
   const [eventStatus, setEventStatus] = useState("");
+  const [donations, setDonations] = useState(0);
 
   useEffect(() => {
     const checkAccessToken = async () => {
@@ -85,9 +86,25 @@ const Home = () => {
         .catch((error) => {
           console.error("Error checking event status:", error);
         });
+
+      if (eventStatus !== "inactive") {
+        fetch("https://toontownrewritten.com/api/riggydonations")
+          .then((response) => {
+            if (!response.ok) {
+              return false;
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setDonations(data.tokensDonated);
+          });
+      }
     };
 
     checkEventStatus();
+    const interval = setInterval(checkEventStatus, 15000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const handleCloseBanner = () => {
@@ -126,6 +143,15 @@ const Home = () => {
             <div className="px-6 pt-6">
               <TabContainer />
             </div>
+
+            {eventStatus !== "inactive" ? (
+              <div className="pt-4 text-xl">
+                <span className="font-minnie">{donations}</span> tokens donated
+                to Riggy!
+              </div>
+            ) : (
+              <></>
+            )}
 
             <div className="px-6">
               <Disclaimer />
