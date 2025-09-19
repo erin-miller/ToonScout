@@ -145,21 +145,15 @@ router.get("/get-cavalcade", async (req, res) => {
       });
     }
 
-    const getNextTime = (status) => {
+    const getNextTime = () => {
       const now = new Date();
       const nextTime = new Date();
-      if (status === carnivalEnums.RECHARGING) {
-        if (now.getMinutes() < 25) {
-          nextTime.setMinutes(25, 0, 0);
-        } else {
-          nextTime.setHours(now.getHours() + 1, 25, 0, 0);
-        }
-      } else if (status === carnivalEnums.IN_TRANSIT) {
-        if (now.getMinutes() < 30) {
-          nextTime.setMinutes(30, 0, 0);
-        } else {
-          nextTime.setHours(now.getHours() + 1, 30, 0, 0);
-        }
+      if (now.getMinutes() < 25) {
+        nextTime.setMinutes(25, 0, 0);
+      } else if (now.getMinutes() < 30) {
+        nextTime.setMinutes(30, 0, 0);
+      } else {
+        nextTime.setHours(now.getHours() + 1, 25, 0, 0);
       }
       return Math.floor(nextTime.getTime() / 1000);
     };
@@ -168,11 +162,11 @@ router.get("/get-cavalcade", async (req, res) => {
     let timestamp = null;
 
     if (status.paradeStatus === carnivalEnums.RECHARGING) {
-      timestamp = getNextTime(carnivalEnums.RECHARGING);
+      timestamp = getNextTime();
       message = `The Cavalcade is currently recharging...`;
     } else if (status.paradeStatus === carnivalEnums.IN_TRANSIT) {
       const locIdx = String(status.paradeLocation).charAt(0);
-      timestamp = getNextTime(carnivalEnums.IN_TRANSIT);
+      timestamp = getNextTime();
       message = `The Cavalcade will be at **${status.paradeLocationString}, ${hoodIds[locIdx]}**`;
     } else if (status.paradeStatus === carnivalEnums.ACTIVE) {
       const locIdx = String(status.paradeLocation).charAt(0);
