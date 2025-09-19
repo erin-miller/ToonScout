@@ -22,12 +22,3 @@ export const carnivalEnums = {
   IN_TRANSIT: "in-transit", // Parade is scheduled but not running
   ACTIVE: "active",        // Parade is running
 };
-
-export const carnivalStatus = async () => {
-  const response = await fetch("https://toontownrewritten.com/api/cavalcade");
-  const data = await response.json();
-  if (!response.ok) {
-    throw new Error(JSON.stringify(data));
-  }
-  return data;
-} 

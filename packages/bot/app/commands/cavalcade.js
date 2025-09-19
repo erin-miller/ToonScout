@@ -1,15 +1,7 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
-import { carnivalEnums, carnivalStatus } from "../util/cmds.js";
-
-const hoodIds = {
-    2: "Toontown Central",
-    1: "Donald's Dock",
-    5: "Daisy's Gardens",
-    4: "Minnie's Melodyland",
-    3: "The Brrrgh",
-    9: "Donald's Dreamland",
-}
+import { carnivalStatus } from "../util/api.js";
+import { carnivalEnums } from "../util/cmds.js"
 
 export const data = new SlashCommandBuilder()
     .setName("cavalcade")
@@ -31,44 +23,23 @@ export async function execute(req, res, target) {
 }
 
 const cavalcadeStatus = async () => {
-    const status = await carnivalStatus();
+    const res = await carnivalStatus();
+    const status = res.status
     if (status == null || status.paradeStatus == carnivalEnums.INACTIVE) {
-        return "The Cartoonival isn't active right now!"
+        return res.message
     }
 
     if (status.paradeStatus == carnivalEnums.RECHARGING) {
-        return `The Cavalcade is currently recharging... come back at ${getNextTime(carnivalEnums.RECHARGING)} to find out the next location!`
+        return res.message + ` come back at ${res.timestamp} to find out the next location!`
     }
 
     if (status.paradeStatus == carnivalEnums.IN_TRANSIT) {
-        const locIdx = String(status.paradeLocation).charAt(0)
-        return `The Cavalcade will be at **${status.paradeLocationString},  ${hoodIds[locIdx]}**, starting at ${getNextTime(carnivalEnums.IN_TRANSIT)}!`
+        return res.message + ` starting at ${res.timestamp}!`
     }
 
     if (status.paradeStatus == carnivalEnums.ACTIVE) {
-        const locIdx = String(status.paradeLocation).charAt(0)
-        return `The Cavalcade is currently running in **${status.paradeLocationString},  ${hoodIds[locIdx]}**!`
+        return res.message
     }
 
     return "Uh oh! An error occured. Please try again later."
-}
-
-const getNextTime = (status) => {
-    const now = new Date();
-    const nextTime = new Date();
-    if (status === carnivalEnums.RECHARGING) {
-        if (now.getMinutes() < 25) {
-            nextTime.setMinutes(25, 0, 0);
-        } else {
-            nextTime.setHours(now.getHours() + 1, 25, 0, 0);
-        }
-    } else if (status === carnivalEnums.IN_TRANSIT) {
-        if (now.getMinutes() < 30) {
-            nextTime.setMinutes(30, 0, 0);
-        } else {
-            nextTime.setHours(now.getHours() + 1, 30, 0, 0);
-        }
-    }
-    const timestamp = Math.floor(nextTime.getTime() / 1000);
-    return `<t:${timestamp}:t>`;
 }

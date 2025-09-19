@@ -33,6 +33,10 @@ export async function execute(req, res, target) {
     )
     .setTimestamp(item.modified);
 
+  if (toon.tokens && toon.tokens > 0) {
+    embed.addFields({ name: "Cartoonival Tokens", value: toon.tokens.toString() })
+  }
+
   return res.send({
     type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
     data: {
