@@ -19,6 +19,9 @@ const Home = () => {
   const { toons } = useToonContext();
   const [isBannerOpen, setIsBannerOpen] = useState(true);
   const [isEventBannerOpen, setIsEventBannerOpen] = useState(false);
+  const [eventMsg, setEventMsg] = useState("");
+  const [eventTimestamp, setEventTimestamp] = useState("");
+  const [eventStatus, setEventStatus] = useState("");
 
   useEffect(() => {
     const checkAccessToken = async () => {
@@ -74,6 +77,9 @@ const Home = () => {
         .then((data) => {
           if (data.status && data.status !== "inactive") {
             setIsEventBannerOpen(true);
+            setEventMsg(data.message);
+            setEventTimestamp(data.timestamp);
+            setEventStatus(data.status);
           }
         })
         .catch((error) => {
@@ -109,6 +115,9 @@ const Home = () => {
           <EventBanner
             isOpen={isEventBannerOpen}
             onClose={handleCloseEventBanner}
+            msg={eventMsg}
+            timestamp={eventTimestamp}
+            status={eventStatus}
           />
         )}
 
