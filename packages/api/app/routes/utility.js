@@ -148,9 +148,9 @@ router.get("/get-cavalcade", async (req, res) => {
     const getNextTime = () => {
       const now = new Date();
       const nextTime = new Date();
-      if (now.getMinutes() < 25) {
+      if (now.getMinutes() < 27) {
         nextTime.setMinutes(25, 0, 0);
-      } else if (now.getMinutes() < 30) {
+      } else if (now.getMinutes() < 31) {
         nextTime.setMinutes(30, 0, 0);
       } else {
         nextTime.setHours(now.getHours() + 1, 25, 0, 0);
