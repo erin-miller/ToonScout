@@ -60,6 +60,10 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
                   const gagImage =
                     gagImages[track.toLowerCase() as GagTrack]?.[gagIndex];
                   const isImageVisible = trackData && gagIndex + 1 <= maxLevel;
+                  const gagLevel = gagIndex + 1;
+                  const organicLevel = trackData?.organic?.level ?? 0;
+                  const isOrganic = gagLevel <= organicLevel;
+                  
                   return (
                     <div
                       key={`${track}-${gagIndex}`}
@@ -75,13 +79,25 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
                       )}
                       {/* gag slot */}
                       {isImageVisible && gagImage && (
-                        <Image
-                          src={gagImage}
-                          alt={`${track} gag ${gagIndex + 1}`}
-                          width={48}
-                          height={48}
-                          className="w-8 xl:w-10 2xl:w-12 object-contain"
-                        />
+                        <>
+                          <Image
+                            src={gagImage}
+                            alt={`${track} gag ${gagLevel}`}
+                            width={48}
+                            height={48}
+                            className="w-8 xl:w-10 2xl:w-12 object-contain"
+                          />
+                          {/* organic gag indicator */}
+                          {isOrganic && (
+                            <Image
+                              src="/organic-gag.webp"
+                              alt="Organic"
+                              width={18}
+                              height={18}
+                              className="absolute -top-0.5 -right-0.5 w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 pointer-events-none"
+                            />
+                          )}
+                        </>
                       )}
 
                       {/* gag border styling */}
