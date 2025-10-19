@@ -38,10 +38,7 @@ const GagTooltip: React.FC<GagTooltipProps> = ({
       {track === "Lure" ? (
         <div className="flex flex-col gap-1">
           <div>
-            ROUNDS LURED: {isOrganic ? LURE_ROUNDS[gagLevel - 1] + 1 : LURE_ROUNDS[gagLevel - 1]}
-            {isOrganic && (
-              <> ({LURE_ROUNDS[gagLevel - 1]} + 1)</>
-            )}
+            ROUNDS LURED: {LURE_ROUNDS[gagLevel - 1]}
           </div>
           {accuracyInfo && (
             <div className="text-xs font-normal">
