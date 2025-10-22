@@ -248,6 +248,6 @@ export interface TaskMatch {
 
 export interface TasklineOverride {
   tasklineId: string;        // Which taskline the user is on
-  stepNumber: number;        // Minimum step number user has set
+  stepNumber: number;        // Exact step number the user selected
   timestamp: number;         // When this override was set
 }

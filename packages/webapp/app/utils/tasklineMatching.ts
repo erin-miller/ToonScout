@@ -3,11 +3,7 @@
 
 import { Task, Taskline, TasklineStep, TaskMatch } from '../types';
 import { getAllTasklines } from '../../data/tasklines';
-import { getLastKnownStep } from './tasklineOverrides';
 import { findNextUncompletedStep } from './tasklineProgress';
-
-// Debug flag - set to true to enable verbose logging
-const DEBUG_MATCHING = false;
 
 /**
  * Normalizes text for comparison by:
@@ -76,14 +72,6 @@ function isLocationAwareMatch(taskObjective: string, step: TasklineStep): boolea
     const stepLocation = normalizeText(step.location);
     const taskLoc = normalizeText(taskLocation.location);
     
-    console.log('[Location Check]', {
-      task: taskObjective,
-      stepObjective: step.objective,
-      taskLocation: taskLoc,
-      stepLocation: stepLocation,
-      match: stepLocation.includes(taskLoc) || taskLoc.includes(stepLocation)
-    });
-    
     // Allow partial location matches (e.g., "donald's dreamland" matches "donalds dreamland")
     if (!stepLocation.includes(taskLoc) && !taskLoc.includes(stepLocation)) {
       return false;
@@ -115,14 +103,6 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
   
   const normalizedObjective = normalizeText(objectiveText);
   const allTasklines = getAllTasklines();
-
-  if (DEBUG_MATCHING) {
-    console.log('[Taskline Match] Raw task.objective.text:', task.objective.text);
-    console.log('[Taskline Match] task.to:', task.to);
-    console.log('[Taskline Match] task.objective.where:', task.objective.where);
-    console.log('[Taskline Match] Constructed full objective:', objectiveText);
-    console.log('[Taskline Match] Normalized:', normalizedObjective);
-  }
 
   // Track matching steps for progress-aware selection
   const matchingSteps: Array<{ taskline: Taskline; step: TasklineStep; matchType: 'exact' | 'alternative' }> = [];
@@ -157,21 +137,24 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
 
   // If we have multiple exact/alternative matches (like "Visit Zari"), use progress tracking to filter
   if (matchingSteps.length > 1) {
-    if (DEBUG_MATCHING) console.log('[Taskline Match] Multiple matches found:', matchingSteps.length);
-    
     // Group by taskline
-    const matchesByTaskline = new Map<string, Array<{ step: TasklineStep; matchType: 'exact' | 'alternative' }>>();
+    const matchesByTaskline = new Map<
+      string,
+      { taskline: Taskline; matches: Array<{ step: TasklineStep; matchType: 'exact' | 'alternative' }> }
+    >();
+
     matchingSteps.forEach(({ taskline, step, matchType }) => {
       if (!matchesByTaskline.has(taskline.id)) {
-        matchesByTaskline.set(taskline.id, []);
+        matchesByTaskline.set(taskline.id, { taskline, matches: [] });
       }
-      matchesByTaskline.get(taskline.id)!.push({ step, matchType });
+      matchesByTaskline.get(taskline.id)!.matches.push({ step, matchType });
     });
     
     // For each taskline, find the next uncompleted step using progress tracking
-    for (const [tasklineId, matches] of matchesByTaskline.entries()) {
+    for (const [tasklineId, data] of matchesByTaskline.entries()) {
+      const { taskline, matches } = data;
       // Sort matches by step order
-      const sortedMatches = matches.sort((a, b) => a.step.order - b.step.order);
+      const sortedMatches = [...matches].sort((a, b) => a.step.order - b.step.order);
       const matchingStepNumbers = sortedMatches.map(m => m.step.order);
       
       // Use progress tracking to find next uncompleted step
@@ -179,16 +162,8 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
       
       if (selectedStepNumber !== null) {
         const selectedMatch = sortedMatches.find(m => m.step.order === selectedStepNumber);
-        
+
         if (selectedMatch) {
-          const taskline = matchingSteps.find(m => m.step.order === selectedStepNumber)!.taskline;
-          
-          if (DEBUG_MATCHING) console.log('[Taskline Match] ✓ PROGRESS-AWARE SELECTION:', {
-            allSteps: matchingStepNumbers,
-            selected: selectedStepNumber,
-            reason: 'next uncompleted step'
-          });
-          
           return {
             taskline,
             step: selectedMatch.step,
@@ -200,12 +175,6 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
       
       // Fallback: use first match if progress tracking didn't help
       const fallbackMatch = sortedMatches[0];
-      const taskline = matchingSteps.find(m => m.step.order === fallbackMatch.step.order)!.taskline;
-      
-      if (DEBUG_MATCHING) console.log('[Taskline Match] ✓ FALLBACK - FIRST MATCH:', {
-        allSteps: matchingStepNumbers,
-        selected: fallbackMatch.step.order
-      });
       
       return {
         taskline,
@@ -219,7 +188,6 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
   // Single exact/alternative match - return it
   if (matchingSteps.length === 1) {
     const match = matchingSteps[0];
-    if (DEBUG_MATCHING) console.log('[Taskline Match] ✓ SINGLE MATCH:', match.taskline.name, 'Step', match.step.order);
     return {
       taskline: match.taskline,
       step: match.step,
@@ -230,8 +198,6 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
 
   // 3. Try location-aware partial match
   let bestMatch: { taskline: Taskline; step: TasklineStep; score: number } | null = null;
-  
-  if (DEBUG_MATCHING) console.log('[Taskline Match] Trying partial matches...');
   
   for (const taskline of allTasklines) {
     for (const step of taskline.steps) {
@@ -250,23 +216,19 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
         // Bonus for location match
         if (step.location && objectiveText.toLowerCase().includes(step.location.toLowerCase())) {
           score += 10;
-          if (DEBUG_MATCHING) console.log('[Taskline Match]   Location bonus for:', taskline.name, step.location);
         }
         
         // Bonus for building match
         if (step.building && objectiveText.toLowerCase().includes(step.building.toLowerCase())) {
           score += 10;
-          if (DEBUG_MATCHING) console.log('[Taskline Match]   Building bonus for:', taskline.name, step.building);
         }
         
         // Bonus for reward match (optional but helpful)
         if (task.reward && step.reward && normalizeText(task.reward) === normalizeText(step.reward)) {
           score += 15;
-          if (DEBUG_MATCHING) console.log('[Taskline Match]   Reward bonus for:', taskline.name, task.reward);
         }
         
         if (score > 0) {
-          if (DEBUG_MATCHING) console.log('[Taskline Match]   Candidate:', taskline.name, 'Step', step.order, 'Score:', score);
           if (!bestMatch || score > bestMatch.score) {
             bestMatch = { taskline, step, score };
           }
@@ -276,7 +238,6 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
   }
   
   if (bestMatch) {
-    if (DEBUG_MATCHING) console.log('[Taskline Match] ✓ PARTIAL MATCH (best):', bestMatch.taskline.name, 'Step', bestMatch.step.order, 'Score:', bestMatch.score);
     return {
       taskline: bestMatch.taskline,
       step: bestMatch.step,
@@ -286,14 +247,6 @@ export function findTasklineMatch(task: Task): TaskMatch | null {
   }
 
   // Log unmatched tasks for data improvement (development only)
-  if (DEBUG_MATCHING) console.log('[Taskline Match] ✗ NO MATCH FOUND');
-  if (DEBUG_MATCHING && process.env.NODE_ENV === 'development') {
-    console.log('[Taskline] No match found:', {
-      objective: task.objective.text,
-      type: task.type,
-    });
-  }
-
   return null; // No match found
 }
 

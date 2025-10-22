@@ -1,4 +1,5 @@
-// TasklineModal Component
+'use client';
+
 // Displays taskline details in a modal when user clicks on a task
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -46,7 +47,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
   // Update selected step when currentStep changes
   useEffect(() => {
     if (currentStep) {
-      console.log('[TasklineModal] currentStep changed to:', currentStep.order);
       setSelectedStepNumber(currentStep.order);
       
       // Check if there's an existing override
@@ -99,7 +99,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
   };
 
   const handleResetOverride = () => {
-    console.log('[TasklineModal] Reset button clicked');
     clearTasklineOverride(task);
     setHasUserOverride(false);
     

@@ -59,7 +59,6 @@ export function getTasklineOverride(task: Task): TasklineOverride | null {
   // Clean up old overrides (older than 30 days)
   const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
   if (override.timestamp < thirtyDaysAgo) {
-    console.log('[Taskline Overrides] Removing stale override:', taskKey);
     overrides.delete(taskKey);
     saveOverrides(overrides);
     return null;
@@ -69,8 +68,7 @@ export function getTasklineOverride(task: Task): TasklineOverride | null {
 }
 
 /**
- * Set a user override for a specific task and taskline step
- * This acts as a "minimum step" - auto-detection can still progress beyond this
+ * Persist the user's selected step for a specific task/taskline combination.
  */
 export function setTasklineOverride(
   task: Task,
@@ -88,12 +86,6 @@ export function setTasklineOverride(
   
   overrides.set(taskKey, override);
   saveOverrides(overrides);
-  
-  console.log('[Taskline Overrides] Set override:', {
-    taskKey,
-    tasklineId,
-    stepNumber,
-  });
 }
 
 /**
@@ -105,7 +97,6 @@ export function clearTasklineOverride(task: Task): void {
   
   if (overrides.delete(taskKey)) {
     saveOverrides(overrides);
-    console.log('[Taskline Overrides] Cleared override:', taskKey);
   }
 }
 
@@ -117,7 +108,6 @@ export function clearAllOverrides(): void {
   
   try {
     localStorage.removeItem(STORAGE_KEY);
-    console.log('[Taskline Overrides] Cleared all overrides');
   } catch (error) {
     console.error('[Taskline Overrides] Failed to clear:', error);
   }
@@ -125,8 +115,7 @@ export function clearAllOverrides(): void {
 
 /**
  * Apply user override to a taskline match
- * Uses the larger of: detected step or user override (user minimum concept)
- * Also considers previous/next step tolerance for small sync issues
+ * Honours the exact step the user selected when an override is present.
  */
 export function applyOverrideToMatch(
   task: Task,
@@ -140,22 +129,10 @@ export function applyOverrideToMatch(
   
   // Override is for a different taskline - ignore it
   if (override.tasklineId !== tasklineId) {
-    console.log('[Taskline Overrides] Override is for different taskline, ignoring');
     return detectedStepNumber;
   }
-  
-  // Use the larger step number (user minimum, but can progress beyond)
-  const finalStep = Math.max(detectedStepNumber, override.stepNumber);
-  
-  if (finalStep !== detectedStepNumber) {
-    console.log('[Taskline Overrides] Applied override:', {
-      detected: detectedStepNumber,
-      override: override.stepNumber,
-      final: finalStep,
-    });
-  }
-  
-  return finalStep;
+
+  return override.stepNumber;
 }
 
 /**

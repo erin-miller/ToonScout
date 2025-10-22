@@ -80,11 +80,6 @@ export function markStepCompleted(tasklineId: string, stepNumber: number): void 
   allProgress.set(tasklineId, progress);
   saveProgress(allProgress);
   
-  console.log('[Taskline Progress] Marked step completed:', {
-    tasklineId,
-    stepNumber,
-    totalCompleted: progress.completedSteps.length,
-  });
 }
 
 /**
@@ -124,11 +119,6 @@ export function updateCurrentStep(
   allProgress.set(tasklineId, progress);
   saveProgress(allProgress);
   
-  console.log('[Taskline Progress] Updated current step:', {
-    tasklineId,
-    currentStepNumber,
-    completedSteps: progress.completedSteps,
-  });
 }
 
 /**
@@ -149,11 +139,6 @@ export function findNextUncompletedStep(
   // Find first matching step that hasn't been completed
   for (const stepNumber of matchingStepNumbers) {
     if (!progress.completedSteps.includes(stepNumber)) {
-      console.log('[Taskline Progress] Found next uncompleted step:', {
-        tasklineId,
-        stepNumber,
-        skipped: matchingStepNumbers.filter(s => s < stepNumber),
-      });
       return stepNumber;
     }
   }
@@ -161,7 +146,6 @@ export function findNextUncompletedStep(
   // All matching steps completed - return last one
   // (User might be repeating the taskline or there's a data issue)
   const lastStep = matchingStepNumbers[matchingStepNumbers.length - 1];
-  console.log('[Taskline Progress] All steps completed, returning last:', lastStep);
   return lastStep || null;
 }
 
@@ -173,7 +157,6 @@ export function resetTasklineProgress(tasklineId: string): void {
   
   if (allProgress.delete(tasklineId)) {
     saveProgress(allProgress);
-    console.log('[Taskline Progress] Reset progress for:', tasklineId);
   }
 }
 
@@ -185,7 +168,6 @@ export function clearAllProgress(): void {
   
   try {
     localStorage.removeItem(STORAGE_KEY);
-    console.log('[Taskline Progress] Cleared all progress');
   } catch (error) {
     console.error('[Taskline Progress] Failed to clear:', error);
   }
@@ -209,7 +191,6 @@ export function detectProgressFromTaskChanges(
   );
   
   if (completedObjectives.length > 0) {
-    console.log('[Taskline Progress] Detected completed tasks:', completedObjectives);
     return {
       progressMade: true,
       completedSteps: [], // Would need taskline steps to map objectives to step numbers
