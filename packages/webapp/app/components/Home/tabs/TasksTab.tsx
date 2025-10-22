@@ -10,35 +10,18 @@ import Image from "next/image";
 import { imageAssets } from "@/assets/images";
 import { FaListOl } from "react-icons/fa";
 import { findTasklineMatch } from "@/app/utils/tasklineMatching";
-import { applyOverrideToMatch } from "@/app/utils/tasklineOverrides";
+import { applyOverrideToMatch, getTaskSignatureParts } from "@/app/utils/tasklineOverrides";
 import { markStepCompleted, updateCurrentStep } from "@/app/utils/tasklineProgress";
 
-const createTaskMatchKey = (task: Task, index: number): string => {
-  const normalizedParts = [
-    task.objective.text,
-    task.objective.where,
-    task.reward,
-    task.type,
-    task.to?.name,
-    task.to?.building,
-    task.to?.neighborhood,
-    task.objective.progress?.text,
-  ]
-    .filter((value): value is string => Boolean(value))
-    .map((value) => value.toLowerCase().trim());
-
-  return [`task-${index}`, ...normalizedParts].join("|");
-};
+const createTaskMatchKey = (task: Task, index: number): string =>
+  [`task-${index}`, ...getTaskSignatureParts(task)].join("|");
 
 const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
   const [tasklineMatches, setTasklineMatches] = useState<Map<string, TaskMatch | null>>(new Map());
   const [selectedTaskMatch, setSelectedTaskMatch] = useState<{ match: TaskMatch; task: Task; matchKey: string } | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  // Track previous steps for progress detection
   const previousStepsRef = useRef<Map<string, { stepNumber: number; tasklineId: string }>>(new Map());
 
-  // Initialize taskline matches for all tasks
   useEffect(() => {
     const tasks = toons.data.data.tasks;
     const matches = new Map<string, TaskMatch | null>();
@@ -46,10 +29,8 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
     tasks.forEach((task, index) => {
       const matchKey = createTaskMatchKey(task, index);
 
-      // Find taskline match for this task
       const match = findTasklineMatch(task);
 
-      // Apply user override if exists
       if (match) {
         const overriddenStepNumber = applyOverrideToMatch(task, match.step.order, match.taskline.id);
         const overriddenStep = match.taskline.steps.find((s) => s.order === overriddenStepNumber);
@@ -65,7 +46,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
     setTasklineMatches(matches);
   }, [toons]);
   
-  // Monitor for step changes to track progress
   useEffect(() => {
     toons.data.data.tasks.forEach((task, index) => {
       const matchKey = createTaskMatchKey(task, index);
@@ -76,20 +56,16 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
         const tasklineId = match.taskline.id;
         const previousData = previousStepsRef.current.get(matchKey);
 
-        // If step changed, mark previous as completed
         if (
           previousData &&
           previousData.tasklineId === tasklineId &&
           previousData.stepNumber !== currentStepNumber
         ) {
-          // Mark the previous step as completed
           markStepCompleted(tasklineId, previousData.stepNumber);
 
-          // Update current step (without auto-marking intermediate steps)
           updateCurrentStep(tasklineId, currentStepNumber, false);
         }
 
-        // Update tracking
         previousStepsRef.current.set(matchKey, {
           stepNumber: currentStepNumber,
           tasklineId: tasklineId,
@@ -98,7 +74,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
     });
   }, [tasklineMatches, toons.data.data.tasks]);
 
-  // Open taskline modal
   const openTasklineModal = (task: Task, match: TaskMatch, matchKey: string) => {
     setSelectedTaskMatch({ match, task, matchKey });
     setIsModalOpen(true);
@@ -113,7 +88,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
     }
   };
 
-  // Handle user changing step in modal
   const handleStepChange = (newStep: TasklineStep, isReset?: boolean) => {
     if (!selectedTaskMatch) return;
     
@@ -132,7 +106,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
           matchKey,
         });
         
-        // Update in tasklineMatches map
         setTasklineMatches(prev => {
           const newMap = new Map(prev);
           newMap.set(matchKey, freshMatch);
@@ -147,7 +120,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
         match: { ...selectedTaskMatch.match, step: newStep }
       });
       
-      // Update in the tasklineMatches map
       setTasklineMatches(prev => {
         const newMap = new Map(prev);
         const currentMatch = newMap.get(matchKey);
@@ -159,7 +131,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
     }
   };
 
-  // Close taskline modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedTaskMatch(null);
@@ -247,7 +218,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
     <AnimatedTabContent>
       <TaskTabNotifications />
 
-      {/* Taskline Modal */}
       {selectedTaskMatch && (
         <TasklineModal
           task={selectedTaskMatch.task}
@@ -293,7 +263,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
                 </span>
               </div>
 
-              {/* Taskline button - top left (next to index) */}
               {tasklineMatch && (
                 <div className="absolute top-16 2xl:top-20 left-4">
                   <button
@@ -311,7 +280,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
                 </div>
               )}
 
-              {/* task content */}
                 <div
                   className="md:grid gap-0 2xl:gap-12"
                   style={{ gridTemplateRows: "130px 90px 30px" }}

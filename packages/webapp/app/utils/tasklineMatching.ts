@@ -1,5 +1,3 @@
-// Taskline Matching Utility
-// Matches current tasks to tasklines in the database
 
 import { Task, Taskline, TasklineStep, TaskMatch } from '../types';
 import { getAllTasklines } from '../../data/tasklines';

@@ -1,7 +1,5 @@
 'use client';
 
-// Displays taskline details in a modal when user clicks on a task
-
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { Task, Taskline, TasklineStep } from '@/app/types';
@@ -11,12 +9,12 @@ import { setTasklineOverride, clearTasklineOverride, getTasklineOverride } from 
 import { getTasklineProgress } from '@/app/utils/tasklineProgress';
 
 interface TasklineModalProps {
-  task: Task; // The actual task (for override tracking)
+  task: Task;
   taskline: Taskline;
-  currentStep?: TasklineStep; // Auto-detected step
+  currentStep?: TasklineStep;
   isOpen: boolean;
   onClose: () => void;
-  onStepChange?: (newStep: TasklineStep, isReset?: boolean) => void; // Callback when user changes step
+  onStepChange?: (newStep: TasklineStep, isReset?: boolean) => void;
 }
 
 const TasklineModal: React.FC<TasklineModalProps> = ({
@@ -29,36 +27,28 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
 }) => {
   const [selectedStepNumber, setSelectedStepNumber] = useState<number>(currentStep?.order || 1);
   const [hasUserOverride, setHasUserOverride] = useState(false);
-  
-  // Refs for scrolling to current step
+
   const stepRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  
-  // Get progress data
+
   const progress = getTasklineProgress(taskline.id);
   const completedSteps = progress?.completedSteps || [];
   const completedCount = completedSteps.length;
   const totalSteps = taskline.steps.length;
-  
-  // Progress based on current step position
-  // Step 1/18 = 0%, Step 18/18 = 100%
+
   const completionPercent = totalSteps > 0 ? Math.round((selectedStepNumber / totalSteps) * 100) : 0;
 
-  // Update selected step when currentStep changes
   useEffect(() => {
     if (currentStep) {
       setSelectedStepNumber(currentStep.order);
-      
-      // Check if there's an existing override
+
       const override = getTasklineOverride(task);
       setHasUserOverride(!!override && override.tasklineId === taskline.id);
     }
   }, [currentStep?.order, task, taskline.id]);
-  
-  // Scroll to selected step when it changes or modal opens
+
   useEffect(() => {
     if (isOpen && selectedStepNumber) {
-      // Small delay to ensure DOM is rendered
       setTimeout(() => {
         const stepElement = stepRefs.current.get(selectedStepNumber);
         if (stepElement && scrollContainerRef.current) {
@@ -90,8 +80,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
   const setUserOverride = (stepNumber: number) => {
     setTasklineOverride(task, taskline.id, stepNumber);
     setHasUserOverride(true);
-    
-    // Notify parent component
     const newStep = taskline.steps.find(s => s.order === stepNumber);
     if (newStep && onStepChange) {
       onStepChange(newStep);
@@ -101,19 +89,15 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
   const handleResetOverride = () => {
     clearTasklineOverride(task);
     setHasUserOverride(false);
-    
-    // Notify parent to trigger re-match with isReset flag
     if (onStepChange && currentStep) {
-      onStepChange(currentStep, true); // Pass true to indicate this is a reset
+      onStepChange(currentStep, true);
     }
   };
 
-  // Check if selected step matches the current task objective
   const isStepMismatched = (): boolean => {
     const selectedStep = taskline.steps.find(s => s.order === selectedStepNumber);
     if (!selectedStep) return false;
     
-    // Construct current task objective (same logic as tasklineMatching.ts)
     let taskObjective = task.objective.text;
     if (taskObjective.toLowerCase().trim() === 'visit' && task.to?.name) {
       taskObjective = `Visit ${task.to.name}`;
@@ -123,10 +107,8 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
     const normalizedTask = normalizeText(taskObjective);
     const normalizedStep = normalizeText(selectedStep.objective);
     
-    // Check if they match (either direction)
     const matches = normalizedTask.includes(normalizedStep) || normalizedStep.includes(normalizedTask);
     
-    // Also check alternatives
     const altMatches = selectedStep.alternatives?.some(alt => {
       const normalizedAlt = normalizeText(alt);
       return normalizedTask.includes(normalizedAlt) || normalizedAlt.includes(normalizedTask);
@@ -135,16 +117,13 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
     return !matches && !altMatches;
   };
 
-  // Get the full task objective text for display
   const getFullTaskObjective = (): string => {
     let taskObjective = task.objective.text;
     if (taskObjective.toLowerCase().trim() === 'visit' && task.to?.name) {
       taskObjective = `Visit ${task.to.name}`;
     } else if (taskObjective.toLowerCase().trim() === 'recover' && task.objective.text) {
-      // For "Recover X items from Y cogs" format
       taskObjective = task.objective.text;
     } else if (taskObjective.toLowerCase().trim() === 'defeat' && task.objective.text) {
-      // For "Defeat X cogs" format
       taskObjective = task.objective.text;
     }
     return taskObjective;
@@ -155,12 +134,10 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
   const selectedStep = taskline.steps.find(s => s.order === selectedStepNumber);
   const showMismatchWarning = isStepMismatched();
 
-  // Render modal using portal to bypass parent container constraints
   const modalContent = (
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -169,7 +146,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
             className="fixed inset-0 bg-black/50 z-[9998] backdrop-blur-sm"
           />
 
-          {/* Modal Container */}
           <div 
             className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
             onClick={onClose}
@@ -182,8 +158,7 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
               className="bg-white dark:bg-gray-1100 rounded-lg shadow-2xl max-w-2xl w-full overflow-hidden flex flex-col"
               style={{ maxHeight: '75vh' }}
             >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-pink-900 to-pink-700 dark:from-pink-800 dark:to-pink-900 text-white p-6 relative flex-shrink-0">
+            <div className="bg-gradient-to-r from-pink-900 to-pink-700 dark:from-pink-800 dark:to-pink-900 text-white p-6 relative flex-shrink-0">
                 <button
                   onClick={onClose}
                   className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
@@ -211,7 +186,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                   )}
                 </div>
 
-                {/* Step Navigation Controls */}
                 <div className="mt-4 flex items-center justify-between bg-white/10 rounded-lg p-3">
                   <button
                     onClick={handlePreviousStep}
@@ -239,7 +213,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                   </button>
                 </div>
 
-                {/* Progress Bar */}
                 {(completedCount > 0 || selectedStepNumber > 1) && (
                   <div className="mt-3 bg-white/10 rounded-lg p-3">
                     <div className="flex justify-between items-center mb-2">
@@ -257,7 +230,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                   </div>
                 )}
 
-                {/* Reset Button (if override exists) */}
                 {hasUserOverride && (
                   <div className="mt-3">
                     <button
@@ -270,7 +242,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                   </div>
                 )}
 
-                {/* Mismatch Warning Banner - Fixed height to prevent layout shift */}
                 <div className="mt-3 transition-all duration-200" style={{ minHeight: showMismatchWarning ? 'auto' : '0' }}>
                   {showMismatchWarning && (
                     <div className="bg-yellow-400/30 dark:bg-yellow-600/30 rounded-lg px-4 py-3 flex items-start gap-3">
@@ -286,7 +257,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                 </div>
               </div>
 
-              {/* Body - Scrollable Steps */}
               <div
                 ref={scrollContainerRef}
                 className="p-6 overflow-y-auto flex-1 bg-white dark:bg-gray-1100"
@@ -296,7 +266,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                   {taskline.steps.map((step) => {
                     const isSelectedStep = selectedStepNumber === step.order;
                     const isAutoDetected = currentStep?.order === step.order;
-                    // A step is "completed" if it's BEFORE the current selected step
                     const isCompleted = step.order < selectedStepNumber;
 
                     return (
@@ -323,7 +292,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                             : 'border-gray-300 dark:border-gray-600'
                         } ${isCompleted ? 'opacity-60' : ''}`}
                       >
-                        {/* Step Number & Objective */}
                         <div className="flex items-start gap-3">
                           <div className="relative flex-shrink-0">
                             <div
@@ -351,28 +319,24 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                               )}
                             </div>
 
-                            {/* NPC Info */}
                             {step.npc && (
                               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                                 <span className="font-medium">NPC:</span> {step.npc}
                               </p>
                             )}
 
-                            {/* Building */}
                             {step.building && (
                               <p className="text-sm text-gray-600 dark:text-gray-300">
                                 <span className="font-medium">Building:</span> {step.building}
                               </p>
                             )}
 
-                            {/* Location */}
                             {step.location && (
                               <p className="text-sm text-gray-600 dark:text-gray-300">
                                 <span className="font-medium">Location:</span> {step.location}
                               </p>
                             )}
 
-                            {/* Reward */}
                             {step.reward && (
                               <div className="mt-2 inline-block px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 rounded-md text-sm font-medium">
                                 🎁 {step.reward}
@@ -386,7 +350,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                 </div>
               </div>
 
-              {/* Footer */}
               <div className="bg-blue-50 dark:bg-gray-900 px-6 py-4 flex justify-between items-center border-t dark:border-gray-700">
                 <div className="text-sm text-gray-600 dark:text-gray-300">
                   {taskline.steps.length} step{taskline.steps.length !== 1 ? 's' : ''} total
@@ -419,7 +382,6 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
     </AnimatePresence>
   );
 
-  // Render modal as portal to document.body to escape parent container constraints
   if (typeof window !== 'undefined') {
     return createPortal(modalContent, document.body);
   }

@@ -1,15 +1,12 @@
-// Taskline Progress Tracking
-// Tracks completed steps to enable smart progression detection
-
 import { Task, Taskline } from '../types';
 
 const STORAGE_KEY = 'toonscout_taskline_progress';
 
 export interface TasklineProgress {
   tasklineId: string;
-  completedSteps: number[];        // Step numbers that have been completed
-  lastSeenStep: number;            // Last step user was detected on
-  lastUpdated: number;             // Timestamp
+  completedSteps: number[];
+  lastSeenStep: number;
+  lastUpdated: number;
 }
 
 /**
@@ -17,11 +14,11 @@ export interface TasklineProgress {
  */
 function loadProgress(): Map<string, TasklineProgress> {
   if (typeof window === 'undefined') return new Map();
-  
+
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) return new Map();
-    
+
     const data = JSON.parse(stored);
     return new Map(Object.entries(data));
   } catch (error) {
@@ -35,7 +32,7 @@ function loadProgress(): Map<string, TasklineProgress> {
  */
 function saveProgress(progress: Map<string, TasklineProgress>): void {
   if (typeof window === 'undefined') return;
-  
+
   try {
     const data = Object.fromEntries(progress);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -59,7 +56,7 @@ export function getTasklineProgress(tasklineId: string): TasklineProgress | null
 export function markStepCompleted(tasklineId: string, stepNumber: number): void {
   const allProgress = loadProgress();
   let progress = allProgress.get(tasklineId);
-  
+
   if (!progress) {
     progress = {
       tasklineId,
@@ -68,18 +65,17 @@ export function markStepCompleted(tasklineId: string, stepNumber: number): void 
       lastUpdated: Date.now(),
     };
   }
-  
-  // Add step to completed list if not already there
+
   if (!progress.completedSteps.includes(stepNumber)) {
     progress.completedSteps.push(stepNumber);
-    progress.completedSteps.sort((a, b) => a - b); // Keep sorted
+    progress.completedSteps.sort((a, b) => a - b);
   }
-  
+
   progress.lastUpdated = Date.now();
-  
+
   allProgress.set(tasklineId, progress);
   saveProgress(allProgress);
-  
+
 }
 
 /**
@@ -93,7 +89,7 @@ export function updateCurrentStep(
 ): void {
   const allProgress = loadProgress();
   let progress = allProgress.get(tasklineId);
-  
+
   if (!progress) {
     progress = {
       tasklineId,
@@ -102,8 +98,7 @@ export function updateCurrentStep(
       lastUpdated: Date.now(),
     };
   }
-  
-  // Auto-mark all previous steps as completed (assumes linear progress)
+
   if (autoMarkPrevious && currentStepNumber > progress.lastSeenStep) {
     for (let i = progress.lastSeenStep; i < currentStepNumber; i++) {
       if (!progress.completedSteps.includes(i)) {
@@ -112,13 +107,13 @@ export function updateCurrentStep(
     }
     progress.completedSteps.sort((a, b) => a - b);
   }
-  
+
   progress.lastSeenStep = currentStepNumber;
   progress.lastUpdated = Date.now();
-  
+
   allProgress.set(tasklineId, progress);
   saveProgress(allProgress);
-  
+
 }
 
 /**
@@ -130,21 +125,17 @@ export function findNextUncompletedStep(
   matchingStepNumbers: number[]
 ): number | null {
   const progress = getTasklineProgress(tasklineId);
-  
+
   if (!progress) {
-    // No progress tracked - return first match
     return matchingStepNumbers[0] || null;
   }
-  
-  // Find first matching step that hasn't been completed
+
   for (const stepNumber of matchingStepNumbers) {
     if (!progress.completedSteps.includes(stepNumber)) {
       return stepNumber;
     }
   }
-  
-  // All matching steps completed - return last one
-  // (User might be repeating the taskline or there's a data issue)
+
   const lastStep = matchingStepNumbers[matchingStepNumbers.length - 1];
   return lastStep || null;
 }
@@ -154,7 +145,7 @@ export function findNextUncompletedStep(
  */
 export function resetTasklineProgress(tasklineId: string): void {
   const allProgress = loadProgress();
-  
+
   if (allProgress.delete(tasklineId)) {
     saveProgress(allProgress);
   }
@@ -165,7 +156,7 @@ export function resetTasklineProgress(tasklineId: string): void {
  */
 export function clearAllProgress(): void {
   if (typeof window === 'undefined') return;
-  
+
   try {
     localStorage.removeItem(STORAGE_KEY);
   } catch (error) {
@@ -182,21 +173,20 @@ export function detectProgressFromTaskChanges(
   previousTasks: Task[],
   currentTasks: Task[]
 ): { progressMade: boolean; completedSteps: number[] } {
-  // Simple heuristic: if a task disappears from the list, it was likely completed
   const previousObjectives = new Set(previousTasks.map(t => t.objective.text));
   const currentObjectives = new Set(currentTasks.map(t => t.objective.text));
-  
+
   const completedObjectives = Array.from(previousObjectives).filter(
     obj => !currentObjectives.has(obj)
   );
-  
+
   if (completedObjectives.length > 0) {
     return {
       progressMade: true,
-      completedSteps: [], // Would need taskline steps to map objectives to step numbers
+      completedSteps: [],
     };
   }
-  
+
   return { progressMade: false, completedSteps: [] };
 }
 
@@ -210,18 +200,14 @@ export function getRecommendedStep(
   userOverrideStep?: number
 ): number {
   const progress = getTasklineProgress(tasklineId);
-  
-  // Priority 1: User override (they know best)
+
   if (userOverrideStep !== undefined) {
     return Math.max(userOverrideStep, autoDetectedStep);
   }
-  
-  // Priority 2: Progress tracking (if we have completion data)
+
   if (progress && progress.lastSeenStep) {
-    // Use the greater of: last seen step or auto-detected
     return Math.max(progress.lastSeenStep, autoDetectedStep);
   }
-  
-  // Priority 3: Auto-detection (fallback)
+
   return autoDetectedStep;
 }

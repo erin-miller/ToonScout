@@ -1,22 +1,27 @@
-// Taskline Override Management
-// Stores user's manual step selections in localStorage
-
 import { Task, TasklineOverride } from '../types';
 
 const STORAGE_KEY = 'toonscout_taskline_overrides';
 
-/**
- * Generate a unique key for a task
- * Uses task objective + location to identify the specific task
- */
-function getTaskKey(task: Task): string {
-  const location = task.objective.where || task.to?.neighborhood || '';
-  return `${task.objective.text}_${location}`.toLowerCase().replace(/\s+/g, '_');
+export function getTaskSignatureParts(task: Task): string[] {
+  return [
+    task.objective.text,
+    task.objective.where,
+    task.reward,
+    task.type,
+    task.to?.name,
+    task.to?.building,
+    task.to?.neighborhood,
+    task.from?.name,
+    task.from?.building,
+  ]
+    .filter((part): part is string => Boolean(part))
+    .map((part) => part.toLowerCase().trim().replace(/\s+/g, "_"));
 }
 
-/**
- * Load all taskline overrides from localStorage
- */
+function getTaskKey(task: Task): string {
+  return getTaskSignatureParts(task).join("|");
+}
+
 function loadOverrides(): Map<string, TasklineOverride> {
   if (typeof window === 'undefined') return new Map();
   
@@ -32,9 +37,6 @@ function loadOverrides(): Map<string, TasklineOverride> {
   }
 }
 
-/**
- * Save all taskline overrides to localStorage
- */
 function saveOverrides(overrides: Map<string, TasklineOverride>): void {
   if (typeof window === 'undefined') return;
   
@@ -46,9 +48,6 @@ function saveOverrides(overrides: Map<string, TasklineOverride>): void {
   }
 }
 
-/**
- * Get the user's override for a specific task
- */
 export function getTasklineOverride(task: Task): TasklineOverride | null {
   const taskKey = getTaskKey(task);
   const overrides = loadOverrides();
@@ -56,7 +55,6 @@ export function getTasklineOverride(task: Task): TasklineOverride | null {
   const override = overrides.get(taskKey);
   if (!override) return null;
   
-  // Clean up old overrides (older than 30 days)
   const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
   if (override.timestamp < thirtyDaysAgo) {
     overrides.delete(taskKey);
@@ -67,9 +65,6 @@ export function getTasklineOverride(task: Task): TasklineOverride | null {
   return override;
 }
 
-/**
- * Persist the user's selected step for a specific task/taskline combination.
- */
 export function setTasklineOverride(
   task: Task,
   tasklineId: string,
@@ -88,9 +83,6 @@ export function setTasklineOverride(
   saveOverrides(overrides);
 }
 
-/**
- * Remove a user override for a specific task
- */
 export function clearTasklineOverride(task: Task): void {
   const taskKey = getTaskKey(task);
   const overrides = loadOverrides();
@@ -100,9 +92,6 @@ export function clearTasklineOverride(task: Task): void {
   }
 }
 
-/**
- * Clear all taskline overrides (useful for reset/debugging)
- */
 export function clearAllOverrides(): void {
   if (typeof window === 'undefined') return;
   
@@ -113,10 +102,6 @@ export function clearAllOverrides(): void {
   }
 }
 
-/**
- * Apply user override to a taskline match
- * Honours the exact step the user selected when an override is present.
- */
 export function applyOverrideToMatch(
   task: Task,
   detectedStepNumber: number,
@@ -124,10 +109,8 @@ export function applyOverrideToMatch(
 ): number {
   const override = getTasklineOverride(task);
   
-  // No override set for this task
   if (!override) return detectedStepNumber;
   
-  // Override is for a different taskline - ignore it
   if (override.tasklineId !== tasklineId) {
     return detectedStepNumber;
   }
@@ -135,10 +118,6 @@ export function applyOverrideToMatch(
   return override.stepNumber;
 }
 
-/**
- * Get the last known step for a taskline (from override)
- * Returns null if no override exists
- */
 export function getLastKnownStep(task: Task, tasklineId: string): number | null {
   const override = getTasklineOverride(task);
   
