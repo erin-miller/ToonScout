@@ -1,3 +1,5 @@
+'use client';
+
 import {
   InfoTab,
   FishTab,
@@ -10,7 +12,7 @@ import {
   RewardsTab,
 } from "./TabList";
 import "/styles/tabs.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useToonContext } from "@/app/context/ToonContext";
 import { StoredToonData } from "@/app/types";
 import { hasNoSuit } from "../../../../utils/tabUtils";

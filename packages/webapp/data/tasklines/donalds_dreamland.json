@@ -1,0 +1,932 @@
+[
+  {
+    "id": "donalds_dreamland_teleport_access",
+    "name": "Teleport access",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Drowsy Dave",
+        "alternatives": [
+          "Visit Drowsy Dave"
+        ],
+        "building": "Asleep at the Wheel Car Repair",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 2 five story Cashbot Cog Buildings",
+        "alternatives": [
+          "recover two five story cashbot cog buildings",
+          "recover 2 5 story cashbot cog buildings",
+          "defeat 2 5 story cashbot cog buildings",
+          "defeat two five story cashbot cog buildings",
+          "Defeat 2 five story Cashbot Cog Buildings",
+          "Recover 2 five story Cashbot Cog Buildings"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Drowsy Dave",
+        "alternatives": [
+          "Return to Drowsy Dave"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Teleport_access"
+  },
+  {
+    "id": "donalds_dreamland_upgraded_gag_pouch",
+    "name": "Upgraded gag pouch",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Susan Siesta",
+        "alternatives": [
+          "Visit Susan Siesta"
+        ],
+        "building": "For Richer or Snorer",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 8 four+ story Cog Buildings",
+        "alternatives": [
+          "Recover 8 four+ story Cog Buildings",
+          "Defeat 8 four+ story Cog Buildings",
+          "defeat eight four+ story cog buildings",
+          "recover eight four+ story cog buildings"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Susan Siesta",
+        "alternatives": [
+          "Return to Susan Siesta"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Gag_pouch"
+  },
+  {
+    "id": "donalds_dreamland_upgraded_jellybean_pouch",
+    "name": "Upgraded jellybean pouch",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit The Countess",
+        "alternatives": [
+          "Visit The Countess"
+        ],
+        "building": "Counting Sheep - So You Don't Have To!",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 25 Number Crunchers",
+        "alternatives": [
+          "Defeat 25 Number Crunchers",
+          "Recover 25 Number Crunchers"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to The Countess",
+        "alternatives": [
+          "Return to The Countess"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Jellybean_pouch"
+  },
+  {
+    "id": "donalds_dreamland_1_laff_boost",
+    "name": "+1 laff boost",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Powers Erge",
+        "alternatives": [
+          "Visit Powers Erge"
+        ],
+        "building": "Lights Out Electric Co.",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 70 Cogs",
+        "alternatives": [
+          "Recover 70 Cogs",
+          "Defeat 70 Cogs"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Powers Erge",
+        "alternatives": [
+          "Return to Powers Erge"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/%2B1_laff_boost_(Powers_Erge)"
+  },
+  {
+    "id": "donalds_dreamland_2_laff_boost",
+    "name": "+2 laff boost",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lawful Linda",
+        "alternatives": [
+          "Visit Lawful Linda"
+        ],
+        "building": "Wynken",
+        "location": "Attorneys at Law"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 3 Rods from Bean Counters",
+        "alternatives": [
+          "Recover 3 Rods from Bean Counters",
+          "defeat three rods from bean counters",
+          "recover three rods from bean counters",
+          "Defeat 3 Rods from Bean Counters"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lawful Linda",
+        "alternatives": [
+          "Return to Lawful Linda"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Recover a Drive Belt from Money Bags",
+        "alternatives": [
+          "Recover a Drive Belt from Money Bags",
+          "Defeat a Drive Belt from Money Bags"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lawful Linda",
+        "alternatives": [
+          "Return to Lawful Linda"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Recover a Pair of Pinchers from Penny Pinchers",
+        "alternatives": [
+          "Defeat a Pair of Pinchers from Penny Pinchers",
+          "Recover a Pair of Pinchers from Penny Pinchers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lawful Linda",
+        "alternatives": [
+          "Return to Lawful Linda"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/%2B2_laff_boost_(Lawful_Linda)"
+  },
+  {
+    "id": "donalds_dreamland_3_laff_boost",
+    "name": "+3 laff boost",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Rocco",
+        "alternatives": [
+          "Visit Rocco"
+        ],
+        "building": "Rock to Sleep Quarry",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 50 Bossbots",
+        "alternatives": [
+          "Recover 50 Bossbots",
+          "Defeat 50 Bossbots"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Rocco",
+        "alternatives": [
+          "Return to Rocco"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/%2B3_laff_boost_(Rocco)"
+  },
+  {
+    "id": "donalds_dreamland_4_laff_boost",
+    "name": "+4 laff boost",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Zari",
+        "alternatives": [
+          "Visit Zari"
+        ],
+        "building": "House of Zzzzzs",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Deliver a Zither to Cowboy George",
+        "alternatives": [
+          "Deliver a Zither to Cowboy George"
+        ],
+        "building": "Sleepless in the Saddle All Night Pony Rides",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Visit Zari",
+        "alternatives": [
+          "Visit Zari"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Deliver a Zamboni to Master Mike",
+        "alternatives": [
+          "Deliver a Zamboni to Master Mike"
+        ],
+        "building": "Hit the Sack Fencing School",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 70 Cashbots",
+        "alternatives": [
+          "Defeat 70 Cashbots",
+          "Recover 70 Cashbots"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Master Mike",
+        "alternatives": [
+          "Return to Master Mike"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Visit Zari",
+        "alternatives": [
+          "Visit Zari"
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Zebra Zabuton to Zen Glen",
+        "alternatives": [
+          "Deliver a Zebra Zabuton to Zen Glen"
+        ],
+        "building": "Dream Jobs Employment Agency",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 9,
+        "objective": "Defeat 25 Mover & Shakers",
+        "alternatives": [
+          "Defeat 25 Mover & Shakers",
+          "Recover 25 Mover & Shakers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 10,
+        "objective": "Return to Zen Glen",
+        "alternatives": [
+          "Return to Zen Glen"
+        ]
+      },
+      {
+        "order": 11,
+        "objective": "Visit Zari",
+        "alternatives": [
+          "Visit Zari"
+        ]
+      },
+      {
+        "order": 12,
+        "objective": "Deliver Zinnias to Rose Petals",
+        "alternatives": [
+          "Deliver Zinnias to Rose Petals"
+        ],
+        "building": "Bed of Roses Florist",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 13,
+        "objective": "Visit Zari",
+        "alternatives": [
+          "Visit Zari"
+        ]
+      },
+      {
+        "order": 14,
+        "objective": "Deliver Zydeco Records to Wyda Wake",
+        "alternatives": [
+          "Deliver Zydeco Records to Wyda Wake"
+        ],
+        "building": "Pillow Fights Nightly",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 15,
+        "objective": "Deliver Zydeco Records to Lullaby Lou",
+        "alternatives": [
+          "Deliver Zydeco Records to Lullaby Lou"
+        ],
+        "building": "Crib Notes - Music to Sleep By",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 16,
+        "objective": "Deliver a Zucchini to Zari",
+        "alternatives": [
+          "Deliver a Zucchini to Zari"
+        ]
+      },
+      {
+        "order": 17,
+        "objective": "Deliver a Zoot Suit to Babyface MacDougal",
+        "alternatives": [
+          "Deliver a Zoot Suit to Babyface MacDougal"
+        ],
+        "building": "Bed Time Stories",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 18,
+        "objective": "Visit Zari",
+        "alternatives": [
+          "Visit Zari"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/%2B4_laff_boost_(Zari)"
+  },
+  {
+    "id": "donalds_dreamland_upper_left_leg",
+    "name": "Upper left leg",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Nat",
+        "alternatives": [
+          "Visit Nat"
+        ],
+        "building": "Don't Let the Bed Bugs Bite Exterminators",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit P.J.",
+        "alternatives": [
+          "Visit P.J."
+        ],
+        "building": "PJ's Taxi Service",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 10 Cashbots",
+        "alternatives": [
+          "recover ten cashbots",
+          "Defeat 10 Cashbots",
+          "defeat ten cashbots",
+          "Recover 10 Cashbots"
+        ],
+        "location": "Cashbot Headquarters"
+      },
+      {
+        "order": 4,
+        "objective": "Return to P.J.",
+        "alternatives": [
+          "Return to P.J."
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Visit Nat",
+        "alternatives": [
+          "Visit Nat"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Recover Cashbot HQ Plans from Cashbots",
+        "alternatives": [
+          "Defeat Cashbot HQ Plans from Cashbots",
+          "Recover Cashbot HQ Plans from Cashbots"
+        ],
+        "location": "Cashbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Nat",
+        "alternatives": [
+          "Return to Nat"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(upper_left_leg)"
+  },
+  {
+    "id": "donalds_dreamland_lower_left_leg",
+    "name": "Lower left leg",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Teddy Blair",
+        "alternatives": [
+          "Visit Teddy Blair"
+        ],
+        "building": "House of Hibernation",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 55 Cashbots",
+        "alternatives": [
+          "Recover 55 Cashbots",
+          "Defeat 55 Cashbots"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Teddy Blair",
+        "alternatives": [
+          "Return to Teddy Blair"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(lower_left_leg)"
+  },
+  {
+    "id": "donalds_dreamland_left_foot",
+    "name": "Left foot",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit William Teller",
+        "alternatives": [
+          "Visit William Teller"
+        ],
+        "building": "First Security Blanket Bank",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Reading Lamp from Cashbots",
+        "alternatives": [
+          "Defeat a Reading Lamp from Cashbots",
+          "Recover a Reading Lamp from Cashbots"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to William Teller",
+        "alternatives": [
+          "Return to William Teller"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(left_foot)"
+  },
+  {
+    "id": "donalds_dreamland_upper_right_leg",
+    "name": "Upper right leg",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Nina Nitelight",
+        "alternatives": [
+          "Visit Nina Nitelight"
+        ],
+        "building": "Nightstand Furniture Company",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Hardy O'Toole",
+        "alternatives": [
+          "Visit Hardy O'Toole"
+        ],
+        "building": "Make Your Bed! Hardware Store",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Deliver a Plain Bed to Nina Nitelight",
+        "alternatives": [
+          "Deliver a Plain Bed to Nina Nitelight"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Hardy O'Toole",
+        "alternatives": [
+          "Visit Hardy O'Toole"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 140 Cogs",
+        "alternatives": [
+          "Defeat 140 Cogs",
+          "Recover 140 Cogs"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Hardy O'Toole",
+        "alternatives": [
+          "Return to Hardy O'Toole"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Deliver a Fancy Bed to Nina Nitelight",
+        "alternatives": [
+          "Deliver a Fancy Bed to Nina Nitelight"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(upper_right_leg)"
+  },
+  {
+    "id": "donalds_dreamland_lower_right_leg",
+    "name": "Lower right leg",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Honey Moon",
+        "alternatives": [
+          "Visit Honey Moon"
+        ],
+        "building": "Sleeping Beauty Parlor",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Ed",
+        "alternatives": [
+          "Visit Ed"
+        ],
+        "building": "Ed's Red Bed Spreads",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 30 Number Crunchers",
+        "alternatives": [
+          "Defeat 30 Number Crunchers",
+          "Recover 30 Number Crunchers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Ed",
+        "alternatives": [
+          "Return to Ed"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Blue Bedspread to Honey Moon",
+        "alternatives": [
+          "Deliver a Blue Bedspread to Honey Moon"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Visit Ed",
+        "alternatives": [
+          "Visit Ed"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Defeat 65 Cashbots",
+        "alternatives": [
+          "Defeat 65 Cashbots",
+          "Recover 65 Cashbots"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Ed",
+        "alternatives": [
+          "Return to Ed"
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Paisley Bedspread to Honey Moon",
+        "alternatives": [
+          "Deliver a Paisley Bedspread to Honey Moon"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(lower_right_leg)"
+  },
+  {
+    "id": "donalds_dreamland_right_foot",
+    "name": "Right foot",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Dreamy Daphne",
+        "alternatives": [
+          "Visit Dreamy Daphne"
+        ],
+        "building": "Cloud Nine Design",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Tex",
+        "alternatives": [
+          "Visit Tex"
+        ],
+        "building": "Armadillo Pillow Company",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Deliver Pillows to Dreamy Daphne",
+        "alternatives": [
+          "Deliver Pillows to Dreamy Daphne"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Tex",
+        "alternatives": [
+          "Visit Tex"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 10 three+ story Cog Buildings",
+        "alternatives": [
+          "defeat ten three+ story cog buildings",
+          "Recover 10 three+ story Cog Buildings",
+          "recover ten three+ story cog buildings",
+          "Defeat 10 three+ story Cog Buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Tex",
+        "alternatives": [
+          "Return to Tex"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Deliver Hard Pillows to Dreamy Daphne",
+        "alternatives": [
+          "Deliver Hard Pillows to Dreamy Daphne"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(right_foot)"
+  },
+  {
+    "id": "donalds_dreamland_pelvis",
+    "name": "Pelvis",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Smudgy Mascara",
+        "alternatives": [
+          "Visit Smudgy Mascara"
+        ],
+        "building": "Curl Up Beauty Parlor",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Rip",
+        "alternatives": [
+          "Visit Rip"
+        ],
+        "building": "Rip Van Winkle's Wrinkle Cream",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Go fishing for Cauliflower Coral",
+        "alternatives": [
+          "Go fishing for Cauliflower Coral"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Rip",
+        "alternatives": [
+          "Return to Rip"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Go fishing for some Slimy Kelp",
+        "alternatives": [
+          "Go fishing for some Slimy Kelp"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Rip",
+        "alternatives": [
+          "Return to Rip"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Recover a Pestle from Loan Sharks",
+        "alternatives": [
+          "Defeat a Pestle from Loan Sharks",
+          "Recover a Pestle from Loan Sharks"
+        ],
+        "location": "Cashbot Headquarters"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Rip",
+        "alternatives": [
+          "Return to Rip"
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Jar of Wrinkle Cream to Smudgy Mascara",
+        "alternatives": [
+          "Deliver a Jar of Wrinkle Cream to Smudgy Mascara"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(pelvis)"
+  },
+  {
+    "id": "donalds_dreamland_upper_torso",
+    "name": "Upper torso",
+    "playground": "Donald's Dreamland",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Sandy Sandman",
+        "alternatives": [
+          "Visit Sandy Sandman"
+        ],
+        "building": "Sandman's Sandwiches",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Big Mama",
+        "alternatives": [
+          "Visit Big Mama"
+        ],
+        "building": "Big Mama's Bahama Pajamas",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Deliver a Pair of Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Pajamas to Sandy Sandman"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Big Mama",
+        "alternatives": [
+          "Visit Big Mama"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Pair of Footie Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Footie Pajamas to Sandy Sandman"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Visit Big Mama",
+        "alternatives": [
+          "Visit Big Mama"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Visit Cat",
+        "alternatives": [
+          "Visit Cat"
+        ],
+        "building": "Cat's Pajamas",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Pair of Puce Footie Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Puce Footie Pajamas to Sandy Sandman"
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Visit Cat",
+        "alternatives": [
+          "Visit Cat"
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Defeat 5 five story Cashbot Cog Buildings",
+        "alternatives": [
+          "defeat 5 5 story cashbot cog buildings",
+          "recover five five story cashbot cog buildings",
+          "Defeat 5 five story Cashbot Cog Buildings",
+          "defeat five five story cashbot cog buildings",
+          "recover 5 5 story cashbot cog buildings",
+          "Recover 5 five story Cashbot Cog Buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 11,
+        "objective": "Return to Cat",
+        "alternatives": [
+          "Return to Cat"
+        ]
+      },
+      {
+        "order": 12,
+        "objective": "Deliver a Pair of Fuchsia Footie Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Fuchsia Footie Pajamas to Sandy Sandman"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(upper_torso)"
+  }
+]

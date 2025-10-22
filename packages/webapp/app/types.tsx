@@ -212,3 +212,42 @@ export interface StoredToonData {
   port: number;
   locked: boolean;
 }
+
+// Taskline Progress Feature Types
+export interface TasklineStep {
+  order: number;              // Step number in sequence (1, 2, 3, ...)
+  objective: string;          // e.g., "Defeat 10 Flunkies"
+  npc?: string;               // NPC name (if applicable)
+  building?: string;          // Building location of NPC
+  location?: string;          // Where to complete it (neighborhood, street)
+  reward?: string;            // What you get for this step (if applicable)
+  alternatives?: string[];    // Alternative objective text variations for matching
+}
+
+export interface Taskline {
+  id: string;                 // e.g., "ttc_teleport", "cashbot_disguise", "sellbot_task_force"
+  name: string;               // e.g., "Toontown Central Teleport Access"
+  playground?: string;        // e.g., "Toontown Central" (optional for non-playground tasklines)
+  category: "playground" | "teleport" | "laff_boost" | "gag_training" | "cog_disguise" | "task_force" | "special" | "other";
+  prerequisites?: string[];   // taskline IDs that must be completed first
+  steps: TasklineStep[];
+  wikiUrl?: string;          // Link to wiki page for this taskline
+}
+
+export interface PlaygroundTasklines {
+  playground: string;
+  tasklines: Taskline[];
+}
+
+export interface TaskMatch {
+  taskline: Taskline;
+  step: TasklineStep;
+  confidence: 'high' | 'medium' | 'low';
+  matchedOn: 'exact' | 'alternative' | 'partial';
+}
+
+export interface TasklineOverride {
+  tasklineId: string;        // Which taskline the user is on
+  stepNumber: number;        // Minimum step number user has set
+  timestamp: number;         // When this override was set
+}

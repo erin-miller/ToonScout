@@ -1,0 +1,533 @@
+[
+  {
+    "id": "cashbot_cog_disguise_upper_left_leg",
+    "name": "Upper left leg",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Nat",
+        "alternatives": [
+          "Visit Nat"
+        ],
+        "building": "Don't Let the Bed Bugs Bite Exterminators",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit P.J.",
+        "alternatives": [
+          "Visit P.J."
+        ],
+        "building": "PJ's Taxi Service",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 10 Cashbots",
+        "alternatives": [
+          "recover ten cashbots",
+          "Defeat 10 Cashbots",
+          "defeat ten cashbots",
+          "Recover 10 Cashbots"
+        ],
+        "location": "Cashbot Headquarters"
+      },
+      {
+        "order": 4,
+        "objective": "Return to P.J.",
+        "alternatives": [
+          "Return to P.J."
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Visit Nat",
+        "alternatives": [
+          "Visit Nat"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Recover Cashbot HQ Plans from Cashbots",
+        "alternatives": [
+          "Defeat Cashbot HQ Plans from Cashbots",
+          "Recover Cashbot HQ Plans from Cashbots"
+        ],
+        "location": "Cashbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Nat",
+        "alternatives": [
+          "Return to Nat"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(upper_left_leg)"
+  },
+  {
+    "id": "cashbot_cog_disguise_lower_left_leg",
+    "name": "Lower left leg",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Teddy Blair",
+        "alternatives": [
+          "Visit Teddy Blair"
+        ],
+        "building": "House of Hibernation",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 55 Cashbots",
+        "alternatives": [
+          "Recover 55 Cashbots",
+          "Defeat 55 Cashbots"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Teddy Blair",
+        "alternatives": [
+          "Return to Teddy Blair"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(lower_left_leg)"
+  },
+  {
+    "id": "cashbot_cog_disguise_left_foot",
+    "name": "Left foot",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit William Teller",
+        "alternatives": [
+          "Visit William Teller"
+        ],
+        "building": "First Security Blanket Bank",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Reading Lamp from Cashbots",
+        "alternatives": [
+          "Defeat a Reading Lamp from Cashbots",
+          "Recover a Reading Lamp from Cashbots"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Return to William Teller",
+        "alternatives": [
+          "Return to William Teller"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(left_foot)"
+  },
+  {
+    "id": "cashbot_cog_disguise_upper_right_leg",
+    "name": "Upper right leg",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Nina Nitelight",
+        "alternatives": [
+          "Visit Nina Nitelight"
+        ],
+        "building": "Nightstand Furniture Company",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Hardy O'Toole",
+        "alternatives": [
+          "Visit Hardy O'Toole"
+        ],
+        "building": "Make Your Bed! Hardware Store",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Deliver a Plain Bed to Nina Nitelight",
+        "alternatives": [
+          "Deliver a Plain Bed to Nina Nitelight"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Hardy O'Toole",
+        "alternatives": [
+          "Visit Hardy O'Toole"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 140 Cogs",
+        "alternatives": [
+          "Defeat 140 Cogs",
+          "Recover 140 Cogs"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Hardy O'Toole",
+        "alternatives": [
+          "Return to Hardy O'Toole"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Deliver a Fancy Bed to Nina Nitelight",
+        "alternatives": [
+          "Deliver a Fancy Bed to Nina Nitelight"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(upper_right_leg)"
+  },
+  {
+    "id": "cashbot_cog_disguise_lower_right_leg",
+    "name": "Lower right leg",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Honey Moon",
+        "alternatives": [
+          "Visit Honey Moon"
+        ],
+        "building": "Sleeping Beauty Parlor",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Ed",
+        "alternatives": [
+          "Visit Ed"
+        ],
+        "building": "Ed's Red Bed Spreads",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 30 Number Crunchers",
+        "alternatives": [
+          "Defeat 30 Number Crunchers",
+          "Recover 30 Number Crunchers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Ed",
+        "alternatives": [
+          "Return to Ed"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Blue Bedspread to Honey Moon",
+        "alternatives": [
+          "Deliver a Blue Bedspread to Honey Moon"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Visit Ed",
+        "alternatives": [
+          "Visit Ed"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Defeat 65 Cashbots",
+        "alternatives": [
+          "Defeat 65 Cashbots",
+          "Recover 65 Cashbots"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Ed",
+        "alternatives": [
+          "Return to Ed"
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Paisley Bedspread to Honey Moon",
+        "alternatives": [
+          "Deliver a Paisley Bedspread to Honey Moon"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(lower_right_leg)"
+  },
+  {
+    "id": "cashbot_cog_disguise_right_foot",
+    "name": "Right foot",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Dreamy Daphne",
+        "alternatives": [
+          "Visit Dreamy Daphne"
+        ],
+        "building": "Cloud Nine Design",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Tex",
+        "alternatives": [
+          "Visit Tex"
+        ],
+        "building": "Armadillo Pillow Company",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Deliver Pillows to Dreamy Daphne",
+        "alternatives": [
+          "Deliver Pillows to Dreamy Daphne"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Tex",
+        "alternatives": [
+          "Visit Tex"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 10 three+ story Cog Buildings",
+        "alternatives": [
+          "defeat ten three+ story cog buildings",
+          "Recover 10 three+ story Cog Buildings",
+          "recover ten three+ story cog buildings",
+          "Defeat 10 three+ story Cog Buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Tex",
+        "alternatives": [
+          "Return to Tex"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Deliver Hard Pillows to Dreamy Daphne",
+        "alternatives": [
+          "Deliver Hard Pillows to Dreamy Daphne"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(right_foot)"
+  },
+  {
+    "id": "cashbot_cog_disguise_pelvis",
+    "name": "Pelvis",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Smudgy Mascara",
+        "alternatives": [
+          "Visit Smudgy Mascara"
+        ],
+        "building": "Curl Up Beauty Parlor",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Rip",
+        "alternatives": [
+          "Visit Rip"
+        ],
+        "building": "Rip Van Winkle's Wrinkle Cream",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Go fishing for Cauliflower Coral",
+        "alternatives": [
+          "Go fishing for Cauliflower Coral"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Rip",
+        "alternatives": [
+          "Return to Rip"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Go fishing for some Slimy Kelp",
+        "alternatives": [
+          "Go fishing for some Slimy Kelp"
+        ],
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Rip",
+        "alternatives": [
+          "Return to Rip"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Recover a Pestle from Loan Sharks",
+        "alternatives": [
+          "Defeat a Pestle from Loan Sharks",
+          "Recover a Pestle from Loan Sharks"
+        ],
+        "location": "Cashbot Headquarters"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Rip",
+        "alternatives": [
+          "Return to Rip"
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Jar of Wrinkle Cream to Smudgy Mascara",
+        "alternatives": [
+          "Deliver a Jar of Wrinkle Cream to Smudgy Mascara"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(pelvis)"
+  },
+  {
+    "id": "cashbot_cog_disguise_upper_torso",
+    "name": "Upper torso",
+    "playground": "Cashbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Sandy Sandman",
+        "alternatives": [
+          "Visit Sandy Sandman"
+        ],
+        "building": "Sandman's Sandwiches",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Big Mama",
+        "alternatives": [
+          "Visit Big Mama"
+        ],
+        "building": "Big Mama's Bahama Pajamas",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "Deliver a Pair of Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Pajamas to Sandy Sandman"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Big Mama",
+        "alternatives": [
+          "Visit Big Mama"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Pair of Footie Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Footie Pajamas to Sandy Sandman"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Visit Big Mama",
+        "alternatives": [
+          "Visit Big Mama"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Visit Cat",
+        "alternatives": [
+          "Visit Cat"
+        ],
+        "building": "Cat's Pajamas",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Pair of Puce Footie Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Puce Footie Pajamas to Sandy Sandman"
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Visit Cat",
+        "alternatives": [
+          "Visit Cat"
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Defeat 5 five story Cashbot Cog Buildings",
+        "alternatives": [
+          "defeat 5 5 story cashbot cog buildings",
+          "recover five five story cashbot cog buildings",
+          "Defeat 5 five story Cashbot Cog Buildings",
+          "defeat five five story cashbot cog buildings",
+          "recover 5 5 story cashbot cog buildings",
+          "Recover 5 five story Cashbot Cog Buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 11,
+        "objective": "Return to Cat",
+        "alternatives": [
+          "Return to Cat"
+        ]
+      },
+      {
+        "order": 12,
+        "objective": "Deliver a Pair of Fuchsia Footie Pajamas to Sandy Sandman",
+        "alternatives": [
+          "Deliver a Pair of Fuchsia Footie Pajamas to Sandy Sandman"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dreamland_ToonTasks/Cashbot_Cog_Disguise_(upper_torso)"
+  }
+]

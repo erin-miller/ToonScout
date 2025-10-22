@@ -1,0 +1,359 @@
+[
+  {
+    "id": "donalds_dock_teleport_access",
+    "name": "Teleport access",
+    "playground": "Donald's Dock",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Melville",
+        "alternatives": [
+          "Visit Melville"
+        ],
+        "building": "Melville's Massive Mizzenmast Mart",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Alice",
+        "alternatives": [
+          "Visit Alice"
+        ],
+        "building": "Alice's Ballast Palace",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 5 Micromanagers",
+        "alternatives": [
+          "recover five micromanagers",
+          "Defeat 5 Micromanagers",
+          "defeat five micromanagers",
+          "Recover 5 Micromanagers"
+        ],
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Alice",
+        "alternatives": [
+          "Return to Alice"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Bushel of Ballast to Melville",
+        "alternatives": [
+          "Deliver a Bushel of Ballast to Melville"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Visit Art",
+        "alternatives": [
+          "Visit Art"
+        ],
+        "building": "Art's Smart Chart Mart",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 7,
+        "objective": "Recover 3 Gears from the Cogs",
+        "alternatives": [
+          "defeat three gears from the cogs",
+          "Recover 3 Gears from the Cogs",
+          "Defeat 3 Gears from the Cogs",
+          "recover three gears from the cogs"
+        ],
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Art",
+        "alternatives": [
+          "Return to Art"
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Sea Chart to Melville",
+        "alternatives": [
+          "Deliver a Sea Chart to Melville"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dock_ToonTasks/Teleport_access"
+  },
+  {
+    "id": "donalds_dock_upgraded_gag_pouch",
+    "name": "Upgraded gag pouch",
+    "playground": "Donald's Dock",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Captain Carl",
+        "alternatives": [
+          "Visit Captain Carl"
+        ],
+        "building": "Dime & Quarterdeck Bank",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 2,
+        "objective": "Deliver a Pair of Eyeglass Frames to Doctor Squall",
+        "alternatives": [
+          "Deliver a Pair of Eyeglass Frames to Doctor Squall"
+        ],
+        "building": "Out to See Optics",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 3,
+        "objective": "Recover a Pair of Eyeglass Frames from Flunkies",
+        "alternatives": [
+          "Defeat a Pair of Eyeglass Frames from Flunkies",
+          "Recover a Pair of Eyeglass Frames from Flunkies"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Doctor Squall",
+        "alternatives": [
+          "Return to Doctor Squall"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Monocle Prescription to Captain Carl",
+        "alternatives": [
+          "Deliver a Monocle Prescription to Captain Carl"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dock_ToonTasks/Gag_pouch"
+  },
+  {
+    "id": "donalds_dock_upgraded_jellybean_pouch",
+    "name": "Upgraded jellybean pouch",
+    "playground": "Donald's Dock",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Barnacle Barbara",
+        "alternatives": [
+          "Visit Barnacle Barbara"
+        ],
+        "building": "Barnacle Bargains",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Big White Wig from Back Stabbers",
+        "alternatives": [
+          "Defeat a Big White Wig from Back Stabbers",
+          "Recover a Big White Wig from Back Stabbers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Barnacle Barbara",
+        "alternatives": [
+          "Return to Barnacle Barbara"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dock_ToonTasks/Jellybean_pouch"
+  },
+  {
+    "id": "donalds_dock_gag_track_training",
+    "name": "Gag track training",
+    "playground": "Donald's Dock",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit HQ Officer",
+        "alternatives": [
+          "Visit HQ Officer"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Choose Drop or Lure",
+        "alternatives": [
+          "Choose Drop or Lure"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dock_ToonTasks/Gag_track_training"
+  },
+  {
+    "id": "donalds_dock_final_gag_track_training",
+    "name": "Final gag track training",
+    "playground": "Donald's Dock",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ahab",
+        "alternatives": [
+          "Visit Ahab"
+        ],
+        "building": "Ahab's Prefab Sea Crab Center",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Claggart",
+        "alternatives": [
+          "Visit Claggart"
+        ],
+        "building": "Claggart's Clever Clovis Closet",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 3,
+        "objective": "Deliver Cruddy Clovis to Mrs. Starch",
+        "alternatives": [
+          "Deliver Cruddy Clovis to Mrs. Starch"
+        ],
+        "building": "Wet Suit Dry Cleaners",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 4,
+        "objective": "Deliver Clean Clovis to Ahab",
+        "alternatives": [
+          "Deliver Clean Clovis to Ahab"
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Visit Admiral Hook",
+        "alternatives": [
+          "Visit Admiral Hook"
+        ],
+        "building": "Hook's Clock Repair",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 6,
+        "objective": "Deliver 3 Squirt Guns to Admiral Hook",
+        "alternatives": [
+          "Deliver 3 Squirt Guns to Admiral Hook",
+          "deliver three squirt guns to admiral hook"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Deliver Large Spring to Ahab",
+        "alternatives": [
+          "Deliver Large Spring to Ahab"
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "One of the following: Visit Rocky Shores Visit Cal Estenicks",
+        "alternatives": [
+          "One of the following: Visit Rocky Shores Visit Cal Estenicks",
+          "1 of the following: visit rocky shores visit cal estenicks"
+        ],
+        "npc": "One of the following: Visit Rocky Shores",
+        "building": "Able-Bodied Gym",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 9,
+        "objective": "One of the following: Defeat 2 Sellbots Defeat 4 Cashbots Defeat 6 Bossbots",
+        "alternatives": [
+          "one of the following: defeat 2 sellbots defeat 4 cashbots defeat six bossbots",
+          "one of the following: recover two sellbots recover 4 cashbots recover 6 bossbots",
+          "one of the following: defeat 2 sellbots defeat four cashbots defeat 6 bossbots",
+          "one of the following: recover 2 sellbots recover 4 cashbots recover six bossbots",
+          "one of the following: recover 2 sellbots recover four cashbots recover 6 bossbots",
+          "1 of the following: defeat 2 sellbots defeat 4 cashbots defeat 6 bossbots",
+          "one of the following: defeat two sellbots defeat 4 cashbots defeat 6 bossbots",
+          "1 of the following: recover 2 sellbots recover 4 cashbots recover 6 bossbots",
+          "One of the following: Recover 2 Sellbots Recover 4 Cashbots Recover 6 Bossbots",
+          "One of the following: Defeat 2 Sellbots Defeat 4 Cashbots Defeat 6 Bossbots"
+        ],
+        "npc": "One of the following: Defeat 2 Sellbots",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 10,
+        "objective": "One of the following: Return to Rocky Shores Return to Cal Estenicks",
+        "alternatives": [
+          "One of the following: Return to Rocky Shores Return to Cal Estenicks",
+          "1 of the following: return to rocky shores return to cal estenicks"
+        ]
+      },
+      {
+        "order": 11,
+        "objective": "Deliver Counter Weight to Ahab",
+        "alternatives": [
+          "Deliver Counter Weight to Ahab"
+        ]
+      },
+      {
+        "order": 12,
+        "objective": "Defeat 1 two+ story Cog Building",
+        "alternatives": [
+          "Recover 1 two+ story Cog Building",
+          "recover one two+ story cog building",
+          "Defeat 1 two+ story Cog Building",
+          "defeat one two+ story cog building"
+        ],
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 13,
+        "objective": "Return to Ahab",
+        "alternatives": [
+          "Return to Ahab"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dock_ToonTasks/Final_gag_track_training"
+  },
+  {
+    "id": "donalds_dock_2_laff_boost",
+    "name": "+2 laff boost",
+    "playground": "Donald's Dock",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Billy Budd",
+        "alternatives": [
+          "Visit Billy Budd"
+        ],
+        "building": "Billy Budd's Big Bargain Binnacle Barn",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 2,
+        "objective": "Recover an Inner Tube from Penny Pinchers",
+        "alternatives": [
+          "Defeat an Inner Tube from Penny Pinchers",
+          "Recover an Inner Tube from Penny Pinchers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Billy Budd",
+        "alternatives": [
+          "Return to Billy Budd"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Donald%27s_Dock_ToonTasks/%2B2_laff_boost_(Billy_Budd)"
+  }
+]

@@ -1,0 +1,1115 @@
+[
+  {
+    "id": "the_brrrgh_teleport_access",
+    "name": "Teleport access",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Gus Gooseburger",
+        "alternatives": [
+          "Visit Gus Gooseburger"
+        ],
+        "building": "Affordable Goosebumps",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 3 four+ story Cashbot Cog Buildings",
+        "alternatives": [
+          "recover three four+ story cashbot cog buildings",
+          "defeat three four+ story cashbot cog buildings",
+          "Recover 3 four+ story Cashbot Cog Buildings",
+          "Defeat 3 four+ story Cashbot Cog Buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Gus Gooseburger",
+        "alternatives": [
+          "Return to Gus Gooseburger"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Grumpy Phil",
+        "alternatives": [
+          "Visit Grumpy Phil"
+        ],
+        "building": "The Frozen Nose",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Broken Tooth to Dr. Mumbleface",
+        "alternatives": [
+          "Deliver a Broken Tooth to Dr. Mumbleface"
+        ],
+        "building": "Chattering Teeth",
+        "location": "Sleet Street"
+      },
+      {
+        "order": 6,
+        "objective": "One of the following: Defeat 8 Sellbots Defeat 8 Cashbots Defeat 8 Lawbots Defeat 8 Bossbots",
+        "alternatives": [
+          "one of the following: recover 8 sellbots recover eight cashbots recover 8 lawbots recover 8 bossbots",
+          "one of the following: recover 8 sellbots recover 8 cashbots recover eight lawbots recover 8 bossbots",
+          "One of the following: Recover 8 Sellbots Recover 8 Cashbots Recover 8 Lawbots Recover 8 Bossbots",
+          "one of the following: recover eight sellbots recover 8 cashbots recover 8 lawbots recover 8 bossbots",
+          "one of the following: defeat 8 sellbots defeat 8 cashbots defeat eight lawbots defeat 8 bossbots",
+          "one of the following: recover 8 sellbots recover 8 cashbots recover 8 lawbots recover eight bossbots",
+          "1 of the following: defeat 8 sellbots defeat 8 cashbots defeat 8 lawbots defeat 8 bossbots",
+          "One of the following: Defeat 8 Sellbots Defeat 8 Cashbots Defeat 8 Lawbots Defeat 8 Bossbots",
+          "one of the following: defeat 8 sellbots defeat eight cashbots defeat 8 lawbots defeat 8 bossbots",
+          "one of the following: defeat 8 sellbots defeat 8 cashbots defeat 8 lawbots defeat eight bossbots",
+          "1 of the following: recover 8 sellbots recover 8 cashbots recover 8 lawbots recover 8 bossbots",
+          "one of the following: defeat eight sellbots defeat 8 cashbots defeat 8 lawbots defeat 8 bossbots"
+        ],
+        "npc": "One of the following: Defeat 8 Sellbots",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Dr. Mumbleface",
+        "alternatives": [
+          "Return to Dr. Mumbleface"
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "One of the following: Recover a Gold Tooth from Mr. Hollywoods Recover a Gold Tooth from Robber Barons Recover a Gold Tooth from Big Wigs Recover a Gold Tooth from The Big Cheeses",
+        "alternatives": [
+          "One of the following: Defeat a Gold Tooth from Mr. Hollywoods Defeat a Gold Tooth from Robber Barons Defeat a Gold Tooth from Big Wigs Defeat a Gold Tooth from The Big Cheeses",
+          "One of the following: Recover a Gold Tooth from Mr. Hollywoods Recover a Gold Tooth from Robber Barons Recover a Gold Tooth from Big Wigs Recover a Gold Tooth from The Big Cheeses",
+          "1 of the following: defeat a gold tooth from mr. hollywoods defeat a gold tooth from robber barons defeat a gold tooth from big wigs defeat a gold tooth from the big cheeses",
+          "1 of the following: recover a gold tooth from mr. hollywoods recover a gold tooth from robber barons recover a gold tooth from big wigs recover a gold tooth from the big cheeses"
+        ],
+        "npc": "One of the following: Recover a Gold Tooth from Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Gold Tooth to Dr. Mumbleface",
+        "alternatives": [
+          "Deliver a Gold Tooth to Dr. Mumbleface"
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Deliver a Gold Tooth to Grumpy Phil",
+        "alternatives": [
+          "Deliver a Gold Tooth to Grumpy Phil"
+        ]
+      },
+      {
+        "order": 11,
+        "objective": "Visit Gus Gooseburger",
+        "alternatives": [
+          "Visit Gus Gooseburger"
+        ]
+      },
+      {
+        "order": 12,
+        "objective": "Deliver a Pine Cone Bread to Grumpy Phil",
+        "alternatives": [
+          "Deliver a Pine Cone Bread to Grumpy Phil"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Teleport_access"
+  },
+  {
+    "id": "the_brrrgh_upgraded_gag_pouch",
+    "name": "Upgraded gag pouch",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Toboggan Ted",
+        "alternatives": [
+          "Visit Toboggan Ted"
+        ],
+        "building": "Toboggan or Not Toboggan",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Toboggan from the Cogs",
+        "alternatives": [
+          "Defeat a Toboggan from the Cogs",
+          "Recover a Toboggan from the Cogs"
+        ],
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Toboggan Ted",
+        "alternatives": [
+          "Return to Toboggan Ted"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Bumpy Noggin",
+        "alternatives": [
+          "Visit Bumpy Noggin"
+        ],
+        "building": "Noggin's Toboggan Bargains",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Go fishing for 3 Ice Cubes",
+        "alternatives": [
+          "go fishing for three ice cubes",
+          "Go fishing for 3 Ice Cubes"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Return to Bumpy Noggin",
+        "alternatives": [
+          "Return to Bumpy Noggin"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Visit Simian Sam",
+        "alternatives": [
+          "Visit Simian Sam"
+        ],
+        "building": "Lowbrow Snowplows",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 5 four+ story Cog Buildings",
+        "alternatives": [
+          "Recover 5 four+ story Cog Buildings",
+          "recover five four+ story cog buildings",
+          "Defeat 5 four+ story Cog Buildings",
+          "defeat five four+ story cog buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Simian Sam",
+        "alternatives": [
+          "Return to Simian Sam"
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Visit Henry the Hazard",
+        "alternatives": [
+          "Visit Henry the Hazard"
+        ],
+        "building": "Skiing Clinic",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 11,
+        "objective": "Defeat 20 level 7 + Cogs",
+        "alternatives": [
+          "Defeat 20 level 7 + Cogs",
+          "defeat 20 level seven + cogs",
+          "defeat twenty level 7 + cogs",
+          "Recover 20 level 7 + Cogs",
+          "recover 20 level seven + cogs",
+          "recover twenty level 7 + cogs"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 12,
+        "objective": "Return to Henry the Hazard",
+        "alternatives": [
+          "Return to Henry the Hazard"
+        ]
+      },
+      {
+        "order": 1,
+        "objective": "Visit Johnny Cashmere",
+        "alternatives": [
+          "Visit Johnny Cashmere"
+        ],
+        "building": "The Sweater Lodge",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover Yarn from Lawbots",
+        "alternatives": [
+          "Defeat Yarn from Lawbots",
+          "Recover Yarn from Lawbots"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Johnny Cashmere",
+        "alternatives": [
+          "Return to Johnny Cashmere"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 20 level 7+ Cogs",
+        "alternatives": [
+          "Defeat 20 level 7+ Cogs",
+          "Recover 20 level 7+ Cogs",
+          "defeat twenty level 7+ cogs",
+          "recover twenty level 7+ cogs"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Johnny Cashmere",
+        "alternatives": [
+          "Return to Johnny Cashmere"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Go fishing for 2 Knitting Needles",
+        "alternatives": [
+          "go fishing for two knitting needles",
+          "Go fishing for 2 Knitting Needles"
+        ],
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Johnny Cashmere",
+        "alternatives": [
+          "Return to Johnny Cashmere"
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 5 four+ story Cog Buildings",
+        "alternatives": [
+          "Recover 5 four+ story Cog Buildings",
+          "recover five four+ story cog buildings",
+          "Defeat 5 four+ story Cog Buildings",
+          "defeat five four+ story cog buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Johnny Cashmere",
+        "alternatives": [
+          "Return to Johnny Cashmere"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Gag_pouch"
+  },
+  {
+    "id": "the_brrrgh_upgraded_jellybean_pouch",
+    "name": "Upgraded jellybean pouch",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Vidalia VaVoom",
+        "alternatives": [
+          "Visit Vidalia VaVoom"
+        ],
+        "building": "Snow Bunny Ski Shop",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following: Recover a Love Letter from The Minglers Recover a Love Letter from Loan Sharks Recover a Love Letter from Legal Eagles Recover a Love Letter from Corporate Raiders",
+        "alternatives": [
+          "1 of the following: recover a love letter from the minglers recover a love letter from loan sharks recover a love letter from legal eagles recover a love letter from corporate raiders",
+          "One of the following: Defeat a Love Letter from The Minglers Defeat a Love Letter from Loan Sharks Defeat a Love Letter from Legal Eagles Defeat a Love Letter from Corporate Raiders",
+          "1 of the following: defeat a love letter from the minglers defeat a love letter from loan sharks defeat a love letter from legal eagles defeat a love letter from corporate raiders",
+          "One of the following: Recover a Love Letter from The Minglers Recover a Love Letter from Loan Sharks Recover a Love Letter from Legal Eagles Recover a Love Letter from Corporate Raiders"
+        ],
+        "npc": "One of the following: Recover a Love Letter from The Minglers",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Vidalia VaVoom",
+        "alternatives": [
+          "Return to Vidalia VaVoom"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Snooty Sinjin",
+        "alternatives": [
+          "Visit Snooty Sinjin"
+        ],
+        "building": "St. Bernard Kennel Club",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 10 Wiener Dogs from the Cogs",
+        "alternatives": [
+          "defeat ten wiener dogs from the cogs",
+          "recover ten wiener dogs from the cogs",
+          "Defeat 10 Wiener Dogs from the Cogs",
+          "Recover 10 Wiener Dogs from the Cogs"
+        ],
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Snooty Sinjin",
+        "alternatives": [
+          "Return to Snooty Sinjin"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Visit Creepy Carl",
+        "alternatives": [
+          "Visit Creepy Carl"
+        ],
+        "building": "Ice House Jewelry",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 10 level 8 + Cogs",
+        "alternatives": [
+          "defeat 10 level eight + cogs",
+          "Recover 10 level 8 + Cogs",
+          "recover ten level 8 + cogs",
+          "Defeat 10 level 8 + Cogs",
+          "defeat ten level 8 + cogs",
+          "recover 10 level eight + cogs"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Creepy Carl",
+        "alternatives": [
+          "Return to Creepy Carl"
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Deliver an Engagement Ring to Vidalia VaVoom",
+        "alternatives": [
+          "Deliver an Engagement Ring to Vidalia VaVoom"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Jellybean_pouch"
+  },
+  {
+    "id": "the_brrrgh_increased_toontask_capacity",
+    "name": "Increased ToonTask capacity",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit March Harry",
+        "alternatives": [
+          "Visit March Harry"
+        ],
+        "building": "Snowshoes You Can't Refuse",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 30 Lawbots",
+        "alternatives": [
+          "Defeat 30 Lawbots",
+          "Recover 30 Lawbots"
+        ],
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 3,
+        "objective": "Return to March Harry",
+        "alternatives": [
+          "Return to March Harry"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Visit Hysterical Harry",
+        "alternatives": [
+          "Visit Hysterical Harry"
+        ],
+        "building": "Snow Big Deal! Crisis Management",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 2 Alibis from Legal Eagles",
+        "alternatives": [
+          "defeat two alibis from legal eagles",
+          "Defeat 2 Alibis from Legal Eagles",
+          "Recover 2 Alibis from Legal Eagles",
+          "recover two alibis from legal eagles"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Hysterical Harry",
+        "alternatives": [
+          "Return to Hysterical Harry"
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Deliver an Alibi to March Harry",
+        "alternatives": [
+          "Deliver an Alibi to March Harry"
+        ]
+      },
+      {
+        "order": 1,
+        "objective": "Visit Hysterical Harry",
+        "alternatives": [
+          "Visit Hysterical Harry"
+        ],
+        "building": "Snow Big Deal! Crisis Management",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 10 The Minglers",
+        "alternatives": [
+          "recover ten the minglers",
+          "defeat ten the minglers",
+          "Recover 10 The Minglers",
+          "Defeat 10 The Minglers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Hysterical Harry",
+        "alternatives": [
+          "Return to Hysterical Harry"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 10 Corporate Raiders",
+        "alternatives": [
+          "Recover 10 Corporate Raiders",
+          "defeat ten corporate raiders",
+          "Defeat 10 Corporate Raiders",
+          "recover ten corporate raiders"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Hysterical Harry",
+        "alternatives": [
+          "Return to Hysterical Harry"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 10 Loan Sharks",
+        "alternatives": [
+          "recover ten loan sharks",
+          "defeat ten loan sharks",
+          "Defeat 10 Loan Sharks",
+          "Recover 10 Loan Sharks"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Hysterical Harry",
+        "alternatives": [
+          "Return to Hysterical Harry"
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "Visit Dee Frost",
+        "alternatives": [
+          "Visit Dee Frost"
+        ],
+        "building": "Dropping Degrees Diner",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 9,
+        "objective": "Go fishing for 2 Sardine Whiskers",
+        "alternatives": [
+          "Go fishing for 2 Sardine Whiskers",
+          "go fishing for two sardine whiskers"
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Return to Dee Frost",
+        "alternatives": [
+          "Return to Dee Frost"
+        ]
+      },
+      {
+        "order": 11,
+        "objective": "Deliver a Calming Potion to Hysterical Harry",
+        "alternatives": [
+          "Deliver a Calming Potion to Hysterical Harry"
+        ]
+      },
+      {
+        "order": 12,
+        "objective": "Defeat 5 Legal Eagles",
+        "alternatives": [
+          "Recover 5 Legal Eagles",
+          "Defeat 5 Legal Eagles",
+          "recover five legal eagles",
+          "defeat five legal eagles"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 13,
+        "objective": "Return to Hysterical Harry",
+        "alternatives": [
+          "Return to Hysterical Harry"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/ToonTask_capacity"
+  },
+  {
+    "id": "the_brrrgh_gag_track_training",
+    "name": "Gag track training",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lil Oldman",
+        "alternatives": [
+          "Visit Lil Oldman"
+        ],
+        "building": "The Blizzard Wizard",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 10 level 8 + Cogs",
+        "alternatives": [
+          "defeat 10 level eight + cogs",
+          "Recover 10 level 8 + Cogs",
+          "recover ten level 8 + cogs",
+          "Defeat 10 level 8 + Cogs",
+          "defeat ten level 8 + cogs",
+          "recover 10 level eight + cogs"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Go fishing for 3 Fuzzy Dice",
+        "alternatives": [
+          "go fishing for three fuzzy dice",
+          "Go fishing for 3 Fuzzy Dice"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "One of the following: Defeat 2 four+ story Sellbot Cog Buildings Defeat 2 four+ story Cashbot Cog Buildings Defeat 2 four+ story Lawbot Cog Buildings Defeat 2 four+ story Bossbot Cog Buildings",
+        "alternatives": [
+          "1 of the following: recover 2 four+ story sellbot cog buildings recover 2 four+ story cashbot cog buildings recover 2 four+ story lawbot cog buildings recover 2 four+ story bossbot cog buildings",
+          "one of the following: defeat 2 four+ story sellbot cog buildings defeat 2 four+ story cashbot cog buildings defeat two four+ story lawbot cog buildings defeat 2 four+ story bossbot cog buildings",
+          "One of the following: Defeat 2 four+ story Sellbot Cog Buildings Defeat 2 four+ story Cashbot Cog Buildings Defeat 2 four+ story Lawbot Cog Buildings Defeat 2 four+ story Bossbot Cog Buildings",
+          "one of the following: defeat 2 four+ story sellbot cog buildings defeat 2 four+ story cashbot cog buildings defeat 2 four+ story lawbot cog buildings defeat two four+ story bossbot cog buildings",
+          "one of the following: recover 2 four+ story sellbot cog buildings recover 2 four+ story cashbot cog buildings recover 2 four+ story lawbot cog buildings recover two four+ story bossbot cog buildings",
+          "one of the following: recover two four+ story sellbot cog buildings recover 2 four+ story cashbot cog buildings recover 2 four+ story lawbot cog buildings recover 2 four+ story bossbot cog buildings",
+          "one of the following: defeat 2 four+ story sellbot cog buildings defeat two four+ story cashbot cog buildings defeat 2 four+ story lawbot cog buildings defeat 2 four+ story bossbot cog buildings",
+          "one of the following: recover 2 four+ story sellbot cog buildings recover two four+ story cashbot cog buildings recover 2 four+ story lawbot cog buildings recover 2 four+ story bossbot cog buildings",
+          "one of the following: recover 2 four+ story sellbot cog buildings recover 2 four+ story cashbot cog buildings recover two four+ story lawbot cog buildings recover 2 four+ story bossbot cog buildings",
+          "1 of the following: defeat 2 four+ story sellbot cog buildings defeat 2 four+ story cashbot cog buildings defeat 2 four+ story lawbot cog buildings defeat 2 four+ story bossbot cog buildings",
+          "one of the following: defeat two four+ story sellbot cog buildings defeat 2 four+ story cashbot cog buildings defeat 2 four+ story lawbot cog buildings defeat 2 four+ story bossbot cog buildings",
+          "One of the following: Recover 2 four+ story Sellbot Cog Buildings Recover 2 four+ story Cashbot Cog Buildings Recover 2 four+ story Lawbot Cog Buildings Recover 2 four+ story Bossbot Cog Buildings"
+        ],
+        "npc": "One of the following: Defeat 2 four+ story Sellbot Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "One of the following: Choose Sound or Lure Choose Sound or Drop Choose Toon-Up or Lure Choose Toon-Up or Drop Choose Trap or Sound Choose Trap or Drop Choose Trap or Lure Choose Trap or Toon-Up",
+        "alternatives": [
+          "1 of the following: choose sound or lure choose sound or drop choose toon-up or lure choose toon-up or drop choose trap or sound choose trap or drop choose trap or lure choose trap or toon-up",
+          "One of the following: Choose Sound or Lure Choose Sound or Drop Choose Toon-Up or Lure Choose Toon-Up or Drop Choose Trap or Sound Choose Trap or Drop Choose Trap or Lure Choose Trap or Toon-Up"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Gag_track_training"
+  },
+  {
+    "id": "the_brrrgh_final_gag_track_training",
+    "name": "Final gag track training",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lil Oldman",
+        "alternatives": [
+          "Visit Lil Oldman"
+        ],
+        "building": "The Blizzard Wizard",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following: Recover 6 Caviars from Mr. Hollywoods Recover 6 Lumpy Cheeses from The Big Cheeses",
+        "alternatives": [
+          "one of the following: defeat 6 caviars from mr. hollywoods defeat six lumpy cheeses from the big cheeses",
+          "One of the following: Defeat 6 Caviars from Mr. Hollywoods Defeat 6 Lumpy Cheeses from The Big Cheeses",
+          "one of the following: recover six caviars from mr. hollywoods recover 6 lumpy cheeses from the big cheeses",
+          "One of the following: Recover 6 Caviars from Mr. Hollywoods Recover 6 Lumpy Cheeses from The Big Cheeses",
+          "1 of the following: defeat 6 caviars from mr. hollywoods defeat 6 lumpy cheeses from the big cheeses",
+          "one of the following: defeat six caviars from mr. hollywoods defeat 6 lumpy cheeses from the big cheeses",
+          "1 of the following: recover 6 caviars from mr. hollywoods recover 6 lumpy cheeses from the big cheeses",
+          "one of the following: recover 6 caviars from mr. hollywoods recover six lumpy cheeses from the big cheeses"
+        ],
+        "npc": "One of the following: Recover 6 Caviars from Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "One of the following: Recover a Simple Spoon from Robber Barons Recover a Simple Spoon from Big Wigs",
+        "alternatives": [
+          "One of the following: Defeat a Simple Spoon from Robber Barons Defeat a Simple Spoon from Big Wigs",
+          "1 of the following: recover a simple spoon from robber barons recover a simple spoon from big wigs",
+          "1 of the following: defeat a simple spoon from robber barons defeat a simple spoon from big wigs",
+          "One of the following: Recover a Simple Spoon from Robber Barons Recover a Simple Spoon from Big Wigs"
+        ],
+        "npc": "One of the following: Recover a Simple Spoon from Robber Barons",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Go fishing for Talking Toad",
+        "alternatives": [
+          "Go fishing for Talking Toad"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "Visit Sticky George",
+        "alternatives": [
+          "Visit Sticky George"
+        ],
+        "building": "The Melting Ice Cream Bar",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 9,
+        "objective": "One of the following: Recover 10 Ice Cream Cones from Mr. Hollywoods Recover 10 Ice Cream Cones from The Big Cheeses",
+        "alternatives": [
+          "One of the following: Recover 10 Ice Cream Cones from Mr. Hollywoods Recover 10 Ice Cream Cones from The Big Cheeses",
+          "One of the following: Defeat 10 Ice Cream Cones from Mr. Hollywoods Defeat 10 Ice Cream Cones from The Big Cheeses",
+          "1 of the following: defeat 10 ice cream cones from mr. hollywoods defeat 10 ice cream cones from the big cheeses",
+          "one of the following: defeat ten ice cream cones from mr. hollywoods defeat 10 ice cream cones from the big cheeses",
+          "one of the following: recover 10 ice cream cones from mr. hollywoods recover ten ice cream cones from the big cheeses",
+          "one of the following: recover ten ice cream cones from mr. hollywoods recover 10 ice cream cones from the big cheeses",
+          "1 of the following: recover 10 ice cream cones from mr. hollywoods recover 10 ice cream cones from the big cheeses",
+          "one of the following: defeat 10 ice cream cones from mr. hollywoods defeat ten ice cream cones from the big cheeses"
+        ],
+        "npc": "One of the following: Recover 10 Ice Cream Cones from Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 10,
+        "objective": "Return to Sticky George",
+        "alternatives": [
+          "Return to Sticky George"
+        ]
+      },
+      {
+        "order": 11,
+        "objective": "Deliver an Ice Cream Cone to Lil Oldman",
+        "alternatives": [
+          "Deliver an Ice Cream Cone to Lil Oldman"
+        ]
+      },
+      {
+        "order": 12,
+        "objective": "One of the following: Recover Make Up Powder from Mr. Hollywoods Recover a Wig Powder from Big Wigs",
+        "alternatives": [
+          "1 of the following: recover make up powder from mr. hollywoods recover a wig powder from big wigs",
+          "One of the following: Defeat Make Up Powder from Mr. Hollywoods Defeat a Wig Powder from Big Wigs",
+          "1 of the following: defeat make up powder from mr. hollywoods defeat a wig powder from big wigs",
+          "One of the following: Recover Make Up Powder from Mr. Hollywoods Recover a Wig Powder from Big Wigs"
+        ],
+        "npc": "One of the following: Recover Make Up Powder from Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 13,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 14,
+        "objective": "Defeat 20 four+ story Cog Buildings",
+        "alternatives": [
+          "Defeat 20 four+ story Cog Buildings",
+          "recover twenty four+ story cog buildings",
+          "defeat twenty four+ story cog buildings",
+          "Recover 20 four+ story Cog Buildings"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 15,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      },
+      {
+        "order": 16,
+        "objective": "Go fishing for Talking Toad's Girlfriend",
+        "alternatives": [
+          "Go fishing for Talking Toad's Girlfriend"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 17,
+        "objective": "Return to Lil Oldman",
+        "alternatives": [
+          "Return to Lil Oldman"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Final_gag_track_training"
+  },
+  {
+    "id": "the_brrrgh_1_laff_boost",
+    "name": "+1 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Chicken Boy",
+        "alternatives": [
+          "Visit Chicken Boy"
+        ],
+        "building": "Pea Soup Cafe",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following: Recover a Soccer Ball from Two-Faces Recover a Soccer Ball from Money Bags Recover a Soccer Ball from Spin Doctors Recover a Soccer Ball from Head Hunters",
+        "alternatives": [
+          "1 of the following: recover a soccer ball from two-faces recover a soccer ball from money bags recover a soccer ball from spin doctors recover a soccer ball from head hunters",
+          "One of the following: Defeat a Soccer Ball from Two-Faces Defeat a Soccer Ball from Money Bags Defeat a Soccer Ball from Spin Doctors Defeat a Soccer Ball from Head Hunters",
+          "1 of the following: defeat a soccer ball from two-faces defeat a soccer ball from money bags defeat a soccer ball from spin doctors defeat a soccer ball from head hunters",
+          "One of the following: Recover a Soccer Ball from Two-Faces Recover a Soccer Ball from Money Bags Recover a Soccer Ball from Spin Doctors Recover a Soccer Ball from Head Hunters"
+        ],
+        "npc": "One of the following: Recover a Soccer Ball from Two-Faces",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Chicken Boy",
+        "alternatives": [
+          "Return to Chicken Boy"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B1_laff_boost_(Chicken_Boy)"
+  },
+  {
+    "id": "the_brrrgh_1_laff_boost",
+    "name": "+1 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Wynne Chill",
+        "alternatives": [
+          "Visit Wynne Chill"
+        ],
+        "building": "Snowmen Bought & Sold",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following: Defeat 40 Lawbots Defeat 40 Bossbots",
+        "alternatives": [
+          "One of the following: Recover 40 Lawbots Recover 40 Bossbots",
+          "One of the following: Defeat 40 Lawbots Defeat 40 Bossbots",
+          "1 of the following: defeat 40 lawbots defeat 40 bossbots",
+          "1 of the following: recover 40 lawbots recover 40 bossbots"
+        ],
+        "npc": "One of the following: Defeat 40 Lawbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Wynne Chill",
+        "alternatives": [
+          "Return to Wynne Chill"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "One of the following: Defeat 45 Sellbots Defeat 45 Cashbots",
+        "alternatives": [
+          "1 of the following: defeat 45 sellbots defeat 45 cashbots",
+          "One of the following: Defeat 45 Sellbots Defeat 45 Cashbots",
+          "One of the following: Recover 45 Sellbots Recover 45 Cashbots",
+          "1 of the following: recover 45 sellbots recover 45 cashbots"
+        ],
+        "npc": "One of the following: Defeat 45 Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Wynne Chill",
+        "alternatives": [
+          "Return to Wynne Chill"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B1_laff_boost_(Wynne_Chill)"
+  },
+  {
+    "id": "the_brrrgh_1_laff_boost",
+    "name": "+1 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Eddie the Yeti",
+        "alternatives": [
+          "Visit Eddie the Yeti"
+        ],
+        "building": "Snowman's Land",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 90 Lawbots",
+        "alternatives": [
+          "Recover 90 Lawbots",
+          "Defeat 90 Lawbots"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Eddie the Yeti",
+        "alternatives": [
+          "Return to Eddie the Yeti"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B1_laff_boost_(Eddie_the_Yeti)"
+  },
+  {
+    "id": "the_brrrgh_2_laff_boost",
+    "name": "+2 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Sweaty Pete",
+        "alternatives": [
+          "Visit Sweaty Pete"
+        ],
+        "building": "Heat-Get it While it's Hot",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Cog Gear from Micromanagers",
+        "alternatives": [
+          "Recover a Cog Gear from Micromanagers",
+          "Defeat a Cog Gear from Micromanagers"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Sweaty Pete",
+        "alternatives": [
+          "Return to Sweaty Pete"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Go fishing for Rubber Ducky",
+        "alternatives": [
+          "Go fishing for Rubber Ducky"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Sweaty Pete",
+        "alternatives": [
+          "Return to Sweaty Pete"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 5 Cog Buildings",
+        "alternatives": [
+          "recover five cog buildings",
+          "Recover 5 Cog Buildings",
+          "Defeat 5 Cog Buildings",
+          "defeat five cog buildings"
+        ],
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Sweaty Pete",
+        "alternatives": [
+          "Return to Sweaty Pete"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B2_laff_boost_(Sweaty_Pete)"
+  },
+  {
+    "id": "the_brrrgh_3_laff_boost",
+    "name": "+3 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lounge Lassard",
+        "alternatives": [
+          "Visit Lounge Lassard"
+        ],
+        "building": "Snow Ball Hall",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Microphone from the Cogs",
+        "alternatives": [
+          "Defeat a Microphone from the Cogs",
+          "Recover a Microphone from the Cogs"
+        ],
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lounge Lassard",
+        "alternatives": [
+          "Return to Lounge Lassard"
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "One of the following: Recover an Electric Keyboard from The Minglers Recover an Electric Keyboard from Loan Sharks Recover an Electric Keyboard from Legal Eagles Recover an Electric Keyboard from Corporate Raiders",
+        "alternatives": [
+          "1 of the following: defeat an electric keyboard from the minglers defeat an electric keyboard from loan sharks defeat an electric keyboard from legal eagles defeat an electric keyboard from corporate raiders",
+          "1 of the following: recover an electric keyboard from the minglers recover an electric keyboard from loan sharks recover an electric keyboard from legal eagles recover an electric keyboard from corporate raiders",
+          "One of the following: Recover an Electric Keyboard from The Minglers Recover an Electric Keyboard from Loan Sharks Recover an Electric Keyboard from Legal Eagles Recover an Electric Keyboard from Corporate Raiders",
+          "One of the following: Defeat an Electric Keyboard from The Minglers Defeat an Electric Keyboard from Loan Sharks Defeat an Electric Keyboard from Legal Eagles Defeat an Electric Keyboard from Corporate Raiders"
+        ],
+        "npc": "One of the following: Recover an Electric Keyboard from The Minglers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lounge Lassard",
+        "alternatives": [
+          "Return to Lounge Lassard"
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "One of the following: Recover Platform Shoes from Mr. Hollywoods Recover Platform Shoes from Robber Barons Recover Platform Shoes from Big Wigs Recover Platform Shoes from The Big Cheeses",
+        "alternatives": [
+          "One of the following: Recover Platform Shoes from Mr. Hollywoods Recover Platform Shoes from Robber Barons Recover Platform Shoes from Big Wigs Recover Platform Shoes from The Big Cheeses",
+          "1 of the following: recover platform shoes from mr. hollywoods recover platform shoes from robber barons recover platform shoes from big wigs recover platform shoes from the big cheeses",
+          "1 of the following: defeat platform shoes from mr. hollywoods defeat platform shoes from robber barons defeat platform shoes from big wigs defeat platform shoes from the big cheeses",
+          "One of the following: Defeat Platform Shoes from Mr. Hollywoods Defeat Platform Shoes from Robber Barons Defeat Platform Shoes from Big Wigs Defeat Platform Shoes from The Big Cheeses"
+        ],
+        "npc": "One of the following: Recover Platform Shoes from Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lounge Lassard",
+        "alternatives": [
+          "Return to Lounge Lassard"
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B3_laff_boost_(Lounge_Lassard)"
+  }
+]
