@@ -264,7 +264,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
               </div>
 
               {tasklineMatch && (
-                <div className="absolute top-16 left-4 2xl:top-4 2xl:left-16">
+                <div className="absolute top-4 right-4 2xl:top-6 2xl:right-6">
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
