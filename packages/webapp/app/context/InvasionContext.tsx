@@ -40,6 +40,7 @@ interface InvasionData {
   startTimestamp: number;
   district: string;
   estimatedEndTime?: number | null;
+  isMegaInvasion?: boolean;
 }
 
 // TypeScript interface for the API response
@@ -53,6 +54,7 @@ interface TTRInvasionResponse {
       startTimestamp: number;
       estimatedEndTime?: number | null;
       rate?: number;
+      isMegaInvasion?: boolean;
     };
   };
   lastUpdated: number;
@@ -99,6 +101,7 @@ export const InvasionProvider: React.FC<{ children: React.ReactNode }> = ({
             startTimestamp: invasion.startTimestamp,
             district,
             estimatedEndTime: invasion.estimatedEndTime,
+            isMegaInvasion: invasion.isMegaInvasion,
           }),
         );
         if (data.lastUpdated !== lastUpdated) {
