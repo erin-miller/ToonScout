@@ -129,12 +129,23 @@ function calculateEstimatedEndTime(invasion, district) {
   if (!invasion.progress || !invasion.progress.includes("/")) return null;
   const [current, total] = invasion.progress.split("/").map(Number);
   
-  // Check for skelecog invasions first, before validating current
+  // Skelecog mega invasion: always use fixed 3-hour duration
   if (isSkelecogInvasion(invasion) && invasion.startTimestamp && total) {
     const endTime = invasion.startTimestamp + MEGA_INVASION_DURATION;
     return Math.max(now, Math.floor(endTime));
   }
-  
+
+  //  mega invasion: 0/1000000 progress, estimatedEndTime null, use 3-hour duration
+  if (
+    total === MEGA_INVASION_COGS &&
+    invasion.startTimestamp &&
+    current === 0 &&
+    (!('estimatedEndTime' in invasion) || invasion.estimatedEndTime == null)
+  ) {
+    const endTime = invasion.startTimestamp + MEGA_INVASION_DURATION;
+    return Math.max(now, Math.floor(endTime));
+  }
+
   if (!current || !total) return null;
   const cacheKey = getInvasionCacheKey(invasion, district);
   // Clean up cache if invasion is complete
@@ -142,7 +153,7 @@ function calculateEstimatedEndTime(invasion, district) {
     invasionDataCache.delete(cacheKey);
     return now;
   }
-  // Handle mega invasions - always use fixed 3-hour duration
+  // Handle other mega invasions (with progress): always use fixed 3-hour duration
   if (total === MEGA_INVASION_COGS && invasion.startTimestamp) {
     const endTime = invasion.startTimestamp + MEGA_INVASION_DURATION;
     return Math.max(now, Math.floor(endTime));
@@ -230,6 +241,10 @@ async function getInvasions() {
           invasion,
           district
         );
+        // Add isMegaInvasion flag (true for 1,000,000 cogs, not skelecog)
+        const isSkelecog = isSkelecogInvasion(invasion);
+        const [current, total] = (invasion.progress || "0/0").split("/").map(Number);
+        invasion.isMegaInvasion = isSkelecog || total === MEGA_INVASION_COGS;
       }
     }
     // Clean up cache for invasions that no longer exist in the latest API response
