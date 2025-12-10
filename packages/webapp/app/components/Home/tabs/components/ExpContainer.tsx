@@ -45,7 +45,7 @@ const ExpContainer: React.FC<ExpContainerProps> = ({ track, toonData }) => {
 
   return (
     <div
-      className={`relative ${trackBg} rounded-lg items-center justify-center text-xl lg:text-md 2xl:text-xl`}
+      className={`relative ${trackBg} rounded-lg items-center justify-center text-xl lg:text-md 2xl:text-xl overflow-hidden`}
     >
       {/* Background overlay */}
       <div
