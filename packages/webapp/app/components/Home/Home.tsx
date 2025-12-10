@@ -10,19 +10,22 @@ import GameSteps from "../GameSteps";
 import Chuckle from "../eggs/Chuckle";
 import SystemBanner from "./SystemBanner";
 import EventBanner from "./EventBanner";
-
-const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
+import { useEventContext } from "@/app/context/EventContext";
 
 const Home = () => {
   const { userId, setUserId } = useDiscordContext();
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const { toons } = useToonContext();
   const [isBannerOpen, setIsBannerOpen] = useState(true);
-  const [isEventBannerOpen, setIsEventBannerOpen] = useState(false);
-  const [eventMsg, setEventMsg] = useState("");
-  const [eventTimestamp, setEventTimestamp] = useState("");
-  const [eventStatus, setEventStatus] = useState("");
-  const [donations, setDonations] = useState(0);
+
+  const {
+    isEventBannerOpen,
+    eventMsg,
+    eventTimestamp,
+    eventStatus,
+    donations,
+    closeEventBanner,
+  } = useEventContext();
 
   useEffect(() => {
     const checkAccessToken = async () => {
@@ -61,58 +64,10 @@ const Home = () => {
     } else {
       checkAccessToken();
     }
-
-    const checkEventStatus = () => {
-      fetch(API_LINK + "/utility/get-cavalcade", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((response) => {
-          if (!response.ok) {
-            return false;
-          }
-          return response.json();
-        })
-        .then((data) => {
-          if (data.status && data.status !== "inactive") {
-            setIsEventBannerOpen(true);
-            setEventMsg(data.message);
-            setEventTimestamp(data.timestamp);
-            setEventStatus(data.status);
-          }
-        })
-        .catch((error) => {
-          console.error("Error checking event status:", error);
-        });
-
-      if (eventStatus !== "inactive") {
-        fetch("https://toontownrewritten.com/api/riggydonations")
-          .then((response) => {
-            if (!response.ok) {
-              return false;
-            }
-            return response.json();
-          })
-          .then((data) => {
-            setDonations(data.tokensDonated);
-          });
-      }
-    };
-
-    checkEventStatus();
-    const interval = setInterval(checkEventStatus, 15000);
-
-    return () => clearInterval(interval);
-  }, []);
+  }, [setUserId]);
 
   const handleCloseBanner = () => {
     setIsBannerOpen(false);
-  };
-
-  const handleCloseEventBanner = () => {
-    setIsEventBannerOpen(false);
   };
 
   return (
@@ -131,7 +86,7 @@ const Home = () => {
         {isEventBannerOpen && (
           <EventBanner
             isOpen={isEventBannerOpen}
-            onClose={handleCloseEventBanner}
+            onClose={closeEventBanner}
             msg={eventMsg}
             timestamp={eventTimestamp}
             status={eventStatus}
