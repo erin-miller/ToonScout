@@ -128,7 +128,7 @@ const carnivalStatus = async () => {
 const hoodIds = {
   2: "Toontown Central",
   1: "Donald's Dock",
-  5: "Daisy's Gardens",
+  5: "Daisy Gardens",
   4: "Minnie's Melodyland",
   3: "The Brrrgh",
   9: "Donald's Dreamland",
