@@ -62,11 +62,18 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
               </div>
               <div className="grid grid-cols-7 gap-2 pl-2 sm:pl-0 lg:pl-2 xl:pl-0">
                 {[...Array(7)].map((_, gagIndex) => {
-                  const gagImage = gagImages[track.toLowerCase() as GagTrack]?.[gagIndex];
+                  const gagImage =
+                    gagImages[track.toLowerCase() as GagTrack]?.[gagIndex];
                   const isImageVisible = trackData && gagIndex + 1 <= maxLevel;
                   const gagLevel = gagIndex + 1;
-                  const tooltipData = getGagTooltipData(track as GagTrackKey, gagLevel, maxLevel, trackData);
-                  const isRightmostGag = gagIndex === 6 || gagIndex + 1 === maxLevel;
+                  const tooltipData = getGagTooltipData(
+                    track as GagTrackKey,
+                    gagLevel,
+                    maxLevel,
+                    trackData
+                  );
+                  const isRightmostGag =
+                    gagIndex === 6 || gagIndex + 1 === maxLevel;
                   const gagKey = `${track}-${gagLevel}`;
                   const isHovered = hoveredGag === gagKey;
 
@@ -90,16 +97,6 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
                           width={48}
                           height={48}
                           className="w-8 xl:w-10 2xl:w-12 object-contain pointer-events-none"
-                        />
-                      )}
-
-                      {isImageVisible && tooltipData?.isOrganic && (
-                        <Image
-                          src="/organic-gag.webp"
-                          alt="Organic"
-                          width={18}
-                          height={18}
-                          className="absolute -top-0.5 -right-0.5 w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 pointer-events-none"
                         />
                       )}
 
@@ -136,6 +133,16 @@ const GagsTab: React.FC<TabProps> = ({ toon }) => {
                             }}
                           ></div>
                         </div>
+                      )}
+
+                      {isImageVisible && tooltipData?.isOrganic && (
+                        <Image
+                          src="/organic-gag.webp"
+                          alt="Organic"
+                          width={18}
+                          height={18}
+                          className="absolute -top-0.5 -right-0.5 w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 pointer-events-none"
+                        />
                       )}
                     </div>
                   );
