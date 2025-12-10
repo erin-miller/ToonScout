@@ -11,6 +11,7 @@ import {
   ToastProvider,
 } from "@/app/context/ToastContext";
 import { useNotificationSettingsPoll } from "../utils/notificationUtils";
+import { EventProvider } from "../context/EventContext";
 
 interface ProvidersProps {
   children: ReactNode;
@@ -24,11 +25,13 @@ const Providers = ({ children }: ProvidersProps) => {
           <ConnectionProvider>
             <ActivePortsProvider>
               <InvasionProvider>
-                <NotificationToastWrapper
-                  notifSettings={useNotificationSettingsPoll(500)}
-                >
-                  {children}
-                </NotificationToastWrapper>
+                <EventProvider>
+                  <NotificationToastWrapper
+                    notifSettings={useNotificationSettingsPoll(500)}
+                  >
+                    {children}
+                  </NotificationToastWrapper>
+                </EventProvider>
               </InvasionProvider>
             </ActivePortsProvider>
           </ConnectionProvider>
