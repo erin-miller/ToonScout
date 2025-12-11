@@ -25,7 +25,6 @@ const apiLimiter = rateLimit({
 });
 
 app.use(corsMiddleware);
-app.options("*", corsMiddleware)
 app.use(apiLimiter);
 
 app.use(express.json());
