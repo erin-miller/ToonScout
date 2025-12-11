@@ -36,11 +36,12 @@ jobs:
             echo '=== [DEBUG] Moving to $PROJECT_DIR... ==='
             cd $PROJECT_DIR
             export GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no\"
-            echo '=== [DEBUG] Checking for outdated npm packages... ==='
-            npm install --production
             echo '=== [DEBUG] Syncing with remote repository... ==='
             time git pull origin main
+            echo '=== [DEBUG] Updating npm packages... ==='
+            npm ci
             echo '=== [DEBUG] Rebuilding docker containers... ==='
+            time docker compose -f docker-compose.prod.yml down
             time docker compose -f docker-compose.prod.yml up --build -d
             echo '=== [DEBUG] Checking running containers... ==='
             docker ps -a
