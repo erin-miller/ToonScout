@@ -224,8 +224,7 @@ export const renderUnites = (toon: StoredToonData) => {
   );
 };
 
-export const renderSummons = async (toon: StoredToonData) => {
-  const { sumSummons } = await getRewardSums(toon.data.data.rewards);
+export const renderSummons = (toon: StoredToonData, sums: RewardSums) => {
   const summons = toon.data.data.rewards.summons;
   if (!summons) {
     return <div>No summons available.</div>;
@@ -253,7 +252,7 @@ export const renderSummons = async (toon: StoredToonData) => {
     <div>
       <div className="text-xl text-left mb-2">
         <ProgressBar
-          currExp={sumSummons}
+          currExp={sums.sumSummons}
           maxExp={MAX_SUMMONS}
           type="togo"
           item="CJs"
