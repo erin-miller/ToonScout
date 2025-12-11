@@ -24,9 +24,10 @@ const apiLimiter = rateLimit({
   message: { error: "Too many requests, please try again later." },
 });
 
+app.use(corsMiddleware);
+app.options("*", corsMiddleware)
 app.use(apiLimiter);
 
-app.use(corsMiddleware);
 app.use(express.json());
 app.use(cookieParser());
 
