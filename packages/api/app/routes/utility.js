@@ -180,4 +180,67 @@ router.get("/get-cavalcade", async (req, res) => {
   }
 });
 
+router.post("/get-reward-sums", async (req, res) => {
+  const { rewards } = req.body;
+
+  if (!rewards) {
+    return res.status(400).json({ message: "Rewards data is required" });
+  }
+
+  try {
+    const sumSos = rewards.sos
+      ? Object.values(rewards.sos).reduce((sum, value) => sum + value, 0)
+      : 0;
+
+    const sumUnites = rewards.unites
+      ? Object.values(rewards.unites).reduce((sum, category) => {
+        return (
+          sum +
+          Object.values(category).reduce(
+            (categorySum, value) => categorySum + value,
+            0
+          )
+        );
+      }, 0)
+      : 0;
+
+    const sumSummons = rewards.summons
+      ? Object.values(rewards.summons).reduce((sum, summon) => {
+        return (
+          sum +
+          (summon.single ? 1 : 0) +
+          (summon.building ? 1 : 0) +
+          (summon.invasion ? 1 : 0)
+        );
+      }, 0)
+      : 0;
+
+    const sumRemotes = rewards.remotes
+      ? Object.values(rewards.remotes).reduce((sum, category) => {
+        return (
+          sum +
+          Object.values(category).reduce(
+            (categorySum, value) => categorySum + value,
+            0
+          )
+        );
+      }, 0)
+      : 0;
+
+    const totalRewards =
+      sumSos + sumUnites + sumSummons + sumRemotes + (rewards.pinkslips || 0);
+
+    return res.status(200).json({
+      sumSos,
+      sumUnites,
+      sumSummons,
+      sumRemotes,
+      totalRewards,
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Internal server error", error: error.message });
+  }
+});
+
 export default router;
