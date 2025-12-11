@@ -55,7 +55,7 @@ router.post("/", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
         return res.send({
           type: InteractionResponseType.UPDATE_MESSAGE,
           data: {
-            embeds: [result.embed],
+            embeds: Array.isArray(result.embed) ? result.embed : [result.embed],
             components: [result.row],
           },
         });
