@@ -1,4 +1,4 @@
-import React, { JSX, useState, useEffect } from "react";
+import React, { JSX, useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
@@ -16,6 +16,11 @@ import { motion } from "framer-motion";
 import { FaCaretDown } from "react-icons/fa6";
 import { RewardSums } from "@/app/types";
 
+const getRewardsHash = (rewards: any) =>
+  Object.entries(rewards)
+    .map(([k, v]) => `${k}:${JSON.stringify(v)}`)
+    .join("|");
+
 const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   if (!toon.data.data.rewards) {
     return <div>No rewards available.</div>;
@@ -25,16 +30,20 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   const [selectedReward, setSelectedReward] = useState(rewardTypes[0]);
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
   const [clickedButton, setClickedButton] = useState<string | null>(null);
+  const prevRewards = useRef<string>("");
 
   // keep track of sums
   useEffect(() => {
+    const currRewards = getRewardsHash(toon.data.data.rewards);
+    if (currRewards === prevRewards.current) return;
+    prevRewards.current = currRewards;
+
     async function checkSums() {
       const res = await getRewardSums(toon.data.data.rewards);
       setSums(res);
     }
     checkSums();
-  }),
-    [toon];
+  }, [toon]);
 
   // sos card sorting
   const [selectedSort, setSelectedSort] = useState("All");
