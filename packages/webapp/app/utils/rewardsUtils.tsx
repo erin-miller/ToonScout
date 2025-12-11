@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa6";
 import { HiMiniUser, HiBuildingOffice, HiUserGroup } from "react-icons/hi2";
 import { getCogImage } from "@/app/utils/invasionUtils";
-import { StoredToonData, Rewards } from "../types";
+import { StoredToonData, Rewards, RewardSums } from "../types";
 import SOS_TOONS from "@/data/sos_toons.json";
 import COGS from "@/data/cogs.json";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import { cogImages } from "@/assets/cog_images";
 import { rewardImages } from "@/assets/rewards";
 import CardFlip from "@/app/components/animations/CardFlip";
 import ProgressBar from "../components/Home/tabs/components/ProgressBar";
+const API_LINK = process.env.NEXT_PUBLIC_API_HTTP;
 
 // Helper: Get the track name for SOS cards
 export const formatTrack = (entry: any) => {
@@ -35,62 +36,32 @@ export const getRendition = (url: string) => {
   );
 };
 
-// Helpers: reward sums
-export const sumSos = (rewards: Rewards) =>
-  rewards.sos
-    ? Object.values(rewards.sos).reduce((sum, value) => sum + value, 0)
-    : 0;
+export const getRewardSums = async (rewards: Rewards): Promise<RewardSums> => {
+  try {
+    const response = await fetch(API_LINK + "/utility/get-reward-sums", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ rewards }),
+    });
 
-export const sumUnites = (rewards: Rewards) =>
-  rewards.unites
-    ? Object.values(rewards.unites).reduce((sum, category) => {
-        return (
-          sum +
-          Object.values(category).reduce(
-            (categorySum, value) => categorySum + value,
-            0,
-          )
-        );
-      }, 0)
-    : 0;
+    if (!response.ok) {
+      throw new Error(`${response.status}`);
+    }
 
-export const sumSummons = (rewards: Rewards) =>
-  rewards.summons
-    ? Object.values(rewards.summons).reduce((sum, summon) => {
-        return (
-          sum +
-          (summon.single ? 1 : 0) +
-          (summon.building ? 1 : 0) +
-          (summon.invasion ? 1 : 0)
-        );
-      }, 0)
-    : 0;
-
-export const sumRemotes = (rewards: Rewards) =>
-  rewards.remotes
-    ? Object.values(rewards.remotes).reduce((sum, category) => {
-        return (
-          sum +
-          Object.values(category).reduce(
-            (categorySum, value) => categorySum + value,
-            0,
-          )
-        );
-      }, 0)
-    : 0;
-
-export const sumRewards = (rewards: Rewards) =>
-  sumSos(rewards) +
-  sumUnites(rewards) +
-  sumSummons(rewards) +
-  sumRemotes(rewards) +
-  rewards.pinkslips;
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching reward sums:", error);
+    throw error;
+  }
+};
 
 export const renderSOS = (
   toon: StoredToonData,
   selectedSort: string,
   flipStates: Record<string, boolean>,
-  toggleFlip: (card: string) => void,
+  toggleFlip: (card: string) => void
 ) => {
   const sosCards = toon.data.data.rewards.sos;
   if (!sosCards || Object.keys(sosCards).length === 0) {
@@ -109,7 +80,7 @@ export const renderSOS = (
         return entry?.ability == "Cogs Miss" || entry?.ability == "Toons Hit";
       }
       return entry?.track === selectedSort && entry?.ability !== "Restock";
-    }),
+    })
   );
 
   const trackColors = {
@@ -158,7 +129,7 @@ export const renderSOS = (
               <div className="">{card}</div>
               <div className="flex justify-center">
                 {getRendition(
-                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`,
+                  `https://rendition.toontownrewritten.com/render/${entry?.dna}/portrait/128x128.webp`
                 )}
               </div>
               <div className="card-count">{count} Remaining</div>
@@ -253,7 +224,8 @@ export const renderUnites = (toon: StoredToonData) => {
   );
 };
 
-export const renderSummons = (toon: StoredToonData) => {
+export const renderSummons = async (toon: StoredToonData) => {
+  const { sumSummons } = await getRewardSums(toon.data.data.rewards);
   const summons = toon.data.data.rewards.summons;
   if (!summons) {
     return <div>No summons available.</div>;
@@ -281,7 +253,7 @@ export const renderSummons = (toon: StoredToonData) => {
     <div>
       <div className="text-xl text-left mb-2">
         <ProgressBar
-          currExp={sumSummons(toon.data.data.rewards)}
+          currExp={sumSummons}
           maxExp={MAX_SUMMONS}
           type="togo"
           item="CJs"
@@ -291,7 +263,7 @@ export const renderSummons = (toon: StoredToonData) => {
         {Object.entries(summons).map(
           ([key, { name, single, building, invasion }]) => {
             const cog = COGS.find(
-              (c) => c.name === name || c.fullname === name,
+              (c) => c.name === name || c.fullname === name
             );
             const mappedColor =
               deptCardMap[cog?.type as keyof typeof deptCardMap] ||
@@ -341,7 +313,7 @@ export const renderSummons = (toon: StoredToonData) => {
                 </div>
               </div>
             );
-          },
+          }
         )}
       </div>
     </div>
@@ -355,7 +327,7 @@ export const renderPinkslips = () => {
 export const renderRemotes = (
   toon: StoredToonData,
   flipStates: Record<string, boolean>,
-  toggleFlip: (card: string) => void,
+  toggleFlip: (card: string) => void
 ) => {
   const remotes = toon.data.data.rewards.remotes;
   if (!remotes) {

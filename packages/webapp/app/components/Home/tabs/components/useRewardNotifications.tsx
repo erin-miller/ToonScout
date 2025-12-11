@@ -8,7 +8,7 @@ import {
   showNativeNotification,
 } from "@/app/utils/notificationUtils";
 import Toast from "@/app/components/Toast";
-import { sortUnites, sumUnites } from "@/app/utils/rewardsUtils";
+import { getRewardSums } from "@/app/utils/rewardsUtils";
 
 interface RewardNotificationSettings {
   notificationsEnabled: boolean;
@@ -28,7 +28,7 @@ export function useRewardNotifications({
   const { toons, activeIndex } = useToonContext();
   const activeToon = toons[activeIndex];
   const prevRewards = useRef<Rewards | null>(
-    activeToon?.data.data.rewards || null,
+    activeToon?.data.data.rewards || null
   );
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
@@ -43,7 +43,7 @@ export function useRewardNotifications({
         interval?: number;
         showToast?: boolean;
         nativeNotif?: boolean;
-      },
+      }
     ) => {
       if (options.showToast) {
         setToastMsg(msg);
@@ -56,7 +56,7 @@ export function useRewardNotifications({
         showNativeNotification("ToonScout Reward Alert", msg);
       }
     },
-    [],
+    []
   );
 
   // Listen for reward notification events
@@ -72,12 +72,12 @@ export function useRewardNotifications({
     };
     window.addEventListener(
       "rewardNotification",
-      handleRewardNotification as EventListener,
+      handleRewardNotification as EventListener
     );
     return () =>
       window.removeEventListener(
         "rewardNotification",
-        handleRewardNotification as EventListener,
+        handleRewardNotification as EventListener
       );
   }, [notificationsEnabled, handleNotification, nativeNotifEnabled]);
 
@@ -85,24 +85,28 @@ export function useRewardNotifications({
     if (!notificationsEnabled || !activeToon) return;
 
     const rewards = activeToon.data.data.rewards;
-    const unites = rewards.unites;
 
-    if (
-      unites &&
-      prevRewards.current &&
-      sumUnites(prevRewards.current) != sumUnites(rewards)
-    ) {
-      const newUnite = uniteDiff(prevRewards.current, rewards);
-      if (newUnite && newUnite.currAmount > newUnite.prevAmount) {
-        handleNotification(`You've earned a ${newUnite.unite} unite!`, {
-          showToast: toastEnabled,
-          playSound: soundEnabled,
-          nativeNotif: nativeNotifEnabled,
-        });
+    const checkRewardChanges = async () => {
+      if (prevRewards.current) {
+        const prevSums = await getRewardSums(prevRewards.current);
+        const currSums = await getRewardSums(rewards);
+
+        if (prevSums.sumUnites !== currSums.sumUnites) {
+          const newUnite = uniteDiff(prevRewards.current, rewards);
+          if (newUnite && newUnite.currAmount > newUnite.prevAmount) {
+            handleNotification(`You've earned a ${newUnite.unite} unite!`, {
+              showToast: toastEnabled,
+              playSound: soundEnabled,
+              nativeNotif: nativeNotifEnabled,
+            });
+          }
+        }
       }
-    }
 
-    prevRewards.current = rewards;
+      prevRewards.current = rewards;
+    };
+
+    checkRewardChanges();
   }, [
     toons,
     activeIndex,
