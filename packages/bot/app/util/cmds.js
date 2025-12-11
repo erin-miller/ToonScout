@@ -37,10 +37,13 @@ export function multiEmbedBuilder({
   const embeds = [];
 
   for (let i = 0; i < fields.length; i += chunkSize) {
-    const embed = new EmbedBuilder().setTitle(title);
+    const embed = new EmbedBuilder()
 
+    if (i === 0) {
+      if (author) embed.setAuthor(author);
+      if (title) embed.setTitle(title);
+    }
     if (color) embed.setColor(color);
-    if (author) embed.setAuthor(author);
     if (description) embed.setDescription(description);
     if (timestamp) embed.setTimestamp(timestamp);
 
