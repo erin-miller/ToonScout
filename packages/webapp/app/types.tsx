@@ -221,7 +221,6 @@ export interface TasklineStep {
   building?: string;          // Building location of NPC
   location?: string;          // Where to complete it (neighborhood, street)
   reward?: string;            // What you get for this step (if applicable)
-  alternatives?: string[];    // Alternative objective text variations for matching
 }
 
 export interface Taskline {
@@ -232,6 +231,7 @@ export interface Taskline {
   prerequisites?: string[];   // taskline IDs that must be completed first
   steps: TasklineStep[];
   wikiUrl?: string;          // Link to wiki page for this taskline
+  lastUpdated?: string;      // ISO timestamp from wiki page revision
 }
 
 export interface PlaygroundTasklines {
@@ -243,7 +243,7 @@ export interface TaskMatch {
   taskline: Taskline;
   step: TasklineStep;
   confidence: 'high' | 'medium' | 'low';
-  matchedOn: 'exact' | 'alternative' | 'partial';
+  matchedOn: 'exact' | 'partial';
 }
 
 export interface TasklineOverride {

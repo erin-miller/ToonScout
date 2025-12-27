@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "../../animations/AnimatedTab";
 import { Task, StoredToonData, TaskMatch, TasklineStep } from "@/app/types";
@@ -16,14 +16,30 @@ import { markStepCompleted, updateCurrentStep } from "@/app/utils/tasklineProgre
 const createTaskMatchKey = (task: Task, index: number): string =>
   [`task-${index}`, ...getTaskSignatureParts(task)].join("|");
 
+const matchCache = new Map<string, Map<string, TaskMatch | null>>();
+
 const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
   const [tasklineMatches, setTasklineMatches] = useState<Map<string, TaskMatch | null>>(new Map());
   const [selectedTaskMatch, setSelectedTaskMatch] = useState<{ match: TaskMatch; task: Task; matchKey: string } | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const previousStepsRef = useRef<Map<string, { stepNumber: number; tasklineId: string }>>(new Map());
 
-  useEffect(() => {
-    const tasks = toons.data.data.tasks;
+  const tasksSignature = useMemo(() => {
+    return toons.data.data.tasks.map((task, i) => createTaskMatchKey(task, i)).join('|');
+  }, [toons.data.data.tasks]);
+
+  const tasksRef = useRef(toons.data.data.tasks);
+  if (tasksSignature !== tasksRef.current.map((task, i) => createTaskMatchKey(task, i)).join('|')) {
+    tasksRef.current = toons.data.data.tasks;
+  }
+
+  const computedMatches = useMemo(() => {
+    const cached = matchCache.get(tasksSignature);
+    if (cached) {
+      return cached;
+    }
+
+    const tasks = tasksRef.current;
     const matches = new Map<string, TaskMatch | null>();
 
     tasks.forEach((task, index) => {
@@ -43,8 +59,21 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
       matches.set(matchKey, match);
     });
 
-    setTasklineMatches(matches);
-  }, [toons]);
+    matchCache.set(tasksSignature, matches);
+
+    if (matchCache.size > 10) {
+      const firstKey = matchCache.keys().next().value;
+      if (firstKey !== undefined) {
+        matchCache.delete(firstKey);
+      }
+    }
+
+    return matches;
+  }, [tasksSignature]);
+
+  useEffect(() => {
+    setTasklineMatches(computedMatches);
+  }, [computedMatches]);
   
   useEffect(() => {
     toons.data.data.tasks.forEach((task, index) => {
