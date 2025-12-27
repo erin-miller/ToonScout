@@ -1,5 +1,8 @@
 {
   "private": true,
+  "devDependencies": {
+    "slugify": "1.6.6"
+  },
   "workspaces": [
     "packages/api",
     "packages/bot",
