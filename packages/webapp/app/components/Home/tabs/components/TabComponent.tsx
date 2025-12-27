@@ -20,6 +20,7 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { BsPiggyBankFill } from "react-icons/bs";
 import { PiTipJarFill } from "react-icons/pi";
 import { BiSolidParty } from "react-icons/bi";
+import { useEventContext } from "@/app/context/EventContext";
 import Image from "next/image";
 
 export interface TabProps {
@@ -36,6 +37,7 @@ export type TabComponent = {
 
 const TabContainer = () => {
   const { activeIndex, toons } = useToonContext();
+  const { eventStatus } = useEventContext();
   const MAX_TABS = 4;
 
   const toon = toons[activeIndex];
@@ -247,7 +249,7 @@ const TabContainer = () => {
                 </span>
               </div>
             </div>
-            {toon.data.data.tokens ? (
+            {eventStatus !== "inactive" ? (
               <div className="flex items-center justify-center space-x-1">
                 <BiSolidParty className="text-2xl text-pink-800" />
                 <span className="text-lg">{toon.data.data.tokens} Tokens</span>

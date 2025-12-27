@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'packages/api/**'
-      - 'packages/bot/**'
+      - "packages/api/**"
+      - "packages/bot/**"
 
 jobs:
   deploy:
@@ -38,7 +38,10 @@ jobs:
             export GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no\"
             echo '=== [DEBUG] Syncing with remote repository... ==='
             time git pull origin main
+            echo '=== [DEBUG] Updating npm packages... ==='
+            npm ci
             echo '=== [DEBUG] Rebuilding docker containers... ==='
+            time docker compose -f docker-compose.prod.yml down
             time docker compose -f docker-compose.prod.yml up --build -d
             echo '=== [DEBUG] Checking running containers... ==='
             docker ps -a

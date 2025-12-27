@@ -14,13 +14,7 @@ import FishSettingsItem from "./SettingsItems/FishSettingsItem";
 import GardenSettingsItem from "./SettingsItems/GardenSettingsItem";
 import NotificationSettingsItem from "./SettingsItems/NotificationSettingsItem";
 import { getNotificationSettings } from "@/app/utils/notificationUtils";
-import {
-  sumRemotes,
-  sumRewards,
-  sumSos,
-  sumSummons,
-  sumUnites,
-} from "@/app/utils/rewardsUtils";
+import { getRewardSums } from "@/app/utils/rewardsUtils";
 
 type SettingsModalProps = {
   toon: StoredToonData | null;
@@ -41,8 +35,28 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
   // notifs
   const initialSettings = getNotificationSettings();
   const [notificationsEnabled, setNotificationsEnabled] = useState<boolean>(
-    initialSettings.notificationsEnabled,
+    initialSettings.notificationsEnabled
   );
+
+  const [rewardSums, setRewardSums] = useState({
+    sumSos: 0,
+    sumUnites: 0,
+    sumSummons: 0,
+    sumRemotes: 0,
+    totalRewards: 0,
+  });
+
+  useEffect(() => {
+    const fetchSums = async () => {
+      if (toon) {
+        const rewards = toon.data.data.rewards;
+        const sums = await getRewardSums(rewards);
+        setRewardSums(sums);
+      }
+    };
+
+    fetchSums();
+  }, [toon]);
 
   const toggleLock = (index: number) => {
     const toon = toons[index];
@@ -53,8 +67,6 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
   const getLockedStatus = (index: number) => {
     return toons[index]?.locked;
   };
-
-  const rewards = toon.data.data.rewards;
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -81,12 +93,12 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
           {/* stats */}
           <div>
             <div className="grid md:grid-cols-3 gap-1">
-              <span>{sumSos(rewards)} SOS cards</span>
-              <span>{sumUnites(rewards)} Unites</span>
-              <span>{sumSummons(rewards)} Summons</span>
-              <span>{rewards.pinkslips} Pinkslips</span>
-              <span>{sumRemotes(rewards)} Remotes</span>
-              <span>{sumRewards(rewards)} total rewards</span>
+              <span>{rewardSums.sumSos} SOS cards</span>
+              <span>{rewardSums.sumUnites} Unites</span>
+              <span>{rewardSums.sumSummons} Summons</span>
+              <span>{toon.data.data.rewards.pinkslips} Pinkslips</span>
+              <span>{rewardSums.sumRemotes} Remotes</span>
+              <span>{rewardSums.totalRewards} total rewards</span>
             </div>
           </div>
 

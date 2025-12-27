@@ -50,7 +50,6 @@ next-env.d.ts
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 ecosystem.config.js
-package-lock.json
 
 # User-specific files
 *.rsuser

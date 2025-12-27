@@ -168,6 +168,14 @@ export interface Rewards {
   };
 }
 
+export interface RewardSums {
+  sumSos: number;
+  sumUnites: number;
+  sumSummons: number;
+  sumRemotes: number;
+  totalRewards: number;
+}
+
 export interface ToonData {
   event: string;
   data: {

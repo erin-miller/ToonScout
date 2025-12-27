@@ -9,6 +9,16 @@ import { getToonRendition } from "../util/cmds.js";
 import { getScoutToken } from "../util/api.js";
 import { SuitsCalculator } from "toonapi-calculator";
 
+const ids = {
+  name: "suit",
+  home: "home",
+  refresh: "refresh",
+  sell: "sell",
+  cash: "cash",
+  law: "law",
+  boss: "boss",
+};
+
 const levels = {
   s: {
     "Cold Caller": 5,
@@ -52,14 +62,16 @@ const levels = {
   },
 };
 
-const gear = "https://scouttoon.info/images/coggear.png";
-const sellIcon = "https://scouttoon.info/images/emblem_sell.png";
-const cashIcon = "https://scouttoon.info/images/emblem_cash.png";
-const lawIcon = "https://scouttoon.info/images/emblem_law.png";
-const bossIcon = "https://scouttoon.info/images/emblem_boss.png";
+const icons = {
+  gear: "https://scouttoon.info/images/coggear.png",
+  sell: "https://scouttoon.info/images/emblem_sell.png",
+  cash: "https://scouttoon.info/images/emblem_cash.png",
+  law: "https://scouttoon.info/images/emblem_law.png",
+  boss: "https://scouttoon.info/images/emblem_boss.png",
+};
 
 export const data = new SlashCommandBuilder()
-  .setName("suit")
+  .setName(ids.name)
   .setDescription("Find information about your cog suits.")
   .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
@@ -72,13 +84,7 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(req, res, target) {
   const item = await getScoutToken(target);
-
-  const row = new ActionRowBuilder().addComponents(
-    getSellButton(target),
-    getCashButton(target),
-    getLawButton(target),
-    getBossButton(target)
-  );
+  const row = getRow(target, ids.home);
 
   return res.send({
     type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
@@ -90,126 +96,63 @@ export async function execute(req, res, target) {
 }
 
 export async function handleButton(req, customId) {
-  let embed;
-  let row;
-  let target;
-  let state;
-
   const parts = customId.split(":");
   const action = parts[0];
-
-  if (parts.length === 3) {
-    state = parts[1];
-    target = parts[2];
-  } else {
-    state = null;
-    target = parts[1];
-  }
+  let state = parts.length === 3 ? parts[1] : null;
+  const target = parts.length === 3 ? parts[2] : parts[1];
 
   const item = await getScoutToken(target);
 
-  switch (action) {
-    case "suit-refresh":
-      switch (state) {
-        case "home":
-          embed = getHomeEmbed(item);
-          row = getHomeRow(target);
-          break;
-        case "sell":
-          embed = getSellEmbed(item);
-          row = getSellRow(target);
-          break;
-        case "cash":
-          embed = getCashEmbed(item);
-          row = getCashRow(target);
-          break;
-        case "law":
-          embed = getLawEmbed(item);
-          row = getLawRow(target);
-          break;
-        case "boss":
-          embed = getBossEmbed(item);
-          row = getBossRow(target);
-          break;
-        default:
-          return;
-      }
-      break;
-    case "suit-home":
-      embed = getHomeEmbed(item);
-      row = getHomeRow(target);
-      break;
-    case "suit-sell":
-      embed = getSellEmbed(item);
-      row = getSellRow(target);
-      break;
-    case "suit-cash":
-      embed = getCashEmbed(item);
-      row = getCashRow(target);
-      break;
-    case "suit-law":
-      embed = getLawEmbed(item);
-      row = getLawRow(target);
-      break;
-    case "suit-boss":
-      embed = getBossEmbed(item);
-      row = getBossRow(target);
-      break;
-    default:
-      return;
+  const stateInfo = {
+    [ids.home]: () => ({
+      embed: getHomeEmbed(item),
+      row: getRow(target, ids.home),
+    }),
+    [ids.sell]: () => ({
+      embed: getSellEmbed(item),
+      row: getRow(target, ids.sell),
+    }),
+    [ids.cash]: () => ({
+      embed: getCashEmbed(item),
+      row: getRow(target, ids.cash),
+    }),
+    [ids.law]: () => ({
+      embed: getLawEmbed(item),
+      row: getRow(target, ids.law),
+    }),
+    [ids.boss]: () => ({
+      embed: getBossEmbed(item),
+      row: getRow(target, ids.boss),
+    }),
+  };
+
+  let embed, row;
+
+  if (action === `${ids.name}-${ids.refresh}` && stateInfo[state]) {
+    ({ embed, row } = stateInfo[state]());
+  } else if (stateInfo[action.replace(`${ids.name}-`, "")]) {
+    ({ embed, row } = stateInfo[action.replace(`${ids.name}-`, "")]());
+  } else {
+    return;
   }
 
   return { embed, row };
 }
 
-function getBossRow(target) {
-  return new ActionRowBuilder().addComponents(
-    getRefreshButton("boss", target),
+function getRow(target, currentId) {
+  const buttons = [
+    getRefreshButton(currentId, target),
     getHomeButton(target),
-    getSellButton(target),
-    getCashButton(target),
-    getLawButton(target)
-  );
-}
-
-function getLawRow(target) {
-  return new ActionRowBuilder().addComponents(
-    getRefreshButton("law", target),
-    getHomeButton(target),
-    getSellButton(target),
-    getCashButton(target),
-    getBossButton(target)
-  );
-}
-
-function getCashRow(target) {
-  return new ActionRowBuilder().addComponents(
-    getRefreshButton("cash", target),
-    getHomeButton(target),
-    getSellButton(target),
-    getLawButton(target),
-    getBossButton(target)
-  );
-}
-
-function getSellRow(target) {
-  return new ActionRowBuilder().addComponents(
-    getRefreshButton("sell", target),
-    getHomeButton(target),
-    getCashButton(target),
-    getLawButton(target),
-    getBossButton(target)
-  );
-}
-
-function getHomeRow(target) {
-  return new ActionRowBuilder().addComponents(
-    getRefreshButton("home", target),
     getSellButton(target),
     getCashButton(target),
     getLawButton(target),
-    getBossButton(target)
+    getBossButton(target),
+  ];
+
+  const filtered = buttons.filter(
+    (b) => !b.data.custom_id.startsWith(`${ids.name}-${currentId}`)
   );
+  return new ActionRowBuilder().addComponents(filtered);
 }
 
 function getHomeEmbed(item) {
@@ -224,7 +167,7 @@ function getHomeEmbed(item) {
     .setDescription(
       "View your current suits or select department for more information."
     )
-    .setThumbnail(gear)
+    .setThumbnail(icons.gear)
     .addFields(
       { name: "Sellbot", value: getBasicSuitInfo(toon.cogsuits, "s") },
       { name: "Cashbot", value: getBasicSuitInfo(toon.cogsuits, "m") },
@@ -235,61 +178,22 @@ function getHomeEmbed(item) {
 }
 
 function getSellEmbed(item) {
-  const embed = getSuitEmbed(item, "Sellbot", "s");
-  return embed.setThumbnail(sellIcon);
+  return getSuitEmbed(item, "Sellbot", "s").setThumbnail(icons.sell);
 }
-
 function getCashEmbed(item) {
-  const embed = getSuitEmbed(item, "Cashbot", "m");
-  return embed.setThumbnail(cashIcon);
+  return getSuitEmbed(item, "Cashbot", "m").setThumbnail(icons.cash);
 }
-
 function getLawEmbed(item) {
-  const embed = getSuitEmbed(item, "Lawbot", "l");
-  return embed.setThumbnail(lawIcon);
+  return getSuitEmbed(item, "Lawbot", "l").setThumbnail(icons.law);
 }
-
 function getBossEmbed(item) {
-  const embed = getSuitEmbed(item, "Bossbot", "c");
-  return embed.setThumbnail(bossIcon);
+  return getSuitEmbed(item, "Bossbot", "c").setThumbnail(icons.boss);
 }
 
 function getSuitEmbed(item, title, type) {
   const toon = item.data;
   const suit = toon.cogsuits;
-  if (suit[type].hasDisguise) {
-    if (suit[type].level == 50) {
-      return new EmbedBuilder()
-        .setColor("Red")
-        .setAuthor({
-          name: toon.toon.name,
-          iconURL: getToonRendition(toon, "laffmeter"),
-        })
-        .setTitle(getBasicSuitInfo(suit, type))
-        .setDescription(`Maxed!`)
-        .setFooter({
-          text: `Facility earnings are an estimate.`,
-          iconURL: gear,
-        })
-        .setTimestamp(item.modified);
-    }
-    return new EmbedBuilder()
-      .setColor("Red")
-      .setAuthor({
-        name: toon.toon.name,
-        iconURL: getToonRendition(toon, "laffmeter"),
-      })
-      .setTitle(getBasicSuitInfo(suit, type))
-      .setDescription(
-        `${simplifyNeeded(suit, type)} to go!\nProgress: ${simplifyPromo(
-          suit,
-          type
-        )}`
-      )
-      .addFields(getSuitPath(suit, type))
-      .setFooter({ text: `Facility earnings are an estimate.`, iconURL: gear })
-      .setTimestamp(item.modified);
-  } else {
+  if (!suit[type].hasDisguise) {
     return new EmbedBuilder()
       .setColor("Red")
       .setAuthor({
@@ -300,70 +204,98 @@ function getSuitEmbed(item, title, type) {
       .setDescription(`This toon has no ${title} disguise.`)
       .setTimestamp(item.modified);
   }
+
+  if (suit[type].level === 50) {
+    return new EmbedBuilder()
+      .setColor("Red")
+      .setAuthor({
+        name: toon.toon.name,
+        iconURL: getToonRendition(toon, "laffmeter"),
+      })
+      .setTitle(getBasicSuitInfo(suit, type))
+      .setDescription("Maxed!")
+      .setFooter({
+        text: `Facility earnings are an estimate.`,
+        iconURL: icons.gear,
+      })
+      .setTimestamp(item.modified);
+  }
+
+  return new EmbedBuilder()
+    .setColor("Red")
+    .setAuthor({
+      name: toon.toon.name,
+      iconURL: getToonRendition(toon, "laffmeter"),
+    })
+    .setTitle(getBasicSuitInfo(suit, type))
+    .setDescription(
+      `${simplifyNeeded(suit, type)} to go!\nProgress: ${simplifyPromo(
+        suit,
+        type
+      )}`
+    )
+    .addFields(getSuitPath(suit, type))
+    .setFooter({
+      text: `Facility earnings are an estimate.`,
+      iconURL: icons.gear,
+    })
+    .setTimestamp(item.modified);
 }
 
+// Buttons
 function getHomeButton(target) {
   return new ButtonBuilder()
-    .setCustomId(`suit-home:${target}`)
+    .setCustomId(`${ids.name}-home:${target}`)
     .setLabel("Home")
     .setStyle("Primary");
 }
-
 function getRefreshButton(type, target) {
   return new ButtonBuilder()
-    .setCustomId(`suit-refresh:${type}:${target}`)
+    .setCustomId(`${ids.name}-refresh:${type}:${target}`)
     .setLabel("Refresh")
     .setStyle("Danger");
 }
-
 function getSellButton(target) {
   return new ButtonBuilder()
-    .setCustomId(`suit-sell:${target}`)
+    .setCustomId(`${ids.name}-sell:${target}`)
     .setLabel("Sellbot")
     .setStyle("Secondary");
 }
-
 function getCashButton(target) {
   return new ButtonBuilder()
-    .setCustomId(`suit-cash:${target}`)
+    .setCustomId(`${ids.name}-cash:${target}`)
     .setLabel("Cashbot")
     .setStyle("Secondary");
 }
-
 function getLawButton(target) {
   return new ButtonBuilder()
-    .setCustomId(`suit-law:${target}`)
+    .setCustomId(`${ids.name}-law:${target}`)
     .setLabel("Lawbot")
     .setStyle("Secondary");
 }
-
 function getBossButton(target) {
   return new ButtonBuilder()
-    .setCustomId(`suit-boss:${target}`)
+    .setCustomId(`${ids.name}-boss:${target}`)
     .setLabel("Bossbot")
     .setStyle("Secondary");
 }
 
+// Helpers
 function getSuitPath(toon, type) {
   const calc = new SuitsCalculator(JSON.stringify(toon));
   const { path, total } = calc.getBestPathWeighted(type);
-
-  if (total == -2) {
+  if (total == -2)
     return {
       name: "Recommended Activities",
       value: "None.\n**You are ready for promotion!**",
     };
-  }
 
-  let weighted = {};
-  path.forEach((item) => {
-    weighted[item] = (weighted[item] || 0) + 1;
-  });
+  const weighted = {};
+  path.forEach((item) => (weighted[item] = (weighted[item] || 0) + 1));
 
   let result = "";
-  for (const [item, count] of Object.entries(weighted)) {
+  for (const [item, count] of Object.entries(weighted))
     result += `(${count}) ${item}\n`;
-  }
   return {
     name: "Recommended Activities",
     value: result + `**Estimated earnings:** ${total}`,
@@ -372,28 +304,22 @@ function getSuitPath(toon, type) {
 
 function getBasicSuitInfo(toon, type) {
   const suitType = toon[type];
-  if (suitType.hasDisguise) {
-    const prestige = suitType.version == 2 ? " v2.0" : "";
-    return `${suitType.suit.name}, Level ${suitType.level} / ${getLevel(
-      toon,
-      type
-    )}${prestige}`;
-  }
-  return "No disguise!";
+  if (!suitType.hasDisguise) return "No disguise!";
+  const prestige = suitType.version === 2 ? " v2.0" : "";
+  return `${suitType.suit.name}, Level ${suitType.level} / ${getLevel(
+    toon,
+    type
+  )}${prestige}`;
 }
 
 function simplifyPromo(toon, type) {
-  const calc = new SuitsCalculator(JSON.stringify(toon));
-  return `${calc.getCurrent(type)} / ${calc.getTarget(type)}`;
+  return `${new SuitsCalculator(JSON.stringify(toon)).getCurrent(
+    type
+  )} / ${new SuitsCalculator(JSON.stringify(toon)).getTarget(type)}`;
 }
-
 function simplifyNeeded(toon, type) {
-  const calc = new SuitsCalculator(JSON.stringify(toon));
-  return calc.getNeeded(type);
+  return new SuitsCalculator(JSON.stringify(toon)).getNeeded(type);
 }
-
 function getLevel(toon, type) {
-  const { suit, version } = toon[type];
-  if (version == 2) return 50;
-  return levels[type][suit.name];
+  return toon[type].version === 2 ? 50 : levels[type][toon[type].suit.name];
 }

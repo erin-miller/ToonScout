@@ -1,4 +1,4 @@
-import React, { JSX, useState } from "react";
+import React, { JSX, useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { TabProps } from "./components/TabComponent";
 import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
@@ -8,21 +8,42 @@ import {
   renderSummons,
   renderPinkslips,
   renderRemotes,
+  getRewardSums,
 } from "@/app/utils/rewardsUtils";
 import { rewardImages } from "@/assets/rewards";
 import { imageAssets } from "@/assets/images";
 import { motion } from "framer-motion";
 import { FaCaretDown } from "react-icons/fa6";
+import { RewardSums } from "@/app/types";
+
+const getRewardsHash = (rewards: any) =>
+  Object.entries(rewards)
+    .map(([k, v]) => `${k}:${JSON.stringify(v)}`)
+    .join("|");
 
 const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   if (!toon.data.data.rewards) {
     return <div>No rewards available.</div>;
   }
-
+  const [sums, setSums] = useState<RewardSums | null>(null);
   const rewardTypes = ["SOS", "Unites", "Summons", "Pinkslips", "Remotes"];
   const [selectedReward, setSelectedReward] = useState(rewardTypes[0]);
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
   const [clickedButton, setClickedButton] = useState<string | null>(null);
+  const prevRewards = useRef<string>("");
+
+  // keep track of sums
+  useEffect(() => {
+    const currRewards = getRewardsHash(toon.data.data.rewards);
+    if (currRewards === prevRewards.current) return;
+    prevRewards.current = currRewards;
+
+    async function checkSums() {
+      const res = await getRewardSums(toon.data.data.rewards);
+      setSums(res);
+    }
+    checkSums();
+  }, [toon]);
 
   // sos card sorting
   const [selectedSort, setSelectedSort] = useState("All");
@@ -31,13 +52,10 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   // flip states for SOS cards
   const sosCards = toon.data.data.rewards.sos || {};
   const [sosFlipStates, setSOSFlipStates] = useState<Record<string, boolean>>(
-    Object.keys(sosCards).reduce(
-      (acc, card) => {
-        acc[card] = false;
-        return acc;
-      },
-      {} as Record<string, boolean>,
-    ),
+    Object.keys(sosCards).reduce((acc, card) => {
+      acc[card] = false;
+      return acc;
+    }, {} as Record<string, boolean>)
   );
 
   const toggleSOSFlip = (card: string) => {
@@ -53,14 +71,11 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
     Record<string, boolean>
   >(
     Array.isArray(remotes)
-      ? remotes.reduce(
-          (acc: Record<string, boolean>, remote: string) => {
-            acc[remote] = false;
-            return acc;
-          },
-          {} as Record<string, boolean>,
-        )
-      : {},
+      ? remotes.reduce((acc: Record<string, boolean>, remote: string) => {
+          acc[remote] = false;
+          return acc;
+        }, {} as Record<string, boolean>)
+      : {}
   );
 
   const toggleRemoteFlip = (remote: string) => {
@@ -73,7 +88,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
   const renders: Record<string, () => JSX.Element> = {
     SOS: () => renderSOS(toon, selectedSort, sosFlipStates, toggleSOSFlip),
     Unites: () => renderUnites(toon),
-    Summons: () => renderSummons(toon),
+    Summons: () => (sums ? renderSummons(toon, sums) : <div>Loading...</div>),
     Pinkslips: renderPinkslips,
     Remotes: () => renderRemotes(toon, remoteFlipStates, toggleRemoteFlip),
   };

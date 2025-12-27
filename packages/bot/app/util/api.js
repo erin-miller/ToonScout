@@ -84,3 +84,24 @@ export async function carnivalStatus() {
     console.error("Error during cavalcade retrieval:", error);
   }
 }
+
+export const getRewardSums = async (rewards) => {
+  try {
+    const response = await fetch(API_LINK + "/utility/get-reward-sums", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ rewards }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching reward sums:", error);
+    throw error;
+  }
+};
