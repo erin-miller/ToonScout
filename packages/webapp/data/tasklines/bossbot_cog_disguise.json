@@ -8,14 +8,11 @@
       {
         "order": 1,
         "objective": "Defeat a Flunky (Anywhere)",
-        "alternatives": [
-          "defeat a flunky (anywhere)",
-          "Defeat a Flunky (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_lower_left_leg",
@@ -26,14 +23,11 @@
       {
         "order": 1,
         "objective": "Defeat a Pencil Pusher (Anywhere)",
-        "alternatives": [
-          "Defeat a Pencil Pusher (Anywhere)",
-          "defeat a pencil pusher (anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_left_foot",
@@ -44,14 +38,11 @@
       {
         "order": 1,
         "objective": "Defeat a Yesman (Anywhere)",
-        "alternatives": [
-          "defeat a yesman (anywhere)",
-          "Defeat a Yesman (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_upper_right_leg",
@@ -62,14 +53,11 @@
       {
         "order": 1,
         "objective": "Defeat a Micromanager (Anywhere)",
-        "alternatives": [
-          "Defeat a Micromanager (Anywhere)",
-          "defeat a micromanager (anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_lower_right_leg",
@@ -80,14 +68,11 @@
       {
         "order": 1,
         "objective": "Defeat a Downsizer (Anywhere)",
-        "alternatives": [
-          "defeat a downsizer (anywhere)",
-          "Defeat a Downsizer (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_right_foot",
@@ -98,14 +83,11 @@
       {
         "order": 1,
         "objective": "Defeat a Head Hunter (Anywhere)",
-        "alternatives": [
-          "defeat a head hunter (anywhere)",
-          "Defeat a Head Hunter (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_left_shoulder",
@@ -116,14 +98,11 @@
       {
         "order": 1,
         "objective": "Defeat a Corporate Raider (Anywhere)",
-        "alternatives": [
-          "Defeat a Corporate Raider (Anywhere)",
-          "defeat a corporate raider (anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_right_shoulder",
@@ -134,14 +113,11 @@
       {
         "order": 1,
         "objective": "Defeat a Big Cheese (Anywhere)",
-        "alternatives": [
-          "defeat a big cheese (anywhere)",
-          "Defeat a Big Cheese (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_chest",
@@ -152,15 +128,11 @@
       {
         "order": 1,
         "objective": "Defeat a one+ story Bossbot Cog Building (Anywhere)",
-        "alternatives": [
-          "defeat a 1+ story bossbot cog building (anywhere)",
-          "defeat a one+ story bossbot cog building (anywhere)",
-          "Defeat a one+ story Bossbot Cog Building (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_health_meter",
@@ -171,15 +143,11 @@
       {
         "order": 1,
         "objective": "Defeat a two+ story Bossbot Cog Building (Anywhere)",
-        "alternatives": [
-          "defeat a 2+ story bossbot cog building (anywhere)",
-          "defeat a two+ story bossbot cog building (anywhere)",
-          "Defeat a two+ story Bossbot Cog Building (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_pelvis",
@@ -190,15 +158,11 @@
       {
         "order": 1,
         "objective": "Defeat a three+ story Bossbot Cog Building (Anywhere)",
-        "alternatives": [
-          "Defeat a three+ story Bossbot Cog Building (Anywhere)",
-          "defeat a 3+ story bossbot cog building (anywhere)",
-          "defeat a three+ story bossbot cog building (anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_upper_left_arm",
@@ -209,15 +173,11 @@
       {
         "order": 1,
         "objective": "Defeat a four+ story Bossbot Cog Building (Anywhere)",
-        "alternatives": [
-          "Defeat a four+ story Bossbot Cog Building (Anywhere)",
-          "defeat a four+ story bossbot cog building (anywhere)",
-          "defeat a 4+ story bossbot cog building (anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_lower_left_arm",
@@ -228,15 +188,11 @@
       {
         "order": 1,
         "objective": "Defeat a five-story Bossbot Cog Building (Anywhere)",
-        "alternatives": [
-          "defeat a five-story bossbot cog building (anywhere)",
-          "Defeat a five-story Bossbot Cog Building (Anywhere)",
-          "defeat a 5-story bossbot cog building (anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_left_hand",
@@ -247,15 +203,11 @@
       {
         "order": 1,
         "objective": "Defeat a Version 2.0 Cog (Anywhere)",
-        "alternatives": [
-          "defeat a version 2.0 cog (anywhere)",
-          "Defeat a Version 2.0 Cog (Anywhere)",
-          "Defeat a Version two.0 Cog (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_upper_right_arm",
@@ -266,15 +218,11 @@
       {
         "order": 1,
         "objective": "Defeat a Version 2.0 Cog (Anywhere)",
-        "alternatives": [
-          "defeat a version 2.0 cog (anywhere)",
-          "Defeat a Version 2.0 Cog (Anywhere)",
-          "Defeat a Version two.0 Cog (Anywhere)"
-        ],
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_lower_right_arm",
@@ -285,15 +233,12 @@
       {
         "order": 1,
         "objective": "Defeat The Club President (Bossbot Golf Courses, Bossbot Headquarters)",
-        "alternatives": [
-          "defeat the club president (bossbot golf courses, bossbot headquarters)",
-          "Defeat The Club President (Bossbot Golf Courses, Bossbot Headquarters)"
-        ],
         "building": "Bossbot Golf Courses",
         "location": "Bossbot Headquarters"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   },
   {
     "id": "bossbot_cog_disguise_right_hand",
@@ -303,15 +248,12 @@
     "steps": [
       {
         "order": 1,
-        "objective": "Visit Flippy ( Toon Hall , Toontown Central )",
-        "alternatives": [
-          "Visit Flippy ( Toon Hall , Toontown Central )",
-          "visit flippy ( toon hall , toontown central )"
-        ],
+        "objective": "Visit Flippy (Toon Hall, Toontown Central)",
         "building": "Toon Hall",
         "location": "Toontown Central"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+    "wikiUrl": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:33:54Z"
   }
 ]

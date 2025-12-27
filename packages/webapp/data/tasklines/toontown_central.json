@@ -8,10 +8,6 @@
       {
         "order": 1,
         "objective": "One of the following: Visit Mary Visit Will Wiseacre",
-        "alternatives": [
-          "1 of the following: visit mary visit will wiseacre",
-          "One of the following: Visit Mary Visit Will Wiseacre"
-        ],
         "npc": "One of the following: Visit Mary",
         "building": "Mary's Go Around Travel Company",
         "location": "Toontown Central"
@@ -19,10 +15,6 @@
       {
         "order": 2,
         "objective": "One of the following: Visit Tee Hee Visit Sally Spittake Visit Charlie Chortle",
-        "alternatives": [
-          "One of the following: Visit Tee Hee Visit Sally Spittake Visit Charlie Chortle",
-          "1 of the following: visit tee hee visit sally spittake visit charlie chortle"
-        ],
         "npc": "One of the following: Visit Tee Hee",
         "building": "Laughter Hours Cafe",
         "location": "Toontown Central"
@@ -30,32 +22,21 @@
       {
         "order": 3,
         "objective": "Recover 4 Recipes from the Cogs",
-        "alternatives": [
-          "recover four recipes from the cogs",
-          "defeat four recipes from the cogs",
-          "Defeat 4 Recipes from the Cogs",
-          "Recover 4 Recipes from the Cogs"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 4,
-        "objective": "One of the following: Return to Tee Hee Return to Sally Spittake Return to Charlie Chortle",
-        "alternatives": [
-          "One of the following: Return to Tee Hee Return to Sally Spittake Return to Charlie Chortle",
-          "1 of the following: return to tee hee return to sally spittake return to charlie chortle"
-        ]
+        "objective": "One of the following: Return to Tee Hee Return to Sally Spittake Return to Charlie Chortle"
       },
       {
         "order": 5,
         "objective": "Visit HQ Officer",
-        "alternatives": [
-          "Visit HQ Officer"
-        ],
+        "building": "Toon Headquarters",
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Teleport_access"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Teleport_access",
+    "lastUpdated": "2022-11-07T02:04:55Z"
   },
   {
     "id": "toontown_central_upgraded_gag_pouch",
@@ -66,66 +47,40 @@
       {
         "order": 1,
         "objective": "Visit Loony Louis",
-        "alternatives": [
-          "Visit Loony Louis"
-        ],
         "building": "Used Clown Cars",
         "location": "Toontown Central"
       },
       {
         "order": 2,
         "objective": "Go fishing for 4 Clown Tires",
-        "alternatives": [
-          "go fishing for four clown tires",
-          "Go fishing for 4 Clown Tires"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Loony Louis",
-        "alternatives": [
-          "Return to Loony Louis"
-        ]
+        "objective": "Return to Loony Louis"
       },
       {
         "order": 4,
         "objective": "Visit Lucy Tires",
-        "alternatives": [
-          "Visit Lucy Tires"
-        ],
         "building": "Crack Up Auto Repair",
         "location": "Toontown Central"
       },
       {
         "order": 5,
         "objective": "Defeat 6 level 3 Cogs",
-        "alternatives": [
-          "recover six level 3 cogs",
-          "recover 6 level three cogs",
-          "Recover 6 level 3 Cogs",
-          "defeat 6 level three cogs",
-          "Defeat 6 level 3 Cogs",
-          "defeat six level 3 cogs"
-        ],
         "location": "Toontown Central"
       },
       {
         "order": 6,
-        "objective": "Return to Lucy Tires",
-        "alternatives": [
-          "Return to Lucy Tires"
-        ]
+        "objective": "Return to Lucy Tires"
       },
       {
         "order": 7,
-        "objective": "Deliver an Air Pump to Loony Louis",
-        "alternatives": [
-          "Deliver an Air Pump to Loony Louis"
-        ]
+        "objective": "Deliver an Air Pump to Loony Louis"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Gag_pouch"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Gag_pouch",
+    "lastUpdated": "2022-01-17T01:44:20Z"
   },
   {
     "id": "toontown_central_upgraded_jellybean_pouch",
@@ -136,68 +91,40 @@
       {
         "order": 1,
         "objective": "Visit Woody Nickel",
-        "alternatives": [
-          "Visit Woody Nickel"
-        ],
         "building": "Funny Money Savings & Loan",
         "location": "Toontown Central"
       },
       {
         "order": 2,
         "objective": "Recover 5 Adding Machines from Cashbots",
-        "alternatives": [
-          "Recover 5 Adding Machines from Cashbots",
-          "recover five adding machines from cashbots",
-          "Defeat 5 Adding Machines from Cashbots",
-          "defeat five adding machines from cashbots"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Woody Nickel",
-        "alternatives": [
-          "Return to Woody Nickel"
-        ]
+        "objective": "Return to Woody Nickel"
       },
       {
         "order": 4,
         "objective": "Deliver Adding Machines to Feather Duster",
-        "alternatives": [
-          "Deliver Adding Machines to Feather Duster"
-        ],
         "building": "Tickle Machines",
         "location": "Toontown Central"
       },
       {
         "order": 5,
-        "objective": "Recover 10 Cog Gears from level 3 + Cogs",
-        "alternatives": [
-          "recover 10 cog gears from level three + cogs",
-          "Defeat 10 Cog Gears from level 3 + Cogs",
-          "recover ten cog gears from level 3 + cogs",
-          "defeat ten cog gears from level 3 + cogs",
-          "defeat 10 cog gears from level three + cogs",
-          "Recover 10 Cog Gears from level 3 + Cogs"
-        ],
+        "objective": "Recover 10 Cog Gears from level 3+ Cogs",
         "location": "Anywhere"
       },
       {
         "order": 6,
-        "objective": "Return to Feather Duster",
-        "alternatives": [
-          "Return to Feather Duster"
-        ]
+        "objective": "Return to Feather Duster"
       },
       {
         "order": 7,
-        "objective": "Deliver Adding Machines to Woody Nickel",
-        "alternatives": [
-          "Deliver Adding Machines to Woody Nickel"
-        ]
+        "objective": "Deliver Adding Machines to Woody Nickel"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Jellybean_pouch"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Jellybean_pouch",
+    "lastUpdated": "2022-01-17T01:46:07Z"
   },
   {
     "id": "toontown_central_increased_toontask_capacity",
@@ -208,71 +135,45 @@
       {
         "order": 1,
         "objective": "Visit Sharky Jones",
-        "alternatives": [
-          "Visit Sharky Jones"
-        ],
         "building": "14 Karat Goldfish",
         "location": "Toontown Central"
       },
       {
         "order": 2,
         "objective": "Recover a Goldfish Receipt from the Cogs",
-        "alternatives": [
-          "Defeat a Goldfish Receipt from the Cogs",
-          "Recover a Goldfish Receipt from the Cogs"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Sharky Jones",
-        "alternatives": [
-          "Return to Sharky Jones"
-        ]
+        "objective": "Return to Sharky Jones"
       },
       {
         "order": 4,
         "objective": "Deliver a Goldfish Receipt to Professor Wiggle",
-        "alternatives": [
-          "Deliver a Goldfish Receipt to Professor Wiggle"
-        ],
         "building": "Professor Wiggle's House of Giggles",
         "location": "Toontown Central"
       },
       {
         "order": 5,
         "objective": "Recover a Goldfish from Flunkies",
-        "alternatives": [
-          "Recover a Goldfish from Flunkies",
-          "Defeat a Goldfish from Flunkies"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 6,
-        "objective": "Return to Sharky Jones",
-        "alternatives": [
-          "Return to Sharky Jones"
-        ]
+        "objective": "Return to Sharky Jones"
       },
       {
         "order": 7,
         "objective": "Go fishing for 4 Goldfish",
-        "alternatives": [
-          "go fishing for four goldfish",
-          "Go fishing for 4 Goldfish"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 8,
-        "objective": "Return to Sharky Jones",
-        "alternatives": [
-          "Return to Sharky Jones"
-        ]
+        "objective": "Return to Sharky Jones"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/ToonTask_capacity"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/ToonTask_capacity",
+    "lastUpdated": "2022-01-17T02:03:36Z"
   },
   {
     "id": "toontown_central_gag_track_training",
@@ -283,91 +184,53 @@
       {
         "order": 1,
         "objective": "Visit Flippy",
-        "alternatives": [
-          "Visit Flippy"
-        ],
+        "building": "Toon Hall",
         "location": "Toontown Central"
       },
       {
         "order": 2,
         "objective": "Defeat 4 Cogs",
-        "alternatives": [
-          "Defeat 4 Cogs",
-          "defeat four cogs",
-          "Recover 4 Cogs",
-          "recover four cogs"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Flippy",
-        "alternatives": [
-          "Return to Flippy"
-        ]
+        "objective": "Return to Flippy"
       },
       {
         "order": 4,
         "objective": "One of the following: Defeat 4 Sellbots Defeat 4 Cashbots Defeat 4 Lawbots Defeat 4 Bossbots",
-        "alternatives": [
-          "One of the following: Recover 4 Sellbots Recover 4 Cashbots Recover 4 Lawbots Recover 4 Bossbots",
-          "one of the following: defeat 4 sellbots defeat 4 cashbots defeat four lawbots defeat 4 bossbots",
-          "one of the following: recover 4 sellbots recover 4 cashbots recover 4 lawbots recover four bossbots",
-          "one of the following: defeat 4 sellbots defeat 4 cashbots defeat 4 lawbots defeat four bossbots",
-          "one of the following: defeat 4 sellbots defeat four cashbots defeat 4 lawbots defeat 4 bossbots",
-          "1 of the following: defeat 4 sellbots defeat 4 cashbots defeat 4 lawbots defeat 4 bossbots",
-          "one of the following: defeat four sellbots defeat 4 cashbots defeat 4 lawbots defeat 4 bossbots",
-          "one of the following: recover four sellbots recover 4 cashbots recover 4 lawbots recover 4 bossbots",
-          "one of the following: recover 4 sellbots recover four cashbots recover 4 lawbots recover 4 bossbots",
-          "one of the following: recover 4 sellbots recover 4 cashbots recover four lawbots recover 4 bossbots",
-          "1 of the following: recover 4 sellbots recover 4 cashbots recover 4 lawbots recover 4 bossbots",
-          "One of the following: Defeat 4 Sellbots Defeat 4 Cashbots Defeat 4 Lawbots Defeat 4 Bossbots"
-        ],
         "npc": "One of the following: Defeat 4 Sellbots",
         "location": "Anywhere"
       },
       {
         "order": 5,
-        "objective": "Return to Flippy",
-        "alternatives": [
-          "Return to Flippy"
-        ]
+        "objective": "Return to Flippy"
       },
       {
         "order": 6,
         "objective": "Visit Franz Neckvein",
-        "alternatives": [
-          "Visit Franz Neckvein"
-        ],
         "building": "The Punch Line Gym",
         "location": "Toontown Central"
       },
       {
         "order": 7,
         "objective": "Visit Honey Haha",
-        "alternatives": [
-          "Visit Honey Haha"
-        ],
         "building": "The Laughin' Place",
         "location": "Toontown Central"
       },
       {
         "order": 8,
         "objective": "Visit Librarian Larry",
-        "alternatives": [
-          "Visit Librarian Larry"
-        ],
+        "building": "Toontown Library",
         "location": "Toontown Central"
       },
       {
         "order": 9,
-        "objective": "Choose Toon-Up or Sound",
-        "alternatives": [
-          "Choose Toon-Up or Sound"
-        ]
+        "objective": "Choose Toon-Up or Sound"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Gag_track_training"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Gag_track_training",
+    "lastUpdated": "2025-03-30T10:09:21Z"
   },
   {
     "id": "toontown_central_final_gag_track_training",
@@ -378,117 +241,69 @@
       {
         "order": 1,
         "objective": "Visit Postmaster Pete",
-        "alternatives": [
-          "Visit Postmaster Pete"
-        ],
         "building": "Toontown Post Office",
         "location": "Toontown Central"
       },
       {
         "order": 2,
-        "objective": "Recover a Package from level 3 + Cogs",
-        "alternatives": [
-          "Defeat a Package from level 3 + Cogs",
-          "defeat a package from level three + cogs",
-          "Recover a Package from level 3 + Cogs",
-          "recover a package from level three + cogs"
-        ],
+        "objective": "Recover a Package from level 3+ Cogs",
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Postmaster Pete",
-        "alternatives": [
-          "Return to Postmaster Pete"
-        ]
+        "objective": "Return to Postmaster Pete"
       },
       {
         "order": 4,
         "objective": "Deliver a Package to Dr. Tom",
-        "alternatives": [
-          "Deliver a Package to Dr. Tom"
-        ],
         "building": "Dr. Tom Foolery",
         "location": "Toontown Central"
       },
       {
         "order": 5,
         "objective": "Defeat 10 Cogs",
-        "alternatives": [
-          "Recover 10 Cogs",
-          "defeat ten cogs",
-          "recover ten cogs",
-          "Defeat 10 Cogs"
-        ],
         "location": "Toontown Central"
       },
       {
         "order": 6,
-        "objective": "Return to Dr. Tom",
-        "alternatives": [
-          "Return to Dr. Tom"
-        ]
+        "objective": "Return to Dr. Tom"
       },
       {
         "order": 7,
         "objective": "One of the following: Recover a Package from Sellbots Recover a Package from Cashbots Recover a Package from Lawbots Recover a Package from Bossbots",
-        "alternatives": [
-          "One of the following: Recover a Package from Sellbots Recover a Package from Cashbots Recover a Package from Lawbots Recover a Package from Bossbots",
-          "1 of the following: defeat a package from sellbots defeat a package from cashbots defeat a package from lawbots defeat a package from bossbots",
-          "1 of the following: recover a package from sellbots recover a package from cashbots recover a package from lawbots recover a package from bossbots",
-          "One of the following: Defeat a Package from Sellbots Defeat a Package from Cashbots Defeat a Package from Lawbots Defeat a Package from Bossbots"
-        ],
         "npc": "One of the following: Recover a Package from Sellbots",
         "location": "Anywhere"
       },
       {
         "order": 8,
-        "objective": "Return to Dr. Tom",
-        "alternatives": [
-          "Return to Dr. Tom"
-        ]
+        "objective": "Return to Dr. Tom"
       },
       {
         "order": 9,
         "objective": "Deliver a Package to Dr. Pulyurleg",
-        "alternatives": [
-          "Deliver a Package to Dr. Pulyurleg"
-        ],
         "building": "Dr. Pulyurleg Chiropractor",
         "location": "Toontown Central"
       },
       {
         "order": 10,
-        "objective": "Visit Postmaster Pete",
-        "alternatives": [
-          "Visit Postmaster Pete"
-        ]
+        "objective": "Visit Postmaster Pete"
       },
       {
         "order": 11,
         "objective": "Recover a Package from the Cogs",
-        "alternatives": [
-          "Recover a Package from the Cogs",
-          "Defeat a Package from the Cogs"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 12,
-        "objective": "Return to Postmaster Pete",
-        "alternatives": [
-          "Return to Postmaster Pete"
-        ]
+        "objective": "Return to Postmaster Pete"
       },
       {
         "order": 13,
-        "objective": "Deliver a Package to Dr. Pulyurleg",
-        "alternatives": [
-          "Deliver a Package to Dr. Pulyurleg"
-        ]
+        "objective": "Deliver a Package to Dr. Pulyurleg"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Final_gag_track_training"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/Final_gag_track_training",
+    "lastUpdated": "2025-03-30T10:09:24Z"
   },
   {
     "id": "toontown_central_1_laff_boost",
@@ -499,41 +314,27 @@
       {
         "order": 1,
         "objective": "Visit Professor Pete",
-        "alternatives": [
-          "Visit Professor Pete"
-        ],
+        "building": "Toontown Schoolhouse",
         "location": "Toontown Central"
       },
       {
         "order": 2,
-        "objective": "Recover 5 Cog Gears from level 2 + Cogs",
-        "alternatives": [
-          "recover 5 cog gears from level two + cogs",
-          "Defeat 5 Cog Gears from level 2 + Cogs",
-          "Recover 5 Cog Gears from level 2 + Cogs",
-          "recover five cog gears from level 2 + cogs",
-          "defeat five cog gears from level 2 + cogs",
-          "defeat 5 cog gears from level two + cogs"
-        ],
+        "objective": "Recover 5 Cog Gears from level 2+ Cogs",
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Professor Pete",
-        "alternatives": [
-          "Return to Professor Pete"
-        ]
+        "objective": "Return to Professor Pete"
       },
       {
         "order": 4,
         "objective": "Deliver a Cog Report to HQ Officer",
-        "alternatives": [
-          "Deliver a Cog Report to HQ Officer"
-        ],
+        "building": "Toon Headquarters",
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B1_laff_boost_(Professor_Pete)"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B1_laff_boost_(Professor_Pete)",
+    "lastUpdated": "2022-01-17T01:49:05Z"
   },
   {
     "id": "toontown_central_2_laff_boost",
@@ -544,35 +345,23 @@
       {
         "order": 1,
         "objective": "Visit Honey Haha",
-        "alternatives": [
-          "Visit Honey Haha"
-        ],
         "building": "The Laughin' Place",
         "location": "Toontown Central"
       },
       {
         "order": 2,
-        "objective": "Defeat 8 level 2 + Cogs",
-        "alternatives": [
-          "Defeat 8 level 2 + Cogs",
-          "Recover 8 level 2 + Cogs",
-          "defeat eight level 2 + cogs",
-          "recover 8 level two + cogs",
-          "defeat 8 level two + cogs",
-          "recover eight level 2 + cogs"
-        ],
+        "objective": "Defeat 8 level 2+ Cogs",
         "location": "Toontown Central"
       },
       {
         "order": 3,
         "objective": "Return to HQ Officer",
-        "alternatives": [
-          "Return to HQ Officer"
-        ],
+        "building": "Toon Headquarters",
         "location": "Anywhere"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B2_laff_boost_(Honey_Haha)"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B2_laff_boost_(Honey_Haha)",
+    "lastUpdated": "2023-07-05T19:45:48Z"
   },
   {
     "id": "toontown_central_2_laff_boost",
@@ -583,47 +372,30 @@
       {
         "order": 1,
         "objective": "Visit Professor Wiggle",
-        "alternatives": [
-          "Visit Professor Wiggle"
-        ],
         "building": "Professor Wiggle's House of Giggles",
         "location": "Toontown Central"
       },
       {
         "order": 2,
         "objective": "Go fishing for Octopus Ink",
-        "alternatives": [
-          "Go fishing for Octopus Ink"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Professor Wiggle",
-        "alternatives": [
-          "Return to Professor Wiggle"
-        ]
+        "objective": "Return to Professor Wiggle"
       },
       {
         "order": 4,
         "objective": "Defeat 6 Bloodsuckers",
-        "alternatives": [
-          "defeat six bloodsuckers",
-          "Defeat 6 Bloodsuckers",
-          "recover six bloodsuckers",
-          "Recover 6 Bloodsuckers"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 5,
-        "objective": "Return to Professor Wiggle",
-        "alternatives": [
-          "Return to Professor Wiggle"
-        ]
+        "objective": "Return to Professor Wiggle"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B2_laff_boost_(Professor_Wiggle)"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B2_laff_boost_(Professor_Wiggle)",
+    "lastUpdated": "2022-01-17T01:51:32Z"
   },
   {
     "id": "toontown_central_3_laff_boost",
@@ -634,61 +406,38 @@
       {
         "order": 1,
         "objective": "Visit Sticky Lou",
-        "alternatives": [
-          "Visit Sticky Lou"
-        ],
         "building": "Blue Glue",
         "location": "Toontown Central"
       },
       {
         "order": 2,
         "objective": "Recover Oil from Sellbots",
-        "alternatives": [
-          "Recover Oil from Sellbots",
-          "Defeat Oil from Sellbots"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Sticky Lou",
-        "alternatives": [
-          "Return to Sticky Lou"
-        ]
+        "objective": "Return to Sticky Lou"
       },
       {
         "order": 4,
         "objective": "Recover Grease from Lawbots",
-        "alternatives": [
-          "Recover Grease from Lawbots",
-          "Defeat Grease from Lawbots"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 5,
-        "objective": "Return to Sticky Lou",
-        "alternatives": [
-          "Return to Sticky Lou"
-        ]
+        "objective": "Return to Sticky Lou"
       },
       {
         "order": 6,
         "objective": "Recover Water from Cashbots",
-        "alternatives": [
-          "Defeat Water from Cashbots",
-          "Recover Water from Cashbots"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 7,
-        "objective": "Return to Sticky Lou",
-        "alternatives": [
-          "Return to Sticky Lou"
-        ]
+        "objective": "Return to Sticky Lou"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B3_laff_boost_(Sticky_Lou)"
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks/%2B3_laff_boost_(Sticky_Lou)",
+    "lastUpdated": "2022-01-17T01:52:30Z"
   }
 ]

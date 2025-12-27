@@ -8,66 +8,39 @@
       {
         "order": 1,
         "objective": "Visit Dr. Fret",
-        "alternatives": [
-          "Visit Dr. Fret"
-        ],
         "building": "Dr. Fret's Dentistry",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 2,
         "objective": "Defeat 10 Number Crunchers",
-        "alternatives": [
-          "Recover 10 Number Crunchers",
-          "Defeat 10 Number Crunchers",
-          "defeat ten number crunchers",
-          "recover ten number crunchers"
-        ],
         "location": "Minnie's Melodyland"
       },
       {
         "order": 3,
-        "objective": "Return to Dr. Fret",
-        "alternatives": [
-          "Return to Dr. Fret"
-        ]
+        "objective": "Return to Dr. Fret"
       },
       {
         "order": 4,
         "objective": "Defeat 20 Cashbots",
-        "alternatives": [
-          "Defeat 20 Cashbots",
-          "recover twenty cashbots",
-          "Recover 20 Cashbots",
-          "defeat twenty cashbots"
-        ],
         "location": "Minnie's Melodyland"
       },
       {
         "order": 5,
-        "objective": "Return to Dr. Fret",
-        "alternatives": [
-          "Return to Dr. Fret"
-        ]
+        "objective": "Return to Dr. Fret"
       },
       {
         "order": 6,
         "objective": "Defeat a Cashbot Cog Building",
-        "alternatives": [
-          "Defeat a Cashbot Cog Building",
-          "Recover a Cashbot Cog Building"
-        ],
         "location": "Minnie's Melodyland"
       },
       {
         "order": 7,
-        "objective": "Return to Dr. Fret",
-        "alternatives": [
-          "Return to Dr. Fret"
-        ]
+        "objective": "Return to Dr. Fret"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Teleport_access"
+    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Teleport_access",
+    "lastUpdated": "2022-01-17T02:30:17Z"
   },
   {
     "id": "minnies_melodyland_upgraded_gag_pouch",
@@ -78,103 +51,65 @@
       {
         "order": 1,
         "objective": "Visit Tom",
-        "alternatives": [
-          "Visit Tom"
-        ],
         "building": "Tom-Tom's Drums",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 2,
         "objective": "Visit Tina",
-        "alternatives": [
-          "Visit Tina"
-        ],
         "building": "Tina's Concertina Concerts",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 3,
-        "objective": "Deliver Tina's Inventory to Tom",
-        "alternatives": [
-          "Deliver Tina's Inventory to Tom"
-        ]
+        "objective": "Deliver Tina's Inventory to Tom"
       },
       {
         "order": 4,
         "objective": "Visit Yuki",
-        "alternatives": [
-          "Visit Yuki"
-        ],
         "building": "Yuki's Ukeleles",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 5,
         "objective": "Defeat 10 Cogs",
-        "alternatives": [
-          "Recover 10 Cogs",
-          "defeat ten cogs",
-          "recover ten cogs",
-          "Defeat 10 Cogs"
-        ],
         "location": "Minnie's Melodyland"
       },
       {
         "order": 6,
-        "objective": "Return to Yuki",
-        "alternatives": [
-          "Return to Yuki"
-        ]
+        "objective": "Return to Yuki"
       },
       {
         "order": 7,
-        "objective": "Deliver Yuki's Inventory to Tom",
-        "alternatives": [
-          "Deliver Yuki's Inventory to Tom"
-        ]
+        "objective": "Deliver Yuki's Inventory to Tom"
       },
       {
         "order": 8,
         "objective": "Visit Fifi",
-        "alternatives": [
-          "Visit Fifi"
-        ],
         "building": "Fifi's Fiddles",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 9,
         "objective": "Visit Cleff",
-        "alternatives": [
-          "Visit Cleff"
-        ],
         "building": "Notations",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 10,
-        "objective": "Deliver a Whole Cream Pie to Cleff",
-        "alternatives": [
-          "Deliver a Whole Cream Pie to Cleff"
-        ]
+        "objective": "Deliver a Whole Cream Pie to Cleff"
       },
       {
         "order": 11,
-        "objective": "Deliver an Inventory Form to Fifi",
-        "alternatives": [
-          "Deliver an Inventory Form to Fifi"
-        ]
+        "objective": "Deliver an Inventory Form to Fifi"
       },
       {
         "order": 12,
-        "objective": "Deliver Fifi's Inventory to Tom",
-        "alternatives": [
-          "Deliver Fifi's Inventory to Tom"
-        ]
+        "objective": "Deliver Fifi's Inventory to Tom"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Gag_pouch"
+    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Gag_pouch",
+    "lastUpdated": "2022-01-17T02:28:44Z"
   },
   {
     "id": "minnies_melodyland_upgraded_jellybean_pouch",
@@ -185,110 +120,69 @@
       {
         "order": 1,
         "objective": "Visit Anna",
-        "alternatives": [
-          "Visit Anna"
-        ],
         "building": "Anna's Cruises",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 2,
         "objective": "Recover Lumber Jack's Ticket from Glad Handers",
-        "alternatives": [
-          "Recover Lumber Jack's Ticket from Glad Handers",
-          "Defeat Lumber Jack's Ticket from Glad Handers"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 3,
-        "objective": "Return to Anna",
-        "alternatives": [
-          "Return to Anna"
-        ]
+        "objective": "Return to Anna"
       },
       {
         "order": 4,
         "objective": "Deliver Lumber Jack's Ticket to Lumber Jack",
-        "alternatives": [
-          "Deliver Lumber Jack's Ticket to Lumber Jack"
-        ],
         "building": "Timbre! Equipment for the Singing Lumberjack",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 5,
-        "objective": "Visit Anna",
-        "alternatives": [
-          "Visit Anna"
-        ]
+        "objective": "Visit Anna"
       },
       {
         "order": 6,
         "objective": "Recover Tabitha's Ticket from Glad Handers",
-        "alternatives": [
-          "Recover Tabitha's Ticket from Glad Handers",
-          "Defeat Tabitha's Ticket from Glad Handers"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 7,
-        "objective": "Return to Anna",
-        "alternatives": [
-          "Return to Anna"
-        ]
+        "objective": "Return to Anna"
       },
       {
         "order": 8,
         "objective": "Deliver Tabitha's Ticket to Tabitha",
-        "alternatives": [
-          "Deliver Tabitha's Ticket to Tabitha"
-        ],
         "building": "Ursatz for Really Kool Katz!",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 9,
-        "objective": "Visit Anna",
-        "alternatives": [
-          "Visit Anna"
-        ]
+        "objective": "Visit Anna"
       },
       {
         "order": 10,
         "objective": "Recover Barry's Ticket from Glad Handers",
-        "alternatives": [
-          "Recover Barry's Ticket from Glad Handers",
-          "Defeat Barry's Ticket from Glad Handers"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 11,
-        "objective": "Return to Anna",
-        "alternatives": [
-          "Return to Anna"
-        ]
+        "objective": "Return to Anna"
       },
       {
         "order": 12,
         "objective": "Deliver Barry's Ticket to Barry",
-        "alternatives": [
-          "Deliver Barry's Ticket to Barry"
-        ],
         "building": "The Baritone Barber",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 13,
-        "objective": "Visit Anna",
-        "alternatives": [
-          "Visit Anna"
-        ]
+        "objective": "Visit Anna"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Jellybean_pouch"
+    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Jellybean_pouch",
+    "lastUpdated": "2022-01-17T02:29:41Z"
   },
   {
     "id": "minnies_melodyland_gag_track_training",
@@ -299,13 +193,11 @@
       {
         "order": 1,
         "objective": "One of the following: Choose Trap or Toon-Up Choose Trap or Sound",
-        "alternatives": [
-          "One of the following: Choose Trap or Toon-Up Choose Trap or Sound",
-          "1 of the following: choose trap or toon-up choose trap or sound"
-        ]
+        "npc": "One of the following: Choose Trap or Toon-Up"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Gag_track_training"
+    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Gag_track_training",
+    "lastUpdated": "2025-03-30T10:09:46Z"
   },
   {
     "id": "minnies_melodyland_final_gag_track_training",
@@ -316,108 +208,67 @@
       {
         "order": 1,
         "objective": "Visit Leo",
-        "alternatives": [
-          "Visit Leo"
-        ],
         "building": "Leo's Fenders",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 2,
         "objective": "Deliver Cloudy Castanet to Carlos",
-        "alternatives": [
-          "Deliver Cloudy Castanet to Carlos"
-        ],
         "building": "Casa de Castanets",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 3,
         "objective": "Go fishing for Blue Squid Ink",
-        "alternatives": [
-          "Go fishing for Blue Squid Ink"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 4,
-        "objective": "Return to Carlos",
-        "alternatives": [
-          "Return to Carlos"
-        ]
+        "objective": "Return to Carlos"
       },
       {
         "order": 5,
         "objective": "Defeat a Cog Building",
-        "alternatives": [
-          "Recover a Cog Building",
-          "Defeat a Cog Building"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 6,
-        "objective": "Return to Carlos",
-        "alternatives": [
-          "Return to Carlos"
-        ]
+        "objective": "Return to Carlos"
       },
       {
         "order": 7,
-        "objective": "Deliver Clear Castanet to Leo",
-        "alternatives": [
-          "Deliver Clear Castanet to Leo"
-        ]
+        "objective": "Deliver Clear Castanet to Leo"
       },
       {
         "order": 8,
         "objective": "Visit Hedy",
-        "alternatives": [
-          "Visit Hedy"
-        ],
         "building": "Lousy Lyrics",
         "location": "Minnie's Melodyland"
       },
       {
         "order": 9,
         "objective": "Defeat a two+ story Cog Building",
-        "alternatives": [
-          "Defeat a two+ story Cog Building",
-          "Recover a two+ story Cog Building"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 10,
-        "objective": "Return to Hedy",
-        "alternatives": [
-          "Return to Hedy"
-        ]
+        "objective": "Return to Hedy"
       },
       {
         "order": 11,
         "objective": "Defeat a three+ story Cog Building",
-        "alternatives": [
-          "Recover a three+ story Cog Building",
-          "Defeat a three+ story Cog Building"
-        ],
         "location": "Anywhere"
       },
       {
         "order": 12,
-        "objective": "Return to Hedy",
-        "alternatives": [
-          "Return to Hedy"
-        ]
+        "objective": "Return to Hedy"
       },
       {
         "order": 13,
-        "objective": "Deliver Leo's Lyrics to Leo",
-        "alternatives": [
-          "Deliver Leo's Lyrics to Leo"
-        ]
+        "objective": "Deliver Leo's Lyrics to Leo"
       }
     ],
-    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Final_gag_track_training"
+    "wikiUrl": "https://toontownrewritten.wiki/Minnie%27s_Melodyland_ToonTasks/Final_gag_track_training",
+    "lastUpdated": "2025-03-30T10:09:49Z"
   }
 ]
