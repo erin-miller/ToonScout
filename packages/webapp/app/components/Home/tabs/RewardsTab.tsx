@@ -196,7 +196,8 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
             const isSOS = type === "SOS";
             const isUnites = type === "Unites";
             const isSummons = type === "Summons";
-            const showCount = isPinkslip || isSOS || isUnites || isSummons;
+            const isRemotes = type === "Remotes";
+            const showCount = isPinkslip || isSOS || isUnites || isSummons || isRemotes;
 
             let countValue: number | null = null;
             if (isPinkslip) {
@@ -207,6 +208,8 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
               countValue = sums.sumUnites;
             } else if (isSummons && sums) {
               countValue = sums.sumSummons;
+            } else if (isRemotes && sums) {
+              countValue = sums.sumRemotes;
             }
 
             return (
