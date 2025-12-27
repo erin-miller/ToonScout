@@ -193,6 +193,22 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
               return baseImageNormal;
             };
 
+            const isSOS = type === "SOS";
+            const isUnites = type === "Unites";
+            const isSummons = type === "Summons";
+            const showCount = isPinkslip || isSOS || isUnites || isSummons;
+
+            let countValue: number | null = null;
+            if (isPinkslip) {
+              countValue = toon.data.data.rewards.pinkslips;
+            } else if (isSOS && sums) {
+              countValue = sums.sumSos;
+            } else if (isUnites && sums) {
+              countValue = sums.sumUnites;
+            } else if (isSummons && sums) {
+              countValue = sums.sumSummons;
+            }
+
             return (
               <button
                 key={type}
@@ -221,13 +237,13 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
                     width={84}
                     height={84}
                   />
-                  {isPinkslip && (
-                    <div className="text-2xl lg:text-4xl 2xl:text-5xl justify-end items-end">
+                  {showCount && countValue !== null && (
+                    <div className="text-lg lg:text-2xl 2xl:text-3xl justify-end items-end">
                       <span className="absolute bottom-1.5 right-2.5 text-blue-950 ">
-                        {toon.data.data.rewards.pinkslips}
+                        {countValue}
                       </span>
                       <span className="absolute bottom-2 right-3 text-gray-100">
-                        {toon.data.data.rewards.pinkslips}
+                        {countValue}
                       </span>
                     </div>
                   )}
