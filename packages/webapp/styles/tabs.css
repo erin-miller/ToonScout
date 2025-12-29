@@ -313,11 +313,11 @@
 */
 
 .tab-reward-container {
-  @apply flex flex-row flex-grow w-full space-x-2 py-2 h-full;
+  @apply grid grid-cols-[minmax(0,8rem)_1fr] gap-2 py-2 h-full;
 }
 
 .reward-container {
-  @apply flex flex-col w-2/12 space-y-1;
+  @apply flex flex-col w-full space-y-1;
 }
 
 .reward-btn {
