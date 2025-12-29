@@ -13,9 +13,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   return (
     <div
       className="fixed transition ease-in-out inset-0
-      bg-gray-500 bg-opacity-70 
-      dark:bg-gray-1200 dark:bg-opacity-70 dark:text-gray-100 
+      backdrop-blur-sm dark:text-gray-100 
       flex justify-center items-center z-50"
+      onClick={onClose}
     >
       <AnimatedTabContent>
         <div
