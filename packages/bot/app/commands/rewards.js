@@ -186,7 +186,7 @@ function getSummonsEmbed(item) {
         value:
             `Single: ${summon.single ? "✅" : "❌"}\n` +
             `Building: ${summon.building ? "✅" : "❌"}\n` +
-            `Invasion: ${summon.invasion ? "❌" : "❌"}`,
+            `Invasion: ${summon.invasion ? "✅" : "❌"}`,
         inline: true,
     }));
 
