@@ -57,9 +57,14 @@ async function getInvasions() {
 
   if (response.ok) {
     const data = await response.json();
-    return data;
+    return sanitize(data);
   } else {
     console.error("Could not get invasion data.");
     return null;
   }
 }
+
+const sanitize = (data) => {
+  let cleaned = JSON.stringify(obj);
+  return cleaned.replace(/\\u[0-9a-fA-F]{4}/g, "");
+};
