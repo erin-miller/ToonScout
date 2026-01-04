@@ -256,8 +256,8 @@ const TabContainer = () => {
               <></>
             )}
             <div className="text-lg">
-              Cattlelog Series {toon.data.data.cattlelog.series} #
-              {toon.data.data.cattlelog.issue}
+              <a href="http://cattlelog.scouttoon.info" target="_blank" rel="noopener noreferrer" className="underline">Cattlelog Series {toon.data.data.cattlelog.series} #
+              {toon.data.data.cattlelog.issue}</a> 
             </div>
           </div>
 
