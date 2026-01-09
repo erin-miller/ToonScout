@@ -58,7 +58,7 @@ const InvasionsTab: React.FC<TabProps> = ({ toon }) => {
 
   return (
     <AnimatedTabContent>
-      <div className="flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-2 fish-scrollbar">
+      <div className="grid 2xl:grid-cols-2 gap-2 max-h-[60vh] overflow-y-auto pr-2 fish-scrollbar">
         {loading ? (
           <div className="flex items-center justify-center py-8">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-500"></div>
