@@ -50,13 +50,12 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
       <div className="flex-1 bg-gray-100 dark:bg-gray-800 overflow-auto flex items-center justify-center p-2 sm:p-4">
         <motion.div 
           className="relative inline-block cursor-zoom-in"
-          whileHover={{ scale: 1.5 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
           <img
             src={mapImageUrl}
             alt={`Map showing ${buildingName} location`}
-            className="h-auto rounded-lg shadow-md"
+            className="h-auto rounded-lg"
             style={{ maxHeight: "100%", maxWidth: "100%" }}
           />
           {markerPosition && (
