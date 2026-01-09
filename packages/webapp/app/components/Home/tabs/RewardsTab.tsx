@@ -216,7 +216,7 @@ const RewardsTab: React.FC<TabProps> = ({ toon }) => {
             return (
               <button
                 key={type}
-                className="reward-btn"
+                className={`reward-btn ${isPinkslip && "cursor-not-allowed"}`}
                 onClick={() => {
                   setSelectedReward(type);
                 }}
