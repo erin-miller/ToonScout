@@ -33,8 +33,18 @@ function categorizeTask(task: Task): TaskCategory {
 
   const reward = task.reward?.toLowerCase() ?? "";
   
-  // Track frame rewards are random/procedural (e.g., "toon-up track animation frame 7")
+  // Track frame rewards are random/procedural
   if (/track\s+(animation\s+)?frame\s+\d/i.test(reward)) {
+    return "random_reward";
+  }
+
+  // DDL random gag pouch (70/80) - reward text contains "(70)" or "(80)"
+  if (/\((70|80)\)/.test(reward)) {
+    return "random_reward";
+  }
+
+  // DDL random jellybean pouch (200/250)
+  if (/(200|250)\s*jellybean/i.test(reward)) {
     return "random_reward";
   }
 
