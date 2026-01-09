@@ -66,8 +66,7 @@ export type MatchUnmatchedReason =
   | "toontorial"
   | "random_reward"
   | "no_candidates"
-  | "no_match"
-  | "ambiguous";
+  | "no_match";
 
 export type MatchDebugInfo = {
   category: MatchCategory;

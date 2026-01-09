@@ -246,35 +246,8 @@ export function findTasklineMatchWithToonDataDetailed(
   }
 
   // All returned candidates are in the same priority tier (deterministic)
-  const topTasklines = new Set(matchCandidates.map((c) => c.taskline.id));
-  const topCandidate = matchCandidates[0];
-
-  // Handle ambiguous matches (multiple tasklines with same rank)
-  if (topTasklines.size > 1) {
-    const usedDeterministic =
-      topCandidate.signals.npcMatch &&
-      (topCandidate.signals.buildingMatch || topCandidate.signals.locationMatch);
-    
-    return {
-      match: null,
-      debug: {
-        category,
-        unmatchedReason: "ambiguous",
-        usedDeterministic,
-        matchQuality: topCandidate.quality,
-        objectiveMatch: topCandidate.signals.objectiveMatch,
-        matchSignals: topCandidate.signals,
-        matchedObjective: topCandidate.objective,
-        bestCandidate: {
-          tasklineId: topCandidate.taskline.id,
-          stepOrder: topCandidate.step.order,
-          matchQuality: topCandidate.quality,
-          objectiveMatch: topCandidate.signals.objectiveMatch,
-          objective: topCandidate.objective,
-        },
-      },
-    };
-  }
+  // When multiple tasklines match equally (e.g., DDL and Cashbot Cog Disguise
+  // both have "Visit Nat"), just pick the first one - they're equivalent content
 
   // Resolve tiebreakers using progress data
   const best = resolveProgressTiebreaker(matchCandidates, toonId);

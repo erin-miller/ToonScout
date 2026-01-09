@@ -21,13 +21,10 @@ const STREETS = new Set([
   "Walrus Way",
 ]);
 
-const STF_ALIASES = [
-  "sellbot task force",
-  "sellbot task force hideout",
-  "sellbot hq",
-];
-
-const PRIMARY_PLAYGROUNDS = new Set([
+// All valid taskline categories/groups (normalized - apostrophes removed, lowercase)
+// Note: These include both playgrounds (TTC, DD, etc.) and taskline categories (cog disguises)
+const TASKLINE_CATEGORIES = new Set([
+  // Story playgrounds (in progression order)
   "toontown central",
   "donalds dock",
   "daisy gardens",
@@ -35,6 +32,11 @@ const PRIMARY_PLAYGROUNDS = new Set([
   "the brrrgh",
   "donalds dreamland",
   "sellbot task force",
+  // Cog disguise tasklines (accessible from various points in progression)
+  "bossbot cog disguise",
+  "cashbot cog disguise",
+  "lawbot cog disguise",
+  "sellbot cog disguise",
 ]);
 
 // Used in tasklineMatching.ts
@@ -63,16 +65,16 @@ export const getTaskStreet = (task: { to?: { zone?: string }; from?: { zone?: st
   return null;
 };
 
+/**
+ * Normalize and validate a taskline category (playground or cog disguise group).
+ * Returns the normalized category if valid, null otherwise.
+ */
 export function getPrimaryPlayground(value?: string | null): string | null {
   if (!value) {
     return null;
   }
   const normalized = normalizePlace(value);
-  const hasStfAlias = STF_ALIASES.some((alias) => normalized.includes(alias));
-  if (hasStfAlias) {
-    return "sellbot task force";
-  }
-  return PRIMARY_PLAYGROUNDS.has(normalized) ? normalized : null;
+  return TASKLINE_CATEGORIES.has(normalized) ? normalized : null;
 }
 
 export function locationsMatch(a: string, b: string): boolean {
