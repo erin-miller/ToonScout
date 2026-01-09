@@ -430,3 +430,5 @@ wrapper/
 .vs
 /test
 ngrok.yml
+.github/taskline-update-report.md
+packages/webapp/data/tasklines/metadata.json

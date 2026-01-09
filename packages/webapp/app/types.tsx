@@ -219,4 +219,51 @@ export interface StoredToonData {
   timestamp: number;
   port: number;
   locked: boolean;
+  overjoyed?: boolean; // True if Overjoyed Laff Meters was active when toon data was captured
+}
+
+export interface TasklineStepOption {
+  objective: string;
+  building?: string;
+  location?: string;
+}
+
+export interface TasklineStep {
+  order: number;
+  objective: string;
+  building?: string;
+  location?: string;
+  reward?: string;
+  options?: TasklineStepOption[];
+  details?: string[];
+}
+
+export interface Taskline {
+  id: string;
+  name: string;
+  playground?: string;
+  category: "playground" | "teleport" | "laff_boost" | "gag_training" | "cog_disguise" | "task_force" | "special" | "other";
+  prerequisites?: string[];
+  steps: TasklineStep[];
+  wikiUrl?: string;
+  lastUpdated?: string;
+}
+
+export interface TaskMatch {
+  taskline: Taskline;
+  step: TasklineStep;
+  confidence: "high" | "medium" | "low";
+  matchedOn: "exact" | "partial";
+  matchedObjective?: {
+    text: string;
+    location?: string;
+    building?: string;
+    optionIndex?: number;
+  };
+}
+
+export interface TasklineOverride {
+  tasklineId: string;
+  stepNumber: number;
+  timestamp: number;
 }
