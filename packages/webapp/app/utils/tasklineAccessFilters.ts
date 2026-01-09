@@ -104,7 +104,7 @@ function canAccessCogDisguise(toonData?: ToonData, overjoyed?: boolean): boolean
   }
 
   const estimation = estimateCompletedTasklines(toonData, overjoyed);
-  if (!estimation.taskLaffFromTasks || estimation.confidence === "low") {
+  if (!estimation.taskLaffFromTasks) {
     return false;
   }
 

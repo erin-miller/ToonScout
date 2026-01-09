@@ -32,7 +32,6 @@ const TASKLINE_CATEGORIES = new Set([
   "the brrrgh",
   "donalds dreamland",
   "sellbot task force",
-  // Cog disguise tasklines (accessible from various points in progression)
   "bossbot cog disguise",
   "cashbot cog disguise",
   "lawbot cog disguise",
