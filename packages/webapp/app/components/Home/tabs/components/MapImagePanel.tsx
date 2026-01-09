@@ -47,16 +47,15 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
       </div>
 
       {/* Map Image with Marker */}
-      <div className="flex-1 bg-gray-100 dark:bg-gray-800 overflow-auto flex items-center justify-center p-2 sm:p-4">
-        <motion.div 
-          className="relative inline-block cursor-zoom-in"
+      <div className="flex-1 min-h-0 bg-gray-100 dark:bg-gray-800 p-2 sm:p-4 flex items-center justify-center overflow-hidden">
+        <motion.div
+          className="relative"
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
           <img
             src={mapImageUrl}
             alt={`Map showing ${buildingName} location`}
-            className="h-auto rounded-lg"
-            style={{ maxHeight: "100%", maxWidth: "100%" }}
+            className="rounded-lg max-w-full max-h-[60vh] h-auto object-contain"
           />
           {markerPosition && (
             <motion.img
@@ -64,10 +63,11 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
               alt="Location marker"
               className="absolute pointer-events-none"
               style={{
-                top: `${markerPosition.top}px`,
-                left: `${markerPosition.left}px`,
-                width: "24px",
-                height: "24px",
+                // Use percentage positioning (marker coords are scaled to 512x512)
+                top: `${(markerPosition.top / 512) * 100}%`,
+                left: `${(markerPosition.left / 512) * 100}%`,
+                width: "20px",
+                height: "20px",
               }}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}

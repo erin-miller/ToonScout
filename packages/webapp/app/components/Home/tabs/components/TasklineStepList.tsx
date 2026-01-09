@@ -249,7 +249,8 @@ export const TasklineStepList: React.FC<TasklineStepListProps> = ({
                   {mapInfo && (
                   <div className="flex items-center pr-4">
                     <button
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.stopPropagation();
                         onMapClick(step.building!, mapInfo);
                       }}
                       className="flex items-center justify-center w-10 h-10

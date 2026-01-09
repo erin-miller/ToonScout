@@ -238,44 +238,46 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
               className="rounded-lg shadow-2xl max-w-2xl w-full overflow-hidden flex flex-col"
               style={{ maxHeight: "82vh" }}
             >
-              <div className="bg-gradient-to-r from-pink-900 to-pink-700 dark:from-pink-800 dark:to-pink-900 text-white px-6 pt-6 pb-3 relative flex-shrink-0">
-                <button
-                  onClick={onClose}
-                  className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
-                  aria-label="Close modal"
-                >
-                  <FaTimes size={24} />
-                </button>
+              {modalView === 'steps' ? (
+                <div className="bg-gradient-to-r from-pink-900 to-pink-700 dark:from-pink-800 dark:to-pink-900 text-white px-6 pt-6 pb-3 relative flex-shrink-0">
+                  <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+                    aria-label="Close modal"
+                  >
+                    <FaTimes size={24} />
+                  </button>
 
-                <h2 className="text-xl sm:text-2xl font-bold pr-10">
-                  {task.reward}
-                </h2>
+                  <h2 className="text-xl sm:text-2xl font-bold pr-10">
+                    {task.reward}
+                  </h2>
 
-                <div className="flex gap-2 mt-3 flex-wrap">
-                  {taskline.playground && (
-                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs sm:text-sm">
-                      {taskline.playground}
-                    </span>
-                  )}
-                  {hasUserOverride && (
-                    <span className="px-3 py-1 bg-yellow-400/30 dark:bg-yellow-600/30 rounded-full text-xs sm:text-sm font-medium">
-                      📍 Manual Step
-                    </span>
-                  )}
+                  <div className="flex gap-2 mt-3 flex-wrap">
+                    {taskline.playground && (
+                      <span className="px-3 py-1 bg-white/20 rounded-full text-xs sm:text-sm">
+                        {taskline.playground}
+                      </span>
+                    )}
+                    {hasUserOverride && (
+                      <span className="px-3 py-1 bg-yellow-400/30 dark:bg-yellow-600/30 rounded-full text-xs sm:text-sm font-medium">
+                        📍 Manual Step
+                      </span>
+                    )}
+                  </div>
+
+                  <TasklineStepNavigation
+                    effectiveStepNumber={effectiveStepNumber}
+                    totalSteps={totalSteps}
+                    completedCount={completedCount}
+                    completionPercent={completionPercent}
+                    hasUserOverride={hasUserOverride}
+                    onPreviousStep={handlePreviousStep}
+                    onNextStep={handleNextStep}
+                    onResetOverride={handleResetOverride}
+                  />
+
                 </div>
-
-                <TasklineStepNavigation
-                  effectiveStepNumber={effectiveStepNumber}
-                  totalSteps={totalSteps}
-                  completedCount={completedCount}
-                  completionPercent={completionPercent}
-                  hasUserOverride={hasUserOverride}
-                  onPreviousStep={handlePreviousStep}
-                  onNextStep={handleNextStep}
-                  onResetOverride={handleResetOverride}
-                />
-
-              </div>
+              ) : null}
 
               <div className="flex-1 overflow-hidden">
                 {modalView === 'steps' ? (
@@ -313,38 +315,40 @@ const TasklineModal: React.FC<TasklineModalProps> = ({
                 )}
               </div>
 
-              <div className="bg-blue-50 dark:bg-gray-900 px-4 sm:px-6 py-4 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-between sm:items-center border-t dark:border-gray-700">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  {taskline.wikiUrl && (
-                    <a
-                      href={taskline.wikiUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium"
-                    >
-                      <Image
-                        src="/images/wiki_eye.webp"
-                        alt=""
-                        width={18}
-                        height={18}
-                        className="object-contain opacity-80"
-                      />
-                      View on Wiki
-                    </a>
-                  )}
+              {modalView === 'steps' && (
+                <div className="bg-blue-50 dark:bg-gray-900 px-4 sm:px-6 py-4 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-between sm:items-center border-t dark:border-gray-700 flex-shrink-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                    {taskline.wikiUrl && (
+                      <a
+                        href={taskline.wikiUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium"
+                      >
+                        <Image
+                          src="/images/wiki_eye.webp"
+                          alt=""
+                          width={18}
+                          height={18}
+                          className="object-contain opacity-80"
+                        />
+                        View on Wiki
+                      </a>
+                    )}
 
-                  <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
-                    {totalSteps} step{totalSteps !== 1 ? "s" : ""} total
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+                      {totalSteps} step{totalSteps !== 1 ? "s" : ""} total
+                    </div>
                   </div>
-                </div>
 
-                <button
-                  onClick={onClose}
-                  className="w-full sm:w-auto px-4 py-2 bg-pink-600 dark:bg-pink-700 text-white rounded-md hover:bg-pink-700 dark:hover:bg-pink-600 transition-colors font-medium"
-                >
-                  Close
-                </button>
-              </div>
+                  <button
+                    onClick={onClose}
+                    className="w-full sm:w-auto px-4 py-2 bg-pink-600 dark:bg-pink-700 text-white rounded-md hover:bg-pink-700 dark:hover:bg-pink-600 transition-colors font-medium"
+                  >
+                    Close
+                  </button>
+                </div>
+              )}
             </motion.div>
           </div>
         </>

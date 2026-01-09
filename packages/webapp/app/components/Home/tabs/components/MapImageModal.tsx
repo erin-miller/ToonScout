@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaExternalLinkAlt } from "react-icons/fa";
@@ -27,11 +27,22 @@ const MapImageModal: React.FC<MapImageModalProps> = ({
   markerPosition,
   headerColor = "blue",
 }) => {
-  if (!isOpen) return null;
-
-  const headerGradient = headerColor === "pink" 
+  const headerGradient = headerColor === "pink"
     ? "from-pink-900 to-pink-700 dark:from-pink-800 dark:to-pink-900"
     : "from-blue-600 to-blue-500 dark:from-blue-700 dark:to-blue-600";
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
 
   const modalContent = (
     <AnimatePresence>
@@ -55,7 +66,7 @@ const MapImageModal: React.FC<MapImageModalProps> = ({
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               onClick={(e: React.MouseEvent) => e.stopPropagation()}
-              className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-lg w-full"
+              className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-lg w-full max-h-[85vh]"
             >
               {/* Header */}
               <div className={`bg-gradient-to-r ${headerGradient} px-4 py-3 flex items-center justify-between`}>
@@ -77,13 +88,12 @@ const MapImageModal: React.FC<MapImageModalProps> = ({
               </div>
 
               {/* Map Image with Marker Overlay */}
-              <div className="relative bg-gray-100 dark:bg-gray-800 flex justify-center">
-                <div className="relative inline-block">
+              <div className="relative bg-gray-100 dark:bg-gray-800 p-4 flex items-center justify-center">
+                <div className="relative">
                   <img
                     src={mapImageUrl}
                     alt={`Map showing ${buildingName} location`}
-                    className="h-auto"
-                    style={{ maxHeight: "60vh", maxWidth: "100%" }}
+                    className="rounded-lg max-w-full max-h-[60vh] w-auto h-auto"
                   />
                   {markerPosition && (
                     <img
@@ -91,8 +101,9 @@ const MapImageModal: React.FC<MapImageModalProps> = ({
                       alt="Location marker"
                       className="absolute pointer-events-none"
                       style={{
-                        top: `${markerPosition.top}px`,
-                        left: `${markerPosition.left}px`,
+                        // Use percentage positioning (marker coords are scaled to 512x512)
+                        top: `${(markerPosition.top / 512) * 100}%`,
+                        left: `${(markerPosition.left / 512) * 100}%`,
                         width: "20px",
                         height: "20px",
                       }}
