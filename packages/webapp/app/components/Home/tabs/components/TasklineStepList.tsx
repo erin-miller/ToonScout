@@ -184,8 +184,8 @@ export const TasklineStepList: React.FC<TasklineStepListProps> = ({
                     : "border-gray-300 dark:border-gray-600"
                 } ${isCompleted ? "opacity-60" : ""}`}
               >
-                <div className="flex items-start gap-3">
-                  <div className="relative flex-shrink-0">
+                <div className="flex gap-3">
+                  <div className="relative flex-shrink-0 items-start">
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${
                         isSelectedStep
@@ -245,26 +245,25 @@ export const TasklineStepList: React.FC<TasklineStepListProps> = ({
                       </div>
                     )}
                   </div>
-                </div>
-              </div>
 
-              {/* Map button column - outside the clickable area */}
-              {mapInfo && (
-                <div className="flex items-center">
-                  <button
-                    onClick={() => {
-                      onMapClick(step.building!, mapInfo);
-                    }}
-                    className="flex items-center justify-center w-10 h-10
-                      bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500
-                      text-white rounded-lg shadow-md transition-colors"
-                    title={`View ${step.building} on map`}
-                  >
-                    <FaMapMarkerAlt size={16} />
-                  </button>
-                </div>
-              )}
-            </div>
+                  {mapInfo && (
+                  <div className="flex items-center pr-4">
+                    <button
+                      onClick={() => {
+                        onMapClick(step.building!, mapInfo);
+                      }}
+                      className="flex items-center justify-center w-10 h-10
+                        bg-blue-500 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-400
+                        text-white rounded-lg shadow-md transition-colors"
+                      title={`View ${step.building} on map`}
+                    >
+                      <FaMapMarkerAlt size={16} />
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>              
+          </div>
           );
         })}
       </div>
