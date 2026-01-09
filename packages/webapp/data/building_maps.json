@@ -1,0 +1,4679 @@
+{
+  "14 Karat Goldfish": {
+    "wikiUrl": "https://toontownrewritten.wiki/14_Karat_Goldfish",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 90,
+      "left": 3
+    }
+  },
+  "14-Carrot Jewelers": {
+    "wikiUrl": "https://toontownrewritten.wiki/14-Carrot_Jewelers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 34,
+      "left": 115
+    }
+  },
+  "A Better Built Quilt": {
+    "wikiUrl": "https://toontownrewritten.wiki/A_Better_Built_Quilt",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 103,
+      "left": 29
+    }
+  },
+  "Able-Bodied Gym": {
+    "wikiUrl": "https://toontownrewritten.wiki/Able-Bodied_Gym",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 83,
+      "left": 123
+    }
+  },
+  "Accidental Insurance": {
+    "wikiUrl": "https://toontownrewritten.wiki/Accidental_Insurance",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 59,
+      "left": 132
+    }
+  },
+  "Accordions: If You Want In, Just Bellow!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Accordions:_If_You_Want_In,_Just_Bellow!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 140,
+      "left": 72
+    }
+  },
+  "Affordable Goosebumps": {
+    "wikiUrl": "https://toontownrewritten.wiki/Affordable_Goosebumps",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 175,
+      "left": 85
+    }
+  },
+  "Ahab's Prefab Sea Crab Center": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ahab's_Prefab_Sea_Crab_Center",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 192,
+      "left": 35
+    }
+  },
+  "Alice's Ballast Palace": {
+    "wikiUrl": "https://toontownrewritten.wiki/Alice's_Ballast_Palace",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 50,
+      "left": 195
+    }
+  },
+  "All for Nautical": {
+    "wikiUrl": "https://toontownrewritten.wiki/All_for_Nautical",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 78,
+      "left": 182
+    }
+  },
+  "All Fun and Games Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/All_Fun_and_Games_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 50,
+      "left": 100
+    }
+  },
+  "All Smiles Tooth Repair": {
+    "wikiUrl": "https://toontownrewritten.wiki/All_Smiles_Tooth_Repair",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 25,
+      "left": 114
+    }
+  },
+  "All That Razz": {
+    "wikiUrl": "https://toontownrewritten.wiki/All_That_Razz",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 138,
+      "left": 143
+    }
+  },
+  "Alpine Chow Line": {
+    "wikiUrl": "https://toontownrewritten.wiki/Alpine_Chow_Line",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 67,
+      "left": 44
+    }
+  },
+  "Anchor Management": {
+    "wikiUrl": "https://toontownrewritten.wiki/Anchor_Management",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 71,
+      "left": 96
+    }
+  },
+  "Anna's Cruises": {
+    "wikiUrl": "https://toontownrewritten.wiki/Anna's_Cruises",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 11,
+      "left": 41
+    }
+  },
+  "Ant Farming Supplies": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ant_Farming_Supplies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 142,
+      "left": 112
+    }
+  },
+  "Antarctic Antiques": {
+    "wikiUrl": "https://toontownrewritten.wiki/Antarctic_Antiques",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 107,
+      "left": 111
+    }
+  },
+  "Apples and Oranges": {
+    "wikiUrl": "https://toontownrewritten.wiki/Apples_and_Oranges",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 98,
+      "left": 173
+    }
+  },
+  "April's Showers and Tubs": {
+    "wikiUrl": "https://toontownrewritten.wiki/April's_Showers_and_Tubs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 141,
+      "left": 158
+    }
+  },
+  "Armadillo Pillow Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Armadillo_Pillow_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 65,
+      "left": 57
+    }
+  },
+  "Art's Smart Chart Mart": {
+    "wikiUrl": "https://toontownrewritten.wiki/Art's_Smart_Chart_Mart",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 118,
+      "left": 140
+    }
+  },
+  "Artie Choke's Neckties": {
+    "wikiUrl": "https://toontownrewritten.wiki/Artie_Choke's_Neckties",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 71,
+      "left": 32
+    }
+  },
+  "Asleep at the Wheel Car Repair": {
+    "wikiUrl": "https://toontownrewritten.wiki/Asleep_at_the_Wheel_Car_Repair",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 25,
+      "left": 143
+    }
+  },
+  "Astroturf Mowers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Astroturf_Mowers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 28,
+      "left": 133
+    }
+  },
+  "Aunt Arctic's Soup Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Aunt_Arctic's_Soup_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 140,
+      "left": 143
+    }
+  },
+  "Auntie Freeze's Radiator Supply": {
+    "wikiUrl": "https://toontownrewritten.wiki/Auntie_Freeze's_Radiator_Supply",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 157,
+      "left": 119
+    }
+  },
+  "B-Sharp Fine Menswear": {
+    "wikiUrl": "https://toontownrewritten.wiki/B-Sharp_Fine_Menswear",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 77,
+      "left": 154
+    }
+  },
+  "Bait and Switches Electrical Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bait_and_Switches_Electrical_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 28,
+      "left": 105
+    }
+  },
+  "Baker's Dozin' Doughnuts": {
+    "wikiUrl": "https://toontownrewritten.wiki/Baker's_Dozin'_Doughnuts",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 178,
+      "left": 146
+    }
+  },
+  "Barbershop Quartet": {
+    "wikiUrl": "https://toontownrewritten.wiki/Barbershop_Quartet",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 120,
+      "left": 156
+    }
+  },
+  "Barely Palatable Pasta": {
+    "wikiUrl": "https://toontownrewritten.wiki/Barely_Palatable_Pasta",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 10,
+      "left": 64
+    }
+  },
+  "Barley, Hops and Malt Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Barley,_Hops_and_Malt_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 58,
+      "left": 35
+    }
+  },
+  "Barnacle Bargains": {
+    "wikiUrl": "https://toontownrewritten.wiki/Barnacle_Bargains",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 123,
+      "left": 125
+    }
+  },
+  "Be More Pacific Ocean Notions": {
+    "wikiUrl": "https://toontownrewritten.wiki/Be_More_Pacific_Ocean_Notions",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 143,
+      "left": 232
+    }
+  },
+  "Bed of Roses Florist": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bed_of_Roses_Florist",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 78,
+      "left": 105
+    }
+  },
+  "Bed Time Stories": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bed_Time_Stories",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 94,
+      "left": 153
+    }
+  },
+  "Bedknobs & Broomsticks Movie House": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bedknobs_&_Broomsticks_Movie_House",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 19,
+      "left": 169
+    }
+  },
+  "Berried Treasure": {
+    "wikiUrl": "https://toontownrewritten.wiki/Berried_Treasure",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 5,
+      "left": 95
+    }
+  },
+  "Bert's Dirt": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bert's_Dirt",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 41,
+      "left": 35
+    }
+  },
+  "Big Mama's Bahama Pajamas": {
+    "wikiUrl": "https://toontownrewritten.wiki/Big_Mama's_Bahama_Pajamas",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 45,
+      "left": 149
+    }
+  },
+  "Billy Budd's Big Bargain Binnacle Barn": {
+    "wikiUrl": "https://toontownrewritten.wiki/Billy_Budd's_Big_Bargain_Binnacle_Barn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 198,
+      "left": 115
+    }
+  },
+  "Black-Eyed Susan's Boxing Lessons": {
+    "wikiUrl": "https://toontownrewritten.wiki/Black-Eyed_Susan's_Boxing_Lessons",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 34,
+      "left": 110
+    }
+  },
+  "Blackbeard's Beauty Parlor": {
+    "wikiUrl": "https://toontownrewritten.wiki/Blackbeard's_Beauty_Parlor",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 188,
+      "left": 220
+    }
+  },
+  "Blue Glue": {
+    "wikiUrl": "https://toontownrewritten.wiki/Blue_Glue",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 115,
+      "left": 38
+    }
+  },
+  "Blues News": {
+    "wikiUrl": "https://toontownrewritten.wiki/Blues_News",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 127,
+      "left": 189
+    }
+  },
+  "Bottled Cans": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bottled_Cans",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 75,
+      "left": 100
+    }
+  },
+  "Bubble Bird Baths": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bubble_Bird_Baths",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 54,
+      "left": 198
+    }
+  },
+  "Bud's Bird Seed": {
+    "wikiUrl": "https://toontownrewritten.wiki/Bud's_Bird_Seed",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 71,
+      "left": 159
+    }
+  },
+  "Buoys and Gulls Nursery School": {
+    "wikiUrl": "https://toontownrewritten.wiki/Buoys_and_Gulls_Nursery_School",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 169,
+      "left": 57
+    }
+  },
+  "C-Flat Tire Repair": {
+    "wikiUrl": "https://toontownrewritten.wiki/C-Flat_Tire_Repair",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 112,
+      "left": 163
+    }
+  },
+  "Call it a Day Calendars": {
+    "wikiUrl": "https://toontownrewritten.wiki/Call_it_a_Day_Calendars",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 158,
+      "left": 121
+    }
+  },
+  "Canned Bottles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Canned_Bottles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 126,
+      "left": 17
+    }
+  },
+  "Canteloupe! Bridal Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Canteloupe!_Bridal_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 35,
+      "left": 33
+    }
+  },
+  "Canticle Your Fancy Gift Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Canticle_Your_Fancy_Gift_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 98,
+      "left": 137
+    }
+  },
+  "Canto Help You!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Canto_Help_You!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 1,
+      "left": 148
+    }
+  },
+  "Cap Size Hat Store": {
+    "wikiUrl": "https://toontownrewritten.wiki/Cap_Size_Hat_Store",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 103,
+      "left": 54
+    }
+  },
+  "Carry a Toon Movers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Carry_a_Toon_Movers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 91,
+      "left": 150
+    }
+  },
+  "Casa de Castanets": {
+    "wikiUrl": "https://toontownrewritten.wiki/Casa_de_Castanets",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 105,
+      "left": 105
+    }
+  },
+  "Cast Iron Kites": {
+    "wikiUrl": "https://toontownrewritten.wiki/Cast_Iron_Kites",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 58,
+      "left": 65
+    }
+  },
+  "Cat Nip for Cat Naps": {
+    "wikiUrl": "https://toontownrewritten.wiki/Cat_Nip_for_Cat_Naps",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 34,
+      "left": 134
+    }
+  },
+  "Cat's Pajamas": {
+    "wikiUrl": "https://toontownrewritten.wiki/Cat's_Pajamas",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 120,
+      "left": 201
+    }
+  },
+  "Catchy Toon Apparel": {
+    "wikiUrl": "https://toontownrewritten.wiki/Catchy_Toon_Apparel",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 83,
+      "left": 72
+    }
+  },
+  "Chattering Teeth, Subzero Dentist": {
+    "wikiUrl": "https://toontownrewritten.wiki/Chattering_Teeth,_Subzero_Dentist",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 172,
+      "left": 195
+    }
+  },
+  "Chin Rest Pillows": {
+    "wikiUrl": "https://toontownrewritten.wiki/Chin_Rest_Pillows",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 156,
+      "left": 181
+    }
+  },
+  "Chopin Blocks and Other Kitchen Supplies": {
+    "wikiUrl": "https://toontownrewritten.wiki/Chopin_Blocks_and_Other_Kitchen_Supplies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 1,
+      "left": 112
+    }
+  },
+  "Choral Wreaths": {
+    "wikiUrl": "https://toontownrewritten.wiki/Choral_Wreaths",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 52,
+      "left": 144
+    }
+  },
+  "Chortle Cafe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Chortle_Cafe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 106,
+      "left": 103
+    }
+  },
+  "Claggart's Clever Clovis Closet": {
+    "wikiUrl": "https://toontownrewritten.wiki/Claggart's_Clever_Clovis_Closet",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 81,
+      "left": 204
+    }
+  },
+  "Clean Sweep Chimney Service": {
+    "wikiUrl": "https://toontownrewritten.wiki/Clean_Sweep_Chimney_Service",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 46,
+      "left": 192
+    }
+  },
+  "Clock Cleaners": {
+    "wikiUrl": "https://toontownrewritten.wiki/Clock_Cleaners",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 64,
+      "left": 117
+    }
+  },
+  "Cloud Nine Design": {
+    "wikiUrl": "https://toontownrewritten.wiki/Cloud_Nine_Design",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 63,
+      "left": 130
+    }
+  },
+  "Clown Class": {
+    "wikiUrl": "https://toontownrewritten.wiki/Clown_Class",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 233,
+      "left": 137
+    }
+  },
+  "Club 88": {
+    "wikiUrl": "https://toontownrewritten.wiki/Club_88",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 95,
+      "left": 61
+    }
+  },
+  "Coda Pop Musical Beverages": {
+    "wikiUrl": "https://toontownrewritten.wiki/Coda_Pop_Musical_Beverages",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 65,
+      "left": 129
+    }
+  },
+  "Cold Air Balloon Rides": {
+    "wikiUrl": "https://toontownrewritten.wiki/Cold_Air_Balloon_Rides",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 42,
+      "left": 39
+    }
+  },
+  "Common Time Watches": {
+    "wikiUrl": "https://toontownrewritten.wiki/Common_Time_Watches",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 10,
+      "left": 64
+    }
+  },
+  "Compost Office": {
+    "wikiUrl": "https://toontownrewritten.wiki/Compost_Office",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 4,
+      "left": 70
+    }
+  },
+  "Con Moto Cycles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Con_Moto_Cycles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 125,
+      "left": 108
+    }
+  },
+  "Cool Cat Hats": {
+    "wikiUrl": "https://toontownrewritten.wiki/Cool_Cat_Hats",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 72,
+      "left": 184
+    }
+  },
+  "Couch Potato Furniture": {
+    "wikiUrl": "https://toontownrewritten.wiki/Couch_Potato_Furniture",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 116,
+      "left": 67
+    }
+  },
+  "Counting Sheep - So You Don't Have To!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Counting_Sheep_-_So_You_Don't_Have_To!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 72,
+      "left": 157
+    }
+  },
+  "Crack of Dawn Repairs": {
+    "wikiUrl": "https://toontownrewritten.wiki/Crack_of_Dawn_Repairs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 212,
+      "left": 111
+    }
+  },
+  "Crack Up Auto Repair": {
+    "wikiUrl": "https://toontownrewritten.wiki/Crack_Up_Auto_Repair",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 109,
+      "left": 120
+    }
+  },
+  "Crib Notes - Music to Sleep By": {
+    "wikiUrl": "https://toontownrewritten.wiki/Crib_Notes_-_Music_to_Sleep_By",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 80,
+      "left": 92
+    }
+  },
+  "Crop Top Barber": {
+    "wikiUrl": "https://toontownrewritten.wiki/Crop_Top_Barber",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 80,
+      "left": 127
+    }
+  },
+  "Curl Up Beauty Parlor": {
+    "wikiUrl": "https://toontownrewritten.wiki/Curl_Up_Beauty_Parlor",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 80,
+      "left": 115
+    }
+  },
+  "Daffy Taffy": {
+    "wikiUrl": "https://toontownrewritten.wiki/Daffy_Taffy",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 217,
+      "left": 182
+    }
+  },
+  "Dance Around the Clock Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dance_Around_the_Clock_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 0,
+      "left": 172
+    }
+  },
+  "Dawn's Yawn & Garden Center": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dawn's_Yawn_&_Garden_Center",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 48,
+      "left": 203
+    }
+  },
+  "Deep Sleep for Cheap!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Deep_Sleep_for_Cheap!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 34,
+      "left": 111
+    }
+  },
+  "Deep-Sea Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Deep-Sea_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 93,
+      "left": 105
+    }
+  },
+  "Designer Inner Tubes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Designer_Inner_Tubes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 164,
+      "left": 105
+    }
+  },
+  "Dew Drop Inn": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dew_Drop_Inn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 42,
+      "left": 156
+    }
+  },
+  "Diced Ice at a Nice Price": {
+    "wikiUrl": "https://toontownrewritten.wiki/Diced_Ice_at_a_Nice_Price",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 76,
+      "left": 230
+    }
+  },
+  "Dime & Quarterdeck Bank": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dime_&_Quarterdeck_Bank",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 158,
+      "left": 135
+    }
+  },
+  "Dirt. Cheap": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dirt._Cheap",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 115,
+      "left": 146
+    }
+  },
+  "Disembark! Tree Surgeons": {
+    "wikiUrl": "https://toontownrewritten.wiki/Disembark!_Tree_Surgeons",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 128,
+      "left": 185
+    }
+  },
+  "Do, Rae, Me Piano Keys": {
+    "wikiUrl": "https://toontownrewritten.wiki/Do,_Rae,_Me_Piano_Keys",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 158,
+      "left": 60
+    }
+  },
+  "Docker's Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Docker's_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 65,
+      "left": 164
+    }
+  },
+  "Dog Paddles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dog_Paddles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 106,
+      "left": 181
+    }
+  },
+  "Don't Let the Bed Bugs Bite Exterminators": {
+    "wikiUrl": "https://toontownrewritten.wiki/Don't_Let_the_Bed_Bugs_Bite_Exterminators",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 48,
+      "left": 100
+    }
+  },
+  "Doppler's Sound Effects Studio": {
+    "wikiUrl": "https://toontownrewritten.wiki/Doppler's_Sound_Effects_Studio",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 162,
+      "left": 203
+    }
+  },
+  "Dottie's Ditzy Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dottie's_Ditzy_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 118,
+      "left": 200
+    }
+  },
+  "Double Reed Bookstore": {
+    "wikiUrl": "https://toontownrewritten.wiki/Double_Reed_Bookstore",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 149,
+      "left": 126
+    }
+  },
+  "Down Time Watch Repair": {
+    "wikiUrl": "https://toontownrewritten.wiki/Down_Time_Watch_Repair",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 80,
+      "left": 49
+    }
+  },
+  "Dr. Fret's Dentistry": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dr._Fret's_Dentistry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 122,
+      "left": 61
+    }
+  },
+  "Dr. I. M. Euphoric": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dr._I._M._Euphoric",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 81,
+      "left": 178
+    }
+  },
+  "Dr. Pulyurleg Chiropractor": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dr._Pulyurleg_Chiropractor",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 40,
+      "left": 49
+    }
+  },
+  "Dr. Tom Foolery": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dr._Tom_Foolery",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 53,
+      "left": 135
+    }
+  },
+  "Dream Jobs Employment Agency": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dream_Jobs_Employment_Agency",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 66,
+      "left": 107
+    }
+  },
+  "Dream On Talent Agency": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dream_On_Talent_Agency",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 86,
+      "left": 57
+    }
+  },
+  "Dreamboat Marine Supply": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dreamboat_Marine_Supply",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 126,
+      "left": 186
+    }
+  },
+  "Dreamland Bleary-Eyed Bistro": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dreamland_Bleary-Eyed_Bistro",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 121,
+      "left": 90
+    }
+  },
+  "Dreamland Blue Moon Cafe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dreamland_Blue_Moon_Cafe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 148,
+      "left": 147
+    }
+  },
+  "Dreamland Sleeping Dogs Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dreamland_Sleeping_Dogs_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 162,
+      "left": 91
+    }
+  },
+  "Dropping Degrees Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Dropping_Degrees_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 105,
+      "left": 230
+    }
+  },
+  "Duck's Back Water Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Duck's_Back_Water_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 98,
+      "left": 222
+    }
+  },
+  "Easy Chair Lifts": {
+    "wikiUrl": "https://toontownrewritten.wiki/Easy_Chair_Lifts",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 222,
+      "left": 75
+    }
+  },
+  "Ed's Red Bed Spreads": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ed's_Red_Bed_Spreads",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 74,
+      "left": 165
+    }
+  },
+  "Etude Brute? Theatre Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Etude_Brute?_Theatre_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 152,
+      "left": 230
+    }
+  },
+  "Every Little Bait": {
+    "wikiUrl": "https://toontownrewritten.wiki/Every_Little_Bait",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 78,
+      "left": 99
+    }
+  },
+  "Eye of the Potato Optometry": {
+    "wikiUrl": "https://toontownrewritten.wiki/Eye_of_the_Potato_Optometry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 53,
+      "left": 32
+    }
+  },
+  "Eye of the Storm Optics": {
+    "wikiUrl": "https://toontownrewritten.wiki/Eye_of_the_Storm_Optics",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 133,
+      "left": 137
+    }
+  },
+  "Fast Freddie's Fretless Fingerboards": {
+    "wikiUrl": "https://toontownrewritten.wiki/Fast_Freddie's_Fretless_Fingerboards",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 103,
+      "left": 185
+    }
+  },
+  "Fifi's Fiddles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Fifi's_Fiddles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 69,
+      "left": 119
+    }
+  },
+  "First Security Blanket Bank": {
+    "wikiUrl": "https://toontownrewritten.wiki/First_Security_Blanket_Bank",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 156,
+      "left": 105
+    }
+  },
+  "Flats Sharpened": {
+    "wikiUrl": "https://toontownrewritten.wiki/Flats_Sharpened",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 127,
+      "left": 178
+    }
+  },
+  "Flo's Oats and Grits": {
+    "wikiUrl": "https://toontownrewritten.wiki/Flo's_Oats_and_Grits",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 262,
+      "left": 145
+    }
+  },
+  "Flower Bed and Breakfast": {
+    "wikiUrl": "https://toontownrewritten.wiki/Flower_Bed_and_Breakfast",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 170,
+      "left": 186
+    }
+  },
+  "Flowery Flute Fleeces": {
+    "wikiUrl": "https://toontownrewritten.wiki/Flowery_Flute_Fleeces",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 126,
+      "left": 140
+    }
+  },
+  "Flutterby's Butterflies": {
+    "wikiUrl": "https://toontownrewritten.wiki/Flutterby's_Butterflies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 35,
+      "left": 171
+    }
+  },
+  "Fly By Night Travel Agency": {
+    "wikiUrl": "https://toontownrewritten.wiki/Fly_By_Night_Travel_Agency",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 35,
+      "left": 86
+    }
+  },
+  "For Good Measure Expert Tailor": {
+    "wikiUrl": "https://toontownrewritten.wiki/For_Good_Measure_Expert_Tailor",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 60,
+      "left": 210
+    }
+  },
+  "For Richer or Snorer": {
+    "wikiUrl": "https://toontownrewritten.wiki/For_Richer_or_Snorer",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 223,
+      "left": 130
+    }
+  },
+  "Forty Winks for the Price of Twenty": {
+    "wikiUrl": "https://toontownrewritten.wiki/Forty_Winks_for_the_Price_of_Twenty",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 40,
+      "left": 180
+    }
+  },
+  "Four Score Antiques": {
+    "wikiUrl": "https://toontownrewritten.wiki/Four_Score_Antiques",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 99,
+      "left": 189
+    }
+  },
+  "Four-Part Harmonicas": {
+    "wikiUrl": "https://toontownrewritten.wiki/Four-Part_Harmonicas",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 65,
+      "left": 127
+    }
+  },
+  "Frank's Pranks": {
+    "wikiUrl": "https://toontownrewritten.wiki/Frank's_Pranks",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 134,
+      "left": 109
+    }
+  },
+  "Fred's Fragrant Flapjacks": {
+    "wikiUrl": "https://toontownrewritten.wiki/Fred's_Fragrant_Flapjacks",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 65,
+      "left": 45
+    }
+  },
+  "Fred's Red Sled Beds": {
+    "wikiUrl": "https://toontownrewritten.wiki/Fred's_Red_Sled_Beds",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 82,
+      "left": 67
+    }
+  },
+  "Fried Baked Alaskas": {
+    "wikiUrl": "https://toontownrewritten.wiki/Fried_Baked_Alaskas",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 28,
+      "left": 96
+    }
+  },
+  "From Fore to Aft": {
+    "wikiUrl": "https://toontownrewritten.wiki/From_Fore_to_Aft",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 53,
+      "left": 107
+    }
+  },
+  "From Start to Spinach": {
+    "wikiUrl": "https://toontownrewritten.wiki/From_Start_to_Spinach",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 63,
+      "left": 39
+    }
+  },
+  "Frosted Snowflakes Cereal Co.": {
+    "wikiUrl": "https://toontownrewritten.wiki/Frosted_Snowflakes_Cereal_Co.",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 66,
+      "left": 109
+    }
+  },
+  "Frosty Freddy's Frozen Frankfurters": {
+    "wikiUrl": "https://toontownrewritten.wiki/Frosty_Freddy's_Frozen_Frankfurters",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 30,
+      "left": 70
+    }
+  },
+  "Full Stop Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Full_Stop_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 43,
+      "left": 197
+    }
+  },
+  "Fungi Clown School": {
+    "wikiUrl": "https://toontownrewritten.wiki/Fungi_Clown_School",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 82,
+      "left": 100
+    }
+  },
+  "Funny Bone Emergency Room": {
+    "wikiUrl": "https://toontownrewritten.wiki/Funny_Bone_Emergency_Room",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 64,
+      "left": 125
+    }
+  },
+  "Funny Money Savings & Loan": {
+    "wikiUrl": "https://toontownrewritten.wiki/Funny_Money_Savings_&_Loan",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 198,
+      "left": 115
+    }
+  },
+  "Garden Hosiery": {
+    "wikiUrl": "https://toontownrewritten.wiki/Garden_Hosiery",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 29,
+      "left": 156
+    }
+  },
+  "Gertie's Greasy Spoon": {
+    "wikiUrl": "https://toontownrewritten.wiki/Gertie's_Greasy_Spoon",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 43,
+      "left": 179
+    }
+  },
+  "Gifts With a Porpoise": {
+    "wikiUrl": "https://toontownrewritten.wiki/Gifts_With_a_Porpoise",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 160,
+      "left": 66
+    }
+  },
+  "Go With the Floe Expert Plumbers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Go_With_the_Floe_Expert_Plumbers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 143,
+      "left": 230
+    }
+  },
+  "Good Luck Horseshoe Crabs": {
+    "wikiUrl": "https://toontownrewritten.wiki/Good_Luck_Horseshoe_Crabs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 74,
+      "left": 211
+    }
+  },
+  "Gopher Broke Savings & Loan": {
+    "wikiUrl": "https://toontownrewritten.wiki/Gopher_Broke_Savings_&_Loan",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 61,
+      "left": 56
+    }
+  },
+  "Grape Expectations": {
+    "wikiUrl": "https://toontownrewritten.wiki/Grape_Expectations",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 7,
+      "left": 193
+    }
+  },
+  "Grass Roots Campaign Headquarters": {
+    "wikiUrl": "https://toontownrewritten.wiki/Grass_Roots_Campaign_Headquarters",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 137,
+      "left": 186
+    }
+  },
+  "Green Bean Jeans": {
+    "wikiUrl": "https://toontownrewritten.wiki/Green_Bean_Jeans",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 80,
+      "left": 42
+    }
+  },
+  "Hambrrrgers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hambrrrgers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 96,
+      "left": 173
+    }
+  },
+  "Happy Hooligans": {
+    "wikiUrl": "https://toontownrewritten.wiki/Happy_Hooligans",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 189,
+      "left": 125
+    }
+  },
+  "Happy Mandolins": {
+    "wikiUrl": "https://toontownrewritten.wiki/Happy_Mandolins",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 113,
+      "left": 105
+    }
+  },
+  "Hard Rock Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hard_Rock_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 78,
+      "left": 189
+    }
+  },
+  "Hardy Harr Seminars": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hardy_Harr_Seminars",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 58,
+      "left": 75
+    }
+  },
+  "Harp Tarps": {
+    "wikiUrl": "https://toontownrewritten.wiki/Harp_Tarps",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 54,
+      "left": 95
+    }
+  },
+  "Harry's House of Harmonious Humbuckers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Harry's_House_of_Harmonious_Humbuckers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 34,
+      "left": 182
+    }
+  },
+  "Haydn Go Seek Playground Supplies": {
+    "wikiUrl": "https://toontownrewritten.wiki/Haydn_Go_Seek_Playground_Supplies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 113,
+      "left": 105
+    }
+  },
+  "Hayseed News": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hayseed_News",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 80,
+      "left": 158
+    }
+  },
+  "Heat-Get it While it's Hot": {
+    "wikiUrl": "https://toontownrewritten.wiki/Heat-Get_it_While_it's_Hot",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 123,
+      "left": 10
+    }
+  },
+  "Her and Hymn Wedding Planners": {
+    "wikiUrl": "https://toontownrewritten.wiki/Her_and_Hymn_Wedding_Planners",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 123,
+      "left": 145
+    }
+  },
+  "Hibernation Vacations": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hibernation_Vacations",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 121,
+      "left": 65
+    }
+  },
+  "Hit the Sack Fencing School": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hit_the_Sack_Fencing_School",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 22,
+      "left": 188
+    }
+  },
+  "Honeydew This": {
+    "wikiUrl": "https://toontownrewritten.wiki/Honeydew_This",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 71,
+      "left": 157
+    }
+  },
+  "Hook, Line, and Sinker Prank Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hook,_Line,_and_Sinker_Prank_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 94,
+      "left": 143
+    }
+  },
+  "Hook's Clock Repair": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hook's_Clock_Repair",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 40,
+      "left": 130
+    }
+  },
+  "House of Bad Pies": {
+    "wikiUrl": "https://toontownrewritten.wiki/House_of_Bad_Pies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 191,
+      "left": 140
+    }
+  },
+  "House of Hibernation": {
+    "wikiUrl": "https://toontownrewritten.wiki/House_of_Hibernation",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 159,
+      "left": 76
+    }
+  },
+  "House of Zzzzzs": {
+    "wikiUrl": "https://toontownrewritten.wiki/House_of_Zzzzzs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 103,
+      "left": 140
+    }
+  },
+  "Hurry Up, Slow Polka! School of Driving": {
+    "wikiUrl": "https://toontownrewritten.wiki/Hurry_Up,_Slow_Polka!_School_of_Driving",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 150,
+      "left": 145
+    }
+  },
+  "I Can Handel It!": {
+    "wikiUrl": "https://toontownrewritten.wiki/I_Can_Handel_It!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 102,
+      "left": 203
+    }
+  },
+  "I Can't Understanza!": {
+    "wikiUrl": "https://toontownrewritten.wiki/I_Can't_Understanza!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 31,
+      "left": 74
+    }
+  },
+  "Ice Cube on a Stick!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ice_Cube_on_a_Stick!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 140,
+      "left": 133
+    }
+  },
+  "Ice Cycle Bikes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ice_Cycle_Bikes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 68,
+      "left": 85
+    }
+  },
+  "Ice House Jewelry": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ice_House_Jewelry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 223,
+      "left": 117
+    }
+  },
+  "Ice Saw it Too": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ice_Saw_it_Too",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 63,
+      "left": 177
+    }
+  },
+  "Icicles Built for Two": {
+    "wikiUrl": "https://toontownrewritten.wiki/Icicles_Built_for_Two",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 118,
+      "left": 163
+    }
+  },
+  "Icy Fine, Do You? Optometry": {
+    "wikiUrl": "https://toontownrewritten.wiki/Icy_Fine,_Do_You?_Optometry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 151,
+      "left": 80
+    }
+  },
+  "Icy London, Icy France Travel Agency": {
+    "wikiUrl": "https://toontownrewritten.wiki/Icy_London,_Icy_France_Travel_Agency",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 223,
+      "left": 157
+    }
+  },
+  "Igloo Design, Inc.": {
+    "wikiUrl": "https://toontownrewritten.wiki/Igloo_Design,_Inc.",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 96,
+      "left": 102
+    }
+  },
+  "Impractical Jokes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Impractical_Jokes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 13,
+      "left": 130
+    }
+  },
+  "In Four-Four Time": {
+    "wikiUrl": "https://toontownrewritten.wiki/In_Four-Four_Time",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 68,
+      "left": 94
+    }
+  },
+  "Inflatable Wrecking Balls": {
+    "wikiUrl": "https://toontownrewritten.wiki/Inflatable_Wrecking_Balls",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 68,
+      "left": 40
+    }
+  },
+  "Insomniac Insurance": {
+    "wikiUrl": "https://toontownrewritten.wiki/Insomniac_Insurance",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 142,
+      "left": 67
+    }
+  },
+  "Instant Ice (Just Add Water and Freeze!)": {
+    "wikiUrl": "https://toontownrewritten.wiki/Instant_Ice_(Just_Add_Water_and_Freeze!)",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 76,
+      "left": 148
+    }
+  },
+  "Jack's Beanstalks": {
+    "wikiUrl": "https://toontownrewritten.wiki/Jack's_Beanstalks",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 9,
+      "left": 173
+    }
+  },
+  "Jake's Rakes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Jake's_Rakes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 83,
+      "left": 56
+    }
+  },
+  "Jesse's Joke Repair": {
+    "wikiUrl": "https://toontownrewritten.wiki/Jesse's_Joke_Repair",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 165,
+      "left": 164
+    }
+  },
+  "Jest for Laughs": {
+    "wikiUrl": "https://toontownrewritten.wiki/Jest_for_Laughs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 55,
+      "left": 125
+    }
+  },
+  "Joy Buzzers to the World": {
+    "wikiUrl": "https://toontownrewritten.wiki/Joy_Buzzers_to_the_World",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 139,
+      "left": 51
+    }
+  },
+  "Jumping Beans": {
+    "wikiUrl": "https://toontownrewritten.wiki/Jumping_Beans",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 83,
+      "left": 78
+    }
+  },
+  "Juneau What I Mean? Public Speaking Seminars": {
+    "wikiUrl": "https://toontownrewritten.wiki/Juneau_What_I_Mean?_Public_Speaking_Seminars",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 208,
+      "left": 130
+    }
+  },
+  "Just So Mistletoe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Just_So_Mistletoe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 140,
+      "left": 158
+    }
+  },
+  "Just Vase It Flower Arrangements": {
+    "wikiUrl": "https://toontownrewritten.wiki/Just_Vase_It_Flower_Arrangements",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 160,
+      "left": 152
+    }
+  },
+  "Kate's Skates": {
+    "wikiUrl": "https://toontownrewritten.wiki/Kate's_Skates",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 148,
+      "left": 73
+    }
+  },
+  "Kazoology School of Music": {
+    "wikiUrl": "https://toontownrewritten.wiki/Kazoology_School_of_Music",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 48,
+      "left": 121
+    }
+  },
+  "Keanu's Kooky Cafe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Keanu's_Kooky_Cafe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 38,
+      "left": 125
+    }
+  },
+  "Keel Deals": {
+    "wikiUrl": "https://toontownrewritten.wiki/Keel_Deals",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 103,
+      "left": 70
+    }
+  },
+  "Kelp Around the House": {
+    "wikiUrl": "https://toontownrewritten.wiki/Kelp_Around_the_House",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 32,
+      "left": 61
+    }
+  },
+  "King Neptoon's Cannery": {
+    "wikiUrl": "https://toontownrewritten.wiki/King_Neptoon's_Cannery",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 106,
+      "left": 163
+    }
+  },
+  "Knots So Fast": {
+    "wikiUrl": "https://toontownrewritten.wiki/Knots_So_Fast",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 103,
+      "left": 104
+    }
+  },
+  "Kooky Cineplex": {
+    "wikiUrl": "https://toontownrewritten.wiki/Kooky_Cineplex",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 93,
+      "left": 69
+    }
+  },
+  "Laughing Gas Station": {
+    "wikiUrl": "https://toontownrewritten.wiki/Laughing_Gas_Station",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 153,
+      "left": 140
+    }
+  },
+  "Laughing Lessons": {
+    "wikiUrl": "https://toontownrewritten.wiki/Laughing_Lessons",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 210,
+      "left": 82
+    }
+  },
+  "Laughter Hours Cafe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Laughter_Hours_Cafe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 111,
+      "left": 82
+    }
+  },
+  "Leaf it Bees Nursery": {
+    "wikiUrl": "https://toontownrewritten.wiki/Leaf_it_Bees_Nursery",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 61,
+      "left": 172
+    }
+  },
+  "Leo's Fenders": {
+    "wikiUrl": "https://toontownrewritten.wiki/Leo's_Fenders",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 113,
+      "left": 152
+    }
+  },
+  "Lettuce Alone Salad Bar": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lettuce_Alone_Salad_Bar",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 65,
+      "left": 54
+    }
+  },
+  "Lettuce Inn": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lettuce_Inn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 69,
+      "left": 119
+    }
+  },
+  "Lights Out Electric Co.": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lights_Out_Electric_Co.",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 65,
+      "left": 76
+    }
+  },
+  "Lisa Lemon Used Cars": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lisa_Lemon_Used_Cars",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 61,
+      "left": 90
+    }
+  },
+  "Lost and Flounder": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lost_and_Flounder",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 50,
+      "left": 39
+    }
+  },
+  "Lotsa Lute Savings & Loan": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lotsa_Lute_Savings_&_Loan",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 81,
+      "left": 149
+    }
+  },
+  "Lousy Lyrics": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lousy_Lyrics",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 182,
+      "left": 121
+    }
+  },
+  "Lowbrow Snowplows": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lowbrow_Snowplows",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 158,
+      "left": 10
+    }
+  },
+  "Luff 'N Stuff": {
+    "wikiUrl": "https://toontownrewritten.wiki/Luff_'N_Stuff",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 80,
+      "left": 140
+    }
+  },
+  "Lyre, Lyre, Pants on Fire!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Lyre,_Lyre,_Pants_on_Fire!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 67,
+      "left": 64
+    }
+  },
+  "Madrigal Motor Homes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Madrigal_Motor_Homes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 68,
+      "left": 113
+    }
+  },
+  "Make Your Bed! Hardware Store": {
+    "wikiUrl": "https://toontownrewritten.wiki/Make_Your_Bed!_Hardware_Store",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 213,
+      "left": 83
+    }
+  },
+  "Malt in Your Mouth Soda Fountain": {
+    "wikiUrl": "https://toontownrewritten.wiki/Malt_in_Your_Mouth_Soda_Fountain",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 121,
+      "left": 212
+    }
+  },
+  "Marshall's Stacks Pancake House": {
+    "wikiUrl": "https://toontownrewritten.wiki/Marshall's_Stacks_Pancake_House",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 68,
+      "left": 6
+    }
+  },
+  "Mary's Go Around Travel Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mary's_Go_Around_Travel_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 150,
+      "left": 118
+    }
+  },
+  "Melted Ice Cubes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Melted_Ice_Cubes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 195,
+      "left": 108
+    }
+  },
+  "Melville's Massive Mizzenmast Mart": {
+    "wikiUrl": "https://toontownrewritten.wiki/Melville's_Massive_Mizzenmast_Mart",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 58,
+      "left": 47
+    }
+  },
+  "Mermaid Swimwear": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mermaid_Swimwear",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 138,
+      "left": 190
+    }
+  },
+  "Midnight Oil & Gas Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Midnight_Oil_&_Gas_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 28,
+      "left": 115
+    }
+  },
+  "Mike's Massive Mukluk Mart": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mike's_Massive_Mukluk_Mart",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 92,
+      "left": 136
+    }
+  },
+  "Mind Over Mattress": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mind_Over_Mattress",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 162,
+      "left": 31
+    }
+  },
+  "Mittens for Kittens": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mittens_for_Kittens",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 101,
+      "left": 92
+    }
+  },
+  "Mixolydian Scales": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mixolydian_Scales",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 44,
+      "left": 45
+    }
+  },
+  "Mom and Pop Corn": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mom_and_Pop_Corn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 25,
+      "left": 82
+    }
+  },
+  "Monkey Tricks": {
+    "wikiUrl": "https://toontownrewritten.wiki/Monkey_Tricks",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 114,
+      "left": 67
+    }
+  },
+  "Moonbeam's Ice Creams": {
+    "wikiUrl": "https://toontownrewritten.wiki/Moonbeam's_Ice_Creams",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 69,
+      "left": 184
+    }
+  },
+  "More Scores": {
+    "wikiUrl": "https://toontownrewritten.wiki/More_Scores",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 148,
+      "left": 118
+    }
+  },
+  "Movie Multiplex": {
+    "wikiUrl": "https://toontownrewritten.wiki/Movie_Multiplex",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 42,
+      "left": 34
+    }
+  },
+  "Mr. Costello's Yellow Cellos": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mr._Costello's_Yellow_Cellos",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 18,
+      "left": 188
+    }
+  },
+  "Mr. Cow's Snow Plows": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mr._Cow's_Snow_Plows",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 74,
+      "left": 119
+    }
+  },
+  "Muldoon's Maroon Balloons": {
+    "wikiUrl": "https://toontownrewritten.wiki/Muldoon's_Maroon_Balloons",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 112,
+      "left": 40
+    }
+  },
+  "Mum's the Word Privacy Consultants": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mum's_the_Word_Privacy_Consultants",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 42,
+      "left": 190
+    }
+  },
+  "Music is Our Forte": {
+    "wikiUrl": "https://toontownrewritten.wiki/Music_is_Our_Forte",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 42,
+      "left": 152
+    }
+  },
+  "Musical Fruit": {
+    "wikiUrl": "https://toontownrewritten.wiki/Musical_Fruit",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 31,
+      "left": 90
+    }
+  },
+  "Mussel Beach Gymnasium": {
+    "wikiUrl": "https://toontownrewritten.wiki/Mussel_Beach_Gymnasium",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 80,
+      "left": 47
+    }
+  },
+  "Name That Toon": {
+    "wikiUrl": "https://toontownrewritten.wiki/Name_That_Toon",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 75,
+      "left": 95
+    }
+  },
+  "Nautical But Nice": {
+    "wikiUrl": "https://toontownrewritten.wiki/Nautical_But_Nice",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 52,
+      "left": 73
+    }
+  },
+  "News for the Amused": {
+    "wikiUrl": "https://toontownrewritten.wiki/News_for_the_Amused",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 77,
+      "left": 24
+    }
+  },
+  "Night Owl Pet Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Night_Owl_Pet_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 40,
+      "left": 125
+    }
+  },
+  "Nightstand Furniture Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Nightstand_Furniture_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 182,
+      "left": 65
+    }
+  },
+  "Noggin's Toboggan Bargains": {
+    "wikiUrl": "https://toontownrewritten.wiki/Noggin's_Toboggan_Bargains",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 128,
+      "left": 108
+    }
+  },
+  "Nor'easter Bonnets": {
+    "wikiUrl": "https://toontownrewritten.wiki/Nor'easter_Bonnets",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 37,
+      "left": 173
+    }
+  },
+  "Northern Lights Electric Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Northern_Lights_Electric_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 7,
+      "left": 175
+    }
+  },
+  "Notations": {
+    "wikiUrl": "https://toontownrewritten.wiki/Notations",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 69,
+      "left": 171
+    }
+  },
+  "Nothing to Luge": {
+    "wikiUrl": "https://toontownrewritten.wiki/Nothing_to_Luge",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 131,
+      "left": 128
+    }
+  },
+  "Oh My Galoshes!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Oh_My_Galoshes!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 140,
+      "left": 121
+    }
+  },
+  "On Ballet! Climbing Supplies": {
+    "wikiUrl": "https://toontownrewritten.wiki/On_Ballet!_Climbing_Supplies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 141,
+      "left": 193
+    }
+  },
+  "One-Liner Miners": {
+    "wikiUrl": "https://toontownrewritten.wiki/One-Liner_Miners",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 44,
+      "left": 73
+    }
+  },
+  "Open Fire Chestnut Roasting": {
+    "wikiUrl": "https://toontownrewritten.wiki/Open_Fire_Chestnut_Roasting",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 19,
+      "left": 149
+    }
+  },
+  "Out to See Optics": {
+    "wikiUrl": "https://toontownrewritten.wiki/Out_to_See_Optics",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 172,
+      "left": 165
+    }
+  },
+  "Overture Understudies": {
+    "wikiUrl": "https://toontownrewritten.wiki/Overture_Understudies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 86,
+      "left": 113
+    }
+  },
+  "Pachelbel's Canonballs": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pachelbel's_Canonballs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 50,
+      "left": 78
+    }
+  },
+  "Paper Airplanes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Paper_Airplanes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 118,
+      "left": 119
+    }
+  },
+  "Pea Soup Cafe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pea_Soup_Cafe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 170,
+      "left": 145
+    }
+  },
+  "Peanut Butter and Jellyfish": {
+    "wikiUrl": "https://toontownrewritten.wiki/Peanut_Butter_and_Jellyfish",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 140,
+      "left": 48
+    }
+  },
+  "Peas and Q's Restaurant": {
+    "wikiUrl": "https://toontownrewritten.wiki/Peas_and_Q's_Restaurant",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 16,
+      "left": 154
+    }
+  },
+  "Petal Pusher Bicycles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Petal_Pusher_Bicycles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 25,
+      "left": 209
+    }
+  },
+  "Petals": {
+    "wikiUrl": "https://toontownrewritten.wiki/Petals",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 17,
+      "left": 34
+    }
+  },
+  "Phony Baloney": {
+    "wikiUrl": "https://toontownrewritten.wiki/Phony_Baloney",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 50,
+      "left": 127
+    }
+  },
+  "Photo Cynthia's Camera Store": {
+    "wikiUrl": "https://toontownrewritten.wiki/Photo_Cynthia's_Camera_Store",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 81,
+      "left": 90
+    }
+  },
+  "Piano Tuna: Works for Scale": {
+    "wikiUrl": "https://toontownrewritten.wiki/Piano_Tuna:_Works_for_Scale",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 146,
+      "left": 99
+    }
+  },
+  "Piccolo's Pizza": {
+    "wikiUrl": "https://toontownrewritten.wiki/Piccolo's_Pizza",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 148,
+      "left": 93
+    }
+  },
+  "Pier Pressure Plumbing": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pier_Pressure_Plumbing",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 50,
+      "left": 93
+    }
+  },
+  "Pillow Fights Nightly": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pillow_Fights_Nightly",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 187,
+      "left": 88
+    }
+  },
+  "Pine Needle Crafts": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pine_Needle_Crafts",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 61,
+      "left": 94
+    }
+  },
+  "Pinecone Zone": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pinecone_Zone",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 82,
+      "left": 111
+    }
+  },
+  "Pipe Dream Plumbers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pipe_Dream_Plumbers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 66,
+      "left": 152
+    }
+  },
+  "Pitch Perfect Roofing": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pitch_Perfect_Roofing",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 163,
+      "left": 170
+    }
+  },
+  "PJ's Taxi Service": {
+    "wikiUrl": "https://toontownrewritten.wiki/PJ's_Taxi_Service",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 96,
+      "left": 95
+    }
+  },
+  "Please Refrain": {
+    "wikiUrl": "https://toontownrewritten.wiki/Please_Refrain",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 120,
+      "left": 78
+    }
+  },
+  "Plummeting Pianos": {
+    "wikiUrl": "https://toontownrewritten.wiki/Plummeting_Pianos",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 32,
+      "left": 189
+    }
+  },
+  "Pluto's Place": {
+    "wikiUrl": "https://toontownrewritten.wiki/Pluto's_Place",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 68,
+      "left": 181
+    }
+  },
+  "Poison Oak Furniture": {
+    "wikiUrl": "https://toontownrewritten.wiki/Poison_Oak_Furniture",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 65,
+      "left": 115
+    }
+  },
+  "Polar Ice Caps": {
+    "wikiUrl": "https://toontownrewritten.wiki/Polar_Ice_Caps",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 127,
+      "left": 172
+    }
+  },
+  "Poop Deck Gym": {
+    "wikiUrl": "https://toontownrewritten.wiki/Poop_Deck_Gym",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 38,
+      "left": 90
+    }
+  },
+  "Portable Fireplaces": {
+    "wikiUrl": "https://toontownrewritten.wiki/Portable_Fireplaces",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 190,
+      "left": 43
+    }
+  },
+  "Precipitation Foundation": {
+    "wikiUrl": "https://toontownrewritten.wiki/Precipitation_Foundation",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 102,
+      "left": 111
+    }
+  },
+  "Professor Wiggle's House of Giggles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Professor_Wiggle's_House_of_Giggles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 48,
+      "left": 147
+    }
+  },
+  "Punchline Movie Palace": {
+    "wikiUrl": "https://toontownrewritten.wiki/Punchline_Movie_Palace",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 28,
+      "left": 205
+    }
+  },
+  "Quentin's Quintessential Quadrilles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Quentin's_Quintessential_Quadrilles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 56,
+      "left": 195
+    }
+  },
+  "Ragtime Drycleaners": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ragtime_Drycleaners",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 140,
+      "left": 197
+    }
+  },
+  "Rake It Inn": {
+    "wikiUrl": "https://toontownrewritten.wiki/Rake_It_Inn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 24,
+      "left": 184
+    }
+  },
+  "Reel 'em Inn": {
+    "wikiUrl": "https://toontownrewritten.wiki/Reel_'em_Inn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 116,
+      "left": 160
+    }
+  },
+  "Reggae Regalia": {
+    "wikiUrl": "https://toontownrewritten.wiki/Reggae_Regalia",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 60,
+      "left": 55
+    }
+  },
+  "Relax the Bach Chiropractors": {
+    "wikiUrl": "https://toontownrewritten.wiki/Relax_the_Bach_Chiropractors",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 33,
+      "left": 30
+    }
+  },
+  "Relax to the Max": {
+    "wikiUrl": "https://toontownrewritten.wiki/Relax_to_the_Max",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 107,
+      "left": 75
+    }
+  },
+  "REM Optometry": {
+    "wikiUrl": "https://toontownrewritten.wiki/REM_Optometry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 71,
+      "left": 219
+    }
+  },
+  "Rests Rooms": {
+    "wikiUrl": "https://toontownrewritten.wiki/Rests_Rooms",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 120,
+      "left": 139
+    }
+  },
+  "Riff's Paper Plates": {
+    "wikiUrl": "https://toontownrewritten.wiki/Riff's_Paper_Plates",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 37,
+      "left": 132
+    }
+  },
+  "Rip Van Winkle's Wrinkle Cream": {
+    "wikiUrl": "https://toontownrewritten.wiki/Rip_Van_Winkle's_Wrinkle_Cream",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 107,
+      "left": 230
+    }
+  },
+  "Road Salt and Pepper": {
+    "wikiUrl": "https://toontownrewritten.wiki/Road_Salt_and_Pepper",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 165,
+      "left": 169
+    }
+  },
+  "Rock to Sleep Quarry": {
+    "wikiUrl": "https://toontownrewritten.wiki/Rock_to_Sleep_Quarry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 132,
+      "left": 65
+    }
+  },
+  "Root 66 Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Root_66_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 17,
+      "left": 197
+    }
+  },
+  "Root Beer Afloats": {
+    "wikiUrl": "https://toontownrewritten.wiki/Root_Beer_Afloats",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 143,
+      "left": 90
+    }
+  },
+  "Rubber Chicken Sandwiches": {
+    "wikiUrl": "https://toontownrewritten.wiki/Rubber_Chicken_Sandwiches",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 61,
+      "left": 168
+    }
+  },
+  "Rudderly Ridiculous!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Rudderly_Ridiculous!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 63,
+      "left": 189
+    }
+  },
+  "Run Aground Taxi Service": {
+    "wikiUrl": "https://toontownrewritten.wiki/Run_Aground_Taxi_Service",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 128,
+      "left": 210
+    }
+  },
+  "Rusty Buckets": {
+    "wikiUrl": "https://toontownrewritten.wiki/Rusty_Buckets",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 93,
+      "left": 112
+    }
+  },
+  "Sails for Sale": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sails_for_Sale",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 113,
+      "left": 47
+    }
+  },
+  "Salmon Chanted Evening Formal Wear": {
+    "wikiUrl": "https://toontownrewritten.wiki/Salmon_Chanted_Evening_Formal_Wear",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 68,
+      "left": 65
+    }
+  },
+  "Sandman's Sandwiches": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sandman's_Sandwiches",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 175,
+      "left": 162
+    }
+  },
+  "Sanjay's Stomach Stuffer": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sanjay's_Stomach_Stuffer",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 30,
+      "left": 79
+    }
+  },
+  "Sawing Wood Slumber Lumber": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sawing_Wood_Slumber_Lumber",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 171,
+      "left": 118
+    }
+  },
+  "School of Vine Arts": {
+    "wikiUrl": "https://toontownrewritten.wiki/School_of_Vine_Arts",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 142,
+      "left": 83
+    }
+  },
+  "Schumann's Shoes for Men": {
+    "wikiUrl": "https://toontownrewritten.wiki/Schumann's_Shoes_for_Men",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 20,
+      "left": 74
+    }
+  },
+  "Seagull Statue Store": {
+    "wikiUrl": "https://toontownrewritten.wiki/Seagull_Statue_Store",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 32,
+      "left": 49
+    }
+  },
+  "Seltzer Bottles (And Cans!)": {
+    "wikiUrl": "https://toontownrewritten.wiki/Seltzer_Bottles_(And_Cans!)",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 50,
+      "left": 197
+    }
+  },
+  "Seven Seas Cafe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Seven_Seas_Cafe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 65,
+      "left": 146
+    }
+  },
+  "Shave and a Haircut for a Song": {
+    "wikiUrl": "https://toontownrewritten.wiki/Shave_and_a_Haircut_for_a_Song",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 182,
+      "left": 111
+    }
+  },
+  "Shiverin' Shakes Malt Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Shiverin'_Shakes_Malt_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 83,
+      "left": 153
+    }
+  },
+  "Shut-Eye Optometry": {
+    "wikiUrl": "https://toontownrewritten.wiki/Shut-Eye_Optometry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 204,
+      "left": 104
+    }
+  },
+  "Sidesplitter's Mending": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sidesplitter's_Mending",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 90,
+      "left": 136
+    }
+  },
+  "Silly Sal's Daffy Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Silly_Sal's_Daffy_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 50,
+      "left": 169
+    }
+  },
+  "Silly Statues": {
+    "wikiUrl": "https://toontownrewritten.wiki/Silly_Statues",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 45,
+      "left": 127
+    }
+  },
+  "Silly Stunts": {
+    "wikiUrl": "https://toontownrewritten.wiki/Silly_Stunts",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 158,
+      "left": 155
+    }
+  },
+  "Silver Lining Jewelers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Silver_Lining_Jewelers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 156,
+      "left": 95
+    }
+  },
+  "Sing Solo We Can't Hear You": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sing_Solo_We_Can't_Hear_You",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 149,
+      "left": 103
+    }
+  },
+  "Skiing Clinic": {
+    "wikiUrl": "https://toontownrewritten.wiki/Skiing_Clinic",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 131,
+      "left": 56
+    }
+  },
+  "Sleeping Beauty Parlor": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sleeping_Beauty_Parlor",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 148,
+      "left": 155
+    }
+  },
+  "Sleepless in the Saddle All Night Pony Rides": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sleepless_in_the_Saddle_All_Night_Pony_Rides",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 116,
+      "left": 181
+    }
+  },
+  "Sleepy Time Pieces": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sleepy_Time_Pieces",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 118,
+      "left": 114
+    }
+  },
+  "Snail Mail": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snail_Mail",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 63,
+      "left": 8
+    }
+  },
+  "Snore or Less": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snore_or_Less",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 214,
+      "left": 111
+    }
+  },
+  "Snow Ball Hall": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snow_Ball_Hall",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 186,
+      "left": 173
+    }
+  },
+  "Snow Big Deal! Crisis Management": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snow_Big_Deal!_Crisis_Management",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 66,
+      "left": 43
+    }
+  },
+  "Snow Bunny Ski Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snow_Bunny_Ski_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 138,
+      "left": 65
+    }
+  },
+  "Snow Whitening": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snow_Whitening",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 34,
+      "left": 164
+    }
+  },
+  "Snowman's Land": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snowman's_Land",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 72,
+      "left": 75
+    }
+  },
+  "Snowmen Bought & Sold": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snowmen_Bought_&_Sold",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 190,
+      "left": 15
+    }
+  },
+  "Snowplace Like Home": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snowplace_Like_Home",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 69,
+      "left": 181
+    }
+  },
+  "Snowshoes You Can't Refuse": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snowshoes_You_Can't_Refuse",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 72,
+      "left": 139
+    }
+  },
+  "Snug as a Bug Rug Dealer": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snug_as_a_Bug_Rug_Dealer",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 113,
+      "left": 129
+    }
+  },
+  "Snuggle Inn": {
+    "wikiUrl": "https://toontownrewritten.wiki/Snuggle_Inn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 40,
+      "left": 159
+    }
+  },
+  "Sofa Whoopee Cushions": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sofa_Whoopee_Cushions",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 45,
+      "left": 43
+    }
+  },
+  "Solar Powered Thermal Blankets": {
+    "wikiUrl": "https://toontownrewritten.wiki/Solar_Powered_Thermal_Blankets",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 98,
+      "left": 33
+    }
+  },
+  "Soles Repaired While U Wait": {
+    "wikiUrl": "https://toontownrewritten.wiki/Soles_Repaired_While_U_Wait",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 123,
+      "left": 160
+    }
+  },
+  "Sonata Your Fault! Discount Auto Insurance": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sonata_Your_Fault!_Discount_Auto_Insurance",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 1,
+      "left": 135
+    }
+  },
+  "Soup and Crack Ups": {
+    "wikiUrl": "https://toontownrewritten.wiki/Soup_and_Crack_Ups",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 27,
+      "left": 100
+    }
+  },
+  "Soup Forks": {
+    "wikiUrl": "https://toontownrewritten.wiki/Soup_Forks",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 105,
+      "left": 146
+    }
+  },
+  "Spaghetti and Goofballs": {
+    "wikiUrl": "https://toontownrewritten.wiki/Spaghetti_and_Goofballs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 105,
+      "left": 60
+    }
+  },
+  "Spill the Beans": {
+    "wikiUrl": "https://toontownrewritten.wiki/Spill_the_Beans",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 66,
+      "left": 87
+    }
+  },
+  "Spring Rain Seltzer Bottles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Spring_Rain_Seltzer_Bottles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 72,
+      "left": 139
+    }
+  },
+  "Squash & Stretch Gym": {
+    "wikiUrl": "https://toontownrewritten.wiki/Squash_&_Stretch_Gym",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 49,
+      "left": 48
+    }
+  },
+  "Squid Pro Quo: Attorneys at Law": {
+    "wikiUrl": "https://toontownrewritten.wiki/Squid_Pro_Quo:_Attorneys_at_Law",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 214,
+      "left": 127
+    }
+  },
+  "Squid's Seaweed": {
+    "wikiUrl": "https://toontownrewritten.wiki/Squid's_Seaweed",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 28,
+      "left": 192
+    }
+  },
+  "St. Bernard Kennel Club": {
+    "wikiUrl": "https://toontownrewritten.wiki/St._Bernard_Kennel_Club",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 158,
+      "left": 170
+    }
+  },
+  "Starlight Cafe": {
+    "wikiUrl": "https://toontownrewritten.wiki/Starlight_Cafe",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 94,
+      "left": 234
+    }
+  },
+  "Subzero Sandwich Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Subzero_Sandwich_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 157,
+      "left": 97
+    }
+  },
+  "Suction Cups and Saucers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Suction_Cups_and_Saucers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 82,
+      "left": 107
+    }
+  },
+  "Sundae Funnies Ice Cream": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sundae_Funnies_Ice_Cream",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 48,
+      "left": 205
+    }
+  },
+  "Sweater Lodge": {
+    "wikiUrl": "https://toontownrewritten.wiki/Sweater_Lodge",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 108,
+      "left": 176
+    }
+  },
+  "Tackle Box Lunches": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tackle_Box_Lunches",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 83,
+      "left": 72
+    }
+  },
+  "Take It or Leaf It Pawn Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Take_It_or_Leaf_It_Pawn_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 48,
+      "left": 176
+    }
+  },
+  "Talking in Your Sleep Voice Training": {
+    "wikiUrl": "https://toontownrewritten.wiki/Talking_in_Your_Sleep_Voice_Training",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 113,
+      "left": 79
+    }
+  },
+  "Tee-Hee Tea Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tee-Hee_Tea_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 264,
+      "left": 97
+    }
+  },
+  "Tenor Times Newspaper": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tenor_Times_Newspaper",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 60,
+      "left": 178
+    }
+  },
+  "That's a Moray!": {
+    "wikiUrl": "https://toontownrewritten.wiki/That's_a_Moray!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 48,
+      "left": 173
+    }
+  },
+  "The All Tucked Inn": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_All_Tucked_Inn",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 214,
+      "left": 55
+    }
+  },
+  "The Baritone Barber": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Baritone_Barber",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 134,
+      "left": 112
+    }
+  },
+  "The Blizzard Wizard": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Blizzard_Wizard",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 130,
+      "left": 160
+    }
+  },
+  "The Borrowed Chord Pawn Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Borrowed_Chord_Pawn_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 112,
+      "left": 137
+    }
+  },
+  "The Chattering Chronicle": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Chattering_Chronicle",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 126,
+      "left": 53
+    }
+  },
+  "The Clam Bake Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Clam_Bake_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 85,
+      "left": 172
+    }
+  },
+  "The Dandy Lion Exotic Pets": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Dandy_Lion_Exotic_Pets",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 60,
+      "left": 190
+    }
+  },
+  "The Downhill Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Downhill_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 119,
+      "left": 132
+    }
+  },
+  "The Dreamland Screening Room": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Dreamland_Screening_Room",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 138,
+      "left": 27
+    }
+  },
+  "The Flying Pie": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Flying_Pie",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 38,
+      "left": 165
+    }
+  },
+  "The Frozen Nose": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Frozen_Nose",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 178,
+      "left": 75
+    }
+  },
+  "The Happy Times": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Happy_Times",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 218,
+      "left": 150
+    }
+  },
+  "The Hogwash & Dry": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Hogwash_&_Dry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 0,
+      "left": 84
+    }
+  },
+  "The Kaboomery": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Kaboomery",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 115,
+      "left": 151
+    }
+  },
+  "The Karnival Kid": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Karnival_Kid",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 52,
+      "left": 62
+    }
+  },
+  "The Laughin' Place": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Laughin'_Place",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 265,
+      "left": 164
+    }
+  },
+  "The Melting Ice Cream Bar": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Melting_Ice_Cream_Bar",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 110,
+      "left": 7
+    }
+  },
+  "The Merry Mimes": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Merry_Mimes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 132,
+      "left": 207
+    }
+  },
+  "The Mostly Toasty Bread Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Mostly_Toasty_Bread_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 108,
+      "left": 100
+    }
+  },
+  "The Punch Line Gym": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Punch_Line_Gym",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 40,
+      "left": 99
+    }
+  },
+  "The Reel Deal": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Reel_Deal",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 118,
+      "left": 201
+    }
+  },
+  "The Salad Bar": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Salad_Bar",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/8/8c/Street_Map_Oak_Street.png/250px-Street_Map_Oak_Street.png",
+    "street": "Oak Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 195,
+      "left": 130
+    }
+  },
+  "The Sanguine Penguin Tuxedo Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Sanguine_Penguin_Tuxedo_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 222,
+      "left": 99
+    }
+  },
+  "The Schmaltzy Waltz School of Dance": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Schmaltzy_Waltz_School_of_Dance",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 112,
+      "left": 173
+    }
+  },
+  "The Shovel Hovel": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Shovel_Hovel",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 89,
+      "left": 205
+    }
+  },
+  "The Sleepy Teepee": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Sleepy_Teepee",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/49/Street_Map_Lullaby_Lane.png/250px-Street_Map_Lullaby_Lane.png",
+    "street": "Lullaby Lane",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 140,
+      "left": 155
+    }
+  },
+  "The Squirting Flower": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Squirting_Flower",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 80,
+      "left": 190
+    }
+  },
+  "The Syncopation Corporation": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Syncopation_Corporation",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 81,
+      "left": 138
+    }
+  },
+  "The Teli-Caster Network": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Teli-Caster_Network",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 135,
+      "left": 160
+    }
+  },
+  "The Ternary Exotic Birds": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Ternary_Exotic_Birds",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 57,
+      "left": 55
+    }
+  },
+  "The Toupee Chalet": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Toupee_Chalet",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 144,
+      "left": 95
+    }
+  },
+  "The Treble Chef's Cooking School": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Treble_Chef's_Cooking_School",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 195,
+      "left": 87
+    }
+  },
+  "The Yo Ho Stop and Go": {
+    "wikiUrl": "https://toontownrewritten.wiki/The_Yo_Ho_Stop_and_Go",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 40,
+      "left": 101
+    }
+  },
+  "This Oar That": {
+    "wikiUrl": "https://toontownrewritten.wiki/This_Oar_That",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 158,
+      "left": 170
+    }
+  },
+  "This Transom Man Custom-Tailored Suits": {
+    "wikiUrl": "https://toontownrewritten.wiki/This_Transom_Man_Custom-Tailored_Suits",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 40,
+      "left": 155
+    }
+  },
+  "Tickle Machines": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tickle_Machines",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 83,
+      "left": 103
+    }
+  },
+  "Timbre! Equipment for the Singing Lumberjack": {
+    "wikiUrl": "https://toontownrewritten.wiki/Timbre!_Equipment_for_the_Singing_Lumberjack",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 122,
+      "left": 200
+    }
+  },
+  "Tina's Concertina Concerts": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tina's_Concertina_Concerts",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 116,
+      "left": 230
+    }
+  },
+  "Toboggan or Not Toboggan": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toboggan_or_Not_Toboggan",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 60,
+      "left": 173
+    }
+  },
+  "Tom-Tom's Drums": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tom-Tom's_Drums",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 45,
+      "left": 121
+    }
+  },
+  "Toon Tunes": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toon_Tunes",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 170,
+      "left": 146
+    }
+  },
+  "Toontown Cinerama": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Cinerama",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 108,
+      "left": 170
+    }
+  },
+  "Toontown Mess Hall": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Mess_Hall",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 38,
+      "left": 65
+    }
+  },
+  "Toontown Playhouse": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Playhouse",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 117,
+      "left": 93
+    }
+  },
+  "Toontown Post Office": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Post_Office",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 124,
+      "left": 85
+    }
+  },
+  "Toontown Sign Factory": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Sign_Factory",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 37,
+      "left": 39
+    }
+  },
+  "Toontown Theatre": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Theatre",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 48,
+      "left": 90
+    }
+  },
+  "Toontown Three Squares Meal House": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Three_Squares_Meal_House",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 3,
+      "left": 145
+    }
+  },
+  "Toontown Tummy Tickler": {
+    "wikiUrl": "https://toontownrewritten.wiki/Toontown_Tummy_Tickler",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 87,
+      "left": 62
+    }
+  },
+  "Tooth Fairy Dentistry": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tooth_Fairy_Dentistry",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 48,
+      "left": 165
+    }
+  },
+  "Trellis the Truth! Private Investigators": {
+    "wikiUrl": "https://toontownrewritten.wiki/Trellis_the_Truth!_Private_Investigators",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 54,
+      "left": 205
+    }
+  },
+  "Trim the Nail Boutique": {
+    "wikiUrl": "https://toontownrewritten.wiki/Trim_the_Nail_Boutique",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 248,
+      "left": 145
+    }
+  },
+  "Trowels and Tribulations": {
+    "wikiUrl": "https://toontownrewritten.wiki/Trowels_and_Tribulations",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 56,
+      "left": 154
+    }
+  },
+  "Tuba Toothpaste": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tuba_Toothpaste",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 112,
+      "left": 163
+    }
+  },
+  "Tuft Guy Gym": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tuft_Guy_Gym",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 0,
+      "left": 133
+    }
+  },
+  "Tuning Forks and Spoons": {
+    "wikiUrl": "https://toontownrewritten.wiki/Tuning_Forks_and_Spoons",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fb/Street_Map_Alto_Avenue.png/250px-Street_Map_Alto_Avenue.png",
+    "street": "Alto Avenue",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 151,
+      "left": 82
+    }
+  },
+  "Ursatz for Really Kool Katz!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ursatz_for_Really_Kool_Katz!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 78,
+      "left": 85
+    }
+  },
+  "Used Clown Cars": {
+    "wikiUrl": "https://toontownrewritten.wiki/Used_Clown_Cars",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 173,
+      "left": 88
+    }
+  },
+  "Used Firecrackers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Used_Firecrackers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 78,
+      "left": 193
+    }
+  },
+  "Used Firewood": {
+    "wikiUrl": "https://toontownrewritten.wiki/Used_Firewood",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/3c/Street_Map_Walrus_Way.png/250px-Street_Map_Walrus_Way.png",
+    "street": "Walrus Way",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 195,
+      "left": 62
+    }
+  },
+  "Used Life Preservers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Used_Life_Preservers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 78,
+      "left": 90
+    }
+  },
+  "Vanishing Cream Going Fast!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Vanishing_Cream_Going_Fast!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 78,
+      "left": 207
+    }
+  },
+  "Vege-Tables and Chairs": {
+    "wikiUrl": "https://toontownrewritten.wiki/Vege-Tables_and_Chairs",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/7c/Street_Map_Elm_Street.png/250px-Street_Map_Elm_Street.png",
+    "street": "Elm Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 35,
+      "left": 62
+    }
+  },
+  "Vine and Dandy Menswear": {
+    "wikiUrl": "https://toontownrewritten.wiki/Vine_and_Dandy_Menswear",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 35,
+      "left": 186
+    }
+  },
+  "Visible Ink": {
+    "wikiUrl": "https://toontownrewritten.wiki/Visible_Ink",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 98,
+      "left": 178
+    }
+  },
+  "Vocal Chords Braided": {
+    "wikiUrl": "https://toontownrewritten.wiki/Vocal_Chords_Braided",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 174,
+      "left": 87
+    }
+  },
+  "Wagner's Vocational Violin Videos": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wagner's_Vocational_Violin_Videos",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 135,
+      "left": 145
+    }
+  },
+  "Wait and See Goggle Defogging": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wait_and_See_Goggle_Defogging",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 98,
+      "left": 58
+    }
+  },
+  "Wake-Up & Smell the Coffee Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wake-Up_&_Smell_the_Coffee_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 77,
+      "left": 124
+    }
+  },
+  "Wake-Up Call Phone Company": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wake-Up_Call_Phone_Company",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 78,
+      "left": 187
+    }
+  },
+  "Walt's Little D Diner": {
+    "wikiUrl": "https://toontownrewritten.wiki/Walt's_Little_D_Diner",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 9,
+      "left": 71
+    }
+  },
+  "Waltzing Matilda's Dance School": {
+    "wikiUrl": "https://toontownrewritten.wiki/Waltzing_Matilda's_Dance_School",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 64,
+      "left": 173
+    }
+  },
+  "We'd Be Gone Travel Agency": {
+    "wikiUrl": "https://toontownrewritten.wiki/We'd_Be_Gone_Travel_Agency",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/6d/Street_Map_Maple_Street.png/250px-Street_Map_Maple_Street.png",
+    "street": "Maple Street",
+    "neighborhood": "Daisy Gardens",
+    "markerPosition": {
+      "top": 0,
+      "left": 113
+    }
+  },
+  "Weird Beard's Disguise Shop": {
+    "wikiUrl": "https://toontownrewritten.wiki/Weird_Beard's_Disguise_Shop",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/4/45/Street_Map_Silly_Street.png/250px-Street_Map_Silly_Street.png",
+    "street": "Silly Street",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 161,
+      "left": 186
+    }
+  },
+  "Wet Blanket Party Planners": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wet_Blanket_Party_Planners",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 98,
+      "left": 161
+    }
+  },
+  "Wet Suit Dry Cleaners": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wet_Suit_Dry_Cleaners",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": null
+  },
+  "What a Mezzo! Maid Service": {
+    "wikiUrl": "https://toontownrewritten.wiki/What_a_Mezzo!_Maid_Service",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 44,
+      "left": 15
+    }
+  },
+  "What's Canoe With You?": {
+    "wikiUrl": "https://toontownrewritten.wiki/What's_Canoe_With_You?",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 61,
+      "left": 112
+    }
+  },
+  "What's Up, Dock?": {
+    "wikiUrl": "https://toontownrewritten.wiki/What's_Up,_Dock?",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 40,
+      "left": 115
+    }
+  },
+  "White Noise for Girls and Boys": {
+    "wikiUrl": "https://toontownrewritten.wiki/White_Noise_for_Girls_and_Boys",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 93,
+      "left": 85
+    }
+  },
+  "Wholly Mackerel! Fish Market": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wholly_Mackerel!_Fish_Market",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/9/97/Street_Map_Lighthouse_Lane.png/250px-Street_Map_Lighthouse_Lane.png",
+    "street": "Lighthouse Lane",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 94,
+      "left": 207
+    }
+  },
+  "Windjammers and Jellies": {
+    "wikiUrl": "https://toontownrewritten.wiki/Windjammers_and_Jellies",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 164,
+      "left": 112
+    }
+  },
+  "Winter Storage": {
+    "wikiUrl": "https://toontownrewritten.wiki/Winter_Storage",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 100,
+      "left": 98
+    }
+  },
+  "Winter Wonderland Walking Club": {
+    "wikiUrl": "https://toontownrewritten.wiki/Winter_Wonderland_Walking_Club",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 30,
+      "left": 215
+    }
+  },
+  "Wiseacre's Noisemakers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wiseacre's_Noisemakers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/6/64/Street_Map_Loopy_Lane.png/250px-Street_Map_Loopy_Lane.png",
+    "street": "Loopy Lane",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 73,
+      "left": 66
+    }
+  },
+  "Wok the Plank Chinese Food": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wok_the_Plank_Chinese_Food",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/f8/Street_Map_Seaweed_Street.png/250px-Street_Map_Seaweed_Street.png",
+    "street": "Seaweed Street",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 157,
+      "left": 44
+    }
+  },
+  "Wynken, Blynken & Nod, Attorneys at Law": {
+    "wikiUrl": "https://toontownrewritten.wiki/Wynken,_Blynken_&_Nod,_Attorneys_at_Law",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 103,
+      "left": 181
+    }
+  },
+  "Yacht's All, Folks!": {
+    "wikiUrl": "https://toontownrewritten.wiki/Yacht's_All,_Folks!",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/a/ae/Street_Map_Barnacle_Boulevard.png/250px-Street_Map_Barnacle_Boulevard.png",
+    "street": "Barnacle Boulevard",
+    "neighborhood": "Donald's Dock",
+    "markerPosition": {
+      "top": 198,
+      "left": 183
+    }
+  },
+  "You Sleigh Me Sleds and Beds": {
+    "wikiUrl": "https://toontownrewritten.wiki/You_Sleigh_Me_Sleds_and_Beds",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/e/e8/Street_Map_Sleet_Street.png/250px-Street_Map_Sleet_Street.png",
+    "street": "Sleet Street",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 98,
+      "left": 64
+    }
+  },
+  "You Snooze, You Lose": {
+    "wikiUrl": "https://toontownrewritten.wiki/You_Snooze,_You_Lose",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/2/28/Street_Map_Pajama_Place.png/250px-Street_Map_Pajama_Place.png",
+    "street": "Pajama Place",
+    "neighborhood": "Donald's Dreamland",
+    "markerPosition": {
+      "top": 63,
+      "left": 131
+    }
+  },
+  "Your Snow Angel": {
+    "wikiUrl": "https://toontownrewritten.wiki/Your_Snow_Angel",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/f/fe/Street_Map_Polar_Place.png/250px-Street_Map_Polar_Place.png",
+    "street": "Polar Place",
+    "neighborhood": "The Brrrgh",
+    "markerPosition": {
+      "top": 16,
+      "left": 177
+    }
+  },
+  "Yuki's Ukeleles": {
+    "wikiUrl": "https://toontownrewritten.wiki/Yuki's_Ukeleles",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 66,
+      "left": 67
+    }
+  },
+  "Ziggy's Zeitlose Zukunftsmusik": {
+    "wikiUrl": "https://toontownrewritten.wiki/Ziggy's_Zeitlose_Zukunftsmusik",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/3/39/Street_Map_Tenor_Terrace.png/250px-Street_Map_Tenor_Terrace.png",
+    "street": "Tenor Terrace",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 70,
+      "left": 161
+    }
+  },
+  "Zippy's Zingers": {
+    "wikiUrl": "https://toontownrewritten.wiki/Zippy's_Zingers",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/1/14/Street_Map_Punchline_Place.png/250px-Street_Map_Punchline_Place.png",
+    "street": "Punchline Place",
+    "neighborhood": "Toontown Central",
+    "markerPosition": {
+      "top": 48,
+      "left": 143
+    }
+  },
+  "Zither Here Nor There": {
+    "wikiUrl": "https://toontownrewritten.wiki/Zither_Here_Nor_There",
+    "mapImageUrl": "https://static.toontownrewritten.wiki/uploads/thumb/7/78/Street_Map_Baritone_Boulevard.png/250px-Street_Map_Baritone_Boulevard.png",
+    "street": "Baritone Boulevard",
+    "neighborhood": "Minnie's Melodyland",
+    "markerPosition": {
+      "top": 133,
+      "left": 210
+    }
+  }
+}

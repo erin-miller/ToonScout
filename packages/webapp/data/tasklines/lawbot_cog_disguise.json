@@ -1,0 +1,226 @@
+[
+  {
+    "id": "lawbot_cog_disguise_upper_left_leg",
+    "name": "Upper left leg",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Silly Street, Toontown Central)",
+        "building": "Silly Street",
+        "location": "Toontown Central"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_lower_left_leg",
+    "name": "Lower left leg",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Loopy Lane, Toontown Central)",
+        "building": "Loopy Lane",
+        "location": "Toontown Central"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_left_foot",
+    "name": "Left foot",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Punchline Place, Toontown Central)",
+        "building": "Punchline Place",
+        "location": "Toontown Central"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_upper_right_leg",
+    "name": "Upper right leg",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Barnacle Boulevard, Donald's Dock)",
+        "building": "Barnacle Boulevard",
+        "location": "Donald's Dock"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_lower_right_leg",
+    "name": "Lower right leg",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Seaweed Street, Donald's Dock)",
+        "building": "Seaweed Street",
+        "location": "Donald's Dock"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_right_foot",
+    "name": "Right foot",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Lighthouse Lane, Donald's Dock)",
+        "building": "Lighthouse Lane",
+        "location": "Donald's Dock"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_upper_torso",
+    "name": "Upper torso",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Elm Street, Daisy Gardens)",
+        "building": "Elm Street",
+        "location": "Daisy Gardens"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_pelvis",
+    "name": "Pelvis",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Maple Street, Daisy Gardens)",
+        "building": "Maple Street",
+        "location": "Daisy Gardens"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_upper_left_arm",
+    "name": "Upper left arm",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Oak Street, Daisy Gardens)",
+        "building": "Oak Street",
+        "location": "Daisy Gardens"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_lower_left_arm",
+    "name": "Lower left arm",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Alto Avenue, Minnie's Melodyland)",
+        "building": "Alto Avenue",
+        "location": "Minnie's Melodyland"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_left_hand",
+    "name": "Left hand",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Baritone Boulevard, Minnie's Melodyland)",
+        "building": "Baritone Boulevard",
+        "location": "Minnie's Melodyland"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_upper_right_arm",
+    "name": "Upper right arm",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Tenor Terrace, Minnie's Melodyland)",
+        "building": "Tenor Terrace",
+        "location": "Minnie's Melodyland"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_lower_right_arm",
+    "name": "Lower right arm",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Lullaby Lane, Donald's Dreamland)",
+        "building": "Lullaby Lane",
+        "location": "Donald's Dreamland"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  },
+  {
+    "id": "lawbot_cog_disguise_right_hand",
+    "name": "Right hand",
+    "playground": "Lawbot Cog Disguise",
+    "category": "cog_disguise",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover an External Temperature Sensor from the Cogs (Pajama Place, Donald's Dreamland)",
+        "building": "Pajama Place",
+        "location": "Donald's Dreamland"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "lastUpdated": "2025-06-23T02:32:59Z"
+  }
+]

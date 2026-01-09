@@ -1,0 +1,117 @@
+{
+  "_comment": "Progression data from TTR Wiki - see URLs below for each playground",
+  "_sources": {
+    "ttc": "https://toontownrewritten.wiki/Toontown_Central_ToonTasks",
+    "dd": "https://toontownrewritten.wiki/Donald's_Dock_ToonTasks",
+    "dg": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks",
+    "mml": "https://toontownrewritten.wiki/Minnie's_Melodyland_ToonTasks",
+    "tb": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks",
+    "ddl": "https://toontownrewritten.wiki/Donald's_Dreamland_ToonTasks",
+    "stf": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks",
+    "sellbotDisguise": "https://toontownrewritten.wiki/Sellbot_Cog_Disguise",
+    "cashbotDisguise": "https://toontownrewritten.wiki/Cashbot_Cog_Disguise",
+    "lawbotDisguise": "https://toontownrewritten.wiki/Lawbot_Cog_Disguise",
+    "bossbotDisguise": "https://toontownrewritten.wiki/Bossbot_Cog_Disguise"
+  },
+  "startingLaff": 15,
+  "playgrounds": [
+    {
+      "name": "Toontown Central",
+      "normalized": "toontown central",
+      "laffReward": 10,
+      "cumulative": 25,
+      "gagPouch": 25,
+      "jellybeanPouch": 50,
+      "maxTasks": 2,
+      "gagTrackChoice": "Toon-Up or Sound"
+    },
+    {
+      "name": "Donald's Dock",
+      "normalized": "donalds dock",
+      "laffReward": 9,
+      "cumulative": 34,
+      "gagPouch": 30,
+      "jellybeanPouch": 60,
+      "gagTrackChoice": "Lure or Drop"
+    },
+    {
+      "name": "Daisy Gardens",
+      "normalized": "daisy gardens",
+      "laffReward": 9,
+      "cumulative": 43,
+      "gagPouch": 35,
+      "jellybeanPouch": 80,
+      "maxTasks": 3,
+      "gagTrackChoice": null
+    },
+    {
+      "name": "Minnie's Melodyland",
+      "normalized": "minnies melodyland",
+      "laffReward": 9,
+      "cumulative": 52,
+      "gagPouch": 40,
+      "jellybeanPouch": 100,
+      "gagTrackChoice": "Trap or (Toon-Up/Sound)"
+    },
+    {
+      "name": "The Brrrgh",
+      "normalized": "the brrrgh",
+      "laffReward": 9,
+      "cumulative": 61,
+      "gagPouch": 50,
+      "jellybeanPouch": 120,
+      "maxTasks": 4,
+      "gagTrackChoice": "Last remaining track"
+    },
+    {
+      "name": "Donald's Dreamland",
+      "normalized": "donalds dreamland",
+      "laffReward": 39,
+      "cumulative": 100,
+      "gagPouch": 80,
+      "jellybeanPouch": 250,
+      "gagTrackChoice": null,
+      "cogDisguise": "cashbot"
+    },
+    {
+      "name": "Sellbot Task Force",
+      "normalized": "sellbot task force",
+      "laffReward": 3,
+      "cumulative": 103,
+      "requirements": {
+        "allCogDisguises": true,
+        "level7Gag": true
+      }
+    }
+  ],
+  "laffBoostPlaygrounds": [
+    "Toontown Central",
+    "Donald's Dock",
+    "Daisy Gardens",
+    "Minnie's Melodyland",
+    "The Brrrgh",
+    "Donald's Dreamland"
+  ],
+  "gagTrackProgression": [
+    { "startTracks": 2, "endTracks": 3, "playground": "Toontown Central", "choice": "Toon-Up or Sound" },
+    { "startTracks": 3, "endTracks": 4, "playground": "Donald's Dock", "choice": "Lure or Drop" },
+    { "startTracks": 4, "endTracks": 4, "playground": "Daisy Gardens", "choice": null },
+    { "startTracks": 4, "endTracks": 5, "playground": "Minnie's Melodyland", "choice": "Trap or remaining" },
+    { "startTracks": 5, "endTracks": 6, "playground": "The Brrrgh", "choice": "Last remaining" },
+    { "startTracks": 6, "endTracks": 6, "playground": "Donald's Dreamland", "choice": null },
+    { "startTracks": 6, "endTracks": 6, "playground": "Sellbot Task Force", "choice": null }
+  ],
+  "gagTrackToPlayground": {
+    "2": ["Toontown Central"],
+    "3": ["Donald's Dock"],
+    "4": ["Daisy Gardens", "Minnie's Melodyland"],
+    "5": ["The Brrrgh"],
+    "6": ["Donald's Dreamland", "Sellbot Task Force"]
+  },
+  "cogDisguiseProgression": [
+    { "department": "sellbot", "code": "s", "hasTaskline": false, "source": "Sellbot HQ (Factory/VP) - no taskline, available at any laff" },
+    { "department": "cashbot", "code": "m", "hasTaskline": true, "source": "Donald's Dreamland ToonTasks (12 parts)" },
+    { "department": "lawbot", "code": "l", "hasTaskline": true, "source": "Professor Flake ToonTasks (after Cashbot Disguise)" },
+    { "department": "bossbot", "code": "c", "hasTaskline": true, "source": "Shep Ahoy ToonTasks (after Lawbot Disguise)" }
+  ]
+}
