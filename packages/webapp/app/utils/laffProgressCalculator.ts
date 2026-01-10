@@ -37,7 +37,10 @@ function countFishTrophies(toonData: ToonData): number {
   let count = 0;
   for (const key in fish) {
     const album = fish[key]?.album;
-    if (album) count += album.length;
+    // album is an object with numeric keys (e.g., {"0": {...}, "1": {...}}), not an array
+    if (album && typeof album === 'object') {
+      count += Object.keys(album).length;
+    }
   }
   return count;
 }
