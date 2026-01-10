@@ -16,9 +16,8 @@ interface BuildingData {
 }
 
 // Structure: neighborhood -> street -> (_meta | building -> data)
-type StreetData = {
-  _meta?: StreetMeta;
-} & Record<string, BuildingData>;
+// Using Record with union type to allow both _meta and building entries
+type StreetData = Record<string, BuildingData | StreetMeta>;
 
 type BuildingMapsStructure = Record<string, Record<string, StreetData>>;
 
@@ -100,22 +99,25 @@ const buildingIndex: Map<
 
 const streetMetaIndex: Map<string, StreetMeta> = new Map();
 
+// Type guard to check if a value is StreetMeta
+function isStreetMeta(value: BuildingData | StreetMeta): value is StreetMeta {
+  return "wikiWidth" in value && "wikiHeight" in value;
+}
+
 for (const [neighborhood, streets] of Object.entries(buildingMaps)) {
   for (const [street, streetData] of Object.entries(streets)) {
-    // Extract street meta if present
-    if (streetData._meta) {
-      streetMetaIndex.set(street, streetData._meta);
-    }
-
-    // Index buildings (skip _meta key)
+    // Index buildings and extract street meta
     for (const [key, value] of Object.entries(streetData)) {
-      if (key === "_meta") continue;
-      const data = value as BuildingData;
-      buildingIndex.set(key.toLowerCase(), {
-        neighborhood,
-        street,
-        data,
-      });
+      if (key === "_meta" && isStreetMeta(value)) {
+        streetMetaIndex.set(street, value);
+      } else if (key !== "_meta") {
+        const data = value as BuildingData;
+        buildingIndex.set(key.toLowerCase(), {
+          neighborhood,
+          street,
+          data,
+        });
+      }
     }
   }
 }
