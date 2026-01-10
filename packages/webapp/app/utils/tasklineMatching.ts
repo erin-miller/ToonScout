@@ -32,7 +32,7 @@ function categorizeTask(task: Task): TaskCategory {
   }
 
   const reward = task.reward?.toLowerCase() ?? "";
-  
+
   // Track frame rewards are random/procedural
   if (/track\s+(animation\s+)?frame\s+\d/i.test(reward)) {
     return "random_reward";
@@ -48,6 +48,13 @@ function categorizeTask(task: Task): TaskCategory {
     return "random_reward";
   }
 
+  // Random/undocumented tasks: Generic HQ Officer pattern
+  // Pattern: from is empty + to is HQ Officer at generic location (Any Street/Any Neighborhood)
+  // These are typically 1-2 step random tasks that shouldn't match documented tasklines
+  if (isGenericHqOfficerTask(task)) {
+    return "random_reward";
+  }
+
   // Deletable task categorization
   if (task.deletable) {
     if (reward.includes("skill points")) return "stf_grinding";
@@ -56,6 +63,25 @@ function categorizeTask(task: Task): TaskCategory {
   }
 
   return "matchable";
+}
+
+function isGenericHqOfficerTask(task: Task): boolean {
+  const toNpc = task.to?.name?.toLowerCase().trim() ?? "";
+  if (!toNpc.includes("hq officer") && toNpc !== "hq") return false;
+
+  const zone = task.to?.zone?.toLowerCase() ?? "";
+  const neighborhood = task.to?.neighborhood?.toLowerCase() ?? "";
+  const hasGenericLocation = zone.includes("any") || neighborhood.includes("any");
+  if (!hasGenericLocation) return false;
+
+  const fromNpc = task.from?.name?.toLowerCase().trim() ?? "";
+  const fromEmpty = !fromNpc;
+  const fromIsHqRelated =
+    fromNpc.includes("hq officer") ||
+    fromNpc === "hq" ||
+    fromNpc.startsWith("hq ");
+
+  return fromEmpty || fromIsHqRelated;
 }
 
 function extractLocation(task: Task): string | null {

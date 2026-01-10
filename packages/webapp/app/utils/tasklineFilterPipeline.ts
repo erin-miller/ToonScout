@@ -143,6 +143,9 @@ export function runTasklineFilterPipeline({
  * NPC taskline-level filter: Keep candidates from tasklines where ANY step
  * mentions the destination NPC. This is the key innovation - it recognizes
  * that if an NPC appears anywhere in a taskline, the whole taskline is relevant.
+ *
+ * Exception: "HQ Officer" is a generic NPC that appears in many tasklines
+ * across different playgrounds and should not be used to narrow down matches.
  */
 function filterByNpcTaskline(
   candidates: FilterCandidate[],
@@ -152,6 +155,11 @@ function filterByNpcTaskline(
 
   const normalizedNpc = normalizeTaskText(toNpc);
   if (!normalizedNpc) return candidates;
+
+  // HQ Officer is too generic to use for filtering - appears in many tasklines
+  if (normalizedNpc.includes("hq officer") || normalizedNpc === "hq") {
+    return candidates;
+  }
 
   // Find all tasklines that have ANY step mentioning this NPC
   const tasklinesWithNpc = new Set<string>();
@@ -210,7 +218,9 @@ function filterByReward(
 
   const taskLaff = extractLaffBoostValue(taskReward);
   if (taskLaff !== null) {
-    return filterWithFallback(candidates, (c) =>
+    // Laff boost values must match exactly - no fallback
+    // If no taskline has this laff boost value, return empty (unmatched)
+    return candidates.filter((c) =>
       extractLaffBoostValue(getCandidateReward(c)) === taskLaff
     );
   }

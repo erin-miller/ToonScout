@@ -28,6 +28,7 @@ export type MatchSignals = {
   locationMatch: boolean;
   objectiveMatch: ObjectiveMatchQuality;
   chainMatch: boolean;
+  npcConflict: boolean;
 };
 
 export type MatchCandidate = FilterCandidate & {
@@ -40,6 +41,17 @@ function getNpcMatch(task: Task, objectiveText: string): boolean {
   return normalizedNpc !== "" && normalizeTaskText(objectiveText).includes(normalizedNpc);
 }
 
+/** Check if step says "to [NPC]" but task.to.name is different */
+function hasNpcConflict(task: Task, stepObjective: string): boolean {
+  const taskNpc = task.to?.name?.trim();
+  if (!taskNpc) return false;
+  const normalizedStep = normalizeTaskText(stepObjective);
+  const toNpcMatch = normalizedStep.match(/\bto\s+([a-z]+(?:\s+[a-z]+)*)\s*$/i);
+  if (!toNpcMatch) return false;
+  const stepNpc = toNpcMatch[1].toLowerCase().trim();
+  return stepNpc !== normalizeTaskText(taskNpc) && !stepNpc.includes("hq officer");
+}
+
 function getBuildingMatch(task: Task, stepBuilding?: string): boolean {
   const taskBuilding = task.to?.building?.trim() ?? "";
   if (!taskBuilding || !stepBuilding || taskBuilding.toLowerCase().startsWith("any ")) return false;
@@ -49,9 +61,9 @@ function getBuildingMatch(task: Task, stepBuilding?: string): boolean {
 
 /** Determine match quality from signals (deterministic rules) */
 function getMatchQuality(signals: MatchSignals): MatchQuality {
-  if (signals.objectiveMatch === "none") return "none";
   if (signals.chainMatch) return "exact";
-  if (signals.npcMatch && signals.buildingMatch) return "exact";
+  if (signals.npcMatch && signals.buildingMatch) return "partial"; // Valid fallback
+  if (signals.objectiveMatch === "none") return "none";
   if (signals.npcMatch && signals.locationMatch) return "strong";
   return "partial";
 }
@@ -94,7 +106,9 @@ function calculateSignals(
     candidate.step.order === chainContext.stepOrder + 1
   );
 
-  return { npcMatch, buildingMatch, locationMatch, objectiveMatch, chainMatch };
+  const npcConflict = hasNpcConflict(task, candidate.objective.text);
+
+  return { npcMatch, buildingMatch, locationMatch, objectiveMatch, chainMatch, npcConflict };
 }
 
 /**
@@ -115,11 +129,11 @@ export function rankMatchCandidates(
   chainContext: ChainContextWrapper,
   hasChainEvidence: boolean
 ): MatchCandidate[] {
-  // Calculate signals for all candidates
+  // Calculate signals for all candidates, filter out invalid matches
   const withSignals = candidates.map((candidate) => {
     const signals = calculateSignals(task, candidate, taskLocation, objectiveText, chainContext, hasChainEvidence);
     return { ...candidate, quality: getMatchQuality(signals), signals };
-  }).filter((c) => c.quality !== "none");
+  }).filter((c) => c.quality !== "none" && !c.signals.npcConflict);
 
   if (withSignals.length === 0) return [];
 
@@ -127,17 +141,23 @@ export function rankMatchCandidates(
   const chainMatches = withSignals.filter((c) => c.signals.chainMatch);
   if (chainMatches.length > 0) return chainMatches;
 
-  // Priority 2: NPC + Building (exact deterministic)
+  // Priority 2: Objective match (prefer those with NPC + building)
+  const objectiveMatches = withSignals.filter((c) => c.signals.objectiveMatch !== "none");
+  if (objectiveMatches.length > 0) {
+    const withNpcBuilding = objectiveMatches.filter((c) => c.signals.npcMatch && c.signals.buildingMatch);
+    if (withNpcBuilding.length > 0) return withNpcBuilding;
+    const withNpcLocation = objectiveMatches.filter((c) => c.signals.npcMatch && c.signals.locationMatch);
+    if (withNpcLocation.length > 0) return withNpcLocation;
+    return objectiveMatches;
+  }
+
+  // Priority 3: NPC + Building (fallback when no objective match)
   const npcBuildingMatches = withSignals.filter((c) => c.signals.npcMatch && c.signals.buildingMatch);
   if (npcBuildingMatches.length > 0) return npcBuildingMatches;
 
-  // Priority 3: NPC + Location (strong deterministic)
+  // Priority 4: NPC + Location
   const npcLocationMatches = withSignals.filter((c) => c.signals.npcMatch && c.signals.locationMatch);
   if (npcLocationMatches.length > 0) return npcLocationMatches;
-
-  // Priority 4: NPC match only
-  const npcMatches = withSignals.filter((c) => c.signals.npcMatch);
-  if (npcMatches.length > 0) return npcMatches;
 
   // Priority 5: Any remaining partial matches
   return withSignals;
