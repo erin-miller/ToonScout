@@ -13,11 +13,12 @@ import cogsData from "../../data/cogs.json";
 
 /**
  * Special case plurals for cog names that don't follow standard rules
- * Maps: full cog name -> plural form
+ * Maps: full cog name -> plural form(s)
  */
-export const COG_SPECIAL_PLURALS: Record<string, string> = {
-  'Mover & Shaker': 'Movers & Shakers',
+export const COG_SPECIAL_PLURALS: Record<string, string | string[]> = {
+  'Mover & Shaker': ['Movers & Shakers', 'Movers and Shakers'],
   'Yes man': 'Yes men',
+  'Yesman': 'Yesmen',
 };
 
 export const COG_NORMALIZATION = {
@@ -63,11 +64,20 @@ export function getCogNameVariants(cog: { name: string; fullname?: string }): st
   const withPlurals: string[] = [];
   names.forEach((n) => {
     withPlurals.push(n);
-    
+
     // Check special plurals first
     const special = COG_SPECIAL_PLURALS[n];
     if (special) {
-      withPlurals.push(special);
+      if (Array.isArray(special)) {
+        withPlurals.push(...special);
+      } else {
+        withPlurals.push(special);
+      }
+    } else if (n.endsWith("y") && !n.endsWith("ey")) {
+      // Words ending in consonant + y: add both forms to be safe
+      // "Flunkies" (correct English) and "Flunkys" (possible game variant)
+      withPlurals.push(n.slice(0, -1) + "ies");
+      withPlurals.push(n + "s");
     } else if (!n.endsWith("s")) {
       // Default: add 's'
       withPlurals.push(n + "s");
