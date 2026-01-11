@@ -1,5 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "ignoreCommand": "if [ \"$VERCEL_ENV\" = \"production\" ]; then git fetch origin main && git diff --quiet origin/main...HEAD -- packages/webapp || exit 1; fi"
+  "ignoreCommand": "bash vercelignore.sh"
 }

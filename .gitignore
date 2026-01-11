@@ -426,7 +426,6 @@ wrapper/
 .idea/
 
 # other
-*.sh
 .vs
 /test
 ngrok.yml
