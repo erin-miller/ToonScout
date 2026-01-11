@@ -32,7 +32,3 @@ export async function fetchSillyMeter(): Promise<SillyMeterData | null> {
 export function getOverjoyedLaffBoost(): number {
   return sillyMeterData?.laffBoost ?? 0;
 }
-
-export function getSillyMeter(): SillyMeterData | null {
-  return sillyMeterData;
-}
