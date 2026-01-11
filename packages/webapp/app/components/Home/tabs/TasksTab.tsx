@@ -433,7 +433,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
 
     if (match) {
       return (
-        <div className="task-progress relative z-5 overflow-hidden min-w-64">
+        <div className="task-progress relative z-5 overflow-hidden w-full">
           <div
             className="bg-emerald-700 absolute inset-0 opacity-30 z-0"
             style={{ width: `${progress}%` }}
