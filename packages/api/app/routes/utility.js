@@ -109,6 +109,54 @@ router.get("/get-invasions", async (req, res) => {
   res.json(apiResponse);
 });
 
+let cachedSillyMeter = null;
+
+const fetchSillyMeter = async () => {
+  if (cachedSillyMeter && Date.now() / 1000 < cachedSillyMeter.nextUpdateTimestamp) {
+    return cachedSillyMeter;
+  }
+
+  try {
+    const response = await fetch("https://www.toontownrewritten.com/api/sillymeter");
+    if (!response.ok) {
+      console.error(`[SillyMeter] API returned ${response.status}`);
+      return cachedSillyMeter;
+    }
+    cachedSillyMeter = await response.json();
+    return cachedSillyMeter;
+  } catch (error) {
+    console.error("[SillyMeter] Failed to fetch:", error);
+    return cachedSillyMeter;
+  }
+};
+
+router.get("/get-sillymeter", async (req, res) => {
+  try {
+    const data = await fetchSillyMeter();
+    if (!data) {
+      return res.status(503).json({ message: "Silly Meter data unavailable" });
+    }
+
+    const secondsUntilUpdate = Math.max(0, data.nextUpdateTimestamp - Math.floor(Date.now() / 1000));
+    res.set("Cache-Control", `public, max-age=${Math.min(secondsUntilUpdate, 3600)}`);
+
+    const isOverjoyedActive = data.state === "Reward" && data.winner === "Overjoyed Laff Meters";
+    
+    res.json({
+      state: data.state,
+      winner: data.winner,
+      rewards: data.rewards,
+      isOverjoyedActive,
+      laffBoost: isOverjoyedActive ? 8 : 0,
+      nextUpdateTimestamp: data.nextUpdateTimestamp,
+      asOf: data.asOf,
+    });
+  } catch (error) {
+    console.error("[SillyMeter]", error);
+    res.status(500).json({ message: "Internal server error", error: error.message });
+  }
+});
+
 const carnivalEnums = {
   INACTIVE: "inactive",    // Holiday not running
   RECHARGING: "recharging", // Holiday is running, but the parade isn't scheduled/running
