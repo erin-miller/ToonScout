@@ -8,6 +8,10 @@ services:
     extends:
       file: ./packages/api/docker-compose.yml
       service: mongo
+    deploy:
+      resources:
+      limits:
+        memory: 512m
 
   bot:
     extends:
@@ -15,4 +19,4 @@ services:
       service: bot
 
 volumes:
-    mongo-data:
+  mongo-data:
