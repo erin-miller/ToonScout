@@ -43,7 +43,7 @@ jobs:
             echo '=== [DEBUG] Updating npm packages... ==='
             npm ci
             echo '=== [DEBUG] Rebuilding docker containers... ==='
-            time docker compose -f docker-compose.prod.yml down
+            time docker compose -f docker-compose.prod.yml down --remove-orphans
             time docker compose -f docker-compose.prod.yml up --build -d
             echo '=== [DEBUG] Checking running containers... ==='
             docker ps -a
