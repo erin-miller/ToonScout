@@ -10,8 +10,8 @@ services:
       service: mongo
     deploy:
       resources:
-      limits:
-        memory: 512m
+        limits:
+          memory: 512m
 
   bot:
     extends:
