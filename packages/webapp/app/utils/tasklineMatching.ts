@@ -66,6 +66,12 @@ function categorizeTask(task: Task): TaskCategory {
 }
 
 function isGenericHqOfficerTask(task: Task): boolean {
+  // Gag training tasks go to HQ Officer but are documented tasklines, not random
+  const reward = task.reward?.toLowerCase() ?? "";
+  if (reward.includes("gag training") || reward.includes("gag track training")) {
+    return false;
+  }
+
   const toNpc = task.to?.name?.toLowerCase().trim() ?? "";
   if (!toNpc.includes("hq officer") && toNpc !== "hq") return false;
 

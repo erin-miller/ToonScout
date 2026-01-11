@@ -106,7 +106,7 @@ export function runTasklineFilterPipeline({
     const fromNpc = task.from?.name?.trim();
     const next = disabled.has("first_step")
       ? filtered
-      : filterByFirstStep(filtered, fromNpc);
+      : filterByFirstStep(filtered, fromNpc, objectiveText);
     recordStage("first_step", filtered, next);
     filtered = next;
   }
@@ -181,11 +181,20 @@ function filterByNpcTaskline(
  * First step filter: Use the from NPC field to determine step position.
  * - Empty from = this must be step 1 of the taskline
  * - Non-empty from = this is NOT step 1
+ * - "Choose ..." objectives skip this filter (gag choice steps have no fromNpc)
  */
 function filterByFirstStep(
   candidates: FilterCandidate[],
-  fromNpc: string | null | undefined
+  fromNpc: string | null | undefined,
+  objectiveText: string
 ): FilterCandidate[] {
+  // "Choose between X and Y" objectives are gag choice steps that have no fromNpc
+  // but are not necessarily step 1, so skip filtering for these
+  const normalizedObjective = normalizeTaskText(objectiveText);
+  if (normalizedObjective.startsWith("choose ") || normalizedObjective.includes("choose between")) {
+    return candidates;
+  }
+
   const isFirstStep = !fromNpc || fromNpc === "";
   return filterWithFallback(candidates, (c) =>
     isFirstStep ? c.step.order === 1 : c.step.order !== 1
