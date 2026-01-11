@@ -29,6 +29,7 @@ export type MatchSignals = {
   objectiveMatch: ObjectiveMatchQuality;
   chainMatch: boolean;
   npcConflict: boolean;
+  fromMatch: boolean; // task.from matches previous step's destination NPC
 };
 
 export type MatchCandidate = FilterCandidate & {
@@ -59,12 +60,66 @@ function getBuildingMatch(task: Task, stepBuilding?: string): boolean {
   return a.includes(b) || b.includes(a);
 }
 
+/**
+ * Extract destination NPC from objective text.
+ * Patterns: "Return to Master Mike", "Visit Zari", "Deliver X to Professor Wiggle"
+ */
+function extractDestinationNpc(objectiveText: string): string | null {
+  const normalized = normalizeTaskText(objectiveText);
+
+  // "Return to X" or "Visit X" - NPC is at the end
+  const visitMatch = normalized.match(/^(?:return to|visit)\s+(.+)$/i);
+  if (visitMatch) return visitMatch[1].trim();
+
+  // "Deliver X to Y" - NPC is after "to"
+  const deliverMatch = normalized.match(/\bto\s+([a-z]+(?:\s+[a-z]+)*)$/i);
+  if (deliverMatch) return deliverMatch[1].trim();
+
+  return null;
+}
+
+/**
+ * Check if task.from matches the previous step's destination NPC.
+ * This provides strong evidence for which step we're on when the same
+ * NPC appears at multiple steps (e.g., "Visit Zari" at steps 3, 7, 11...).
+ */
+function getFromMatch(task: Task, candidate: FilterCandidate): boolean {
+  const taskFromName = task.from?.name?.trim();
+  if (!taskFromName) return false;
+
+  // Find the previous step in the taskline
+  const prevStepOrder = candidate.step.order - 1;
+  if (prevStepOrder < 1) return false;
+
+  const prevStep = candidate.taskline.steps.find(s => s.order === prevStepOrder);
+  if (!prevStep) return false;
+
+  // Extract the destination NPC from the previous step's objective
+  const prevDestNpc = extractDestinationNpc(prevStep.objective);
+  if (!prevDestNpc) return false;
+
+  // Compare normalized names
+  const normalizedFrom = normalizeTaskText(taskFromName);
+  const normalizedPrevDest = normalizeTaskText(prevDestNpc);
+
+  // Check for match (either exact or contains)
+  return normalizedFrom === normalizedPrevDest ||
+         normalizedFrom.includes(normalizedPrevDest) ||
+         normalizedPrevDest.includes(normalizedFrom);
+}
+
 /** Determine match quality from signals (deterministic rules) */
 function getMatchQuality(signals: MatchSignals): MatchQuality {
   if (signals.chainMatch) return "exact";
-  if (signals.npcMatch && signals.buildingMatch) return "partial"; // Valid fallback
-  if (signals.objectiveMatch === "none") return "none";
+  // fromMatch is very strong evidence - task.from matches previous step's destination
+  if (signals.fromMatch && signals.npcMatch) return "exact";
+  // When objective doesn't match, npc+building is a valid fallback
+  if (signals.objectiveMatch === "none") {
+    return signals.npcMatch && signals.buildingMatch ? "partial" : "none";
+  }
+  // Have objective match - check for strong signals
   if (signals.npcMatch && signals.locationMatch) return "strong";
+  if (signals.npcMatch && signals.objectiveMatch === "exact") return "strong";
   return "partial";
 }
 
@@ -108,7 +163,11 @@ function calculateSignals(
 
   const npcConflict = hasNpcConflict(task, candidate.objective.text);
 
-  return { npcMatch, buildingMatch, locationMatch, objectiveMatch, chainMatch, npcConflict };
+  // Check if task.from matches the previous step's destination NPC
+  // This disambiguates cases where same NPC appears at multiple steps
+  const fromMatch = getFromMatch(task, candidate);
+
+  return { npcMatch, buildingMatch, locationMatch, objectiveMatch, chainMatch, npcConflict, fromMatch };
 }
 
 /**
@@ -117,9 +176,10 @@ function calculateSignals(
  *
  * Priority order:
  * 1. chainMatch (history-based, highest confidence)
- * 2. npcMatch + buildingMatch (exact deterministic)
- * 3. npcMatch + locationMatch (strong deterministic)
- * 4. Any remaining valid matches (partial)
+ * 2. fromMatch + npcMatch (task.from matches previous step's destination)
+ * 3. npcMatch + buildingMatch + objectiveMatch (exact deterministic)
+ * 4. npcMatch + locationMatch + objectiveMatch (strong deterministic)
+ * 5. Any remaining valid matches (partial)
  */
 export function rankMatchCandidates(
   candidates: FilterCandidate[],
@@ -141,7 +201,12 @@ export function rankMatchCandidates(
   const chainMatches = withSignals.filter((c) => c.signals.chainMatch);
   if (chainMatches.length > 0) return chainMatches;
 
-  // Priority 2: Objective match (prefer those with NPC + building)
+  // Priority 2: fromMatch + npcMatch (task.from matches previous step's destination)
+  // This disambiguates cases like "Visit Zari" appearing at multiple steps
+  const fromMatches = withSignals.filter((c) => c.signals.fromMatch && c.signals.npcMatch);
+  if (fromMatches.length > 0) return fromMatches;
+
+  // Priority 3: Objective match (prefer those with NPC + building)
   const objectiveMatches = withSignals.filter((c) => c.signals.objectiveMatch !== "none");
   if (objectiveMatches.length > 0) {
     const withNpcBuilding = objectiveMatches.filter((c) => c.signals.npcMatch && c.signals.buildingMatch);
@@ -151,14 +216,14 @@ export function rankMatchCandidates(
     return objectiveMatches;
   }
 
-  // Priority 3: NPC + Building (fallback when no objective match)
+  // Priority 4: NPC + Building (fallback when no objective match)
   const npcBuildingMatches = withSignals.filter((c) => c.signals.npcMatch && c.signals.buildingMatch);
   if (npcBuildingMatches.length > 0) return npcBuildingMatches;
 
-  // Priority 4: NPC + Location
+  // Priority 5: NPC + Location
   const npcLocationMatches = withSignals.filter((c) => c.signals.npcMatch && c.signals.locationMatch);
   if (npcLocationMatches.length > 0) return npcLocationMatches;
 
-  // Priority 5: Any remaining partial matches
+  // Priority 6: Any remaining partial matches
   return withSignals;
 }
