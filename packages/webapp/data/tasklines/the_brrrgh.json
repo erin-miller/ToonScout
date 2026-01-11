@@ -1,0 +1,869 @@
+[
+  {
+    "id": "the_brrrgh_teleport_access",
+    "name": "Teleport access",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Gus Gooseburger",
+        "building": "Affordable Goosebumps",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 3 four+ story Cashbot Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Gus Gooseburger"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Grumpy Phil",
+        "building": "The Frozen Nose",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Broken Tooth to Dr. Mumbleface",
+        "building": "Chattering Teeth",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 6,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat 8 Sellbots",
+            "location": "The Brrrgh"
+          },
+          {
+            "objective": "Defeat 8 Cashbots",
+            "location": "The Brrrgh"
+          },
+          {
+            "objective": "Defeat 8 Lawbots",
+            "location": "The Brrrgh"
+          },
+          {
+            "objective": "Defeat 8 Bossbots",
+            "location": "The Brrrgh"
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Return to Dr. Mumbleface"
+      },
+      {
+        "order": 8,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Gold Tooth from Mr. Hollywoods",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Gold Tooth from Robber Barons",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Gold Tooth from Big Wigs",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Gold Tooth from The Big Cheeses",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Gold Tooth to Dr. Mumbleface"
+      },
+      {
+        "order": 10,
+        "objective": "Deliver a Gold Tooth to Grumpy Phil"
+      },
+      {
+        "order": 11,
+        "objective": "Visit Gus Gooseburger"
+      },
+      {
+        "order": 12,
+        "objective": "Deliver a Pine Cone Bread to Grumpy Phil"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Teleport_access",
+    "lastUpdated": "2023-11-20T07:16:04Z"
+  },
+  {
+    "id": "the_brrrgh_upgraded_jellybean_pouch",
+    "name": "Upgraded jellybean pouch",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Vidalia VaVoom",
+        "building": "Snow Bunny Ski Shop",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Love Letter from The Minglers",
+            "location": "The Brrrgh"
+          },
+          {
+            "objective": "Recover a Love Letter from Loan Sharks",
+            "location": "The Brrrgh"
+          },
+          {
+            "objective": "Recover a Love Letter from Legal Eagles",
+            "location": "The Brrrgh"
+          },
+          {
+            "objective": "Recover a Love Letter from Corporate Raiders",
+            "location": "The Brrrgh"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "objective": "Return to Vidalia VaVoom"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Snooty Sinjin",
+        "building": "St. Bernard Kennel Club",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 10 Wiener Dogs from the Cogs",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Snooty Sinjin"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Creepy Carl",
+        "building": "Ice House Jewelry",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 10 level 8+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Creepy Carl"
+      },
+      {
+        "order": 10,
+        "objective": "Deliver an Engagement Ring to Vidalia VaVoom"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Jellybean_pouch",
+    "lastUpdated": "2024-10-04T04:09:13Z"
+  },
+  {
+    "id": "the_brrrgh_gag_track_training",
+    "name": "Gag track training",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lil Oldman",
+        "building": "The Blizzard Wizard",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 10 level 8+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 4,
+        "objective": "Go fishing for 3 Fuzzy Dice",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 6,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat 2 four+ story Sellbot Cog Buildings",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 2 four+ story Cashbot Cog Buildings",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 2 four+ story Lawbot Cog Buildings",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 2 four+ story Bossbot Cog Buildings",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 8,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Choose Sound or Lure"
+          },
+          {
+            "objective": "Choose Sound or Drop"
+          },
+          {
+            "objective": "Choose Toon-Up or Lure"
+          },
+          {
+            "objective": "Choose Toon-Up or Drop"
+          },
+          {
+            "objective": "Choose Trap or Sound"
+          },
+          {
+            "objective": "Choose Trap or Drop"
+          },
+          {
+            "objective": "Choose Trap or Lure"
+          },
+          {
+            "objective": "Choose Trap or Toon-Up"
+          }
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Gag_track_training",
+    "lastUpdated": "2025-03-30T10:10:02Z"
+  },
+  {
+    "id": "the_brrrgh_final_gag_track_training",
+    "name": "Final gag track training",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lil Oldman",
+        "building": "The Blizzard Wizard",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover 6 Caviars from Mr. Hollywoods",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover 6 Lumpy Cheeses from The Big Cheeses",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 4,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Simple Spoon from Robber Barons",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Simple Spoon from Big Wigs",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 6,
+        "objective": "Go fishing for Talking Toad",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Sticky George",
+        "building": "The Melting Ice Cream Bar",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 9,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover 10 Ice Cream Cones from Mr. Hollywoods",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover 10 Ice Cream Cones from The Big Cheeses",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Return to Sticky George"
+      },
+      {
+        "order": 11,
+        "objective": "Deliver an Ice Cream Cone to Lil Oldman"
+      },
+      {
+        "order": 12,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover Make Up Powder from Mr. Hollywoods",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Wig Powder from Big Wigs",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 13,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 14,
+        "objective": "Defeat 20 four+ story Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 15,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 16,
+        "objective": "Go fishing for Talking Toad's Girlfriend",
+        "location": "Anywhere"
+      },
+      {
+        "order": 17,
+        "objective": "Return to Lil Oldman"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Final_gag_track_training",
+    "lastUpdated": "2025-03-30T10:10:07Z"
+  },
+  {
+    "id": "the_brrrgh_1_laff_boost",
+    "name": "+1 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Chicken Boy",
+        "building": "Pea Soup Cafe",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Soccer Ball from Two-Faces",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Soccer Ball from Money Bags",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Soccer Ball from Spin Doctors",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Soccer Ball from Head Hunters",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "objective": "Return to Chicken Boy"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B1_laff_boost_(Chicken_Boy)",
+    "lastUpdated": "2022-01-17T02:42:16Z"
+  },
+  {
+    "id": "the_brrrgh_2_laff_boost",
+    "name": "+2 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Sweaty Pete",
+        "building": "Heat-Get it While it's Hot",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Cog Gear from Micromanagers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Sweaty Pete"
+      },
+      {
+        "order": 4,
+        "objective": "Go fishing for Rubber Ducky",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Sweaty Pete"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 5 Cog Buildings",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Sweaty Pete"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B2_laff_boost_(Sweaty_Pete)",
+    "lastUpdated": "2024-09-10T19:19:44Z"
+  },
+  {
+    "id": "the_brrrgh_3_laff_boost",
+    "name": "+3 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lounge Lassard",
+        "building": "Snow Ball Hall",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Microphone from the Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lounge Lassard"
+      },
+      {
+        "order": 4,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover an Electric Keyboard from The Minglers",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover an Electric Keyboard from Loan Sharks",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover an Electric Keyboard from Legal Eagles",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover an Electric Keyboard from Corporate Raiders",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lounge Lassard"
+      },
+      {
+        "order": 6,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover Platform Shoes from Mr. Hollywoods",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover Platform Shoes from Robber Barons",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover Platform Shoes from Big Wigs",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover Platform Shoes from The Big Cheeses",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lounge Lassard"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B3_laff_boost_(Lounge_Lassard)",
+    "lastUpdated": "2022-01-17T02:46:34Z"
+  },
+  {
+    "id": "the_brrrgh_increased_toontask_capacity_(hysterical_harry)",
+    "name": "Increased ToonTask capacity (Hysterical Harry)",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Hysterical Harry",
+        "building": "Snow Big Deal! Crisis Management",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 10 The Minglers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Hysterical Harry"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 10 Corporate Raiders",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Hysterical Harry"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 10 Loan Sharks",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Hysterical Harry"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Dee Frost",
+        "building": "Dropping Degrees Diner",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 9,
+        "objective": "Go fishing for 2 Sardine Whiskers"
+      },
+      {
+        "order": 10,
+        "objective": "Return to Dee Frost"
+      },
+      {
+        "order": 11,
+        "objective": "Deliver a Calming Potion to Hysterical Harry"
+      },
+      {
+        "order": 12,
+        "objective": "Defeat 5 Legal Eagles",
+        "location": "Anywhere"
+      },
+      {
+        "order": 13,
+        "objective": "Return to Hysterical Harry"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/ToonTask_capacity",
+    "lastUpdated": "2022-08-08T14:08:01Z"
+  },
+  {
+    "id": "the_brrrgh_increased_toontask_capacity_(march_harry)",
+    "name": "Increased ToonTask capacity (March Harry)",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit March Harry",
+        "building": "Snowshoes You Can't Refuse",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 30 Lawbots",
+        "building": "Polar Place",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 3,
+        "objective": "Return to March Harry"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Hysterical Harry",
+        "building": "Snow Big Deal! Crisis Management",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 2 Alibis from Legal Eagles",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Hysterical Harry"
+      },
+      {
+        "order": 7,
+        "objective": "Deliver an Alibi to March Harry"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/ToonTask_capacity",
+    "lastUpdated": "2022-08-08T14:08:01Z"
+  },
+  {
+    "id": "the_brrrgh_upgraded_gag_pouch_(johnny_cashmere)",
+    "name": "Upgraded gag pouch (Johnny Cashmere)",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Johnny Cashmere",
+        "building": "The Sweater Lodge",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover Yarn from Lawbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Johnny Cashmere"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 20 level 7+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Johnny Cashmere"
+      },
+      {
+        "order": 6,
+        "objective": "Go fishing for 2 Knitting Needles",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Johnny Cashmere"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 5 four+ story Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Johnny Cashmere"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Gag_pouch",
+    "lastUpdated": "2024-08-30T16:53:05Z"
+  },
+  {
+    "id": "the_brrrgh_upgraded_gag_pouch_(toboggan_ted)",
+    "name": "Upgraded gag pouch (Toboggan Ted)",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Toboggan Ted",
+        "building": "Toboggan or Not Toboggan",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Toboggan from the Cogs",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Toboggan Ted"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Bumpy Noggin",
+        "building": "Noggin's Toboggan Bargains",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 5,
+        "objective": "Go fishing for 3 Ice Cubes"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Bumpy Noggin"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Simian Sam",
+        "building": "Lowbrow Snowplows",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 5 four+ story Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Simian Sam"
+      },
+      {
+        "order": 10,
+        "objective": "Visit Henry the Hazard",
+        "building": "Skiing Clinic",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 11,
+        "objective": "Defeat 20 level 7+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 12,
+        "objective": "Return to Henry the Hazard"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/Gag_pouch",
+    "lastUpdated": "2024-08-30T16:53:05Z"
+  },
+  {
+    "id": "the_brrrgh_1_laff_boost_1",
+    "name": "+1 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Eddie the Yeti",
+        "building": "Snowman's Land",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 90 Lawbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Eddie the Yeti"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B1_laff_boost_(Eddie_the_Yeti)",
+    "lastUpdated": "2022-01-17T02:44:40Z"
+  },
+  {
+    "id": "the_brrrgh_1_laff_boost_2",
+    "name": "+1 laff boost",
+    "playground": "The Brrrgh",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Wynne Chill",
+        "building": "Snowmen Bought & Sold",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat 40 Lawbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 40 Bossbots",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "objective": "Return to Wynne Chill"
+      },
+      {
+        "order": 4,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat 45 Sellbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 45 Cashbots",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Return to Wynne Chill"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/The_Brrrgh_ToonTasks/%2B1_laff_boost_(Wynne_Chill)",
+    "lastUpdated": "2022-01-17T02:44:04Z"
+  }
+]

@@ -1,0 +1,38 @@
+name: Taskline Update
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  taskline-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh tasklines
+        run: node scripts/tasklines/update_tasklines.js --refresh --report-path .github/taskline-update-report.md
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: 'Update taskline data from wiki'
+          title: 'Update taskline data from wiki'
+          body-path: '.github/taskline-update-report.md'
+          branch: 'automation/taskline-update'
+          delete-branch: true

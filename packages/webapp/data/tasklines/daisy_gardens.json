@@ -1,0 +1,515 @@
+[
+  {
+    "id": "daisy_gardens_upgraded_gag_pouch",
+    "name": "Upgraded gag pouch",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Detective Lima",
+        "building": "Spill the Beans",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 5 Sellbots",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Detective Lima"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Judge McIntosh",
+        "building": "Apples and Oranges",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 5,
+        "objective": "Recover Sellbot HQ Blueprints from Sellbots",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Judge McIntosh"
+      },
+      {
+        "order": 7,
+        "objective": "Deliver Sellbot HQ Blueprints to Detective Lima"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/Gag_pouch",
+    "lastUpdated": "2022-01-17T02:01:49Z"
+  },
+  {
+    "id": "daisy_gardens_upgraded_jellybean_pouch",
+    "name": "Upgraded jellybean pouch",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Coach Zucchini",
+        "building": "Squash & Stretch Gym",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat a Sellbot Factory",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Coach Zucchini"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/Jellybean_pouch",
+    "lastUpdated": "2022-01-17T02:06:21Z"
+  },
+  {
+    "id": "daisy_gardens_increased_toontask_capacity",
+    "name": "Increased ToonTask capacity",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 2 Cog Buildings"
+      },
+      {
+        "order": 2,
+        "objective": "Return to HQ Officer",
+        "building": "Toon Headquarters",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 2 two+ story Cog Buildings"
+      },
+      {
+        "order": 4,
+        "objective": "Return to HQ Officer"
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 2 three+ story Cog Buildings"
+      },
+      {
+        "order": 6,
+        "objective": "Return to HQ Officer"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/ToonTask_capacity",
+    "lastUpdated": "2022-01-17T02:04:57Z"
+  },
+  {
+    "id": "daisy_gardens_1_laff_boost",
+    "name": "+1 laff boost",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Artie",
+        "building": "Artie Choke's Neckties",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Deliver a Silk Necktie to Vine Green",
+        "building": "Vine and Dandy Menswear",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Recover a Pinstripe Suit from the Cogs",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Vine Green"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/%2B1_laff_boost_(Artie)",
+    "lastUpdated": "2022-01-17T02:10:56Z"
+  },
+  {
+    "id": "daisy_gardens_2_laff_boost",
+    "name": "+2 laff boost",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Sprocket from Name Droppers",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Sprocket from Glad Handers",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Sprocket from Mover & Shakers",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Sprocket from Ambulance Chasers",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Sprocket from Back Stabbers",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Sprocket from Spin Doctors",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "objective": "Return to HQ Officer",
+        "building": "Toon Headquarters",
+        "location": "Anywhere"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/%2B2_laff_boost",
+    "lastUpdated": "2024-11-07T00:04:31Z"
+  },
+  {
+    "id": "daisy_gardens_3_laff_boost",
+    "name": "+3 laff boost",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Visit Aunt Hill",
+            "building": "Ant Farming Supplies",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Visit Uncle Spud",
+            "building": "Couch Potato Furniture",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Visit Uncle Mud",
+            "building": "Dirt. Cheap",
+            "location": "Daisy Gardens"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Sellbot HQ Memo from Sellbots",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Return to Aunt Hill"
+          },
+          {
+            "objective": "Return to Uncle Spud"
+          },
+          {
+            "objective": "Return to Uncle Mud"
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Recover a Sellbot HQ Memo from Sellbots",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 5,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Return to Aunt Hill"
+          },
+          {
+            "objective": "Return to Uncle Spud"
+          },
+          {
+            "objective": "Return to Uncle Mud"
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Recover a Sellbot HQ Memo from Sellbots",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Return to Aunt Hill"
+          },
+          {
+            "objective": "Return to Uncle Spud"
+          },
+          {
+            "objective": "Return to Uncle Mud"
+          }
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "Recover a Sellbot HQ Memo from Sellbots",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 9,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Return to Aunt Hill"
+          },
+          {
+            "objective": "Return to Uncle Spud"
+          },
+          {
+            "objective": "Return to Uncle Mud"
+          }
+        ]
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/%2B3_laff_boost",
+    "lastUpdated": "2022-01-17T02:19:00Z"
+  },
+  {
+    "id": "daisy_gardens_teleport_access_(legal_eagles)",
+    "name": "Teleport access (Legal Eagles)",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover a Key from Legal Eagles",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to HQ Officer",
+        "building": "Toon Headquarters",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Recover a Key to Daisy Gardens from Legal Eagles",
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to HQ Officer"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/Teleport_access",
+    "lastUpdated": "2022-01-17T02:07:17Z"
+  },
+  {
+    "id": "daisy_gardens_teleport_access_(the_minglers)",
+    "name": "Teleport access (The Minglers)",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover a Key from The Minglers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to HQ Officer",
+        "building": "Toon Headquarters",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Recover a Key to Daisy Gardens from The Minglers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to HQ Officer"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/Teleport_access",
+    "lastUpdated": "2022-01-17T02:07:17Z"
+  },
+  {
+    "id": "daisy_gardens_1_laff_boost_1",
+    "name": "+1 laff boost",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Barber Bjorn",
+        "building": "Crop Top Barber",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Pair of Scissors from Bloodsuckers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Barber Bjorn"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/%2B1_laff_boost_(Barber_Bjorn)",
+    "lastUpdated": "2022-01-17T02:13:27Z"
+  },
+  {
+    "id": "daisy_gardens_1_laff_boost_2",
+    "name": "+1 laff boost",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Innkeeper Janet",
+        "building": "Dew Drop Inn",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Deliver a Salad to Jake",
+            "building": "Jake's Rakes",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Lisa",
+            "building": "Lisa Lemon Used Cars",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Bert",
+            "building": "Bert's Dirt",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Dan D. Lion",
+            "building": "The Dandy Lion Exotic Pets",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Susan",
+            "building": "Black-Eyed Susan's Boxing Lessons",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Bud",
+            "building": "Bud's Bird Seed",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Flutterby",
+            "building": "Flutterby's Butterflies",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Jack",
+            "building": "Jack's Beanstalks",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver a Salad to Sofie Squirt",
+            "building": "The Squirting Flower",
+            "location": "Daisy Gardens"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 10 Cogs",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Innkeeper Janet"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/%2B1_laff_boost_(Innkeeper_Janet)",
+    "lastUpdated": "2022-09-19T06:27:31Z"
+  },
+  {
+    "id": "daisy_gardens_1_laff_boost_3",
+    "name": "+1 laff boost",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Visit Sofie Squirt",
+            "building": "The Squirting Flower",
+            "location": "Daisy Gardens"
+          },
+          {
+            "objective": "Deliver 10 Squirting Flowers to Sofie Squirt"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 20 Cogs",
+        "building": "Maple Street",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Sofie Squirt"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/%2B1_laff_boost_(Sofie_Squirt)",
+    "lastUpdated": "2024-11-03T23:19:31Z"
+  },
+  {
+    "id": "daisy_gardens_2_laff_boost_1",
+    "name": "+2 laff boost",
+    "playground": "Daisy Gardens",
+    "category": "playground",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Postman Felipe",
+        "building": "Compost Office",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 10 Postcards from Double Talkers",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Postman Felipe"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Daisy_Gardens_ToonTasks/%2B2_laff_boost_(Postman_Felipe)",
+    "lastUpdated": "2022-01-17T02:17:42Z"
+  }
+]

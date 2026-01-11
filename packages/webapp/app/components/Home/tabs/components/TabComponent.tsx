@@ -1,3 +1,5 @@
+'use client';
+
 import {
   InfoTab,
   FishTab,
@@ -218,6 +220,14 @@ const TabContainer = () => {
               <p className="text-lg md:text-xl lg:text-2xl pt-1">
                 {toon.data.data.laff.current} / {toon.data.data.laff.max} laff
               </p>
+              {toon.overjoyed && (
+                <span 
+                  className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-200 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-100"
+                  title="Toon data was captured during Overjoyed Laff Meters (+8 laff)"
+                >
+                  🎉 Overjoyed
+                </span>
+              )}
               <p className="text-md md:text-xl lg:text-2xl">
                 {toon.data.data.location.zone},{" "}
                 {toon.data.data.location.district}
