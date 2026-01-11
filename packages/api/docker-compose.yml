@@ -22,7 +22,7 @@ services:
         - action: rebuild
           path: package.json
   mongo:
-    image: mongo:8.2
+    image: mongo:6.0.27
     container_name: ts-mongo
     ports:
       - "27017:27017"
