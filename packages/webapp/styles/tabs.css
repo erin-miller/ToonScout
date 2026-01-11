@@ -289,9 +289,19 @@
 }
 
 .task-progress {
-  @apply text-sm sm:text-xl lg:text-xl 2xl:text-2xl items-center p-2
+  @apply text-sm sm:text-xl 2xl:text-2xl items-center p-2
   bg-opacity-10 border-2
-  border-t-gray-800 border-l-gray-800 border-b-white border-r-white;
+  border-t-gray-800 border-l-gray-800 border-b-white border-r-white
+  min-w-36 sm:min-w-44 md:min-w-52;
+}
+
+.task-index-bubble {
+  @apply absolute top-6 left-2 sm:top-8 sm:left-3 md:top-10 md:left-4
+  flex items-center justify-center
+  w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7
+  border-2 shadow-lg rounded-full
+  bg-red-500 border-red-600 text-gray-100
+  text-xs sm:text-sm md:text-base font-bold z-10;
 }
 
 .dark .task-progress {
