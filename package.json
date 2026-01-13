@@ -9,7 +9,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:api": "vitest run packages/api",
-    "test:webapp": "vitest run packages/webapp"
+    "test:webapp": "vitest run packages/webapp",
+    "test:scripts": "echo 'Add standalone test scripts to scripts/tests/'"
   },
   "devDependencies": {
     "vitest": "^4.0.17"
