@@ -30,6 +30,7 @@ export function useRewardNotifications({
   const prevRewards = useRef<Rewards | null>(
     activeToon?.data.data.rewards || null
   );
+  const prevId = useRef<string | null>(null);
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
 
@@ -84,9 +85,16 @@ export function useRewardNotifications({
   useEffect(() => {
     if (!notificationsEnabled || !activeToon) return;
 
+    const activeId = activeToon.data.data.toon.id;
     const rewards = activeToon.data.data.rewards;
 
     const checkRewardChanges = async () => {
+      if (prevId.current !== activeId) {
+        prevId.current == activeId
+        prevRewards.current == rewards;
+        return
+      }
+      
       if (prevRewards.current) {
         const prevSums = await getRewardSums(prevRewards.current);
         const currSums = await getRewardSums(rewards);
