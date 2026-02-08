@@ -27,17 +27,15 @@ export function parseNumericRequirements(text: string): ParsedNumericRequirement
   }
 
   let story: NumericRequirement | null = null;
-  const storyPlusMatch = normalized.match(/\b(\d+)\s*\+\s*story\b/);
+  const storyPlusMatch = normalized.match(/\b(\d+)\s*\+?\s*story\b/);
   if (storyPlusMatch) {
-    story = { value: Number(storyPlusMatch[1]), plus: true };
+    story = { value: Number(storyPlusMatch[1]), plus: storyPlusMatch[0].includes('+') };
     remaining = remaining.replace(storyPlusMatch[0], " ");
-  } else {
-    const storyExactMatch = normalized.match(/\b(\d+)\s*story\b/);
-    if (storyExactMatch) {
-      story = { value: Number(storyExactMatch[1]), plus: false };
-      remaining = remaining.replace(storyExactMatch[0], " ");
-    }
   }
+
+  // Remove qualifiers (star ratings, laff thresholds) - not counts
+  remaining = remaining.replace(/\b\d+\s*\+?\s*star\b/gi, " ");
+  remaining = remaining.replace(/\b\d+\s+laff\b/gi, " ");
 
   const countMatch = remaining.match(/\b(\d+)\b/);
   const count = countMatch ? Number(countMatch[1]) : null;

@@ -216,7 +216,7 @@ function getCandidateReward(c: FilterCandidate): string {
 }
 
 /**
- * Reward filter: Match laff values, teleport access, or gag training.
+ * Reward filter: Match laff values, teleport access, gag training, or reward text.
  * Track frame rewards pass through (random/procedural tasks).
  */
 function filterByReward(
@@ -244,6 +244,17 @@ function filterByReward(
     return filterWithFallback(candidates, (c) =>
       isGagTrainingReward(getCandidateReward(c))
     );
+  }
+
+  // Match reward text to taskline name
+  const normalizedTaskReward = normalizeTaskText(taskReward);
+  if (normalizedTaskReward) {
+    const matched = candidates.filter((c) => {
+      const candidateReward = normalizeTaskText(getCandidateReward(c));
+      return candidateReward.includes(normalizedTaskReward) ||
+             normalizedTaskReward.includes(candidateReward);
+    });
+    return matched.length > 0 ? matched : candidates;
   }
 
   return candidates;

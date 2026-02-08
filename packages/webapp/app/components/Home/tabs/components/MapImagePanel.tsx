@@ -64,12 +64,13 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
               className="absolute pointer-events-none"
               style={{
                 // Use percentage positioning (marker coords are scaled to 512x512)
+                // Size as percentage so marker scales with image
                 top: `${(markerPosition.top / 512) * 100}%`,
                 left: `${(markerPosition.left / 512) * 100}%`,
-                width: "20px",
-                height: "20px",
+                width: "6%",
+                height: "auto",
               }}
-              initial={{ y: -100, opacity: 0 }}
+              initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ type: "spring", bounce: 0.4, delay: 0.2 }}
             />

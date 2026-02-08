@@ -122,6 +122,39 @@ for (const [neighborhood, streets] of Object.entries(buildingMaps)) {
   }
 }
 
+// Per-street calibration for marker positioning
+// Each street may have different image processing (stretched, padded, etc.)
+// Values: { scaleMode: 'stretched' | 'uniform', paddingTopFactor?: number, paddingLeftFactor?: number }
+const STREET_CALIBRATION: Record<string, {
+  scaleMode: 'stretched' | 'uniform';
+  paddingTopFactor?: number;
+  paddingLeftFactor?: number;
+}> = {
+  // Toontown Central
+  "Silly Street": { scaleMode: 'uniform', paddingLeftFactor: 0.5 },      // tall (250x327)
+  "Loopy Lane": { scaleMode: 'uniform', paddingTopFactor: 0.7 },         // wide (250x201)
+  "Punchline Place": { scaleMode: 'uniform', paddingTopFactor: 0.5 },     // very wide (250x115)
+  // Donald's Dock
+  "Barnacle Boulevard": { scaleMode: 'uniform', paddingLeftFactor: 0.35 }, // tall (250x376)
+  "Seaweed Street": { scaleMode: 'uniform', paddingTopFactor: 0.1 },     // (250x218)
+  "Lighthouse Lane": { scaleMode: 'uniform', paddingTopFactor: 0.55 },   // (250x148)
+  // Daisy Gardens
+  "Elm Street": { scaleMode: 'uniform', paddingTopFactor: 0.45 },        // very wide (250x103)
+  "Maple Street": { scaleMode: 'uniform', paddingTopFactor: 0.45 },      // very wide (250x105)
+  "Oak Street": { scaleMode: 'uniform', paddingTopFactor: 0.55 },        // (250x232)
+  // Minnie's Melodyland
+  "Alto Avenue": { scaleMode: 'uniform', paddingTopFactor: 0.5 },        // (250x228)
+  "Baritone Boulevard": { scaleMode: 'uniform', paddingTopFactor: 0.55 }, // (250x236)
+  "Tenor Terrace": { scaleMode: 'uniform', paddingTopFactor: 0.4 },      // (250x163)
+  // The Brrrgh
+  "Walrus Way": { scaleMode: 'uniform', paddingTopFactor: 0.5 },         // (250x250) square
+  "Sleet Street": { scaleMode: 'uniform', paddingTopFactor: 0.5 },       // (250x245)
+  "Polar Place": { scaleMode: 'uniform', paddingTopFactor: 0.5 },        // (250x222)
+  // Donald's Dreamland
+  "Lullaby Lane": { scaleMode: 'uniform', paddingLeftFactor: 0.5 },      // tall (250x312)
+  "Pajama Place": { scaleMode: 'uniform', paddingTopFactor: 0.5 },       // (250x250) square
+};
+
 // Scale marker position from wiki thumbnail coordinates to local image coordinates
 function scaleMarkerPosition(
   position: MarkerPosition | null,
@@ -129,13 +162,43 @@ function scaleMarkerPosition(
 ): MarkerPosition | null {
   if (!position) return null;
 
-  // Use JSON _meta if available, otherwise fall back to hardcoded dimensions
   const meta = streetMetaIndex.get(street) ?? STREET_DIMENSIONS_FALLBACK[street];
   if (!meta) return position;
 
+  const calibration = STREET_CALIBRATION[street];
+
+  // Default to stretched if no calibration
+  if (!calibration || calibration.scaleMode === 'stretched') {
+    // Simple stretched: scale X and Y independently to fill 512x512
+    return {
+      top: Math.round((position.top / meta.wikiHeight) * LOCAL_IMAGE_SIZE),
+      left: Math.round((position.left / meta.wikiWidth) * LOCAL_IMAGE_SIZE),
+    };
+  }
+
+  // Uniform scaling with padding
+  const aspectRatio = meta.wikiWidth / meta.wikiHeight;
+  let scaleFactor: number;
+  let paddingTop = 0;
+  let paddingLeft = 0;
+
+  if (aspectRatio >= 1) {
+    // Wide image: scale by width, pad top/bottom
+    scaleFactor = LOCAL_IMAGE_SIZE / meta.wikiWidth;
+    const contentHeight = meta.wikiHeight * scaleFactor;
+    const totalPadding = LOCAL_IMAGE_SIZE - contentHeight;
+    paddingTop = totalPadding * (calibration.paddingTopFactor ?? 0.5);
+  } else {
+    // Tall image: scale by height, pad left/right
+    scaleFactor = LOCAL_IMAGE_SIZE / meta.wikiHeight;
+    const contentWidth = meta.wikiWidth * scaleFactor;
+    const totalPadding = LOCAL_IMAGE_SIZE - contentWidth;
+    paddingLeft = totalPadding * (calibration.paddingLeftFactor ?? 0.5);
+  }
+
   return {
-    top: Math.round((position.top / meta.wikiHeight) * LOCAL_IMAGE_SIZE),
-    left: Math.round((position.left / meta.wikiWidth) * LOCAL_IMAGE_SIZE),
+    top: Math.round(paddingTop + position.top * scaleFactor),
+    left: Math.round(paddingLeft + position.left * scaleFactor),
   };
 }
 

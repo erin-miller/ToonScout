@@ -102,10 +102,11 @@ const MapImageModal: React.FC<MapImageModalProps> = ({
                       className="absolute pointer-events-none"
                       style={{
                         // Use percentage positioning (marker coords are scaled to 512x512)
+                        // Size as percentage so marker scales with image
                         top: `${(markerPosition.top / 512) * 100}%`,
                         left: `${(markerPosition.left / 512) * 100}%`,
-                        width: "20px",
-                        height: "20px",
+                        width: "6%",
+                        height: "auto",
                       }}
                     />
                   )}

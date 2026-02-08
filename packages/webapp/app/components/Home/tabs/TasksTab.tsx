@@ -433,12 +433,12 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
 
     if (match) {
       return (
-        <div className="task-progress relative z-5 overflow-hidden w-full">
+        <div className="task-progress relative z-5 overflow-hidden">
           <div
             className="bg-emerald-700 absolute inset-0 opacity-30 z-0"
             style={{ width: `${progress}%` }}
           ></div>
-          <div className="w-full z-50">{text}</div>
+          <div className="z-50">{text}</div>
         </div>
       );
     } else {
@@ -494,13 +494,16 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
 
           return (
             <div key={task.matchKey} className="task-container">
-              <Image
-                src={imageAssets.task}
-                className="task-size"
-                alt="Task"
-                width={320}
-                height={320}
-              />
+              <div className="relative">
+                <Image
+                  src={imageAssets.task}
+                  className="task-size"
+                  alt="Task"
+                  width={320}
+                  height={320}
+                />
+                <span className="task-index-bubble">{getIndex(index)}</span>
+              </div>
               <div className="flex flex-col absolute justify-center items-center text-center task-size px-6 pb-8 xl:pb-10">
                 <span className="absolute inset-0 mt-2 2xl:mt-4 font-semibold font-minnie text-gray-1200 text-sm sm:text-xl 2xl:text-2xl">
                   TOONTASK
@@ -511,16 +514,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
                     {task.type}
                   </span>
                 )}
-                {/* red index bubble */}
-                <div className="flex absolute top-4 left-4 justify-center items-center">
-                  <span
-                    className="hidden 2xl:flex items-center justify-center w-8 h-8 border-4 shadow-lg
-                bg-red-500 border-red-600 rounded-full text-gray-100
-                xl:text-lg mt-12 mx-6"
-                  >
-                    {getIndex(index)}
-                  </span>
-                </div>
 
                 <div className="absolute top-4 right-4 2xl:top-6 2xl:right-6 flex flex-col gap-2">
                   {tasklineMatch && (
@@ -560,7 +553,7 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
                 </div>
 
                 <div
-                  className="md:grid gap-0 2xl:gap-12"
+                  className="md:grid gap-0 2xl:gap-12 w-full"
                   style={{ gridTemplateRows: "130px 90px 30px" }}
                 >
                   <h3 className="task-title">{task.title}</h3>

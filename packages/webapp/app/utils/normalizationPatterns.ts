@@ -98,6 +98,8 @@ function normalizeText(
     result = result.toLowerCase();
   }
 
+  result = result.replace(/(\d+)-(\w)/g, '$1 $2'); // "5-story" → "5 story"
+
   // Apply punctuation removal
   if (removePunctuation) {
     const pattern = typeof removePunctuation === 'string'
