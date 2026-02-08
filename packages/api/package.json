@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node app/app.js",
-    "dev": "nodemon --inspect=0.0.0.0:9229 app/app.js"
+    "dev": "nodemon --inspect=0.0.0.0:9229 app/app.js",
+    "check": "find . -name '*.js' -exec node --check {} \\;"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",

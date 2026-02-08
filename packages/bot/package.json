@@ -11,7 +11,8 @@
     "start": "cross-env node app/app.js",
     "register": "cross-env node app/install_commands.js",
     "dev": "cross-env nodemon app/app.js",
-    "dev-register": "cross-env node app/install_commands.js"
+    "dev-register": "cross-env node app/install_commands.js",
+    "check": "find . -name '*.js' -exec node --check {} \\;"
   },
   "author": "Erin Miller",
   "license": "MIT",
