@@ -1,4 +1,5 @@
 import { StoredToonData } from "../types";
+import { fetchSillyMeter } from "../utils/sillyMeter";
 
 const DEFAULT_PORTS = [1547, 1548, 1549, 1550, 1551, 1552, 1553, 1554];
 const REQ_INTERVAL = 5000;
@@ -34,6 +35,9 @@ export const initWebSocket = (
   removeActivePort = removeActivePortFn;
   addToon = addToonFn;
 
+  // Pre-fetch sillymeter data so it's cached before toon data arrives
+  fetchSillyMeter();
+  
   connectWebSocket();
 };
 
@@ -83,7 +87,9 @@ const connectWebSocket = () => {
       if (toon.event === "all") {
         debug(port, "processing toon data");
         const timestamp = Date.now();
-        const localToon = { data: toon, timestamp, port, locked: false };
+        const sillyMeter = await fetchSillyMeter();
+        const overjoyed = sillyMeter?.isOverjoyedActive ?? false;
+        const localToon = { data: toon, timestamp, port, locked: false, overjoyed };
         const data = localStorage.getItem("toonData");
         let curr = data ? JSON.parse(data) : [];
 

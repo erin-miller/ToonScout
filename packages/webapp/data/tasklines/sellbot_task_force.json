@@ -1,0 +1,3511 @@
+[
+  {
+    "id": "sellbot_task_force_join_the_toon_resistance",
+    "name": "Join the Toon Resistance",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Whispering Willow",
+        "building": "Talking in Your Sleep Voice Training",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Present a level 7 gag to Whispering Willow"
+      },
+      {
+        "order": 3,
+        "objective": "Visit Naggy Nell",
+        "building": "Honeydew This",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 15 Skelecogs",
+        "building": "Sellbot Factory",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Naggy Nell"
+      },
+      {
+        "order": 6,
+        "objective": "Visit Rusty Ralph",
+        "building": "Rusty Buckets",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 7,
+        "objective": "Defeat the Chief Executive Officer",
+        "building": "Bossbot Clubhouse",
+        "location": "Bossbot Headquarters"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Rusty Ralph"
+      },
+      {
+        "order": 9,
+        "objective": "Visit Groovy Garland",
+        "building": "Choral Wreaths",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 10,
+        "objective": "Defeat a Sellbot Field Office annex",
+        "location": "Anywhere"
+      },
+      {
+        "order": 11,
+        "objective": "Return to Groovy Garland"
+      },
+      {
+        "order": 12,
+        "objective": "Visit Whispering Willow"
+      },
+      {
+        "order": 13,
+        "objective": "Visit Whiny Wilma",
+        "building": "Trowels and Tribulations",
+        "location": "Daisy Gardens"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Join_the_Toon_Resistance",
+    "lastUpdated": "2025-06-12T10:01:42Z"
+  },
+  {
+    "id": "sellbot_task_force_green_trainee_stamp",
+    "name": "Green Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ro Maine",
+        "building": "Lettuce Inn",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Basket from the Cogs",
+        "building": "Oak Street",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ro Maine"
+      },
+      {
+        "order": 4,
+        "objective": "Deliver a Gift Basket to Naggy Nell",
+        "building": "Honeydew This",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 5,
+        "objective": "Visit Ro Maine"
+      },
+      {
+        "order": 6,
+        "objective": "Recover 8 Flowers from the Cogs",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Ro Maine"
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Flower Basket to Naggy Nell"
+      },
+      {
+        "order": 9,
+        "objective": "Visit Ro Maine"
+      },
+      {
+        "order": 10,
+        "objective": "Recover 12 Honeydew Melons from the Cogs",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 11,
+        "objective": "Return to Ro Maine"
+      },
+      {
+        "order": 12,
+        "objective": "Deliver a Honeydew Basket to Naggy Nell"
+      },
+      {
+        "order": 13,
+        "objective": "Visit Ro Maine"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Green_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T03:36:52Z"
+  },
+  {
+    "id": "sellbot_task_force_blue_trainee_stamp",
+    "name": "Blue Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Lil Oldman",
+        "building": "The Blizzard Wizard",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Toadstool from The Minglers",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Toadstool from Legal Eagles",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 4,
+        "objective": "Earn 500 jellybeans on the Trolley",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 3 Boss Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lil Oldman"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Blue_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T03:47:25Z"
+  },
+  {
+    "id": "sellbot_task_force_purple_trainee_stamp",
+    "name": "Purple Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Whispering Willow",
+        "building": "Talking in Your Sleep Voice Training",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Drowsy Dave",
+        "building": "Asleep at the Wheel Car Repair",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 3,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Wacky Wrench from Sellbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Wacky Wrench from Cashbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Wacky Wrench from Lawbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Wacky Wrench from Bossbots",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "objective": "Return to Drowsy Dave"
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 5 five-story Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Drowsy Dave"
+      },
+      {
+        "order": 7,
+        "objective": "Deliver a Race Car to Whispering Willow"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Purple_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T03:49:42Z"
+  },
+  {
+    "id": "sellbot_task_force_red_trainee_stamp",
+    "name": "Red Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Rusty Ralph",
+        "building": "Rusty Buckets",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 2,
+        "objective": "Help a Toon 50 laff or less defeat 15 Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Rusty Ralph"
+      },
+      {
+        "order": 4,
+        "objective": "Help a Toon 75 laff or less defeat 3 three+ story Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Rusty Ralph"
+      },
+      {
+        "order": 6,
+        "objective": "Help a Toon 105 laff or less defeat a Boss Cog",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Rusty Ralph"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Red_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T03:51:24Z"
+  },
+  {
+    "id": "sellbot_task_force_orange_trainee_stamp",
+    "name": "Orange Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Samantha Spade",
+        "building": "Trellis the Truth! Private Investigators",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Find Runaway Boots in a Hidden Location",
+        "details": [
+          "Located near the giant daisy in Daisy Gardens."
+        ]
+      },
+      {
+        "order": 3,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 4,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat 25 Sellbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 25 Cashbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 25 Lawbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 25 Bossbots",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 6,
+        "objective": "Find some Shoe Prints in a Hidden Location",
+        "details": [
+          "Located on top of a box near the fishing pond on Seaweed Street in Donald's Dock."
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Shep Ahoy",
+        "building": "All for Nautical",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 9,
+        "objective": "Find a Stick of Chalk in a Hidden Location",
+        "details": [
+          "Located near the First Fairway entrance in Bossbot Headquarters."
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 11,
+        "objective": "Deliver a Stick of Chalk to HQ Officer",
+        "building": "Toon Headquarters",
+        "location": "Anywhere"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Orange_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T03:54:02Z"
+  },
+  {
+    "id": "sellbot_task_force_yellow_trainee_stamp",
+    "name": "Yellow Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Shorty Fuse",
+        "building": "The Kaboomery",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 12 Unsuspicious Eggs from Bottom Feeders",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Shorty Fuse"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Chewy Morsel",
+        "building": "Rubber Chicken Sandwiches",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 6 Tightwads",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Chewy Morsel"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Sneezy Kitty",
+        "building": "Weird Beard's Disguise Shop",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 8,
+        "objective": "Go fishing for a Pirate Hat",
+        "building": "Silly Street",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Sneezy Kitty"
+      },
+      {
+        "order": 10,
+        "objective": "Deliver a Bag of Gags to Flippy",
+        "building": "Toon Hall",
+        "location": "Toontown Central"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Yellow_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T03:56:34Z"
+  },
+  {
+    "id": "sellbot_task_force_brown_trainee_stamp",
+    "name": "Brown Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Barry Medly",
+        "building": "Berried Treasure",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 30 level 9+ Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Barry Medly"
+      },
+      {
+        "order": 4,
+        "objective": "Recover 6 Treasure Chests from Two-Faces",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Barry Medly"
+      },
+      {
+        "order": 6,
+        "objective": "Collect 3 Treasure Chests in Treasure Dive on the Trolley in the playground"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Barry Medly"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Brown_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T03:59:54Z"
+  },
+  {
+    "id": "sellbot_task_force_pink_trainee_stamp",
+    "name": "Pink Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Anna",
+        "building": "Anna's Cruises",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 3 Corporate Raiders",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Anna"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Sea Shanty",
+        "building": "Mixolydian Scales",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 5,
+        "objective": "Defeat 4 three+ story Cog Buildings",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Sea Shanty"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Luke Lute",
+        "building": "Lyre",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 8 Two-Faces",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Luke Lute"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Pink_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T04:02:25Z"
+  },
+  {
+    "id": "sellbot_task_force_cyan_trainee_stamp",
+    "name": "Cyan Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Groovy Garland",
+        "building": "Choral Wreaths",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Soggy Nell",
+        "building": "Melted Ice Cubes",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 3,
+        "objective": "Go fishing for 3 Ice Cubes",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Soggy Nell"
+      },
+      {
+        "order": 5,
+        "objective": "Visit Julius Wheezer",
+        "building": "Etude Brute? Theatre Company",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 6,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat 37 Sellbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 37 Cashbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 37 Lawbots",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 37 Bossbots",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Return to Julius Wheezer"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Soggy Nell"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Shakespearian Letter to Vidalia VaVoom",
+        "building": "Snow Bunny Ski Shop",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 10,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Recover a Pair of Eyeglasses from Mr. Hollywoods",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Pair of Eyeglasses from Robber Barons",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Pair of Eyeglasses from Big Wigs",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Recover a Pair of Eyeglasses from The Big Cheeses",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 11,
+        "objective": "Return to Vidalia VaVoom"
+      },
+      {
+        "order": 12,
+        "objective": "Deliver a Resistance Report to Naggy Nell",
+        "building": "Honeydew This",
+        "location": "Daisy Gardens"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Cyan_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T04:04:34Z"
+  },
+  {
+    "id": "sellbot_task_force_teal_trainee_stamp",
+    "name": "Teal Trainee Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Librarian Larry",
+        "building": "Toontown Library",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 2,
+        "objective": "Go fishing for a Fountain Pen",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Librarian Larry"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Professor Pete",
+        "building": "Toontown Schoolhouse",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 5,
+        "objective": "Recover Pete's Book from Pencil Pushers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Professor Pete"
+      },
+      {
+        "order": 7,
+        "objective": "Deliver Pete's Book to Librarian Larry"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Rollo The Amazing",
+        "building": "Silly Stunts",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 9,
+        "objective": "Defeat 10 level 2+ Cogs",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 10,
+        "objective": "Return to Rollo The Amazing"
+      },
+      {
+        "order": 11,
+        "objective": "Deliver an Autobiography to Librarian Larry"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Teal_Trainee_Stamp",
+    "lastUpdated": "2025-06-08T04:06:13Z"
+  },
+  {
+    "id": "sellbot_task_force_trainee_badge",
+    "name": "Trainee Badge",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Naggy Nell",
+        "building": "Honeydew This",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat The Boiler",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Naggy Nell"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat a two+ star Sellbot Field Office annex",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Naggy Nell"
+      },
+      {
+        "order": 6,
+        "objective": "Go to Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 9,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 10,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 11,
+        "objective": "Visit Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Trainee_Badge",
+    "lastUpdated": "2025-06-08T04:11:12Z"
+  },
+  {
+    "id": "sellbot_task_force_green_explorer_stamp",
+    "name": "Green Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 100 Notepad Papers from Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 4,
+        "objective": "Recover 10 Copies of V.P.'s Book from Sellbots",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 6,
+        "objective": "Collect 50 Stolen Jokes",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Ai Spai"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Green_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T04:19:11Z"
+  },
+  {
+    "id": "sellbot_task_force_purple_explorer_stamp",
+    "name": "Purple Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Collect 2750 Sellbot Merits",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Doctor Googlymoogly"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Purple_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T04:22:03Z"
+  },
+  {
+    "id": "sellbot_task_force_red_explorer_stamp",
+    "name": "Red Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Chomped Pie Chart from Loan Sharks",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 15 level 12+ Cogs",
+        "building": "Cog Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ripley"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Red_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T04:24:32Z"
+  },
+  {
+    "id": "sellbot_task_force_orange_explorer_stamp",
+    "name": "Orange Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Franz Neckvein",
+        "building": "The Punch Line Gym",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 8 Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Franz Neckvein"
+      },
+      {
+        "order": 4,
+        "objective": "Collect 18 Cog Gears in Cog Thief on the Trolley in the playground"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Franz Neckvein"
+      },
+      {
+        "order": 6,
+        "objective": "Visit Lance Iceberg",
+        "building": "Ice Cycle Bikes",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 7,
+        "objective": "Defeat 2 Cold Caller Cubicles",
+        "building": "Two+ star Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Lance Iceberg"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Workout Routine to Lars Bicep",
+        "building": "Tuft Guy Gym",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 10,
+        "objective": "Defeat 90 level 9+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 11,
+        "objective": "Return to Lars Bicep"
+      },
+      {
+        "order": 12,
+        "objective": "Visit Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Orange_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T04:29:28Z"
+  },
+  {
+    "id": "sellbot_task_force_yellow_explorer_stamp",
+    "name": "Yellow Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 35 Skele-Gears from Skelecogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 4,
+        "objective": "Deliver a Proto-guise to Sasha Sidesplitter",
+        "building": "Sidesplitter's Mending",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 10 Giganti-Gears from level 12+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Sasha Sidesplitter"
+      },
+      {
+        "order": 7,
+        "objective": "Deliver a Cardboard Cog Disguise to Doctor Googlymoogly"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Yellow_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T05:17:30Z"
+  },
+  {
+    "id": "sellbot_task_force_brown_explorer_stamp",
+    "name": "Brown Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Deliver Notes to Lazy Hal",
+        "building": "All Fun and Games Shop",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 2,
+        "objective": "Recover some Art Supplies from Two-Faces",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Lazy Hal"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 60 Sellbots",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Lazy Hal"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 3 two+ star Sellbot Field Office annexes",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Lazy Hal"
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Trading Card to Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Brown_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T05:23:41Z"
+  },
+  {
+    "id": "sellbot_task_force_pink_explorer_stamp",
+    "name": "Pink Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Rick Rockhead",
+        "building": "Cast Iron Kites",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 3,
+        "objective": "Recover 10 Cog Parts from level 10+ Cogs",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Rick Rockhead"
+      },
+      {
+        "order": 5,
+        "objective": "Visit Frank Furter",
+        "building": "Frank's Pranks",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 6,
+        "objective": "Recover 40 Silly Strings from Lawbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Frank Furter"
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Surveillance Kite to Ai Spai"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Pink_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T05:46:04Z"
+  },
+  {
+    "id": "sellbot_task_force_cyan_explorer_stamp",
+    "name": "Cyan Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 50 Lawbots",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat a Lawbot DA Office",
+        "location": "Lawbot Headquarters"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat the Chief Justice",
+        "building": "Lawbot Courthouse",
+        "location": "Lawbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Bonnie Bubbles"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Cyan_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T05:47:19Z"
+  },
+  {
+    "id": "sellbot_task_force_teal_explorer_stamp",
+    "name": "Teal Explorer Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Sluggo Songbird",
+        "building": "Carry a Toon Movers",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 6 Mega-Movers",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Sluggo Songbird"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Martha Mopp",
+        "building": "What a Mezzo! Maid Service",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 15 Sponges from Telemarketers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Martha Mopp"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Teal_Explorer_Stamp",
+    "lastUpdated": "2025-06-08T05:49:49Z"
+  },
+  {
+    "id": "sellbot_task_force_explorer_badge",
+    "name": "Explorer Badge",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat a two+ star Boiler",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 5,
+        "objective": "Find 3 Pieces of Intel in a Hidden Location",
+        "details": [
+          "First intel is located in the narrow pathway leading to the Sellbot Factory entrances.",
+          "Second intel is located inside the Sellbot Factory at the Warehouse Lookout.",
+          "Third intel is located inside the Sellbot Factory on the bridge between the West Silo and the Center Silo."
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 50 Sellbots",
+        "building": "Cog Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 10,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 11,
+        "objective": "Recover 9 Party Poppers from the Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 12,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 13,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 14,
+        "objective": "Defeat a three+ star Sellbot Field Office annex",
+        "location": "Anywhere"
+      },
+      {
+        "order": 15,
+        "objective": "Return to Ripley"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Explorer_Badge",
+    "lastUpdated": "2025-06-08T06:14:01Z"
+  },
+  {
+    "id": "sellbot_task_force_green_sleuth_stamp",
+    "name": "Green Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Artie",
+        "building": "Artie Choke's Neckties",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 30 Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Artie"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Fa",
+        "building": "Do",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 88 Piano Keys from Sellbots",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Fa"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Dr. Floss",
+        "building": "Tooth Fairy Dentistry",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 8,
+        "objective": "Defeat 450 Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Dr. Floss"
+      },
+      {
+        "order": 10,
+        "objective": "Visit Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Green_Sleuth_Stamp",
+    "lastUpdated": "2025-06-08T07:01:51Z"
+  },
+  {
+    "id": "sellbot_task_force_blue_sleuth_stamp",
+    "name": "Blue Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Collect 100 Stolen Jokes",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Jesse Jester",
+        "building": "Jesse's Joke Repair",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 5,
+        "objective": "Go fishing for 3 Lucky Juggling Cubes",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Jesse Jester"
+      },
+      {
+        "order": 7,
+        "objective": "Recover a Prized Joke from The Boiler",
+        "building": "Cog Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Jesse Jester"
+      },
+      {
+        "order": 9,
+        "objective": "Visit Bonnie Bubbles"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Blue_Sleuth_Stamp",
+    "lastUpdated": "2025-06-08T07:04:54Z"
+  },
+  {
+    "id": "sellbot_task_force_red_sleuth_stamp",
+    "name": "Red Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat The Factory Foreman",
+        "building": "Sellbot Factory",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 4,
+        "objective": "Collect 2780 Sellbot Merits",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat the Vice President",
+        "building": "Sellbot Towers",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 8,
+        "objective": "Recover a Memo from the Chief Executive Officer",
+        "building": "Bossbot Clubhouse",
+        "location": "Bossbot Headquarters"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Ripley"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Red_Sleuth_Stamp",
+    "lastUpdated": "2025-08-01T03:50:51Z"
+  },
+  {
+    "id": "sellbot_task_force_orange_sleuth_stamp",
+    "name": "Orange Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Loony Labs Scientoon",
+        "building": "Toon Hall",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 2,
+        "objective": "Collect 250 Stolen Jokes",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Loony Labs Scientoon"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 3 Boilers",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Loony Labs Scientoon"
+      },
+      {
+        "order": 6,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Orange_Sleuth_Stamp",
+    "lastUpdated": "2025-06-08T08:12:01Z"
+  },
+  {
+    "id": "sellbot_task_force_yellow_sleuth_stamp",
+    "name": "Yellow Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat The Mint Auditor",
+        "building": "Cashbot Mints",
+        "location": "Cashbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 40 Skelecogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 6,
+        "objective": "Find a Business Plan in a Hidden Location",
+        "details": [
+          "Located inside the Cashbot Vault during the process of battling the Chief Financial Officer."
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Return to Bonnie Bubbles"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Yellow_Sleuth_Stamp",
+    "lastUpdated": "2025-06-08T08:14:01Z"
+  },
+  {
+    "id": "sellbot_task_force_brown_sleuth_stamp",
+    "name": "Brown Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Rudy Rudder",
+        "building": "Rudderly Ridiculous!",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 15 Mover & Shakers",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Rudy Rudder"
+      },
+      {
+        "order": 4,
+        "objective": "Visit T.P. Rolle",
+        "building": "Impractical Jokes",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 5,
+        "objective": "Collect 200 Stolen Jokes",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 6,
+        "objective": "Return to T.P. Rolle"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Brown_Sleuth_Stamp",
+    "lastUpdated": "2025-07-29T08:14:29Z"
+  },
+  {
+    "id": "sellbot_task_force_pink_sleuth_stamp",
+    "name": "Pink Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Recover a Contact List from Name Droppers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 50 level 8+ Cogs",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat The Factory Foreman",
+        "building": "Sellbot Factory",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 8,
+        "objective": "Recover some Meeting Notes from the Vice President",
+        "building": "Sellbot Towers",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Bonnie Bubbles"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Pink_Sleuth_Stamp",
+    "lastUpdated": "2025-06-08T08:39:24Z"
+  },
+  {
+    "id": "sellbot_task_force_cyan_sleuth_stamp",
+    "name": "Cyan Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Vidalia VaVoom",
+        "building": "Snow Bunny Ski Shop",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 3,
+        "objective": "Recover 50 Skis from the Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Vidalia VaVoom"
+      },
+      {
+        "order": 5,
+        "objective": "Visit Henry the Hazard",
+        "building": "Skiing Clinic",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 100 level 11+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Henry the Hazard"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Ai Spai"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Cyan_Sleuth_Stamp",
+    "lastUpdated": "2025-06-08T09:18:21Z"
+  },
+  {
+    "id": "sellbot_task_force_teal_sleuth_stamp",
+    "name": "Teal Sleuth Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 175 Cog Parts from Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 4,
+        "objective": "Find some Spray Paint Cans in a Hidden Location",
+        "details": [
+          "Located at the Sellbot Towers in the middle of the area."
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 6,
+        "objective": "Visit Sweet Slumber",
+        "building": "Sawing Wood Slumber Lumber",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 7,
+        "objective": "Deliver 4000 jellybeans to Sweet Slumber"
+      },
+      {
+        "order": 8,
+        "objective": "Visit Doctor Googlymoogly"
+      },
+      {
+        "order": 9,
+        "objective": "Defeat 10 Mega-Movers",
+        "building": "Three+ star Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 10,
+        "objective": "Return to Doctor Googlymoogly"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Teal_Sleuth_Stamp",
+    "lastUpdated": "2025-06-08T09:38:06Z"
+  },
+  {
+    "id": "sellbot_task_force_sleuth_badge",
+    "name": "Sleuth Badge",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Deliver a Portfolio to Samantha Spade",
+        "building": "Trellis the Truth! Private Investigators",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 6 level 16+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 5,
+        "objective": "Visit Professor Prepostera",
+        "building": "Toon Hall",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 6,
+        "objective": "Find a Cog Doohickey in a Hidden Location",
+        "details": [
+          "Located on top of a chair within the Surveillance Room in Sellbot Field Offices. Complete the Cog battle first."
+        ]
+      },
+      {
+        "order": 7,
+        "objective": "Return to Professor Prepostera"
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Cog Doohickey to Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 9,
+        "objective": "Find an Antisillio Battery in a Hidden Location",
+        "details": [
+          "Located at the first speed booster in Goofy Speedway's Corkscrew Coliseum race track."
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 11,
+        "objective": "Deliver a Cogspeak Communicator to Samantha Spade"
+      },
+      {
+        "order": 12,
+        "objective": "Recover 24 Cogspeak Clips from the Cogs",
+        "building": "Cog Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 13,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 14,
+        "objective": "Defeat a three+ star Boiler",
+        "building": "Cog Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 15,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 16,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Sleuth_Badge",
+    "lastUpdated": "2025-06-08T09:28:06Z"
+  },
+  {
+    "id": "sellbot_task_force_green_smasher_stamp",
+    "name": "Green Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Jack",
+        "building": "Jack's Beanstalks",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 300 Magic Jellybeans from Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Jack"
+      },
+      {
+        "order": 4,
+        "objective": "Deliver a Bean Bundle to Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Green_Smasher_Stamp",
+    "lastUpdated": "2025-06-08T09:35:24Z"
+  },
+  {
+    "id": "sellbot_task_force_blue_smasher_stamp",
+    "name": "Blue Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 8 Mega-Movers",
+        "building": "Two+ star Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "Visit Gus Gooseburger",
+        "building": "Affordable Goosebumps",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 2 Cold Caller Cubicles",
+        "building": "Three+ star Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Gus Gooseburger"
+      },
+      {
+        "order": 6,
+        "objective": "Deliver Gus’ Business Card to Toon Resistance Operator"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Blue_Smasher_Stamp",
+    "lastUpdated": "2025-06-08T09:38:51Z"
+  },
+  {
+    "id": "sellbot_task_force_purple_smasher_stamp",
+    "name": "Purple Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Chef Knucklehead",
+        "building": "Spaghetti and Goofballs",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 36 Ciabatta Rolls from Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Chef Knucklehead"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Ted Calm",
+        "building": "Seven Seas Cafe",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 5,
+        "objective": "Recover 20 Fruits in Catching Game on the Trolley in the playground"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Ted Calm"
+      },
+      {
+        "order": 7,
+        "objective": "Visit Caesar",
+        "building": "The Salad Bar",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 8,
+        "objective": "Go fishing for 5 Sea Cucumbers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 9,
+        "objective": "Return to Caesar"
+      },
+      {
+        "order": 10,
+        "objective": "Visit Piccolo",
+        "building": "Piccolo's Pizza",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 11,
+        "objective": "Defeat 80 level 8+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 12,
+        "objective": "Return to Piccolo"
+      },
+      {
+        "order": 13,
+        "objective": "Visit Chef Bumblesoup",
+        "building": "Hambrrrgers",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 14,
+        "objective": "Recover 50 Burger Patties from the Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 15,
+        "objective": "Visit Moonbeam",
+        "building": "Moonbeam's Ice Creams",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 16,
+        "objective": "Defeat 1 Cold Caller Cubicles",
+        "building": "Three+ star Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 17,
+        "objective": "Return to Moonbeam"
+      },
+      {
+        "order": 18,
+        "objective": "Deliver a Seasoned Special to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Purple_Smasher_Stamp",
+    "lastUpdated": "2025-06-08T09:44:22Z"
+  },
+  {
+    "id": "sellbot_task_force_red_smasher_stamp",
+    "name": "Red Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 5 Sellbot Field Office annexes",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ripley"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Red_Smasher_Stamp",
+    "lastUpdated": "2025-06-10T19:11:51Z"
+  },
+  {
+    "id": "sellbot_task_force_orange_smasher_stamp",
+    "name": "Orange Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Cynthia",
+        "building": "Photo Cynthia's Camera Store",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat a Sellbot Field Office annex",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Cynthia"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat a three+ star Boiler",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Cynthia"
+      },
+      {
+        "order": 6,
+        "objective": "Deliver some Perfect Picture to Bill Board",
+        "building": "Toontown Sign Factory",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 7,
+        "objective": "Collect 240 Stolen Jokes",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Bill Board"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver some Embarrassing Memo to Orville",
+        "building": "Fly By Night Travel Agency",
+        "location": "Donald's Dreamland"
+      },
+      {
+        "order": 10,
+        "objective": "Recover 25 Burnished Bolts from Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 11,
+        "objective": "Return to Orville"
+      },
+      {
+        "order": 12,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 13,
+        "objective": "Deliver 3 Whole Cream Pies to Ai Spai"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Orange_Smasher_Stamp",
+    "lastUpdated": "2025-06-08T09:48:37Z"
+  },
+  {
+    "id": "sellbot_task_force_yellow_smasher_stamp",
+    "name": "Yellow Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Deliver a Letter to Ned Slinger",
+        "building": "The Flying Pie",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 2,
+        "objective": "Recover 18 Shaky Springs from Mover & Shakers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ned Slinger"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 5 Mega-Movers",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ned Slinger"
+      },
+      {
+        "order": 6,
+        "objective": "Deliver a Pie Flinger 2000 to Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Yellow_Smasher_Stamp",
+    "lastUpdated": "2025-06-08T09:52:23Z"
+  },
+  {
+    "id": "sellbot_task_force_brown_smasher_stamp",
+    "name": "Brown Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 5 Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 50 Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 500 Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 8,
+        "objective": "Deliver a Resistance Report to Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver an Inconspicuous Box to Ai Spai"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Brown_Smasher_Stamp",
+    "lastUpdated": "2025-06-08T09:56:02Z"
+  },
+  {
+    "id": "sellbot_task_force_pink_smasher_stamp",
+    "name": "Pink Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Fisherman Flora",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Recover 4 Hedging Documents from the Cogs in Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Fisherman Flora"
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Hedging Document to Doctor Googlymoogly"
+      },
+      {
+        "order": 6,
+        "objective": "Visit Professor Prepostera",
+        "building": "Toon Hall",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 7,
+        "objective": "Find some High-Level Waterspout Intel in a Hidden Location",
+        "details": [
+          "Located at the geyser in Chip 'n Dale's Acorn Acres."
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "Return to Professor Prepostera"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Loony Labs Analysis to Flippy",
+        "building": "Toon Hall",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 10,
+        "objective": "Deliver a Loony Labs Analysis to Doctor Googlymoogly"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Pink_Smasher_Stamp",
+    "lastUpdated": "2025-06-10T19:13:51Z"
+  },
+  {
+    "id": "sellbot_task_force_cyan_smasher_stamp",
+    "name": "Cyan Smasher Stamp",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat a three+ star Sellbot Field Office annex",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Art",
+        "building": "Art's Smart Chart Mart",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 5,
+        "objective": "Go fishing for 10 Crumpled Charts",
+        "building": "Seaweed Street",
+        "location": "Donald's Dock"
+      },
+      {
+        "order": 6,
+        "objective": "Return to Art"
+      },
+      {
+        "order": 7,
+        "objective": "Recover 15 Purloined Papers from Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Art"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Confusing Chart to Doctor Googlymoogly"
+      },
+      {
+        "order": 10,
+        "objective": "Visit Patty Papercut",
+        "building": "Paper Airplanes",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 11,
+        "objective": "Recover 10 Paper Airplanes from Legal Eagles",
+        "location": "Anywhere"
+      },
+      {
+        "order": 12,
+        "objective": "Return to Patty Papercut"
+      },
+      {
+        "order": 13,
+        "objective": "Visit Doctor Googlymoogly"
+      },
+      {
+        "order": 14,
+        "objective": "Visit Luciano Scoop",
+        "building": "Tenor Times Newspaper",
+        "location": "Minnie's Melodyland"
+      },
+      {
+        "order": 15,
+        "objective": "Defeat 5 four+ story Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 16,
+        "objective": "Return to Luciano Scoop"
+      },
+      {
+        "order": 17,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 18,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 19,
+        "objective": "Visit Doctor Googlymoogly"
+      },
+      {
+        "order": 20,
+        "objective": "Visit Luciano Scoop"
+      },
+      {
+        "order": 21,
+        "objective": "Visit Doctor Googlymoogly"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Cyan_Smasher_Stamp",
+    "lastUpdated": "2025-06-08T09:59:56Z"
+  },
+  {
+    "id": "sellbot_task_force_smasher_badge",
+    "name": "Smasher Badge",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Naggy Nell",
+        "building": "Honeydew This",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 4,
+        "objective": "Find 4 HQ Hints in a Hidden Location",
+        "details": [
+          "First HQ Hint is located in front of the Sellbot Towers entrance.",
+          "Second HQ Hint is located in Cashbot Headquarters on the fourth train track to the left.",
+          "Third HQ Hint is located inside the Lawbot DA Offices lobby area.",
+          "Fourth HQ Hint is located in front of the Executive Office Tower entrance."
+        ]
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 6,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Recover 3 Expansion Schematics from level 6+ Cogs",
+        "building": "Sellbot Factory",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 9,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 10,
+        "objective": "Visit Bonnie Bubbles"
+      },
+      {
+        "order": 11,
+        "objective": "Recover the Key to Daisy Gardens, Inc. from the Vice President",
+        "building": "Sellbot Towers",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 12,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 13,
+        "objective": "Visit Ripley"
+      },
+      {
+        "order": 14,
+        "objective": "Go to Daisy Gardens, Inc.",
+        "location": "Kaboomberg district"
+      },
+      {
+        "order": 15,
+        "objective": "Return to Ripley",
+        "building": "Kaboomberg",
+        "location": "Inc."
+      },
+      {
+        "order": 16,
+        "objective": "Defeat a four-star Boiler",
+        "building": "Sellbot Field Offices",
+        "location": "Inc."
+      },
+      {
+        "order": 17,
+        "objective": "Return to Ripley"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Smasher_Badge",
+    "lastUpdated": "2025-06-11T08:13:34Z"
+  },
+  {
+    "id": "sellbot_task_force_1_laff_boost",
+    "name": "+1 laff boost",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Visit Wet Will",
+        "building": "Spring Rain Seltzer Bottles",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 3,
+        "objective": "Defeat 75 level 10+ Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 4,
+        "objective": "Return to Wet Will"
+      },
+      {
+        "order": 5,
+        "objective": "Deliver a Customized Seltzer Bottle to Bonnie Bubbles"
+      },
+      {
+        "order": 6,
+        "objective": "Defeat 3 Cold Caller Cubicles",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 7,
+        "objective": "Return to Bonnie Bubbles"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/%2B1_laff_boost_(Explorer)",
+    "lastUpdated": "2025-06-08T04:20:09Z"
+  },
+  {
+    "id": "sellbot_task_force_carry_1_level_7_gag",
+    "name": "Carry +1 level 7 gag",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Choose a level 7 gag"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Carry_%2B1_level_7_gag",
+    "lastUpdated": "2025-06-08T10:22:33Z"
+  },
+  {
+    "id": "sellbot_task_force_change_1_level_7_gag_carry_capacity",
+    "name": "Change +1 level 7 gag carry capacity",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 120 Cogs",
+        "building": "Sellbot Factory",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat the Vice President",
+        "building": "Sellbot Towers",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 6,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 7,
+        "objective": "Find some Spilled Lima Beans in a Hidden Location",
+        "details": [
+          "Located outside Spill the Beans."
+        ]
+      },
+      {
+        "order": 8,
+        "objective": "Return some Spilled Lima Beans to Detective Lima",
+        "building": "Spill the Beans",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 9,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat 100 level 3+ Bossbots",
+            "building": "Cog Buildings",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 100 level 3+ Lawbots",
+            "building": "Cog Buildings",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 100 level 3+ Cashbots",
+            "building": "Cog Buildings",
+            "location": "Anywhere"
+          },
+          {
+            "objective": "Defeat 100 level 3+ Sellbots",
+            "building": "Cog Buildings",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 10,
+        "objective": "Return to Detective Lima"
+      },
+      {
+        "order": 11,
+        "objective": "Deliver a Cog Building Bank to Ai Spai"
+      },
+      {
+        "order": 12,
+        "objective": "Find 2 Antisillion Batteries in a Hidden Location",
+        "details": [
+          "Located in the Blizzard Boulevard race track in Goofy Speedway."
+        ]
+      },
+      {
+        "order": 13,
+        "objective": "Return 2 Antisillion Batteries to Samantha Spade",
+        "building": "Trellis the Truth! Private Investigators",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 14,
+        "objective": "Recover 8 Cogspeak Clips from the Cogs",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 15,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 16,
+        "objective": "Defeat 30 level 13+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 17,
+        "objective": "Return to Samantha Spade"
+      },
+      {
+        "order": 18,
+        "objective": "Deliver a Cog Building Case File to Naggy Nell",
+        "building": "Honeydew This",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 19,
+        "objective": "Defeat 5 Boss Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 20,
+        "objective": "Return to Naggy Nell"
+      },
+      {
+        "order": 21,
+        "objective": "Deliver a Cog Building Case File to Ai Spai"
+      },
+      {
+        "order": 22,
+        "objective": "Visit Bonnie Bubbles",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 23,
+        "objective": "Earn 400 jellybeans on the Trolley in the playground"
+      },
+      {
+        "order": 24,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 25,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat The Factory Foreman",
+            "building": "Sellbot Factory",
+            "location": "Sellbot Headquarters"
+          },
+          {
+            "objective": "Defeat The Mint Auditor",
+            "building": "Cashbot Mints",
+            "location": "Cashbot Headquarters"
+          },
+          {
+            "objective": "Defeat The Office Clerk",
+            "building": "Lawbot DA Offices",
+            "location": "Lawbot Headquarters"
+          },
+          {
+            "objective": "Defeat The Club President",
+            "building": "Bossbot Golf Courses",
+            "location": "Bossbot Headquarters"
+          }
+        ]
+      },
+      {
+        "order": 26,
+        "objective": "Return to Bonnie Bubbles"
+      },
+      {
+        "order": 27,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 28,
+        "objective": "Recover an Animation Cel from level 20+ Cogs",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 29,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 30,
+        "objective": "Deliver an Animation Cel to Lil Oldman",
+        "building": "The Blizzard Wizard",
+        "location": "The Brrrgh"
+      },
+      {
+        "order": 31,
+        "objective": "Go fishing for a Needle",
+        "location": "Anywhere"
+      },
+      {
+        "order": 32,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 33,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Defeat the Vice President",
+            "building": "Sellbot Towers",
+            "location": "Sellbot Headquarters"
+          },
+          {
+            "objective": "Defeat The Boiler",
+            "building": "Sellbot Field Offices",
+            "location": "Anywhere"
+          }
+        ]
+      },
+      {
+        "order": 34,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 35,
+        "objective": "Go fishing for 14 Engagement Rings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 36,
+        "objective": "Return to Lil Oldman"
+      },
+      {
+        "order": 37,
+        "objective": "Deliver a Magical Animation Cel to Doctor Googlymoogly"
+      },
+      {
+        "order": 38,
+        "objective": "Visit Ripley"
+      },
+      {
+        "order": 39,
+        "objective": "Recover Rocky's Rubber Stamp from Glad Handers",
+        "location": "Anywhere"
+      },
+      {
+        "order": 40,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 41,
+        "objective": "Find 3 Loud & Clear Letters in a Hidden Location",
+        "details": [
+          "The first Loud & Clear Letter is located in the Sellbot Headquarters courtyard by the pit.",
+          "The second Loud & Clear Letter is located in the Sellbot Factory lobby area.",
+          "The third Loud & Clear Letter is located inside the Sellbot Towers lobby area."
+        ]
+      },
+      {
+        "order": 42,
+        "objective": "Return to Ripley"
+      },
+      {
+        "order": 43,
+        "objective": "Go to Daisy Gardens, Inc.",
+        "location": "Kaboomberg district"
+      },
+      {
+        "order": 44,
+        "objective": "Return to Ripley",
+        "building": "Kaboomberg",
+        "location": "Inc."
+      },
+      {
+        "order": 45,
+        "objective": "Recover The Lord Lowden Clearance from The Boiler",
+        "building": "Sellbot Field Offices",
+        "location": "Inc."
+      },
+      {
+        "order": 46,
+        "objective": "Return to Ripley",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 47,
+        "objective": "Deliver The Lord Lowden Clearance to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 48,
+        "objective": "One of the following",
+        "options": [
+          {
+            "objective": "Visit Ripley"
+          },
+          {
+            "objective": "Visit Doctor Googlymoogly"
+          },
+          {
+            "objective": "Visit Bonnie Bubbles"
+          },
+          {
+            "objective": "Visit Ai Spai"
+          }
+        ]
+      },
+      {
+        "order": 49,
+        "objective": "Choose a level 7 gag"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Change_%2B1_level_7_gag_carry_capacity",
+    "lastUpdated": "2025-06-12T10:01:07Z"
+  },
+  {
+    "id": "sellbot_task_force_trainee_outfit",
+    "name": "Trainee Outfit",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat The Boiler",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Trainee_Outfit",
+    "lastUpdated": "2022-01-17T03:59:56Z"
+  },
+  {
+    "id": "sellbot_task_force_pair_of_trainers",
+    "name": "Pair of Trainers",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 5 five story Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Pair_of_Trainers",
+    "lastUpdated": "2022-01-17T04:00:20Z"
+  },
+  {
+    "id": "sellbot_task_force_trainee_travel_pack",
+    "name": "Trainee Travel Pack",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Recover 12 Shtickers from the Cogs",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Trainee_Travel_Pack",
+    "lastUpdated": "2022-01-17T04:38:48Z"
+  },
+  {
+    "id": "sellbot_task_force_vintage_teashades",
+    "name": "Vintage Teashades",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 85 Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Vintage_Teashades",
+    "lastUpdated": "2022-01-17T04:39:02Z"
+  },
+  {
+    "id": "sellbot_task_force_pie_tin_topper",
+    "name": "Pie Tin Topper",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Deliver 8 Whole Fruit Pies to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Pie_Tin_Topper",
+    "lastUpdated": "2022-01-17T04:40:01Z"
+  },
+  {
+    "id": "sellbot_task_force_explorer_outfit",
+    "name": "Explorer Outfit",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 5 Boss Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Explorer_Outfit",
+    "lastUpdated": "2024-07-19T08:28:21Z"
+  },
+  {
+    "id": "sellbot_task_force_exploration_boots",
+    "name": "Exploration Boots",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 30 Sellbots",
+        "building": "Cog Buildings",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Exploration_Boots",
+    "lastUpdated": "2022-01-17T04:40:59Z"
+  },
+  {
+    "id": "sellbot_task_force_oil_pail_pack",
+    "name": "Oil Pail Pack",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 3 Factory Foremen",
+        "building": "Sellbot Factory",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Oil_Pail_Pack",
+    "lastUpdated": "2024-07-19T08:44:18Z"
+  },
+  {
+    "id": "sellbot_task_force_experimental_eyewear",
+    "name": "Experimental Eyewear",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 10 level 14+ Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Experimental_Eyewear",
+    "lastUpdated": "2022-01-17T04:41:23Z"
+  },
+  {
+    "id": "sellbot_task_force_water_cooled_cap",
+    "name": "Water Cooled Cap",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 12 Mega-Movers",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Water_Cooled_Cap",
+    "lastUpdated": "2022-01-17T04:43:24Z"
+  },
+  {
+    "id": "sellbot_task_force_sleuthing_squeakers",
+    "name": "Sleuthing Squeakers",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Play Spotlight Search on the Trolley in the playground"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Sleuthing_Squeakers",
+    "lastUpdated": "2023-06-10T08:55:50Z"
+  },
+  {
+    "id": "sellbot_task_force_sly_scarf",
+    "name": "Sly Scarf",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 20 Two-Faces",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Sly_Scarf",
+    "lastUpdated": "2022-01-17T04:44:00Z"
+  },
+  {
+    "id": "sellbot_task_force_magnifying_glasses",
+    "name": "Magnifying Glasses",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 3 two+ star Sellbot Field Office annexes",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Magnifying_Glasses",
+    "lastUpdated": "2022-01-17T04:44:24Z"
+  },
+  {
+    "id": "sellbot_task_force_sleuth_outfit",
+    "name": "Sleuth Outfit",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 3 three star Sellbot Field Office annexes",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Sleuth_Outfit",
+    "lastUpdated": "2022-01-17T04:44:47Z"
+  },
+  {
+    "id": "sellbot_task_force_ticklish_topper",
+    "name": "Ticklish Topper",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 12 Legal Eagles",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Ticklish_Topper",
+    "lastUpdated": "2022-06-04T01:00:45Z"
+  },
+  {
+    "id": "sellbot_task_force_aegis_of_aluminum",
+    "name": "Aegis of Aluminum",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat a level 20 Cog",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Aegis_of_Aluminum",
+    "lastUpdated": "2022-06-06T17:14:33Z"
+  },
+  {
+    "id": "sellbot_task_force_salvaged_spectacles",
+    "name": "Salvaged Spectacles",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 15 Sellbots",
+        "building": "Oak Street",
+        "location": "Daisy Gardens"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Salvaged_Spectacles",
+    "lastUpdated": "2022-06-06T17:02:07Z"
+  },
+  {
+    "id": "sellbot_task_force_resistance_recruitment_poster",
+    "name": "Resistance Recruitment Poster",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Help a Toon 60 laff or less defeat 20 Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Resistance_Recruitment_Poster",
+    "lastUpdated": "2024-07-12T07:16:11Z"
+  },
+  {
+    "id": "sellbot_task_force_smasher_outfit",
+    "name": "Smasher Outfit",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 1000 Cogs",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Smasher_Outfit",
+    "lastUpdated": "2022-06-06T17:05:53Z"
+  },
+  {
+    "id": "sellbot_task_force_litter_less_lid",
+    "name": "Litter-less Lid",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Collect 500 Stolen Jokes",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Litter-less_Lid",
+    "lastUpdated": "2022-06-06T17:05:48Z"
+  },
+  {
+    "id": "sellbot_task_force_sellbot_cog_crusher_outfit",
+    "name": "Sellbot Cog-Crusher Outfit",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 100 Sellbots",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Sellbot_Cog-Crusher_Outfit",
+    "lastUpdated": "2022-01-17T04:37:27Z"
+  },
+  {
+    "id": "sellbot_task_force_sellbot_cog_crusher_shades",
+    "name": "Sellbot Cog-Crusher Shades",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 18 Mr. Hollywoods",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Sellbot_Cog-Crusher_Shades",
+    "lastUpdated": "2022-01-17T04:39:31Z"
+  },
+  {
+    "id": "sellbot_task_force_sellbot_cog_crusher_shoes",
+    "name": "Sellbot Cog-Crusher Shoes",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 5 Vice Presidents",
+        "building": "Sellbot Towers",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Sellbot_Cog-Crusher_Shoes",
+    "lastUpdated": "2022-01-17T04:38:55Z"
+  },
+  {
+    "id": "sellbot_task_force_steel_toed_smashers",
+    "name": "Steel-toed Smashers",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Defeat 15 Minglers",
+        "building": "Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 2,
+        "objective": "Return to Toon Resistance Operator",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/Steel-toed_Smashers",
+    "lastUpdated": "2022-06-06T16:55:58Z"
+  },
+  {
+    "id": "sellbot_task_force_1_laff_boost_1",
+    "name": "+1 laff boost",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Doctor Googlymoogly",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat a Boss Cog",
+        "location": "Anywhere"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Doctor Googlymoogly"
+      },
+      {
+        "order": 4,
+        "objective": "Visit Professor Prepostera",
+        "building": "Toon Hall",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 5,
+        "objective": "Find a Cog Antenna in a Hidden Location",
+        "details": [
+          "Located within the Stomper Room in Sellbot Field Offices. Complete the Cog battle first."
+        ]
+      },
+      {
+        "order": 6,
+        "objective": "Return to Professor Prepostera"
+      },
+      {
+        "order": 7,
+        "objective": "Recover 3 Cog Control Chips from level 13+ Cogs",
+        "building": "Cog Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 8,
+        "objective": "Return to Professor Prepostera"
+      },
+      {
+        "order": 9,
+        "objective": "Deliver a Cog Control Chip to Doctor Dimm",
+        "building": "Toon Hall",
+        "location": "Toontown Central"
+      },
+      {
+        "order": 10,
+        "objective": "Recover a Cog Control Chip from The Boiler",
+        "building": "Cog Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 11,
+        "objective": "Return to Doctor Dimm"
+      },
+      {
+        "order": 12,
+        "objective": "Deliver some of Doctor Dimm's Scribbles to Doctor Googlymoogly"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/%2B1_laff_boost_(Sleuth)",
+    "lastUpdated": "2025-11-10T10:53:53Z"
+  },
+  {
+    "id": "sellbot_task_force_1_laff_boost_2",
+    "name": "+1 laff boost",
+    "playground": "Sellbot Task Force",
+    "category": "task_force",
+    "steps": [
+      {
+        "order": 1,
+        "objective": "Visit Ai Spai",
+        "building": "Sellbot Task Force Hideout",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 2,
+        "objective": "Defeat 20 Cogs",
+        "building": "Sellbot Towers",
+        "location": "Sellbot Headquarters"
+      },
+      {
+        "order": 3,
+        "objective": "Return to Ai Spai"
+      },
+      {
+        "order": 4,
+        "objective": "Defeat 8 Mega-Movers",
+        "building": "Two+ star Sellbot Field Offices",
+        "location": "Anywhere"
+      },
+      {
+        "order": 5,
+        "objective": "Return to Ai Spai"
+      }
+    ],
+    "wikiUrl": "https://toontownrewritten.wiki/Sellbot_Task_Force_ToonTasks/%2B1_laff_boost_(Smasher)",
+    "lastUpdated": "2025-11-10T10:54:58Z"
+  }
+]

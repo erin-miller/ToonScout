@@ -51,26 +51,27 @@ export const ToonProvider: React.FC<{ children: React.ReactNode }> = ({
     const sanitized: StoredToonData = JSON.parse(
       sanitize(JSON.stringify(newToon)),
     );
+    const normalized = normalizeToonData(sanitized);
 
     setToons((prevToons) => {
       let newToons = [...prevToons];
 
       const existingIndex = newToons.findIndex(
-        (toon) => toon?.data?.data.toon.id === sanitized?.data?.data.toon?.id,
+        (toon) => toon?.data?.data.toon.id === normalized?.data?.data.toon?.id,
       );
 
       if (existingIndex !== -1) {
         // toon exists
-        newToons[existingIndex] = sanitized;
+        newToons[existingIndex] = normalized;
       } else if (newToons.length < MAX_TOONS) {
         // toon doesnt exist; add to end
-        newToons.push(sanitized);
+        newToons.push(normalized);
       } else {
         // toon doesnt exist but we're at max capacity; replace the oldest unlocked toon
         newToons = newToons.sort((a, b) => a.timestamp - b.timestamp);
         const oldest = newToons.findIndex((toon) => !toon.locked);
         if (oldest !== -1) {
-          newToons[oldest] = sanitized;
+          newToons[oldest] = normalized;
         } else {
           console.warn("All toons are locked. Cannot add a new toon.");
           return prevToons;
@@ -117,6 +118,56 @@ export const useToonContext = () => {
     throw new Error("useToonContext must be used within a ToonProvider");
   }
   return context;
+};
+
+const normalizeToonData = (toon: StoredToonData): StoredToonData => {
+  const tasks = toon?.data?.data?.tasks;
+  if (!Array.isArray(tasks)) {
+    return toon;
+  }
+
+  const normalizedTasks = tasks.map((task) => ({
+    ...task,
+    objective: {
+      ...task?.objective,
+      text: task?.objective?.text ?? "",
+      where: task?.objective?.where ?? "",
+      progress: {
+        ...task?.objective?.progress,
+        text: task?.objective?.progress?.text ?? "",
+        current: Number(task?.objective?.progress?.current) || 0,
+        target: Number(task?.objective?.progress?.target) || 0,
+      },
+    },
+    from: {
+      ...task?.from,
+      name: task?.from?.name ?? "",
+      building: task?.from?.building ?? "",
+      zone: task?.from?.zone ?? "",
+      neighborhood: task?.from?.neighborhood ?? "",
+    },
+    to: {
+      ...task?.to,
+      name: task?.to?.name ?? "",
+      building: task?.to?.building ?? "",
+      zone: task?.to?.zone ?? "",
+      neighborhood: task?.to?.neighborhood ?? "",
+    },
+    reward: task?.reward ?? "",
+    deletable: Boolean(task?.deletable),
+    type: task?.type ?? "",
+  }));
+
+  return {
+    ...toon,
+    data: {
+      ...toon.data,
+      data: {
+        ...toon.data.data,
+        tasks: normalizedTasks,
+      },
+    },
+  };
 };
 
 // sanitize JSON to remove invalid Unicode characters
