@@ -77,7 +77,7 @@ const connectWebSocket = () => {
       startContinuousRequests();
     });
 
-    socket.addEventListener("message", (event) => {
+    socket.addEventListener("message", async (event) => {
       debug(port, "message received");
       addPort(port);
       updateConnectionStatus();
