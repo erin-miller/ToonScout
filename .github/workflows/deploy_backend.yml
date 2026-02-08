@@ -37,11 +37,13 @@ jobs:
             cd $PROJECT_DIR
             export GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no\"
             echo '=== [DEBUG] Syncing with remote repository... ==='
-            time git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
             echo '=== [DEBUG] Updating npm packages... ==='
             npm ci
             echo '=== [DEBUG] Rebuilding docker containers... ==='
-            time docker compose -f docker-compose.prod.yml down
+            time docker compose -f docker-compose.prod.yml down --remove-orphans
             time docker compose -f docker-compose.prod.yml up --build -d
             echo '=== [DEBUG] Checking running containers... ==='
             docker ps -a

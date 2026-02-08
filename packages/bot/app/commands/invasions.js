@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
+import { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder } from "discord.js";
 import { InteractionResponseType } from "discord-interactions";
 
 export const data = new SlashCommandBuilder()
@@ -8,8 +8,43 @@ export const data = new SlashCommandBuilder()
   .setContexts([0, 1, 2]);
 
 export async function execute(req, res, target) {
-  const inv = await getInvasions();
+  const { embed, row } = await getInvEmbed()
 
+  return res.send({
+    type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+    data: {
+      embeds: [embed],
+      components: [row],
+    },
+  });
+}
+
+export async function handleButton(req, customId) {
+  return await getInvEmbed();
+}
+
+async function getInvasions() {
+  const response = await fetch(
+    "https://www.toontownrewritten.com/api/invasions",
+    {
+      headers: { "User-Agent": process.env.USER_AGENT },
+    }
+  );
+
+  if (response.ok) {
+    const data = await response.json();
+    return sanitize(data);
+  } else {
+    console.error("Could not get invasion data.");
+    return null;
+  }
+}
+
+const getInvEmbed = async () => {
+  const inv = await getInvasions();
+  const row = new ActionRowBuilder().addComponents(
+    getRefreshButton()
+  );
   const embed = new EmbedBuilder()
     .setColor("DarkBlue")
     .setTitle("Current Invasions")
@@ -39,27 +74,17 @@ export async function execute(req, res, target) {
     });
   }
 
-  return res.send({
-    type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-    data: {
-      embeds: [embed],
-    },
-  });
+  return { embed, row }
 }
 
-async function getInvasions() {
-  const response = await fetch(
-    "https://www.toontownrewritten.com/api/invasions",
-    {
-      headers: { "User-Agent": process.env.USER_AGENT },
-    }
-  );
-
-  if (response.ok) {
-    const data = await response.json();
-    return data;
-  } else {
-    console.error("Could not get invasion data.");
-    return null;
-  }
+function getRefreshButton() {
+  return new ButtonBuilder()
+    .setCustomId(`invasions-refresh`)
+    .setLabel("Refresh")
+    .setStyle("Danger");
 }
+
+const sanitize = (data) => {
+  let cleaned = JSON.stringify(data);
+  return JSON.parse(cleaned.replace(/\\u[0-9a-fA-F]{4}/g, ""));
+};

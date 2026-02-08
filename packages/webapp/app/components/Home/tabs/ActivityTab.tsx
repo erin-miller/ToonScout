@@ -9,6 +9,7 @@ import {
   sumGolf,
   sumRace,
 } from "../../../utils/tabUtils";
+import { FaCircle } from "react-icons/fa";
 
 const ActivityTab: React.FC<TabProps> = ({ toon }) => {
   const trophyIcon = (earned: number) => {
@@ -47,10 +48,14 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
 
           let curr = item.num.toString();
           let progress = 100;
+          let totalSteps = -1;
+          let currStep = -1;
           if (trophy) {
             const target = trophy.values.find((value) => item.num < value);
 
             if (target) {
+              totalSteps = trophy.values.length
+              currStep = trophy.values.indexOf(target)
               curr = `${item.num} / ${target}`;
               progress = Math.min((item.num / target) * 100, 100);
             }
@@ -62,7 +67,10 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
                 className="bg-blue-900 dark:bg-gray-1200 absolute inset-0 opacity-15 z-0"
                 style={{ width: `${progress}%` }}
               ></div>
-              <div className="text-xl w-full text-left z-50">{item.name}</div>
+              <div className="flex flex-col text-xl w-full text-left z-50">
+                <div>{item.name}</div>
+                <div className="flex flex-row gap-1">{trophy && currStep > -1 && trophy.values.length > 1 && trophy.values.map((value, index) => (<FaCircle key={value} className={index <= currStep ? "w-3 h-3 text-blue-700" : "w-3 h-3 text-blue-100"} />))}</div>
+              </div>
               <div
                 className="flex z-50 w-36 h-10 justify-center items-center rounded-full border-4
               text-gray-100 bg-blue-800 border-blue-900

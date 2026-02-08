@@ -23,15 +23,19 @@ const ConnectionStatus: React.FC<ConnectionStatusProps> = ({
         if (!toon) return;
         const diff = Date.now() - toon.timestamp;
         const timeAgo = getTimeAgo(diff);
+        if (process.env.DEBUG_FLAG == "true" && diff >= 60000) {
+          console.log(`===DEBUG=== [${toon.port}] timestamp is not updating!!!`)
+        }
 
         setModified(timeAgo);
       } catch (error) {
         console.error("Error parsing existing toon data:", error);
+      } finally {
+        setActive(activePorts.has(toon.port));
       }
     };
 
     updateStatus();
-    setActive(activePorts.has(toon.port));
 
     const interval = setInterval(updateStatus, 60000);
     return () => clearInterval(interval);

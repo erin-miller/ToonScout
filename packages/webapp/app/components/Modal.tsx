@@ -24,14 +24,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   return (
     <div
       className="fixed transition ease-in-out inset-0
-      bg-gray-500 bg-opacity-70 
-      dark:bg-gray-1200 dark:bg-opacity-70 dark:text-gray-100 
+      backdrop-blur-sm dark:text-gray-100 
       flex justify-center items-center z-50"
+      onClick={onClose}
     >
       <AnimatedTabContent>
         <div
           className="p-6 rounded-lg border-blue-700 border-4 relative text-xl max-w-4xl font-impress
-          text-gray-800 bg-gray-100 dark:text-gray-100 dark:bg-gray-1100 overflow-y-auto site-scrollbar ;"
+          text-gray-800 bg-gray-100 dark:text-gray-100 dark:bg-gray-1100 overflow-y-auto site-scrollbar"
+          onClick={(e) => e.stopPropagation()}
         >
           <div className="max-h-[calc(90vh-3rem)]">{children}</div>
           {/* Close button in the top-right corner */}
