@@ -47,6 +47,8 @@ function hasNpcConflict(task: Task, stepObjective: string): boolean {
   const taskNpc = task.to?.name?.trim();
   if (!taskNpc) return false;
   const normalizedStep = normalizeTaskText(stepObjective);
+  // "Go to [location]" objectives are navigation, not NPC delivery — skip conflict check
+  if (normalizedStep.startsWith("go to ")) return false;
   const toNpcMatch = normalizedStep.match(/\bto\s+([a-z]+(?:\s+[a-z]+)*)\s*$/i);
   if (!toNpcMatch) return false;
   const stepNpc = toNpcMatch[1].toLowerCase().trim();

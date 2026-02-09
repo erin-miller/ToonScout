@@ -66,29 +66,34 @@ function categorizeTask(task: Task): TaskCategory {
 }
 
 function isGenericHqOfficerTask(task: Task): boolean {
-  // Gag training tasks go to HQ Officer but are documented tasklines, not random
-  const reward = task.reward?.toLowerCase() ?? "";
-  if (reward.includes("gag training") || reward.includes("gag track training")) {
-    return false;
-  }
+  // "Call Clarabelle" tasks are always random procedural tasks
+  const objective = task.objective?.text?.toLowerCase() ?? "";
+  if (objective.includes("clarabelle")) return true;
 
+  // Check structural HQ officer profile
+  if (!isGenericHqOfficerProfile(task)) return false;
+
+  // Exclude rewards that correspond to documented tasklines
+  const reward = task.reward?.toLowerCase() ?? "";
+  if (reward.includes("laff boost")) return false;
+  if (reward.includes("toontask") || reward.includes("toon task")) return false;
+  if (reward.includes("gag training")) return false;
+  if (reward.includes("teleport access")) return false;
+
+  return true;
+}
+
+/** Structural check: task goes to generic HQ Officer at "Any" location with no/HQ from */
+function isGenericHqOfficerProfile(task: Task): boolean {
   const toNpc = task.to?.name?.toLowerCase().trim() ?? "";
   if (!toNpc.includes("hq officer") && toNpc !== "hq") return false;
-
   const zone = task.to?.zone?.toLowerCase() ?? "";
   const neighborhood = task.to?.neighborhood?.toLowerCase() ?? "";
-  const hasGenericLocation = zone.includes("any") || neighborhood.includes("any");
-  if (!hasGenericLocation) return false;
-
+  if (!zone.includes("any") && !neighborhood.includes("any")) return false;
   const fromNpc = task.from?.name?.toLowerCase().trim() ?? "";
-  const fromEmpty = !fromNpc;
-  const fromIsHqRelated =
-    fromNpc.includes("hq officer") ||
-    fromNpc === "hq" ||
-    fromNpc.startsWith("hq ");
-
-  return fromEmpty || fromIsHqRelated;
+  return !fromNpc || fromNpc.includes("hq officer") || fromNpc === "hq" || fromNpc.startsWith("hq ");
 }
+
 
 function extractLocation(task: Task): string | null {
   const where = task.objective.where?.trim().toLowerCase();
@@ -278,12 +283,14 @@ export function findTasklineMatchWithToonDataDetailed(
 
   // Handle no matches
   if (matchCandidates.length === 0) {
+    // Tasks that passed isGenericHqOfficerTask (e.g., laff boost) but still failed
+    // to match any documented step are reclassified as random
+    const unmatchedReason =
+      isGenericHqOfficerProfile(task) ? "random_reward"
+        : candidates.length ? "no_match" : "no_candidates";
     return {
       match: null,
-      debug: {
-        category,
-        unmatchedReason: candidates.length ? "no_match" : "no_candidates",
-      },
+      debug: { category: unmatchedReason === "random_reward" ? "random_reward" : category, unmatchedReason },
     };
   }
 
