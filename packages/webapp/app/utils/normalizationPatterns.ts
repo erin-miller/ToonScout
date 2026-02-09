@@ -62,6 +62,11 @@ const OBJECTIVE_NORMALIZATIONS: Array<{
     replacement: ' and ',
     description: 'Normalize ampersand to "and"',
   },
+  {
+    pattern: /^go to\s+/g,
+    replacement: 'visit ',
+    description: 'Normalize "go to X" to "visit X" (wiki/game verb mismatch)',
+  },
 ];
 
 /**

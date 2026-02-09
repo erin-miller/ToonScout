@@ -196,9 +196,17 @@ function filterByFirstStep(
   }
 
   const isFirstStep = !fromNpc || fromNpc === "";
-  return filterWithFallback(candidates, (c) =>
-    isFirstStep ? c.step.order === 1 : c.step.order !== 1
-  );
+  return filterWithFallback(candidates, (c) => {
+    if (!isFirstStep) {
+      return c.step.order !== 1;
+    }
+    if (c.step.order === 1) return true;
+
+    // Exception: If the objective text matches exactly (normalized), allow it even if not step 1
+    // This handles cases where 'from' data is missing but the objective uniquely identifies a later step
+    const candidateObj = normalizeTaskText(c.objective.text);
+    return candidateObj === normalizedObjective;
+  });
 }
 
 /** Filter with fallback - returns matches if any, otherwise all candidates */
@@ -251,8 +259,20 @@ function filterByReward(
   if (normalizedTaskReward) {
     const matched = candidates.filter((c) => {
       const candidateReward = normalizeTaskText(getCandidateReward(c));
-      return candidateReward.includes(normalizedTaskReward) ||
-             normalizedTaskReward.includes(candidateReward);
+      if (
+        candidateReward.includes(normalizedTaskReward) ||
+        normalizedTaskReward.includes(candidateReward)
+      ) {
+        return true;
+      }
+      // "Carry X ToonTasks" → "Increased ToonTask capacity" fuzzy match
+      if (
+        normalizedTaskReward.includes("toontask") &&
+        candidateReward.includes("toontask")
+      ) {
+        return true;
+      }
+      return false;
     });
     return matched.length > 0 ? matched : candidates;
   }
