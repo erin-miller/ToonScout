@@ -71,9 +71,9 @@ export async function handleButton(req, customId) {
   }
 
   if (action === `${ids.name}-${ids.refresh}` && stateInfo[state]) {
-    ; ({ embed, row } = stateInfo[state]())
+    ;({ embed, row } = stateInfo[state]())
   } else if (stateInfo[action.replace(`${ids.name}-`, '')]) {
-    ; ({ embed, row } = stateInfo[action.replace(`${ids.name}-`, '')]())
+    ;({ embed, row } = stateInfo[action.replace(`${ids.name}-`, '')]())
   } else {
     return
   }

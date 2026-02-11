@@ -178,7 +178,8 @@ function getTopTrophies(toon) {
   trophies = trophies
     .map(
       (t, index) =>
-        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${t.progress.required
+        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${
+          t.progress.required
         }\n${t.progress.difference} more to go!\n`
     )
     .join('\n')
