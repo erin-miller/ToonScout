@@ -31,7 +31,7 @@ jobs:
         run: npm run lint
 
       - name: Reviewdog - Prettier
-        uses: reviewdog/action-prettier@v4
+        uses: EPMatt/reviewdog-action-prettier@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
