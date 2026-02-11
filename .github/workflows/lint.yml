@@ -8,9 +8,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: EPMatt/reviewdog-action-prettier@v1
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           level: warning
+          prettier_flags: "packages/**/*.{js,jsx,ts,tsx}"
   eslint:
     name: runner / eslint
     runs-on: ubuntu-latest
