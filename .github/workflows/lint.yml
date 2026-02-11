@@ -9,7 +9,6 @@ on:
 
 jobs:
   lint:
-    name: Run Prettier & ESLint
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +24,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Prettier & ESLint
-        run: |
-          npm run format
-          npm run lint
+      - name: Run Prettier
+        run: npm run format
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Reviewdog - Prettier
+        uses: reviewdog/action-prettier@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          level: warning
+          filter_mode: added
+
+      - name: Reviewdog - ESLint
+        uses: reviewdog/action-eslint@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          level: warning
+          filter_mode: added
+          eslint_flags: "packages/**/*.{js,jsx,ts,tsx}"
