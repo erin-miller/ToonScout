@@ -1,4 +1,4 @@
-import { GagTrackData } from "./utils/gagDamage"
+import { GagTrackData } from './utils/gagDamage'
 
 interface Toon {
   id: string
