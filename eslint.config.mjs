@@ -39,10 +39,10 @@ export default defineConfig([{
     },
 
     rules: {
-        // ✅ Prettier handles formatting
+        // prettier formats
         "prettier/prettier": "error",
 
-        // ⚡ Only ESLint rules that don't conflict with Prettier
+        // nonconflicting eslint rules
         "no-console": "off",
         "no-floating-decimal": "error",
         "no-lonely-if": "error",
@@ -51,15 +51,19 @@ export default defineConfig([{
         "yoda": "error",
         "max-nested-callbacks": ["error", { max: 4 }],
         "max-statements-per-line": ["error", { max: 2 }],
+        "no-control-regex": "off",
 
         // TypeScript-specific
         "@typescript-eslint/no-empty-function": "warn",
-        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
+        ],
         "@typescript-eslint/no-shadow": ["error", {
             allow: ["err", "resolve", "reject", "s", "c", "f", "l"]
         }],
 
-        // Turn off all formatting rules that conflict with Prettier
+        // conflicting rules with prettier
         semi: "off",
         quotes: "off",
         "brace-style": "off",
@@ -75,7 +79,7 @@ export default defineConfig([{
         "space-before-blocks": "off",
         "spaced-comment": "off",
 
-        // Turn off conflicting base rules
+        // conflicting rules with typescript
         "no-empty-function": "off",
         "no-shadow": "off",
         "no-unused-vars": "off",

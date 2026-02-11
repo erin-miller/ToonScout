@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint \"packages/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint \"packages/**/*.{js,jsx,ts,tsx}\" --fix",
-    "format": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,json,md}\""
+    "format": "prettier --check \"packages/**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:fix": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
