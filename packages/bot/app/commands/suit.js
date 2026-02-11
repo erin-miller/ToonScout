@@ -74,7 +74,7 @@ export const data = new SlashCommandBuilder()
     option.setName('user').setDescription("(Optional) Get the specified user's toon info.").setRequired(false)
   )
 
-export async function execute(req, res, target) {
+export async function execute(_req, res, target) {
   const item = await getScoutToken(target)
   const row = getRow(target, ids.home)
 
@@ -121,9 +121,9 @@ export async function handleButton(req, customId) {
   let embed, row
 
   if (action === `${ids.name}-${ids.refresh}` && stateInfo[state]) {
-    ;({ embed, row } = stateInfo[state]())
+    ; ({ embed, row } = stateInfo[state]())
   } else if (stateInfo[action.replace(`${ids.name}-`, '')]) {
-    ;({ embed, row } = stateInfo[action.replace(`${ids.name}-`, '')]())
+    ; ({ embed, row } = stateInfo[action.replace(`${ids.name}-`, '')]())
   } else {
     return
   }

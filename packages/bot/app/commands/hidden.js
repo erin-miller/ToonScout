@@ -8,7 +8,7 @@ export const data = new SlashCommandBuilder()
   .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
 
-export async function execute(req, res, target) {
+export async function execute(_req, res, target) {
   const hidden = await updateHidden(target)
   const embed = new EmbedBuilder().setColor('White').setDescription(`Your visiblity is now set to: **${hidden}**`)
 

@@ -7,7 +7,7 @@ export const data = new SlashCommandBuilder()
   .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
 
-export async function execute(res) {
+export async function execute(_req, res, _target) {
   const invite = 'https://discord.gg/Qb929SrdRP'
 
   const embed = new EmbedBuilder()

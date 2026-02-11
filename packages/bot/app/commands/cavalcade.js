@@ -9,7 +9,7 @@ export const data = new SlashCommandBuilder()
   .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
 
-export async function execute(res) {
+export async function execute(_req, res, _target) {
   const embed = new EmbedBuilder().setColor('Blue').setDescription(await cavalcadeStatus())
 
   return res.send({

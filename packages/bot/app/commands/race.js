@@ -31,7 +31,7 @@ export const data = new SlashCommandBuilder()
     option.setName('user').setDescription("(Optional) Get the specified user's toon info.").setRequired(false)
   )
 
-export async function execute(req, res, target) {
+export async function execute(_req, res, target) {
   const item = await getScoutToken(target)
 
   const row = new ActionRowBuilder().addComponents(getRefreshButton('home', target), getAdviceButton(target))
@@ -179,8 +179,7 @@ function getTopTrophies(toon) {
   trophies = trophies
     .map(
       (t, index) =>
-        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${
-          t.progress.required
+        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${t.progress.required
         }\n${t.progress.difference} more to go!\n`
     )
     .join('\n')

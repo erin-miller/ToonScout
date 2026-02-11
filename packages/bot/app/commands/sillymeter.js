@@ -8,7 +8,7 @@ export const data = new SlashCommandBuilder()
   .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
 
-export async function execute(res) {
+export async function execute(_req, res, _target) {
   const meter = await getMeter()
   const status = meter.state
   const METER_CAP = 5000000

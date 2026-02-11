@@ -29,7 +29,7 @@ router.post('/', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content: 'There was an error while executing this command!',
+          content: 'Oops, something went wrong! Please make sure you\'re connected on the website.\nIf there is a green check mark on the Discord icon, and this error still appears, please contact support at /support!',
           flags: 64
         }
       })

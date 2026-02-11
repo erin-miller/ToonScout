@@ -12,7 +12,7 @@ export const data = new SlashCommandBuilder()
     option.setName('user').setDescription("(Optional) Get the specified user's toon info.").setRequired(false)
   )
 
-export async function execute(req, res, target) {
+export async function execute(_req, res, target) {
   const item = await getScoutToken(target)
   const toon = item.data
   const embed = new EmbedBuilder()
