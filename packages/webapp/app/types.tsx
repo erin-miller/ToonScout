@@ -1,18 +1,4 @@
-interface GagExperience {
-  current: number
-  next: number
-}
-
-interface Gag {
-  gag: GagItem
-  organic: GagItem | null
-  experience: GagExperience
-}
-
-interface GagItem {
-  level: number
-  name: string
-}
+import { GagTrackData } from "./utils/gagDamage"
 
 interface Toon {
   id: string
@@ -194,7 +180,7 @@ export interface ToonData {
     }
     location: Location
     gags: {
-      [key: string]: Gag | null
+      [key: string]: GagTrackData | null
     }
     tasks: Task[]
     invasion: Invasion
