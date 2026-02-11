@@ -39,7 +39,7 @@ jobs:
           filter_mode: added
 
       - name: Reviewdog - ESLint
-        uses: reviewdog/action-eslint@v2
+        uses: reviewdog/action-eslint@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
