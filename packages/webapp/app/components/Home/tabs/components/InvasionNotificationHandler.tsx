@@ -1,7 +1,6 @@
-'use client';
-import { useInvasionNotifications } from './useInvasionNotifications';
+'use client'
 
 // This handler is now a no-op to avoid runtime errors after refactor
-const InvasionNotificationHandler = () => null;
+const InvasionNotificationHandler = () => null
 
-export default InvasionNotificationHandler;
+export default InvasionNotificationHandler
