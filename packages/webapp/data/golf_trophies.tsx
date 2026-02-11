@@ -1,52 +1,52 @@
 export const golf_trophies = [
   {
-    description: "Courses Completed",
+    description: 'Courses Completed',
     values: [1, 10, 100],
-    weight: 2,
+    weight: 2
   },
   {
-    description: "Courses Under Par",
+    description: 'Courses Under Par',
     values: [1, 10, 100],
-    weight: 3,
+    weight: 3
   },
   {
-    description: "Hole In One Shots",
+    description: 'Hole In One Shots',
     values: [1, 5, 50],
-    weight: 4,
+    weight: 4
   },
   {
-    description: "Eagle Or Better Shots",
+    description: 'Eagle Or Better Shots',
     values: [1, 10, 100],
-    weight: 6,
+    weight: 6
   },
   {
-    description: "Birdie Or Better Shots",
+    description: 'Birdie Or Better Shots',
     values: [3, 30, 300],
-    weight: 5,
+    weight: 5
   },
   {
-    description: "Par Or Better Shots",
+    description: 'Par Or Better Shots',
     values: [4, 40, 400],
-    weight: 4,
+    weight: 4
   },
   {
-    description: "Multiplayer Courses Completed",
+    description: 'Multiplayer Courses Completed',
     values: [2, 20, 200],
-    weight: 3,
+    weight: 3
   },
   {
-    description: "Walk In The Par Wins",
+    description: 'Walk In The Par Wins',
     values: [1, 5, 25],
-    weight: 2,
+    weight: 2
   },
   {
-    description: "Hole Some Fun Wins",
+    description: 'Hole Some Fun Wins',
     values: [1, 5, 25],
-    weight: 4,
+    weight: 4
   },
   {
-    description: "The Hole Kit And Caboodle Wins",
+    description: 'The Hole Kit And Caboodle Wins',
     values: [1, 5, 25],
-    weight: 6,
-  },
-];
+    weight: 6
+  }
+]

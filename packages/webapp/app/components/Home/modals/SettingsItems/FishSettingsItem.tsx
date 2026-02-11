@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from "react";
-import SettingsItem from "./SettingsItem";
+import React, { useState, useEffect } from 'react'
+import SettingsItem from './SettingsItem'
 
 const FishSettingsItem: React.FC = () => {
   const [fishDisplayType, setFishDisplayType] = useState<1 | 2>(() => {
-    return JSON.parse(localStorage.getItem("fishDisplayType") || "1");
-  });
+    return JSON.parse(localStorage.getItem('fishDisplayType') || '1')
+  })
 
   const [bucketType, setBucketType] = useState<1 | 2>(() => {
-    return JSON.parse(localStorage.getItem("bucketType") || "1");
-  });
+    return JSON.parse(localStorage.getItem('bucketType') || '1')
+  })
 
   const [showCaught, setShowCaught] = useState<boolean>(() => {
-    return JSON.parse(localStorage.getItem("showCaught") || "false");
-  });
+    return JSON.parse(localStorage.getItem('showCaught') || 'false')
+  })
 
   const [showTime, setShowTime] = useState<boolean>(() => {
-    return JSON.parse(localStorage.getItem("showTime") || "false");
-  });
+    return JSON.parse(localStorage.getItem('showTime') || 'false')
+  })
 
   useEffect(() => {
-    localStorage.setItem("fishDisplayType", JSON.stringify(fishDisplayType));
-    localStorage.setItem("bucketType", JSON.stringify(bucketType));
-    localStorage.setItem("showCaught", JSON.stringify(showCaught));
-    localStorage.setItem("showTime", JSON.stringify(showTime));
-    window.dispatchEvent(new Event("fishChange"));
-  }, [fishDisplayType, bucketType, showCaught, showTime]);
+    localStorage.setItem('fishDisplayType', JSON.stringify(fishDisplayType))
+    localStorage.setItem('bucketType', JSON.stringify(bucketType))
+    localStorage.setItem('showCaught', JSON.stringify(showCaught))
+    localStorage.setItem('showTime', JSON.stringify(showTime))
+    window.dispatchEvent(new Event('fishChange'))
+  }, [fishDisplayType, bucketType, showCaught, showTime])
 
   return (
     <SettingsItem label="Fishing">
@@ -41,10 +41,7 @@ const FishSettingsItem: React.FC = () => {
               onChange={() => setFishDisplayType(1)}
               className="w-5 h-5 cursor-pointer"
             />
-            <label
-              className="text-lg cursor-pointer hover:text-blue-600"
-              htmlFor="byFish"
-            >
+            <label className="text-lg cursor-pointer hover:text-blue-600" htmlFor="byFish">
               Per Fish
             </label>
           </div>
@@ -58,10 +55,7 @@ const FishSettingsItem: React.FC = () => {
               onChange={() => setFishDisplayType(2)}
               className="w-5 h-5 cursor-pointer"
             />
-            <label
-              className="text-lg cursor-pointer hover:text-blue-600"
-              htmlFor="byLocation"
-            >
+            <label className="text-lg cursor-pointer hover:text-blue-600" htmlFor="byLocation">
               Per Location
             </label>
           </div>
@@ -79,10 +73,7 @@ const FishSettingsItem: React.FC = () => {
               onChange={() => setBucketType(1)}
               className="w-5 h-5 cursor-pointer"
             />
-            <label
-              className="text-lg cursor-pointer hover:text-blue-600"
-              htmlFor="avgBuckets"
-            >
+            <label className="text-lg cursor-pointer hover:text-blue-600" htmlFor="avgBuckets">
               Average
             </label>
           </div>
@@ -96,10 +87,7 @@ const FishSettingsItem: React.FC = () => {
               onChange={() => setBucketType(2)}
               className="w-5 h-5 cursor-pointer"
             />
-            <label
-              className="text-lg cursor-pointer hover:text-blue-600"
-              htmlFor="confidentBuckets"
-            >
+            <label className="text-lg cursor-pointer hover:text-blue-600" htmlFor="confidentBuckets">
               Confident (90%)
             </label>
           </div>
@@ -114,13 +102,10 @@ const FishSettingsItem: React.FC = () => {
                 type="checkbox"
                 checked={showCaught}
                 id="caught"
-                onChange={(e) => setShowCaught(e.target.checked)}
+                onChange={e => setShowCaught(e.target.checked)}
                 className="w-5 h-5 cursor-pointer"
               />
-              <label
-                htmlFor="caught"
-                className="text-lg cursor-pointer hover:text-blue-600"
-              >
+              <label htmlFor="caught" className="text-lg cursor-pointer hover:text-blue-600">
                 Show Caught Fish
               </label>
             </div>
@@ -130,13 +115,10 @@ const FishSettingsItem: React.FC = () => {
                 type="checkbox"
                 checked={showTime}
                 id="catchTime"
-                onChange={(e) => setShowTime(e.target.checked)}
+                onChange={e => setShowTime(e.target.checked)}
                 className="w-5 h-5 cursor-pointer"
               />
-              <label
-                htmlFor="catchTime"
-                className="text-lg cursor-pointer hover:text-blue-600"
-              >
+              <label htmlFor="catchTime" className="text-lg cursor-pointer hover:text-blue-600">
                 Show Estimated Time to Catch
               </label>
             </div>
@@ -144,7 +126,7 @@ const FishSettingsItem: React.FC = () => {
         </div>
       </div>
     </SettingsItem>
-  );
-};
+  )
+}
 
-export default FishSettingsItem;
+export default FishSettingsItem

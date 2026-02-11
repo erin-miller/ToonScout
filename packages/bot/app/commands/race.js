@@ -1,209 +1,181 @@
-import {
-  SlashCommandBuilder,
-  EmbedBuilder,
-  ActionRowBuilder,
-  ButtonBuilder,
-} from "discord.js";
-import { InteractionResponseType } from "discord-interactions";
-import { getToonRendition } from "../util/cmds.js";
-import { getScoutToken } from "../util/api.js";
-import { RacingCalculator } from "toonapi-calculator";
+import { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder } from 'discord.js'
+import { InteractionResponseType } from 'discord-interactions'
+import { getToonRendition } from '../util/cmds.js'
+import { getScoutToken } from '../util/api.js'
+import { RacingCalculator } from 'toonapi-calculator'
 
-const trophyEmoji = "<:trophy:1301971567575699498>";
+const trophyEmoji = '<:trophy:1301971567575699498>'
 
-const car = "https://scouttoon.info/images/racing_tickets.png";
-const trophyIcon = "https://i.imgur.com/Sl1ep8e.png";
+const car = 'https://scouttoon.info/images/racing_tickets.png'
+const trophyIcon = 'https://i.imgur.com/Sl1ep8e.png'
 const order = [
-  "Speedway Wins",
-  "Speedway Qualify Count",
-  "Rural Wins",
-  "Rural Qualify Count",
-  "Urban Wins",
-  "Urban Qualify Count",
-  "Total Wins",
-  "Total Qualify Count",
-  "Tournament Race Wins",
-  "Tournament Race Qualify Count",
-  "Unique race tracks completed",
-];
+  'Speedway Wins',
+  'Speedway Qualify Count',
+  'Rural Wins',
+  'Rural Qualify Count',
+  'Urban Wins',
+  'Urban Qualify Count',
+  'Total Wins',
+  'Total Qualify Count',
+  'Tournament Race Wins',
+  'Tournament Race Qualify Count',
+  'Unique race tracks completed'
+]
 
 export const data = new SlashCommandBuilder()
-  .setName("race")
-  .setDescription("Get advising on what trophies to go for next.")
+  .setName('race')
+  .setDescription('Get advising on what trophies to go for next.')
   .setIntegrationTypes([0, 1])
   .setContexts([0, 1, 2])
-  .addUserOption((option) =>
-    option
-      .setName("user")
-      .setDescription("(Optional) Get the specified user's toon info.")
-      .setRequired(false)
-  );
+  .addUserOption(option =>
+    option.setName('user').setDescription("(Optional) Get the specified user's toon info.").setRequired(false)
+  )
 
-export async function execute(req, res, target) {
-  const item = await getScoutToken(target);
+export async function execute(_req, res, target) {
+  const item = await getScoutToken(target)
 
-  const row = new ActionRowBuilder().addComponents(
-    getRefreshButton("home", target),
-    getAdviceButton(target)
-  );
+  const row = new ActionRowBuilder().addComponents(getRefreshButton('home', target), getAdviceButton(target))
 
   return res.send({
     type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
     data: {
       embeds: [getHomeEmbed(item)],
-      components: [row],
-    },
-  });
+      components: [row]
+    }
+  })
 }
 
 export async function handleButton(req, customId) {
-  let embed;
-  let row;
-  let target;
-  let state;
+  let embed
+  let row
+  let target
+  let state
 
-  const parts = customId.split(":");
-  const action = parts[0];
+  const parts = customId.split(':')
+  const action = parts[0]
 
   if (parts.length === 3) {
-    state = parts[1];
-    target = parts[2];
+    state = parts[1]
+    target = parts[2]
   } else {
-    state = null;
-    target = parts[1];
+    state = null
+    target = parts[1]
   }
 
-  const item = await getScoutToken(target);
+  const item = await getScoutToken(target)
 
   switch (action) {
-    case "race-refresh":
+    case 'race-refresh':
       switch (state) {
-        case "home":
-          embed = getHomeEmbed(item);
-          row = getHomeRow(target);
-          break;
-        case "advice":
-          embed = getAdviceEmbed(item);
-          row = getAdviceRow(target);
-          break;
+        case 'home':
+          embed = getHomeEmbed(item)
+          row = getHomeRow(target)
+          break
+        case 'advice':
+          embed = getAdviceEmbed(item)
+          row = getAdviceRow(target)
+          break
         default:
-          return;
+          return
       }
-      break;
-    case "race-home":
-      embed = getHomeEmbed(item);
-      row = getHomeRow(target);
-      break;
-    case "race-advice":
-      embed = getAdviceEmbed(item);
-      row = getAdviceRow(target);
-      break;
+      break
+    case 'race-home':
+      embed = getHomeEmbed(item)
+      row = getHomeRow(target)
+      break
+    case 'race-advice':
+      embed = getAdviceEmbed(item)
+      row = getAdviceRow(target)
+      break
     default:
-      return;
+      return
   }
 
-  return { embed, row };
+  return { embed, row }
 }
 
 function getHomeButton(target) {
-  return new ButtonBuilder()
-    .setCustomId(`race-home:${target}`)
-    .setLabel("Home")
-    .setStyle("Secondary");
+  return new ButtonBuilder().setCustomId(`race-home:${target}`).setLabel('Home').setStyle('Secondary')
 }
 
 function getAdviceButton(target) {
-  return new ButtonBuilder()
-    .setCustomId(`race-advice:${target}`)
-    .setLabel("Advice")
-    .setStyle("Secondary");
+  return new ButtonBuilder().setCustomId(`race-advice:${target}`).setLabel('Advice').setStyle('Secondary')
 }
 
 function getRefreshButton(type, target) {
-  return new ButtonBuilder()
-    .setCustomId(`race-refresh:${type}:${target}`)
-    .setLabel("Refresh")
-    .setStyle("Danger");
+  return new ButtonBuilder().setCustomId(`race-refresh:${type}:${target}`).setLabel('Refresh').setStyle('Danger')
 }
 
 function getHomeRow(target) {
-  return new ActionRowBuilder().addComponents(
-    getRefreshButton("home", target),
-    getAdviceButton(target)
-  );
+  return new ActionRowBuilder().addComponents(getRefreshButton('home', target), getAdviceButton(target))
 }
 
 function getAdviceRow(target) {
-  return new ActionRowBuilder().addComponents(
-    getRefreshButton("advice", target),
-    getHomeButton(target)
-  );
+  return new ActionRowBuilder().addComponents(getRefreshButton('advice', target), getHomeButton(target))
 }
 
 function getHomeEmbed(item) {
-  const toon = item.data;
-  const trophies = getAllTrophies(toon.racing);
+  const toon = item.data
+  const trophies = getAllTrophies(toon.racing)
   const embed = new EmbedBuilder()
-    .setColor("Gold")
+    .setColor('Gold')
     .setAuthor({
       name: toon.toon.name,
-      iconURL: getToonRendition(toon, "laffmeter"),
+      iconURL: getToonRendition(toon, 'laffmeter')
     })
     .setTitle(`Racing Trophies (${getTotalEarned(toon.racing)}/30)`)
     .setThumbnail(car)
     .setFooter({ text: getLaff(toon.racing), iconURL: trophyIcon })
-    .setTimestamp(item.modified);
+    .setTimestamp(item.modified)
 
   if (getTotalEarned(toon.racing) !== 30 && trophies) {
-    let trophyNames = ``;
-    let progNames = ``;
-    const earned = getSpecificEarned(toon.racing);
+    let trophyNames = ''
+    let progNames = ''
+    const earned = getSpecificEarned(toon.racing)
 
-    trophies.forEach((trophy) => {
-      const completed = earned.find((item) => item[0] === trophy.name)[1];
+    trophies.forEach(trophy => {
+      const completed = earned.find(i => i[0] === trophy.name)[1]
 
-      const progress = `${trophy.progress.current}/${
-        trophy.progress.required
-      } ${trophyEmoji.repeat(completed)}\n`;
-      trophyNames += `${trophy.name}\n`;
-      progNames += progress;
-    });
+      const progress = `${trophy.progress.current}/${trophy.progress.required} ${trophyEmoji.repeat(completed)}\n`
+      trophyNames += `${trophy.name}\n`
+      progNames += progress
+    })
 
     embed.addFields(
-      { name: "Trophies", value: trophyNames, inline: true },
-      { name: "Progress", value: progNames, inline: true }
-    );
+      { name: 'Trophies', value: trophyNames, inline: true },
+      { name: 'Progress', value: progNames, inline: true }
+    )
   } else {
-    embed.setDescription("You have maxed racing! Congratulations!");
+    embed.setDescription('You have maxed racing! Congratulations!')
   }
 
-  return embed;
+  return embed
 }
 
 function getAdviceEmbed(item) {
-  const toon = item.data;
+  const toon = item.data
   return new EmbedBuilder()
-    .setColor("Gold")
+    .setColor('Gold')
     .setAuthor({
       name: toon.toon.name,
-      iconURL: getToonRendition(toon, "laffmeter"),
+      iconURL: getToonRendition(toon, 'laffmeter')
     })
     .setTitle(`Racing Trophies (${getTotalEarned(toon.racing)}/30)`)
     .setDescription(getTopTrophies(toon.racing))
     .setThumbnail(car)
     .setFooter({ text: getLaff(toon.racing), iconURL: trophyIcon })
-    .setTimestamp(item.modified);
+    .setTimestamp(item.modified)
 }
 
 function getLaff(toon) {
-  const calc = new RacingCalculator(JSON.stringify(toon));
-  const pts = calc.getCurrentProgress();
-  return `${pts}/3 laff points earned.`;
+  const calc = new RacingCalculator(JSON.stringify(toon))
+  const pts = calc.getCurrentProgress()
+  return `${pts}/3 laff points earned.`
 }
 
 function getTopTrophies(toon) {
-  const calc = new RacingCalculator(JSON.stringify(toon));
-  let trophies = calc.getBestTrophy().slice(0, 5);
+  const calc = new RacingCalculator(JSON.stringify(toon))
+  let trophies = calc.getBestTrophy().slice(0, 5)
   trophies = trophies
     .map(
       (t, index) =>
@@ -211,24 +183,24 @@ function getTopTrophies(toon) {
           t.progress.required
         }\n${t.progress.difference} more to go!\n`
     )
-    .join("\n");
-  return trophies !== "" ? trophies : "You have maxed racing! Congratulations!";
+    .join('\n')
+  return trophies !== '' ? trophies : 'You have maxed racing! Congratulations!'
 }
 
 function getAllTrophies(toon) {
-  const calc = new RacingCalculator(JSON.stringify(toon));
+  const calc = new RacingCalculator(JSON.stringify(toon))
   const trophies = calc.getBestTrophy().sort((a, b) => {
-    return order.indexOf(a.name) - order.indexOf(b.name);
-  });
-  return trophies !== "" ? trophies : null;
+    return order.indexOf(a.name) - order.indexOf(b.name)
+  })
+  return trophies !== '' ? trophies : null
 }
 
 function getTotalEarned(toon) {
-  const calc = new RacingCalculator(JSON.stringify(toon));
-  return calc.getTotalEarned();
+  const calc = new RacingCalculator(JSON.stringify(toon))
+  return calc.getTotalEarned()
 }
 
 function getSpecificEarned(toon) {
-  const calc = new RacingCalculator(JSON.stringify(toon));
-  return calc.getCompletedTrophies();
+  const calc = new RacingCalculator(JSON.stringify(toon))
+  return calc.getCompletedTrophies()
 }

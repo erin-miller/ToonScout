@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import SettingsItem from "./SettingsItem";
+import React, { useState, useEffect } from 'react'
+import SettingsItem from './SettingsItem'
 
 const GardenSettingsItem: React.FC = () => {
   const [flowerType, setFlowerType] = useState<1 | 2 | 3>(() => {
-    return JSON.parse(localStorage.getItem("flowerType") || "1");
-  });
+    return JSON.parse(localStorage.getItem('flowerType') || '1')
+  })
 
   useEffect(() => {
-    localStorage.setItem("flowerType", JSON.stringify(flowerType));
-    window.dispatchEvent(new Event("flowerChange"));
-  }, [flowerType]);
+    localStorage.setItem('flowerType', JSON.stringify(flowerType))
+    window.dispatchEvent(new Event('flowerChange'))
+  }, [flowerType])
 
   function handleFlowerDisplay(arg: 1 | 2 | 3): void {
-    setFlowerType(arg);
+    setFlowerType(arg)
   }
 
   return (
@@ -26,10 +26,7 @@ const GardenSettingsItem: React.FC = () => {
           onChange={() => handleFlowerDisplay(1)}
           className="w-5 h-5 cursor-pointer"
         />
-        <label
-          className="text-lg cursor-pointer hover:text-blue-600"
-          htmlFor="progressFlowers"
-        >
+        <label className="text-lg cursor-pointer hover:text-blue-600" htmlFor="progressFlowers">
           Only flowers that grant progress
         </label>
       </div>
@@ -43,10 +40,7 @@ const GardenSettingsItem: React.FC = () => {
           onChange={() => handleFlowerDisplay(2)}
           className="w-5 h-5 cursor-pointer"
         />
-        <label
-          className="text-lg cursor-pointer hover:text-blue-600"
-          htmlFor="plantableFlowers"
-        >
+        <label className="text-lg cursor-pointer hover:text-blue-600" htmlFor="plantableFlowers">
           All plantable flowers
         </label>
       </div>
@@ -60,15 +54,12 @@ const GardenSettingsItem: React.FC = () => {
           onChange={() => setFlowerType(3)}
           className="w-5 h-5 cursor-pointer"
         />
-        <label
-          className="text-lg cursor-pointer hover:text-blue-600"
-          htmlFor="allFlowers"
-        >
+        <label className="text-lg cursor-pointer hover:text-blue-600" htmlFor="allFlowers">
           All flowers
         </label>
       </div>
     </SettingsItem>
-  );
-};
+  )
+}
 
-export default GardenSettingsItem;
+export default GardenSettingsItem

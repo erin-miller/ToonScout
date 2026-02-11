@@ -1,35 +1,24 @@
-import React from "react";
-import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
-import {
-  displaySuit,
-  sumFish,
-  sumFlowers,
-  sumRace,
-  sumGolf,
-  hasNoSuit,
-} from "../../../utils/tabUtils";
-import { TabComponent, TabProps } from "./components/TabComponent";
-import FishTab from "./FishTab";
-import ActivityTab from "./ActivityTab";
+import React from 'react'
+import AnimatedTabContent from '@/app/components/animations/AnimatedTab'
+import { displaySuit, sumFish, sumFlowers, sumRace, sumGolf, hasNoSuit } from '../../../utils/tabUtils'
+import { TabComponent, TabProps } from './components/TabComponent'
+import FishTab from './FishTab'
+import ActivityTab from './ActivityTab'
 
 const InfoTab: React.FC<TabProps> = ({ toon, setSelectedTab }) => {
   const TabList: TabComponent[] = [
-    { title: "Fishing", component: FishTab },
-    { title: "Activities", component: ActivityTab },
-  ];
+    { title: 'Fishing', component: FishTab },
+    { title: 'Activities', component: ActivityTab }
+  ]
   const handleTab = (tab: TabComponent) => {
     if (setSelectedTab) {
-      setSelectedTab(tab);
+      setSelectedTab(tab)
     }
-  };
+  }
   return (
     <AnimatedTabContent>
       <div className="activity-info-container">
-        <button
-          className="activity-bubble hover:scale-up"
-          id="fish"
-          onClick={() => handleTab(TabList[0])}
-        >
+        <button className="activity-bubble hover:scale-up" id="fish" onClick={() => handleTab(TabList[0])}>
           <svg
             fill="currentColor"
             className="w-6 h-6 md:w-10 md:h-10 xl:w-16 xl:h-16"
@@ -40,11 +29,7 @@ const InfoTab: React.FC<TabProps> = ({ toon, setSelectedTab }) => {
           </svg>
           <p>{sumFish(toon)} / 70</p>
         </button>
-        <button
-          className="activity-bubble hover:scale-up"
-          id="golf"
-          onClick={() => handleTab(TabList[1])}
-        >
+        <button className="activity-bubble hover:scale-up" id="golf" onClick={() => handleTab(TabList[1])}>
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -55,11 +40,7 @@ const InfoTab: React.FC<TabProps> = ({ toon, setSelectedTab }) => {
           </svg>
           <p>{sumGolf(toon)} / 30</p>
         </button>
-        <button
-          className="activity-bubble hover:scale-up"
-          id="race"
-          onClick={() => handleTab(TabList[1])}
-        >
+        <button className="activity-bubble hover:scale-up" id="race" onClick={() => handleTab(TabList[1])}>
           <svg
             viewBox="0 0 256 256"
             xmlns="http://www.w3.org/2000/svg"
@@ -70,11 +51,7 @@ const InfoTab: React.FC<TabProps> = ({ toon, setSelectedTab }) => {
           </svg>
           <p>{sumRace(toon)} / 30</p>
         </button>
-        <button
-          className="activity-bubble hover:scale-up"
-          id="flowers"
-          disabled
-        >
+        <button className="activity-bubble hover:scale-up" id="flowers" disabled>
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -93,19 +70,17 @@ const InfoTab: React.FC<TabProps> = ({ toon, setSelectedTab }) => {
         </button>
       </div>
       {hasNoSuit(toon) ? (
-        <div className="flex items-center justify-center h-full text-3xl">
-          You haven't unlocked any cog suits!
-        </div>
+        <div className="flex items-center justify-center h-full text-3xl">You haven't unlocked any cog suits!</div>
       ) : (
         <div className="suits-info-container">
-          <div className="suit-card">{displaySuit(toon, "s")}</div>
-          <div className="suit-card">{displaySuit(toon, "m")}</div>
-          <div className="suit-card">{displaySuit(toon, "l")}</div>
-          <div className="suit-card">{displaySuit(toon, "c")}</div>
+          <div className="suit-card">{displaySuit(toon, 's')}</div>
+          <div className="suit-card">{displaySuit(toon, 'm')}</div>
+          <div className="suit-card">{displaySuit(toon, 'l')}</div>
+          <div className="suit-card">{displaySuit(toon, 'c')}</div>
         </div>
       )}
     </AnimatedTabContent>
-  );
-};
+  )
+}
 
-export default InfoTab;
+export default InfoTab

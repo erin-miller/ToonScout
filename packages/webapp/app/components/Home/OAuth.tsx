@@ -1,34 +1,33 @@
-import React from "react";
-import "/styles/auth.css";
-import ArrowButton from "@/app/components/ArrowButton";
+import React from 'react'
+import '/styles/auth.css'
+import ArrowButton from '@/app/components/ArrowButton'
 
 const generateRandomString = (length = 16) => {
-  const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let result = "";
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  let result = ''
   for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    result += characters[randomIndex];
+    const randomIndex = Math.floor(Math.random() * characters.length)
+    result += characters[randomIndex]
   }
-  return result;
-};
+  return result
+}
 
 export const initOAuth = () => {
-  const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
-  const uri = window.location.origin;
-  const redirectUri = encodeURIComponent(uri);
-  const scope = encodeURIComponent("identify");
+  const clientId = process.env.NEXT_PUBLIC_CLIENT_ID
+  const uri = window.location.origin
+  const redirectUri = encodeURIComponent(uri)
+  const scope = encodeURIComponent('identify')
 
-  const randomState = generateRandomString();
-  localStorage.setItem("oauth-state", randomState);
+  const randomState = generateRandomString()
+  localStorage.setItem('oauth-state', randomState)
 
   const url = `https://discord.com/oauth2/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scope}&state=${btoa(
-    randomState,
-  )}`;
+    randomState
+  )}`
 
   // Redirect to Discord authorization URL
-  window.location.href = url;
-};
+  window.location.href = url
+}
 
 const OAuth = () => {
   return (
@@ -38,7 +37,7 @@ const OAuth = () => {
       <p className="py-2">Click the button below to begin!</p>
       <ArrowButton onClick={initOAuth} />
     </div>
-  );
-};
+  )
+}
 
-export default OAuth;
+export default OAuth

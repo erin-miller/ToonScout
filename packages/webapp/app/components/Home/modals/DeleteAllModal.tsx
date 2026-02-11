@@ -1,26 +1,25 @@
-import React, { useEffect, useState } from "react";
-import Modal from "../../Modal";
-import { StoredToonData } from "@/app/types";
-import { useToonContext } from "@/app/context/ToonContext";
+import React from 'react'
+import Modal from '../../Modal'
+import { useToonContext } from '@/app/context/ToonContext'
 
 type DeleteAllModalProps = {
-  isOpen: boolean;
-  onClose: () => void;
-};
+  isOpen: boolean
+  onClose: () => void
+}
 
 const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-  const { toons, deleteToon } = useToonContext();
-  const unlockedToons = toons.filter((toon) => !toon.locked);
+  if (!isOpen) return null
+  const { toons, deleteToon } = useToonContext()
+  const unlockedToons = toons.filter(toon => !toon.locked)
 
   const confirm = () => {
-    unlockedToons.forEach((toon) => deleteToon(toon));
-    onClose();
-  };
+    unlockedToons.forEach(toon => deleteToon(toon))
+    onClose()
+  }
 
   const reject = () => {
-    onClose();
-  };
+    onClose()
+  }
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -28,8 +27,7 @@ const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
         {unlockedToons.length >= 1 ? (
           <>
             <p>
-              Are you sure you want to{" "}
-              <strong>delete the following unlocked toons?</strong>
+              Are you sure you want to <strong>delete the following unlocked toons?</strong>
             </p>
             <ol className="list-disc list-inside">
               {unlockedToons.map((lockedToon, idx) => (
@@ -43,10 +41,7 @@ const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
               >
                 Yes
               </button>
-              <button
-                className="px-2 bg-red-100 border-4 rounded-lg border-red-600 text-red-900"
-                onClick={reject}
-              >
+              <button className="px-2 bg-red-100 border-4 rounded-lg border-red-600 text-red-900" onClick={reject}>
                 No
               </button>
             </div>
@@ -58,7 +53,7 @@ const DeleteAllModal: React.FC<DeleteAllModalProps> = ({ isOpen, onClose }) => {
         )}
       </div>
     </Modal>
-  );
-};
+  )
+}
 
-export default DeleteAllModal;
+export default DeleteAllModal

@@ -1,16 +1,16 @@
-import React from "react";
-import { DamageInfo, AccuracyInfo, LURE_ROUNDS } from "@/app/utils/gagDamage";
+import React from 'react'
+import { DamageInfo, AccuracyInfo, LURE_ROUNDS } from '@/app/utils/gagDamage'
 
 export type GagTooltipProps = {
-  track: string;
-  gagLevel: number;
-  damageInfo: DamageInfo | null;
-  baseDamageInfo: DamageInfo | null;
-  accuracyInfo: AccuracyInfo | null;
-  isOrganic: boolean;
-  isHovered: boolean;
-  isRightmost: boolean;
-};
+  track: string
+  gagLevel: number
+  damageInfo: DamageInfo | null
+  baseDamageInfo: DamageInfo | null
+  accuracyInfo: AccuracyInfo | null
+  isOrganic: boolean
+  isHovered: boolean
+  isRightmost: boolean
+}
 
 const GagTooltip: React.FC<GagTooltipProps> = ({
   track,
@@ -20,9 +20,9 @@ const GagTooltip: React.FC<GagTooltipProps> = ({
   accuracyInfo,
   isOrganic,
   isHovered,
-  isRightmost,
+  isRightmost
 }) => {
-  const tooltipPositionClass = isRightmost ? 'right-0' : 'left-1/2 -translate-x-1/2';
+  const tooltipPositionClass = isRightmost ? 'right-0' : 'left-1/2 -translate-x-1/2'
 
   return (
     <div
@@ -35,16 +35,17 @@ const GagTooltip: React.FC<GagTooltipProps> = ({
         transition: 'opacity 0.2s, visibility 0.2s'
       }}
     >
-      {track === "Lure" ? (
+      {track === 'Lure' ? (
         <div className="flex flex-col gap-1">
-          <div>
-            ROUNDS LURED: {LURE_ROUNDS[gagLevel - 1]}
-          </div>
+          <div>ROUNDS LURED: {LURE_ROUNDS[gagLevel - 1]}</div>
           {accuracyInfo && (
             <div className="text-xs font-normal">
               Accuracy: {accuracyInfo.organic ?? accuracyInfo.base}%
               {accuracyInfo.organic && accuracyInfo.organic !== accuracyInfo.base && (
-                <> ({accuracyInfo.base}% + {accuracyInfo.organic - accuracyInfo.base}%)</>
+                <>
+                  {' '}
+                  ({accuracyInfo.base}% + {accuracyInfo.organic - accuracyInfo.base}%)
+                </>
               )}
             </div>
           )}
@@ -52,9 +53,11 @@ const GagTooltip: React.FC<GagTooltipProps> = ({
       ) : damageInfo ? (
         <div className="flex flex-col gap-1">
           <div>
-            {track === "Toon-Up" ? "HEALING: " : "DAMAGE: "}
+            {track === 'Toon-Up' ? 'HEALING: ' : 'DAMAGE: '}
             {isOrganic && baseDamageInfo ? (
-              <>{damageInfo.value} ({baseDamageInfo.value} + {damageInfo.value - baseDamageInfo.value})</>
+              <>
+                {damageInfo.value} ({baseDamageInfo.value} + {damageInfo.value - baseDamageInfo.value})
+              </>
             ) : (
               <>{damageInfo.value}</>
             )}
@@ -63,13 +66,18 @@ const GagTooltip: React.FC<GagTooltipProps> = ({
             <div className="text-xs font-normal">
               Accuracy: {accuracyInfo.organic ?? accuracyInfo.base}%
               {accuracyInfo.organic && accuracyInfo.organic !== accuracyInfo.base && (
-                <> ({accuracyInfo.base}% + {accuracyInfo.organic - accuracyInfo.base}%)</>
+                <>
+                  {' '}
+                  ({accuracyInfo.base}% + {accuracyInfo.organic - accuracyInfo.base}%)
+                </>
               )}
             </div>
           )}
         </div>
       ) : (
-        <div>Level {gagLevel} {track}</div>
+        <div>
+          Level {gagLevel} {track}
+        </div>
       )}
       <div
         className={`absolute top-full ${isRightmost ? 'right-4' : 'left-1/2 -translate-x-1/2'}`}
@@ -82,7 +90,7 @@ const GagTooltip: React.FC<GagTooltipProps> = ({
         }}
       ></div>
     </div>
-  );
-};
+  )
+}
 
-export default GagTooltip;
+export default GagTooltip

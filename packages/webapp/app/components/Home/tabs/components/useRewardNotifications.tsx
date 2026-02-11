@@ -1,21 +1,18 @@
-"use client";
+'use client'
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { useToonContext } from "@/app/context/ToonContext";
-import { Rewards } from "@/app/types";
-import {
-  playNotificationSound,
-  showNativeNotification,
-} from "@/app/utils/notificationUtils";
-import Toast from "@/app/components/Toast";
-import { getRewardSums } from "@/app/utils/rewardsUtils";
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { useToonContext } from '@/app/context/ToonContext'
+import { Rewards } from '@/app/types'
+import { playNotificationSound, showNativeNotification } from '@/app/utils/notificationUtils'
+import Toast from '@/app/components/Toast'
+import { getRewardSums } from '@/app/utils/rewardsUtils'
 
 interface RewardNotificationSettings {
-  notificationsEnabled: boolean;
-  toastEnabled: boolean;
-  soundEnabled: boolean;
-  toastPersistent: boolean;
-  nativeNotifEnabled: boolean;
+  notificationsEnabled: boolean
+  toastEnabled: boolean
+  soundEnabled: boolean
+  toastPersistent: boolean
+  nativeNotifEnabled: boolean
 }
 
 export function useRewardNotifications({
@@ -23,126 +20,107 @@ export function useRewardNotifications({
   toastEnabled,
   soundEnabled,
   toastPersistent,
-  nativeNotifEnabled,
+  nativeNotifEnabled
 }: RewardNotificationSettings) {
-  const { toons, activeIndex } = useToonContext();
-  const activeToon = toons[activeIndex];
-  const prevRewards = useRef<Rewards | null>(
-    activeToon?.data.data.rewards || null
-  );
-  const prevId = useRef<string | null>(null);
-  const [showToast, setShowToast] = useState(false);
-  const [toastMsg, setToastMsg] = useState("");
+  const { toons, activeIndex } = useToonContext()
+  const activeToon = toons[activeIndex]
+  const prevRewards = useRef<Rewards | null>(activeToon?.data.data.rewards || null)
+  const prevId = useRef<string | null>(null)
+  const [showToast, setShowToast] = useState(false)
+  const [toastMsg, setToastMsg] = useState('')
 
   // Centralized notification logic
   const handleNotification = useCallback(
     (
       msg: string,
       options: {
-        playSound?: boolean;
-        repeat?: number;
-        interval?: number;
-        showToast?: boolean;
-        nativeNotif?: boolean;
+        playSound?: boolean
+        repeat?: number
+        interval?: number
+        showToast?: boolean
+        nativeNotif?: boolean
       }
     ) => {
       if (options.showToast) {
-        setToastMsg(msg);
-        setShowToast(true);
+        setToastMsg(msg)
+        setShowToast(true)
       }
       if (options.playSound && options.repeat && options.repeat > 0) {
-        playNotificationSound(options.repeat, options.interval || 1);
+        playNotificationSound(options.repeat, options.interval || 1)
       }
       if (options.nativeNotif) {
-        showNativeNotification("ToonScout Reward Alert", msg);
+        showNativeNotification('ToonScout Reward Alert', msg)
       }
     },
     []
-  );
+  )
 
   // Listen for reward notification events
   useEffect(() => {
     const handleRewardNotification = (event: CustomEvent) => {
-      if (!notificationsEnabled) return;
-      const { message, showToast, playSound } = event.detail;
+      if (!notificationsEnabled) return
+      const { message, showToast: eventShowToast, playSound } = event.detail
       handleNotification(message, {
-        showToast,
+        showToast: eventShowToast,
         playSound,
-        nativeNotif: nativeNotifEnabled,
-      });
-    };
-    window.addEventListener(
-      "rewardNotification",
-      handleRewardNotification as EventListener
-    );
-    return () =>
-      window.removeEventListener(
-        "rewardNotification",
-        handleRewardNotification as EventListener
-      );
-  }, [notificationsEnabled, handleNotification, nativeNotifEnabled]);
+        nativeNotif: nativeNotifEnabled
+      })
+    }
+    window.addEventListener('rewardNotification', handleRewardNotification as EventListener)
+    return () => window.removeEventListener('rewardNotification', handleRewardNotification as EventListener)
+  }, [notificationsEnabled, handleNotification, nativeNotifEnabled])
 
   useEffect(() => {
-    if (!notificationsEnabled || !activeToon) return;
+    if (!notificationsEnabled || !activeToon) return
 
-    const activeId = activeToon.data.data.toon.id;
-    const rewards = activeToon.data.data.rewards;
+    const activeId = activeToon.data.data.toon.id
+    const rewards = activeToon.data.data.rewards
 
     const checkRewardChanges = async () => {
       if (prevId.current !== activeId) {
-        prevId.current == activeId
-        prevRewards.current == rewards;
+        prevId.current = activeId
+        prevRewards.current = rewards
         return
       }
-      
+
       if (prevRewards.current) {
-        const prevSums = await getRewardSums(prevRewards.current);
-        const currSums = await getRewardSums(rewards);
+        const prevSums = await getRewardSums(prevRewards.current)
+        const currSums = await getRewardSums(rewards)
 
         if (prevSums.sumUnites !== currSums.sumUnites) {
-          const newUnite = uniteDiff(prevRewards.current, rewards);
+          const newUnite = uniteDiff(prevRewards.current, rewards)
           if (newUnite && newUnite.currAmount > newUnite.prevAmount) {
             handleNotification(`You've earned a ${newUnite.unite} unite!`, {
               showToast: toastEnabled,
               playSound: soundEnabled,
-              nativeNotif: nativeNotifEnabled,
-            });
+              nativeNotif: nativeNotifEnabled
+            })
           }
         }
       }
 
-      prevRewards.current = rewards;
-    };
+      prevRewards.current = rewards
+    }
 
-    checkRewardChanges();
-  }, [
-    toons,
-    activeIndex,
-    notificationsEnabled,
-    toastEnabled,
-    soundEnabled,
-    nativeNotifEnabled,
-    toastPersistent,
-  ]);
+    checkRewardChanges()
+  }, [toons, activeIndex, notificationsEnabled, toastEnabled, soundEnabled, nativeNotifEnabled, toastPersistent])
 
   const uniteDiff = (prevBase: Rewards, currBase: Rewards) => {
-    const curr = currBase.unites;
-    const prev = prevBase.unites;
+    const curr = currBase.unites
+    const prev = prevBase.unites
 
     for (const category in curr) {
-      if (prev && !prev[category as keyof typeof prev]) continue; // skip new categories if needed
+      if (prev && !prev[category as keyof typeof prev]) continue // skip new categories if needed
       for (const unite in curr[category as keyof typeof curr]) {
-        const prevAmount = prev
-          ? prev[category as keyof typeof prev][unite] || 0
-          : 0;
-        const currAmount = curr[category as keyof typeof curr][unite] || 0;
+        const prevAmount = prev ? prev[category as keyof typeof prev][unite] || 0 : 0
+        const currAmount = curr[category as keyof typeof curr][unite] || 0
         if (prevAmount !== currAmount) {
-          return { category, unite, prevAmount, currAmount };
+          return { category, unite, prevAmount, currAmount }
         }
       }
     }
-    return null; // no changes
-  };
+    return null // no changes
+  }
 
   const toast = (
     <Toast
@@ -151,6 +129,6 @@ export function useRewardNotifications({
       onClose={() => setShowToast(false)}
       persistent={toastPersistent || true}
     />
-  );
-  return { toast };
+  )
+  return { toast }
 }
