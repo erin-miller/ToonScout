@@ -148,8 +148,8 @@ interface Racing {
 export interface Rewards {
   sos: null | Record<string, number>;
   unites: null | {
-    "Toon-Up": Record<string, number>;
-    "Gag-Up": Record<string, number>;
+    'Toon-Up': Record<string, number>;
+    'Gag-Up': Record<string, number>;
     Jellybeans: Record<string, number>;
   };
   summons: null | Record<
@@ -163,8 +163,8 @@ export interface Rewards {
   >;
   pinkslips: number;
   remotes: null | {
-    "Damage Remote": Record<string, number>;
-    "Toon-Up Remote": Record<string, number>;
+    'Damage Remote': Record<string, number>;
+    'Toon-Up Remote': Record<string, number>;
   };
 }
 

@@ -1,5 +1,5 @@
-"use client";
-import React, { createContext, useContext, useState, ReactNode } from "react";
+'use client';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type DiscordContextType = {
   userId: string | null;
@@ -9,21 +9,21 @@ type DiscordContextType = {
 const DiscordContext = createContext<DiscordContextType | undefined>(undefined);
 
 export const DiscordProvider: React.FC<{ children: ReactNode }> = ({
-  children,
+	children,
 }) => {
-  const [userId, setUserId] = useState<string | null>(null);
+	const [userId, setUserId] = useState<string | null>(null);
 
-  return (
-    <DiscordContext.Provider value={{ userId, setUserId }}>
-      {children}
-    </DiscordContext.Provider>
-  );
+	return (
+		<DiscordContext.Provider value={{ userId, setUserId }}>
+			{children}
+		</DiscordContext.Provider>
+	);
 };
 
 export const useDiscordContext = () => {
-  const context = useContext(DiscordContext);
-  if (!context) {
-    throw new Error("useDiscordContext must be used within a DiscordProvider");
-  }
-  return context;
+	const context = useContext(DiscordContext);
+	if (!context) {
+		throw new Error('useDiscordContext must be used within a DiscordProvider');
+	}
+	return context;
 };

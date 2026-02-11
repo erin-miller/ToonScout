@@ -1,10 +1,10 @@
-import Banner from "@/app/components/Banner";
+import Banner from '@/app/components/Banner';
 
 const carnivalEnums = {
-  INACTIVE: "inactive", // Holiday not running
-  RECHARGING: "recharging", // Holiday is running, but the parade isn't scheduled/running
-  IN_TRANSIT: "in-transit", // Parade is scheduled but not running
-  ACTIVE: "active", // Parade is running
+	INACTIVE: 'inactive', // Holiday not running
+	RECHARGING: 'recharging', // Holiday is running, but the parade isn't scheduled/running
+	IN_TRANSIT: 'in-transit', // Parade is scheduled but not running
+	ACTIVE: 'active', // Parade is running
 };
 interface EventBannerProps {
   isOpen: boolean;
@@ -15,38 +15,38 @@ interface EventBannerProps {
 }
 
 const EventBanner: React.FC<EventBannerProps> = ({
-  isOpen,
-  onClose,
-  msg,
-  timestamp,
-  status,
+	isOpen,
+	onClose,
+	msg,
+	timestamp,
+	status,
 }) => {
-  const localTime = new Date(parseInt(timestamp) * 1000).toLocaleTimeString(
-    [],
-    { hour: "numeric", minute: "2-digit", hour12: true }
-  );
+	const localTime = new Date(parseInt(timestamp) * 1000).toLocaleTimeString(
+		[],
+		{ hour: 'numeric', minute: '2-digit', hour12: true },
+	);
 
-  let display = msg.replaceAll("*", "");
+	let display = msg.replaceAll('*', '');
 
-  if (status == carnivalEnums.RECHARGING) {
-    display =
+	if (status == carnivalEnums.RECHARGING) {
+		display =
       display + ` come back at ${localTime} to find out the next location!`;
-  }
+	}
 
-  if (status == carnivalEnums.IN_TRANSIT) {
-    display = display + ` starting at ${localTime}!`;
-  }
+	if (status == carnivalEnums.IN_TRANSIT) {
+		display = display + ` starting at ${localTime}!`;
+	}
 
-  if (!isOpen) return null;
-  return (
-    <Banner
-      isOpen={isOpen}
-      onClose={onClose}
-      msg={display}
-      className={`bg-blue-300`}
-      enableBtn={false}
-    />
-  );
+	if (!isOpen) return null;
+	return (
+		<Banner
+			isOpen={isOpen}
+			onClose={onClose}
+			msg={display}
+			className={'bg-blue-300'}
+			enableBtn={false}
+		/>
+	);
 };
 
 export default EventBanner;
