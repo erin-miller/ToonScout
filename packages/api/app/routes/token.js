@@ -9,10 +9,10 @@ router.post('/store-token', async (req, res) => {
     const modifiedCount = await storeCookieToken(userId, accessToken, expiresAt)
     res.cookie('accessToken', accessToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production' ? true : false,
-      expires: new Date(Date.now() + expiresAt * 1000),
-      sameSite: process.env.NODE_ENV === 'production' ? 'Strict' : 'Lax',
-      domain: process.env.NODE_ENV === 'production' ? process.env.COOKIE_DOMAIN : undefined
+      secure: true,
+      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
+      sameSite: 'None',
+      domain: process.env.COOKIE_DOMAIN || undefined
     })
 
     res.status(200).json({ message: 'Token stored successfully', modifiedCount })
