@@ -6,25 +6,25 @@ import { getScoutToken } from '../util/api.js'
 
 const fisherman = 'https://static.toontownrewritten.wiki/uploads/e/eb/Crocodile_fishing.png'
 const bucket = 'https://i.imgur.com/jpy0keb.png'
-const teleport = 'https://scouttoon.info/images/teleport.png'
+const teleport = 'https://toonscout.app/images/teleport.png'
 const fish = [
-  'https://scouttoon.info/fish/amoreeel.png',
-  'https://scouttoon.info/fish/balloonfish.png',
-  'https://scouttoon.info/fish/bearacuda.png',
-  'https://scouttoon.info/fish/catfish.png',
-  'https://scouttoon.info/fish/clownfish.png',
-  'https://scouttoon.info/fish/cuttthroat.png',
-  'https://scouttoon.info/fish/devilray.png',
-  'https://scouttoon.info/fish/dog.png',
-  'https://scouttoon.info/fish/frozenfish.png',
-  'https://scouttoon.info/fish/jellyfish.png',
-  'https://scouttoon.info/fish/kingcrab.png',
-  'https://scouttoon.info/fish/moonfish.png',
-  'https://scouttoon.info/fish/nurseshark.png',
-  'https://scouttoon.info/fish/pianofish.png',
-  'https://scouttoon.info/fish/poolshark.png',
-  'https://scouttoon.info/fish/seahorse.png',
-  'https://scouttoon.info/fish/starfish.png'
+  'https://toonscout.app/fish/amoreeel.png',
+  'https://toonscout.app/fish/balloonfish.png',
+  'https://toonscout.app/fish/bearacuda.png',
+  'https://toonscout.app/fish/catfish.png',
+  'https://toonscout.app/fish/clownfish.png',
+  'https://toonscout.app/fish/cuttthroat.png',
+  'https://toonscout.app/fish/devilray.png',
+  'https://toonscout.app/fish/dog.png',
+  'https://toonscout.app/fish/frozenfish.png',
+  'https://toonscout.app/fish/jellyfish.png',
+  'https://toonscout.app/fish/kingcrab.png',
+  'https://toonscout.app/fish/moonfish.png',
+  'https://toonscout.app/fish/nurseshark.png',
+  'https://toonscout.app/fish/pianofish.png',
+  'https://toonscout.app/fish/poolshark.png',
+  'https://toonscout.app/fish/seahorse.png',
+  'https://toonscout.app/fish/starfish.png'
 ]
 let footer = ''
 

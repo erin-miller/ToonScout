@@ -6,7 +6,7 @@ import { GolfCalculator } from 'toonapi-calculator'
 
 const trophyEmoji = '<:trophy:1301971567575699498>'
 
-const pencil = 'https://scouttoon.info/images/golf_pencil.png'
+const pencil = 'https://toonscout.app/images/golf_pencil.png'
 const trophyIcon = 'https://i.imgur.com/Sl1ep8e.png'
 const order = [
   'Walk In The Par Wins',
