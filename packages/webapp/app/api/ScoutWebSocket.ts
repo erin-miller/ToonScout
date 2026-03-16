@@ -2,7 +2,7 @@ import { ToonData } from '../types'
 
 const MAX_SCOUT_ATTEMPTS = 10
 const RECONNECT_DELAY = 10000
-const SCOUT_LINK = process.env.NEXT_PUBLIC_BOT_WSS || 'wss://bot.toonscout.app'
+const SCOUT_LINK = process.env.NEXT_PUBLIC_BOT_WSS || 'wss://bot.scouttoon.info'
 let scout: WebSocket | null = null
 let scoutAttempts = 0
 

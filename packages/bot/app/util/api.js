@@ -1,4 +1,4 @@
-const API_LINK = process.env.API_LINK || 'wss://api.toonscout.app'
+const API_LINK = process.env.API_LINK || 'wss://api.scouttoon.info'
 
 export async function getScoutToken(target) {
   try {
