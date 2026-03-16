@@ -237,12 +237,7 @@ const TabContainer = () => {
               <></>
             )}
             <div className="text-lg">
-              <a
-                href="https://cattlelog.toonscout.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
+              <a href="https://cattlelog.toonscout.app" target="_blank" rel="noopener noreferrer" className="underline">
                 Cattlelog Series {toon.data.data.cattlelog.series} #{toon.data.data.cattlelog.issue}
               </a>
             </div>
