@@ -33,8 +33,8 @@ const validateOrigins = curr => {
     }
   }
 
-  // always allow scouttoon.info origins in prod
-  if (curr.endsWith('scouttoon.info')) {
+  // always allow scouttoon.info and toonscout.app origins in prod
+  if (curr.endsWith('scouttoon.info') || curr.endsWith('toonscout.app')) {
     return true
   }
 

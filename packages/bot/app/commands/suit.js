@@ -58,11 +58,11 @@ const levels = {
 }
 
 const icons = {
-  gear: 'https://scouttoon.info/images/coggear.png',
-  sell: 'https://scouttoon.info/images/emblem_sell.png',
-  cash: 'https://scouttoon.info/images/emblem_cash.png',
-  law: 'https://scouttoon.info/images/emblem_law.png',
-  boss: 'https://scouttoon.info/images/emblem_boss.png'
+  gear: 'https://toonscout.app/images/coggear.png',
+  sell: 'https://toonscout.app/images/emblem_sell.png',
+  cash: 'https://toonscout.app/images/emblem_cash.png',
+  law: 'https://toonscout.app/images/emblem_law.png',
+  boss: 'https://toonscout.app/images/emblem_boss.png'
 }
 
 export const data = new SlashCommandBuilder()
@@ -121,9 +121,9 @@ export async function handleButton(req, customId) {
   let embed, row
 
   if (action === `${ids.name}-${ids.refresh}` && stateInfo[state]) {
-    ;({ embed, row } = stateInfo[state]())
+    ; ({ embed, row } = stateInfo[state]())
   } else if (stateInfo[action.replace(`${ids.name}-`, '')]) {
-    ;({ embed, row } = stateInfo[action.replace(`${ids.name}-`, '')]())
+    ; ({ embed, row } = stateInfo[action.replace(`${ids.name}-`, '')]())
   } else {
     return
   }

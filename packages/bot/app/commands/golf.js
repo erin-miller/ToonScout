@@ -6,7 +6,7 @@ import { GolfCalculator } from 'toonapi-calculator'
 
 const trophyEmoji = '<:trophy:1301971567575699498>'
 
-const pencil = 'https://scouttoon.info/images/golf_pencil.png'
+const pencil = 'https://toonscout.app/images/golf_pencil.png'
 const trophyIcon = 'https://i.imgur.com/Sl1ep8e.png'
 const order = [
   'Walk In The Par Wins',
@@ -178,8 +178,7 @@ function getTopTrophies(toon) {
   trophies = trophies
     .map(
       (t, index) =>
-        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${
-          t.progress.required
+        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${t.progress.required
         }\n${t.progress.difference} more to go!\n`
     )
     .join('\n')

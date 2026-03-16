@@ -238,7 +238,7 @@ const TabContainer = () => {
             )}
             <div className="text-lg">
               <a
-                href="https://cattlelog.scouttoon.info"
+                href="https://cattlelog.toonscout.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"

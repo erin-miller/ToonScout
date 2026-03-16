@@ -6,7 +6,7 @@ import { RacingCalculator } from 'toonapi-calculator'
 
 const trophyEmoji = '<:trophy:1301971567575699498>'
 
-const car = 'https://scouttoon.info/images/racing_tickets.png'
+const car = 'https://toonscout.app/images/racing_tickets.png'
 const trophyIcon = 'https://i.imgur.com/Sl1ep8e.png'
 const order = [
   'Speedway Wins',
@@ -179,8 +179,7 @@ function getTopTrophies(toon) {
   trophies = trophies
     .map(
       (t, index) =>
-        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${
-          t.progress.required
+        `**${index + 1}. ${t.name}**Progress: ${t.progress.current}/${t.progress.required
         }\n${t.progress.difference} more to go!\n`
     )
     .join('\n')
