@@ -1,72 +1,64 @@
-import React, { useEffect, useState } from "react";
-import Modal from "../../Modal";
-import { Rewards, StoredToonData } from "@/app/types";
-import { useToonContext } from "@/app/context/ToonContext";
-import {
-  FaLock,
-  FaUnlock,
-  FaCog,
-  FaTrash,
-  FaBellSlash,
-  FaBell,
-} from "react-icons/fa";
-import FishSettingsItem from "./SettingsItems/FishSettingsItem";
-import GardenSettingsItem from "./SettingsItems/GardenSettingsItem";
-import NotificationSettingsItem from "./SettingsItems/NotificationSettingsItem";
-import { getNotificationSettings } from "@/app/utils/notificationUtils";
-import { getRewardSums } from "@/app/utils/rewardsUtils";
+import React, { useEffect, useState } from 'react'
+import Modal from '../../Modal'
+import { StoredToonData } from '@/app/types'
+import { useToonContext } from '@/app/context/ToonContext'
+import { FaLock, FaUnlock, FaTrash, FaBellSlash, FaBell } from 'react-icons/fa'
+import FishSettingsItem from './SettingsItems/FishSettingsItem'
+import GardenSettingsItem from './SettingsItems/GardenSettingsItem'
+import NotificationSettingsItem from './SettingsItems/NotificationSettingsItem'
+import { getNotificationSettings, setNotificationSettings } from '@/app/utils/notificationUtils'
+import { getRewardSums } from '@/app/utils/rewardsUtils'
 
 type SettingsModalProps = {
-  toon: StoredToonData | null;
-  index: number | null;
-  isOpen: boolean;
-  onClose: () => void;
-};
+  toon: StoredToonData | null
+  index: number | null
+  isOpen: boolean
+  onClose: () => void
+}
 
-const SettingsModal: React.FC<SettingsModalProps> = ({
-  toon,
-  index,
-  isOpen,
-  onClose,
-}) => {
-  if (!isOpen || !toon || index == null) return null;
-  const { toons, addToon, deleteToon } = useToonContext();
+const SettingsModal: React.FC<SettingsModalProps> = ({ toon, index, isOpen, onClose }) => {
+  if (!isOpen || !toon || index == null) return null
+  const { toons, addToon, deleteToon } = useToonContext()
 
   // notifs
-  const initialSettings = getNotificationSettings();
-  const [notificationsEnabled, setNotificationsEnabled] = useState<boolean>(
-    initialSettings.notificationsEnabled
-  );
+  const initialSettings = getNotificationSettings()
+  const [notificationsEnabled, setNotificationsEnabled] = useState<boolean>(initialSettings.notificationsEnabled)
+
+  useEffect(() => {
+    setNotificationSettings({
+      notificationsEnabled
+    })
+  }, [notificationsEnabled])
 
   const [rewardSums, setRewardSums] = useState({
     sumSos: 0,
     sumUnites: 0,
     sumSummons: 0,
     sumRemotes: 0,
-    totalRewards: 0,
-  });
+    totalRewards: 0
+  })
 
   useEffect(() => {
     const fetchSums = async () => {
       if (toon) {
-        const rewards = toon.data.data.rewards;
-        const sums = await getRewardSums(rewards);
-        setRewardSums(sums);
+        const rewards = toon.data.data.rewards
+        const sums = await getRewardSums(rewards)
+        setRewardSums(sums)
       }
-    };
+    }
 
-    fetchSums();
-  }, [toon]);
+    fetchSums()
+  }, [toon])
 
-  const toggleLock = (index: number) => {
-    const toon = toons[index];
-    toon.locked = !toon.locked;
-    addToon(toon);
-  };
+  const toggleLock = (i: number) => {
+    const t = toons[i]
+    t.locked = !t.locked
+    addToon(t)
+  }
 
-  const getLockedStatus = (index: number) => {
-    return toons[index]?.locked;
-  };
+  const getLockedStatus = (i: number) => {
+    return toons[i]?.locked
+  }
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -76,19 +68,14 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
         <div className="flex flex-col items-start gap-2 mb-4">
           {/* lock */}
           <div className="flex gap-2">
-            <button
-              className="flex items-center gap-2 text-xl"
-              onClick={() => toggleLock(index)}
-            >
+            <button className="flex items-center gap-2 text-xl" onClick={() => toggleLock(index)}>
               {getLockedStatus(index) ? (
                 <FaLock className="text-red-500 text-2xl" />
               ) : (
                 <FaUnlock className="text-green-500 text-2xl" />
               )}
             </button>
-            <span>
-              Currently {getLockedStatus(index) ? "Locked" : "Unlocked"}
-            </span>
+            <span>Currently {getLockedStatus(index) ? 'Locked' : 'Unlocked'}</span>
           </div>
           {/* stats */}
           <div>
@@ -102,7 +89,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
           </div>
 
-          {/* global settings */}
+          {/* global */}
           <div className="grid md:grid-cols-2 md:space-x-6 mt-5">
             <div>
               <h3 className="text-3xl font-bold ">Tab Settings</h3>
@@ -118,12 +105,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                 <div className="flex">
                   <button
                     className="text-2xl focus:outline-none"
-                    title={
-                      notificationsEnabled
-                        ? "Disable Notifications"
-                        : "Enable Notifications"
-                    }
-                    onClick={() => setNotificationsEnabled((prev) => !prev)}
+                    title={notificationsEnabled ? 'Disable Notifications' : 'Enable Notifications'}
+                    onClick={() => setNotificationsEnabled(prev => !prev)}
                   >
                     {notificationsEnabled ? (
                       <FaBell className="text-orange-500 dark:text-yellow-400" />
@@ -143,8 +126,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
           <button
             className="flex items-center gap-2 text-xl bg-red-200 p-2 rounded hover:bg-red-300"
             onClick={() => {
-              onClose();
-              deleteToon(toon);
+              onClose()
+              deleteToon(toon)
             }}
           >
             <FaTrash className="text-red-800" />
@@ -153,7 +136,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
         </div>
       </div>
     </Modal>
-  );
-};
+  )
+}
 
-export default SettingsModal;
+export default SettingsModal

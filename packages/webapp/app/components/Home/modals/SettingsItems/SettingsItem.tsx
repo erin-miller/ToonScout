@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
 type SettingsItemProps = {
-  label: string;
-  children: React.ReactNode;
-};
+  label: string
+  children: React.ReactNode
+}
 
 const SettingsItem: React.FC<SettingsItemProps> = ({ label, children }) => {
   return (
@@ -11,7 +11,7 @@ const SettingsItem: React.FC<SettingsItemProps> = ({ label, children }) => {
       <span>{label}</span>
       <div className="font-normal">{children}</div>
     </div>
-  );
-};
+  )
+}
 
-export default SettingsItem;
+export default SettingsItem

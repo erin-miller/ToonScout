@@ -1,16 +1,16 @@
-import React from "react";
-import Modal from "../../Modal";
-import Image from "next/image";
-import { imageAssets } from "@/assets/images";
-import { StaticImageData } from "next/image";
+import React from 'react'
+import Modal from '../../Modal'
+import Image from 'next/image'
+import { imageAssets } from '@/assets/images'
+import { StaticImageData } from 'next/image'
 
 interface GameStepsModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 
 const GameStepsModal: React.FC<GameStepsModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -18,33 +18,18 @@ const GameStepsModal: React.FC<GameStepsModalProps> = ({ isOpen, onClose }) => {
         To connect to Toontown Rewritten, follow the steps below!
       </div>
       <div className="grid grid-cols-2 gap-8">
-        <Step
-          title="1. Enable Companion App Support"
-          image={imageAssets.gameplay_menu}
-        />
-        <Step
-          title="2. Click 'OK' on in-game popup and select a toon"
-          image={imageAssets.prompt}
-        />
+        <Step title="1. Enable Companion App Support" image={imageAssets.gameplay_menu} />
+        <Step title="2. Click 'OK' on in-game popup and select a toon" image={imageAssets.prompt} />
       </div>
     </Modal>
-  );
-};
+  )
+}
 
-const Step: React.FC<{ title: string; image: StaticImageData }> = ({
-  title,
-  image,
-}) => (
+const Step: React.FC<{ title: string; image: StaticImageData }> = ({ title, image }) => (
   <div className="text-2xl">
     <h2 className="pb-2 ">{title}</h2>
-    <Image
-      src={image}
-      alt={title}
-      className="mx-auto"
-      width={256}
-      height={256}
-    />
+    <Image src={image} alt={title} className="mx-auto" width={256} height={256} />
   </div>
-);
+)
 
-export default GameStepsModal;
+export default GameStepsModal

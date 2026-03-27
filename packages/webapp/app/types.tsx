@@ -1,269 +1,247 @@
-interface GagExperience {
-  current: number;
-  next: number;
-}
-
-interface Gag {
-  gag: {
-    level: number;
-    name: string;
-  };
-  organic: any;
-  experience: GagExperience;
-}
+import { GagTrackData } from './utils/gagDamage'
 
 interface Toon {
-  id: string;
-  name: string;
-  species: string;
-  headColor: string;
-  style: string;
+  id: string
+  name: string
+  species: string
+  headColor: string
+  style: string
 }
 
 interface Location {
-  zone: string;
-  neighborhood: string;
-  district: string;
-  instanceId: number;
+  zone: string
+  neighborhood: string
+  district: string
+  instanceId: number
 }
 
 interface TaskProgress {
-  text: string;
-  current: number;
-  target: number;
+  text: string
+  current: number
+  target: number
 }
 
 export interface Task {
   objective: {
-    text: string;
-    where: string;
-    progress: TaskProgress;
-  };
+    text: string
+    where: string
+    progress: TaskProgress
+  }
   from: {
-    name: string;
-    building: string;
-    zone: string;
-    neighborhood: string;
-  };
+    name: string
+    building: string
+    zone: string
+    neighborhood: string
+  }
   to: {
-    name: string;
-    building: string;
-    zone: string;
-    neighborhood: string;
-  };
-  reward: string;
-  deletable: boolean;
-  type: string;
+    name: string
+    building: string
+    zone: string
+    neighborhood: string
+  }
+  reward: string
+  deletable: boolean
+  type: string
 }
 
 interface FishAlbumEntry {
-  name: string;
-  weight: number;
+  name: string
+  weight: number
 }
 
 export interface FishRarity {
-  name: string;
-  probability: number;
-  location: string;
-  buckets: FishBuckets;
-  rarity: number;
+  name: string
+  probability: number
+  location: string
+  buckets: FishBuckets
+  rarity: number
 }
 
 export type LocRarity = [
   string,
   {
-    total: number;
-    buckets: FishBuckets;
+    total: number
+    buckets: FishBuckets
   }
-];
+]
 
 export interface FishBuckets {
-  confBuckets: number;
-  confTime: number;
-  avgBuckets: number;
-  avgTime: number;
+  confBuckets: number
+  confTime: number
+  avgBuckets: number
+  avgTime: number
 }
 
 interface Fish {
   rod: {
-    id: number;
-    name: string;
-  };
+    id: number
+    name: string
+  }
   collection: Record<
     number,
     {
-      name: string;
-      album: FishAlbumEntry[];
+      name: string
+      album: FishAlbumEntry[]
     }
-  >;
+  >
 }
 
 interface Flower {
   shovel: {
-    id: number;
-    name: string;
-    curSkill: number;
-    maxSkill: number;
-  };
+    id: number
+    name: string
+    curSkill: number
+    maxSkill: number
+  }
   wateringCan: {
-    id: number;
-    name: string;
-    curSkill: number;
-    maxSkill: number;
-  };
+    id: number
+    name: string
+    curSkill: number
+    maxSkill: number
+  }
   collection: Record<
     number,
     {
-      name: string;
-      album: string[];
+      name: string
+      album: string[]
     }
-  >;
+  >
 }
 
 interface Cogsuit {
-  department: string;
-  hasDisguise: boolean;
+  department: string
+  hasDisguise: boolean
   suit: {
-    id: string;
-    name: string;
-  };
-  version: number;
-  level: number;
+    id: string
+    name: string
+  }
+  version: number
+  level: number
   promotion: {
-    current: number;
-    target: number;
-  };
+    current: number
+    target: number
+  }
 }
 
 interface Golf {
-  name: string;
-  num: number;
+  name: string
+  num: number
 }
 
 interface Racing {
-  name: string;
-  num: number;
+  name: string
+  num: number
 }
 
 export interface Rewards {
-  sos: null | Record<string, number>;
+  sos: null | Record<string, number>
   unites: null | {
-    "Toon-Up": Record<string, number>;
-    "Gag-Up": Record<string, number>;
-    Jellybeans: Record<string, number>;
-  };
+    'Toon-Up': Record<string, number>
+    'Gag-Up': Record<string, number>
+    Jellybeans: Record<string, number>
+  }
   summons: null | Record<
     string,
     {
-      name: string;
-      single: boolean;
-      building: boolean;
-      invasion: boolean;
+      name: string
+      single: boolean
+      building: boolean
+      invasion: boolean
     }
-  >;
-  pinkslips: number;
+  >
+  pinkslips: number
   remotes: null | {
-    "Damage Remote": Record<string, number>;
-    "Toon-Up Remote": Record<string, number>;
-  };
+    'Damage Remote': Record<string, number>
+    'Toon-Up Remote': Record<string, number>
+  }
 }
 
 export interface RewardSums {
-  sumSos: number;
-  sumUnites: number;
-  sumSummons: number;
-  sumRemotes: number;
-  totalRewards: number;
+  sumSos: number
+  sumUnites: number
+  sumSummons: number
+  sumRemotes: number
+  totalRewards: number
+}
+
+export interface Invasion {
+  cog: string
+  quantity: number
+  mega: boolean
 }
 
 export interface ToonData {
-  event: string;
+  event: string
   data: {
-    toon: Toon;
+    toon: Toon
     laff: {
-      current: number;
-      max: number;
-    };
-    location: Location;
+      current: number
+      max: number
+    }
+    location: Location
     gags: {
-      [key: string]: Gag | null;
-    };
-    tasks: Task[];
-    invasion: any;
-    fish: Fish;
-    flowers: Flower;
-    cogsuits: Record<string, Cogsuit>;
-    golf: Golf[];
-    racing: Racing[];
-    rewards: Rewards;
+      [key: string]: GagTrackData | null
+    }
+    tasks: Task[]
+    invasion: Invasion
+    fish: Fish
+    flowers: Flower
+    cogsuits: Record<string, Cogsuit>
+    golf: Golf[]
+    racing: Racing[]
+    rewards: Rewards
     beans: {
       jar: {
-        current: number;
-        max: number;
-      };
+        current: number
+        max: number
+      }
       bank: {
-        current: number;
-        max: number;
-      };
-    };
+        current: number
+        max: number
+      }
+    }
     cattlelog: {
-      series: number;
-      issue: number;
-    };
-    tokens: number;
-  };
+      series: number
+      issue: number
+    }
+    tokens: number
+  }
 }
 
 export interface StoredToonData {
-  data: ToonData;
-  timestamp: number;
-  port: number;
-  locked: boolean;
-  overjoyed?: boolean; // True if Overjoyed Laff Meters was active when toon data was captured
+  data: ToonData
+  timestamp: number
+  port: number
+  locked: boolean
 }
 
-export interface TasklineStepOption {
-  objective: string;
-  building?: string;
-  location?: string;
+export interface SOSToon {
+  name: string
+  stars: number
+  ability: string
+  track: string | null
+  dna: string
+  description: string
 }
 
-export interface TasklineStep {
-  order: number;
-  objective: string;
-  building?: string;
-  location?: string;
-  reward?: string;
-  options?: TasklineStepOption[];
-  details?: string[];
+export interface CogData {
+  name: string
+  type: string
+  tier: number
+  level_range: {
+    min: number
+    max: number
+  }
+  image: string
+  fullname?: string
 }
 
-export interface Taskline {
-  id: string;
-  name: string;
-  playground?: string;
-  category: "playground" | "teleport" | "laff_boost" | "gag_training" | "cog_disguise" | "task_force" | "special" | "other";
-  prerequisites?: string[];
-  steps: TasklineStep[];
-  wikiUrl?: string;
-  lastUpdated?: string;
-}
-
-export interface TaskMatch {
-  taskline: Taskline;
-  step: TasklineStep;
-  confidence: "high" | "medium" | "low";
-  matchedOn: "exact" | "partial";
-  matchedObjective?: {
-    text: string;
-    location?: string;
-    building?: string;
-    optionIndex?: number;
-  };
-}
-
-export interface TasklineOverride {
-  tasklineId: string;
-  stepNumber: number;
-  timestamp: number;
+export interface InvasionData {
+  asOf: number
+  cog: string
+  progress: string
+  startTimestamp: number
+  district: string
+  estimatedEndTime?: number | null
+  isMegaInvasion?: boolean
 }

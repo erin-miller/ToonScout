@@ -1,32 +1,17 @@
-import React, { useEffect, useState } from "react";
-import SettingsItem from "./SettingsItem";
-import {
-  getNotificationSettings,
-  setNotificationSettings,
-} from "@/app/utils/notificationUtils";
+import React, { useEffect, useState } from 'react'
+import SettingsItem from './SettingsItem'
+import { getNotificationSettings, setNotificationSettings } from '@/app/utils/notificationUtils'
 
 const NotificationSettingsItem: React.FC = () => {
   // Notification settings state
-  const initialSettings = getNotificationSettings();
-  const [notificationsEnabled, setNotificationsEnabled] = useState<boolean>(
-    initialSettings.notificationsEnabled,
-  );
-  const [toastEnabled, setToastEnabled] = useState(
-    initialSettings.toastEnabled,
-  );
-  const [soundEnabled, setSoundEnabled] = useState(
-    initialSettings.soundEnabled,
-  );
-  const [toastPersistent, setToastPersistent] = useState(
-    initialSettings.toastPersistent,
-  );
-  const [soundRepeat, setSoundRepeat] = useState(initialSettings.soundRepeat);
-  const [soundRepeatInterval, setSoundRepeatInterval] = useState(
-    initialSettings.soundRepeatInterval,
-  );
-  const [nativeNotifEnabled, setNativeNotifEnabled] = useState(
-    initialSettings.nativeNotifEnabled,
-  );
+  const initialSettings = getNotificationSettings()
+  const [notificationsEnabled] = useState<boolean>(initialSettings.notificationsEnabled)
+  const [toastEnabled, setToastEnabled] = useState(initialSettings.toastEnabled)
+  const [soundEnabled, setSoundEnabled] = useState(initialSettings.soundEnabled)
+  const [toastPersistent, setToastPersistent] = useState(initialSettings.toastPersistent)
+  const [soundRepeat, setSoundRepeat] = useState(initialSettings.soundRepeat)
+  const [soundRepeatInterval, setSoundRepeatInterval] = useState(initialSettings.soundRepeatInterval)
+  const [nativeNotifEnabled, setNativeNotifEnabled] = useState(initialSettings.nativeNotifEnabled)
 
   useEffect(() => {
     setNotificationSettings({
@@ -36,8 +21,8 @@ const NotificationSettingsItem: React.FC = () => {
       toastPersistent,
       soundRepeat,
       soundRepeatInterval,
-      nativeNotifEnabled,
-    });
+      nativeNotifEnabled
+    })
   }, [
     notificationsEnabled,
     toastEnabled,
@@ -45,21 +30,17 @@ const NotificationSettingsItem: React.FC = () => {
     toastPersistent,
     soundRepeat,
     soundRepeatInterval,
-    nativeNotifEnabled,
-  ]);
+    nativeNotifEnabled
+  ])
 
   // Request browser notification permission if enabled
   useEffect(() => {
-    if (
-      nativeNotifEnabled &&
-      typeof window !== "undefined" &&
-      "Notification" in window
-    ) {
-      if (Notification.permission === "default") {
-        Notification.requestPermission();
+    if (nativeNotifEnabled && typeof window !== 'undefined' && 'Notification' in window) {
+      if (Notification.permission === 'default') {
+        Notification.requestPermission()
       }
     }
-  }, [nativeNotifEnabled]);
+  }, [nativeNotifEnabled])
 
   return (
     <SettingsItem label="">
@@ -69,13 +50,10 @@ const NotificationSettingsItem: React.FC = () => {
             type="checkbox"
             id="popupEnabled"
             checked={toastEnabled}
-            onChange={(e) => setToastEnabled(e.target.checked)}
+            onChange={e => setToastEnabled(e.target.checked)}
             className="w-5 h-5 cursor-pointer"
           />
-          <label
-            className="cursor-pointer hover:text-blue-600"
-            htmlFor="popupEnabled"
-          >
+          <label className="cursor-pointer hover:text-blue-600" htmlFor="popupEnabled">
             Popup
           </label>
         </div>
@@ -85,13 +63,10 @@ const NotificationSettingsItem: React.FC = () => {
             type="checkbox"
             id="soundEnabled"
             checked={soundEnabled}
-            onChange={(e) => setSoundEnabled(e.target.checked)}
+            onChange={e => setSoundEnabled(e.target.checked)}
             className="w-5 h-5 cursor-pointer"
           />
-          <label
-            className="cursor-pointer hover:text-blue-600"
-            htmlFor="soundEnabled"
-          >
+          <label className="cursor-pointer hover:text-blue-600" htmlFor="soundEnabled">
             Sound
           </label>
         </div>
@@ -101,13 +76,10 @@ const NotificationSettingsItem: React.FC = () => {
             type="checkbox"
             id="toastPersistent"
             checked={toastPersistent}
-            onChange={(e) => setToastPersistent(e.target.checked)}
+            onChange={e => setToastPersistent(e.target.checked)}
             className="w-5 h-5 cursor-pointer"
           />
-          <label
-            className="cursor-pointer hover:text-blue-600"
-            htmlFor="toastPersistent"
-          >
+          <label className="cursor-pointer hover:text-blue-600" htmlFor="toastPersistent">
             Popup requires manual dismiss (X)
           </label>
         </div>
@@ -116,7 +88,7 @@ const NotificationSettingsItem: React.FC = () => {
           Sound:
           <select
             value={soundRepeat}
-            onChange={(e) => setSoundRepeat(Number(e.target.value))}
+            onChange={e => setSoundRepeat(Number(e.target.value))}
             className="ml-2 px-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700"
           >
             <option value={1}>Once</option>
@@ -132,7 +104,7 @@ const NotificationSettingsItem: React.FC = () => {
                 min={2}
                 max={60}
                 value={soundRepeatInterval}
-                onChange={(e) => setSoundRepeatInterval(Number(e.target.value))}
+                onChange={e => setSoundRepeatInterval(Number(e.target.value))}
                 className="ml-2 px-1 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700"
               />
             </p>
@@ -144,19 +116,16 @@ const NotificationSettingsItem: React.FC = () => {
             type="checkbox"
             id="nativeNotifEnabled"
             checked={nativeNotifEnabled}
-            onChange={(e) => setNativeNotifEnabled(e.target.checked)}
+            onChange={e => setNativeNotifEnabled(e.target.checked)}
             className="w-5 h-5 cursor-pointer"
           />
-          <label
-            className="cursor-pointer hover:text-blue-600"
-            htmlFor="nativeNotifEnabled"
-          >
+          <label className="cursor-pointer hover:text-blue-600" htmlFor="nativeNotifEnabled">
             Enable browser notifications
           </label>
         </div>
       </div>
     </SettingsItem>
-  );
-};
+  )
+}
 
-export default NotificationSettingsItem;
+export default NotificationSettingsItem

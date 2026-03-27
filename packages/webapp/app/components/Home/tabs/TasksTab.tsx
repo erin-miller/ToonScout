@@ -420,16 +420,16 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
   }
 
   function renderProgress(text: string) {
-    const match = text.match(/^(\d+)\s+of\s+(\d+)/);
-    let curr = 0;
-    let target = 1;
+    const match = text.match(/^(\d+)\s+of\s+(\d+)/)
+    let curr = 0
+    let target = 1
 
     if (match) {
-      curr = parseInt(match[1], 10);
-      target = parseInt(match[2], 10);
+      curr = parseInt(match[1], 10)
+      target = parseInt(match[2], 10)
     }
 
-    const progress = Math.min((curr / target) * 100, 100);
+    const progress = Math.min((curr / target) * 100, 100)
 
     if (match) {
       return (
@@ -440,9 +440,9 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
           ></div>
           <div className="z-50">{text}</div>
         </div>
-      );
+      )
     } else {
-      return <div className="task-location">{text}</div>;
+      return <div className="task-location">{text}</div>
     }
   }
 
@@ -460,8 +460,8 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
     if (displayTasks.length > 2 && (index === 1 || index === 2)) {
       return index === 1 ? index + 2 : index;
     }
-    return index + 1;
-  };
+    return index + 1
+  }
 
   return (
     <AnimatedTabContent>
@@ -575,6 +575,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
         })}
       </div>
     </AnimatedTabContent>
-  );
-};
-export default TasksTab;
+  )
+}
+export default TasksTab

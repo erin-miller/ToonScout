@@ -1,107 +1,107 @@
-const API_LINK = process.env.API_LINK || "wss://api.scouttoon.info";
+const API_LINK = process.env.API_LINK || 'wss://api.scouttoon.info'
 
 export async function getScoutToken(target) {
   try {
-    const response = await fetch(API_LINK + "/scout/get-scout-token", {
-      method: "POST",
+    const response = await fetch(API_LINK + '/scout/get-scout-token', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ target }),
-    });
+      body: JSON.stringify({ target })
+    })
 
     if (!response.ok) {
-      throw new Error("Failed to install commands.");
+      throw new Error('Failed to install commands.')
     }
 
-    const data = await response.json();
+    const data = await response.json()
     if (!data.token) {
-      throw new Error("Token not found in response.");
+      throw new Error('Token not found in response.')
     }
     // ensure modified is a date
-    data.token.modified = new Date(data.token.modified);
-    return data.token;
+    data.token.modified = new Date(data.token.modified)
+    return data.token
   } catch (error) {
-    console.error("Error during install:", error);
+    console.error('Error during install:', error)
   }
 }
 
 export async function storeScoutToken(userId, data) {
   try {
-    const response = await fetch(API_LINK + "/scout/store-scout-token", {
-      method: "POST",
+    const response = await fetch(API_LINK + '/scout/store-scout-token', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ userId, data }),
-    });
+      body: JSON.stringify({ userId, data })
+    })
 
     if (!response.ok) {
-      throw new Error("Failed to store token.");
+      throw new Error('Failed to store token.')
     }
   } catch (error) {
-    console.error("Error during token storage:", error);
+    console.error('Error during token storage:', error)
   }
 }
 
 export async function updateHidden(target) {
   try {
-    const response = await fetch(API_LINK + "/scout/update-hidden", {
-      method: "POST",
+    const response = await fetch(API_LINK + '/scout/update-hidden', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ target }),
-    });
+      body: JSON.stringify({ target })
+    })
 
     if (!response.ok) {
-      throw new Error("Failed to update visibility.");
+      throw new Error('Failed to update visibility.')
     }
 
-    const data = await response.json();
-    return data.status;
+    const data = await response.json()
+    return data.status
   } catch (error) {
-    console.error("Error during visibility update:", error);
+    console.error('Error during visibility update:', error)
   }
 }
 
 export async function carnivalStatus() {
   try {
-    const response = await fetch(API_LINK + "/utility/get-cavalcade", {
-      method: "GET",
+    const response = await fetch(API_LINK + '/utility/get-cavalcade', {
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
-      },
-    });
+        'Content-Type': 'application/json'
+      }
+    })
 
     if (!response.ok) {
-      throw new Error("Cavalcade information could not be retrieved.");
+      throw new Error('Cavalcade information could not be retrieved.')
     }
 
-    const data = await response.json();
-    return data;
+    const data = await response.json()
+    return data
   } catch (error) {
-    console.error("Error during cavalcade retrieval:", error);
+    console.error('Error during cavalcade retrieval:', error)
   }
 }
 
-export const getRewardSums = async (rewards) => {
+export const getRewardSums = async rewards => {
   try {
-    const response = await fetch(API_LINK + "/utility/get-reward-sums", {
-      method: "POST",
+    const response = await fetch(API_LINK + '/utility/get-reward-sums', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ rewards }),
-    });
+      body: JSON.stringify({ rewards })
+    })
 
     if (!response.ok) {
-      throw new Error(`${response.status}`);
+      throw new Error(`${response.status}`)
     }
 
-    return await response.json();
+    return await response.json()
   } catch (error) {
-    console.error("Error fetching reward sums:", error);
-    throw error;
+    console.error('Error fetching reward sums:', error)
+    throw error
   }
-};
+}

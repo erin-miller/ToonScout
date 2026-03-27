@@ -9,152 +9,146 @@ import {
   ActivityTab,
   InvasionsTab,
   GardenTab,
-  RewardsTab,
-} from "./TabList";
-import "/styles/tabs.css";
-import { useState } from "react";
-import { useToonContext } from "@/app/context/ToonContext";
-import { StoredToonData } from "@/app/types";
-import { hasNoSuit } from "../../../../utils/tabUtils";
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
-import { BsPiggyBankFill } from "react-icons/bs";
-import { PiTipJarFill } from "react-icons/pi";
-import { BiSolidParty } from "react-icons/bi";
-import { useEventContext } from "@/app/context/EventContext";
-import Image from "next/image";
+  RewardsTab
+} from './TabList'
+import '/styles/tabs.css'
+import { useState } from 'react'
+import { useToonContext } from '@/app/context/ToonContext'
+import { StoredToonData } from '@/app/types'
+import { hasNoSuit } from '../../../../utils/tabUtils'
+import { FaAngleRight, FaAngleLeft } from 'react-icons/fa'
+import { BsPiggyBankFill } from 'react-icons/bs'
+import { PiTipJarFill } from 'react-icons/pi'
+import { BiSolidParty } from 'react-icons/bi'
+import { useEventContext } from '@/app/context/EventContext'
+import Image from 'next/image'
 
 export interface TabProps {
-  toon: StoredToonData;
-  setSelectedTab?: React.Dispatch<React.SetStateAction<TabComponent>>;
+  toon: StoredToonData
+  setSelectedTab?: React.Dispatch<React.SetStateAction<TabComponent>>
 }
 
 export type TabComponent = {
-  title: string;
-  component: React.FC<{ toon: StoredToonData }>;
-  disabled?: boolean;
-  tooltip?: string;
-};
+  title: string
+  component: React.FC<{ toon: StoredToonData }>
+  disabled?: boolean
+  tooltip?: string
+}
 
 const TabContainer = () => {
-  const { activeIndex, toons } = useToonContext();
-  const { eventStatus } = useEventContext();
-  const MAX_TABS = 4;
+  const { activeIndex, toons } = useToonContext()
+  const { eventStatus } = useEventContext()
+  const MAX_TABS = 4
 
-  const toon = toons[activeIndex];
+  const toon = toons[activeIndex]
 
   if (!toon) {
-    return "No toon data found. Please try refreshing the page.";
+    return 'No toon data found. Please try refreshing the page.'
   }
 
   const TabList: TabComponent[] = [
     {
-      title: "Overview",
-      component: (props) => (
-        <InfoTab {...props} setSelectedTab={setSelectedTab} />
-      ),
+      title: 'Overview',
+      component: props => <InfoTab {...props} setSelectedTab={setSelectedTab} />
     },
     {
-      title: "Fishing",
+      title: 'Fishing',
       component: FishTab,
       tooltip:
-        "Percentages and buckets are estimates and should not be taken literally. Toontown Rewritten has not disclosed their actual fishing odds.",
+        'Percentages and buckets are estimates and should not be taken literally. Toontown Rewritten has not disclosed their actual fishing odds.'
     },
     {
-      title: "Suits",
+      title: 'Suits',
       component: SuitTab,
       disabled: hasNoSuit(toon),
       tooltip:
-        "Promotion recommendations are weighted by merit return and time. The time is determined by the average group find time at peak hours and length of the facility.",
+        'Promotion recommendations are weighted by merit return and time. The time is determined by the average group find time at peak hours and length of the facility.'
     },
-    { title: "Gags", component: GagsTab },
+    { title: 'Gags', component: GagsTab },
     {
-      title: "Tasks",
+      title: 'Tasks',
       component: TasksTab,
-      disabled: toons[activeIndex].data.data.tasks.length <= 0,
+      disabled: toons[activeIndex].data.data.tasks.length <= 0
     },
-    { title: "Activities", component: ActivityTab },
+    { title: 'Activities', component: ActivityTab },
     {
-      title: "Invasions",
+      title: 'Invasions',
       component: InvasionsTab,
-      tooltip: "Displays currently active invasions.",
+      tooltip: 'Displays currently active invasions.'
     },
     {
-      title: "Garden",
+      title: 'Garden',
       component: GardenTab,
-      tooltip:
-        "Golden border flowers will progress your experience and allow you to grow higher bean combinations.",
+      tooltip: 'Golden border flowers will progress your experience and allow you to grow higher bean combinations.'
     },
     {
-      title: "Rewards",
+      title: 'Rewards',
       component: RewardsTab,
-      disabled: !toon.data.data.rewards,
-    },
-  ];
+      disabled: !toon.data.data.rewards
+    }
+  ]
 
-  const [selectedTab, setSelectedTab] = useState<TabComponent>(TabList[0]); // Default to "Overview"
-  const [pose, setPose] = useState<string>("waving");
-  const [currPage, setCurrPage] = useState(0);
-  const totalPages = Math.ceil(TabList.length / MAX_TABS);
-  const visibleTabs = TabList.slice(
-    currPage * MAX_TABS,
-    (currPage + 1) * MAX_TABS
-  );
+  const [selectedTab, setSelectedTab] = useState<TabComponent>(TabList[0]) // Default to "Overview"
+  const [pose, setPose] = useState<string>('waving')
+  const [currPage, setCurrPage] = useState(0)
+  const totalPages = Math.ceil(TabList.length / MAX_TABS)
+  const visibleTabs = TabList.slice(currPage * MAX_TABS, (currPage + 1) * MAX_TABS)
 
   // change pages if the toon has no suits so that the tab is disabled properly
-  if (selectedTab.title == "Suits" && hasNoSuit(toon)) {
-    setSelectedTab(TabList[1]);
+  if (selectedTab.title == 'Suits' && hasNoSuit(toon)) {
+    setSelectedTab(TabList[1])
   }
 
   const poses = [
-    "head",
-    "portrait-sleep",
-    "portrait-delighted",
-    "portrait-surprise",
-    "portrait-thinking",
-    "portrait-birthday",
-    "portrait-fall",
-    "portrait-grin",
-    "cake-topper",
-    "crying",
-    "waving",
-  ];
+    'head',
+    'portrait-sleep',
+    'portrait-delighted',
+    'portrait-surprise',
+    'portrait-thinking',
+    'portrait-birthday',
+    'portrait-fall',
+    'portrait-grin',
+    'cake-topper',
+    'crying',
+    'waving'
+  ]
 
   // Preload all pose images using hidden <Image /> components for optimal Next.js caching
-  const dna = toon.data.data.toon.style;
-  const preloadImages = poses.map((poseName) => (
+  const dna = toon.data.data.toon.style
+  const preloadImages = poses.map(poseName => (
     <Image
       key={poseName}
       src={`https://rendition.toontownrewritten.com/render/${dna}/${poseName}/1024x1024.png`}
-      alt={toon.data.data.toon.name + " preload " + poseName}
+      alt={toon.data.data.toon.name + ' preload ' + poseName}
       width={512}
       height={512}
-      style={{ display: "none" }}
+      style={{ display: 'none' }}
       loading="eager"
       priority={poseName === pose} // prioritize the current pose
     />
-  ));
+  ))
 
   const getImage = () => {
-    return `https://rendition.toontownrewritten.com/render/${dna}/${pose}/1024x1024.png`;
-  };
+    return `https://rendition.toontownrewritten.com/render/${dna}/${pose}/1024x1024.png`
+  }
 
   const handleTabChange = (tab: TabComponent) => {
-    setSelectedTab(tab);
-  };
+    setSelectedTab(tab)
+  }
 
   const handleImageClick = () => {
-    const curr = poses.indexOf(pose);
-    const next = (curr + 1) % poses.length;
-    setPose(poses[next]);
-  };
+    const curr = poses.indexOf(pose)
+    const next = (curr + 1) % poses.length
+    setPose(poses[next])
+  }
 
   const handleNextPage = () => {
-    setCurrPage((prev) => Math.min(prev + 1, totalPages - 1));
-  };
+    setCurrPage(prev => Math.min(prev + 1, totalPages - 1))
+  }
 
   const handlePrevPage = () => {
-    setCurrPage((prev) => Math.max(prev - 1, 0));
-  };
+    setCurrPage(prev => Math.max(prev - 1, 0))
+  }
 
   return (
     <div>
@@ -164,7 +158,7 @@ const TabContainer = () => {
       <div>
         {/* full tab list for larger screens */}
         <div className="tab-container hidden xl:flex">
-          {TabList.map((tab) => (
+          {TabList.map(tab => (
             <button
               key={tab.title}
               className="tab-btn"
@@ -179,15 +173,11 @@ const TabContainer = () => {
 
         {/* paginated tab list for smaller screens */}
         <div className="tab-container flex xl:hidden">
-          <button
-            className="rounded-lg tab-btn"
-            onClick={handlePrevPage}
-            disabled={currPage == 0}
-          >
+          <button className="rounded-lg tab-btn" onClick={handlePrevPage} disabled={currPage == 0}>
             <FaAngleLeft />
           </button>
 
-          {visibleTabs.map((tab) => (
+          {visibleTabs.map(tab => (
             <button
               key={tab.title}
               className="tab-btn"
@@ -199,11 +189,7 @@ const TabContainer = () => {
             </button>
           ))}
 
-          <button
-            className="rounded-lg tab-btn"
-            onClick={handleNextPage}
-            disabled={currPage === totalPages - 1}
-          >
+          <button className="rounded-lg tab-btn" onClick={handleNextPage} disabled={currPage === totalPages - 1}>
             <FaAngleRight />
           </button>
         </div>
@@ -229,8 +215,7 @@ const TabContainer = () => {
                 </span>
               )}
               <p className="text-md md:text-xl lg:text-2xl">
-                {toon.data.data.location.zone},{" "}
-                {toon.data.data.location.district}
+                {toon.data.data.location.zone}, {toon.data.data.location.district}
               </p>
             </div>
             <div className="toon-photo">
@@ -246,18 +231,14 @@ const TabContainer = () => {
             <div className="flex flex-row items-center justify-center space-x-6">
               <div className="flex items-center space-x-1">
                 <PiTipJarFill className="text-2xl text-pink-800" />
-                <span className="text-lg">
-                  {toon.data.data.beans.jar.current}
-                </span>
+                <span className="text-lg">{toon.data.data.beans.jar.current}</span>
               </div>
               <div className="flex items-center space-x-1">
                 <BsPiggyBankFill className="text-2xl text-pink-800" />
-                <span className="text-lg">
-                  {toon.data.data.beans.bank.current}
-                </span>
+                <span className="text-lg">{toon.data.data.beans.bank.current}</span>
               </div>
             </div>
-            {eventStatus !== "inactive" ? (
+            {eventStatus !== 'inactive' ? (
               <div className="flex items-center justify-center space-x-1">
                 <BiSolidParty className="text-2xl text-pink-800" />
                 <span className="text-lg">{toon.data.data.tokens} Tokens</span>
@@ -266,8 +247,9 @@ const TabContainer = () => {
               <></>
             )}
             <div className="text-lg">
-              <a href="https://cattlelog.scouttoon.info" target="_blank" rel="noopener noreferrer" className="underline">Cattlelog Series {toon.data.data.cattlelog.series} #
-              {toon.data.data.cattlelog.issue}</a> 
+              <a href="https://cattlelog.toonscout.app" target="_blank" rel="noopener noreferrer" className="underline">
+                Cattlelog Series {toon.data.data.cattlelog.series} #{toon.data.data.cattlelog.issue}
+              </a>
             </div>
           </div>
 
@@ -286,7 +268,7 @@ const TabContainer = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default TabContainer;
+export default TabContainer

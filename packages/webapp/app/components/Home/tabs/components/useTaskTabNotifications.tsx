@@ -1,27 +1,16 @@
-import {
-  getNotificationSettings,
-  setNotificationSettings,
-} from "@/app/utils/notificationUtils";
-import { useState, useEffect } from "react";
+import { getNotificationSettings, setNotificationSettings } from '@/app/utils/notificationUtils'
+import { useState, useEffect } from 'react'
 
 export function useTaskTabNotifications() {
   // Use utility to initialize all notification settings
-  const initial = getNotificationSettings();
-  const [notificationsEnabled, setNotificationsEnabled] = useState(
-    initial.notificationsEnabled,
-  );
-  const [toastEnabled, setToastEnabled] = useState(initial.toastEnabled);
-  const [soundEnabled, setSoundEnabled] = useState(initial.soundEnabled);
-  const [toastPersistent, setToastPersistent] = useState(
-    initial.toastPersistent,
-  );
-  const [soundRepeat, setSoundRepeat] = useState(initial.soundRepeat);
-  const [soundRepeatInterval, setSoundRepeatInterval] = useState(
-    initial.soundRepeatInterval,
-  );
-  const [nativeNotifEnabled, setNativeNotifEnabled] = useState(
-    initial.nativeNotifEnabled,
-  );
+  const initial = getNotificationSettings()
+  const [notificationsEnabled, setNotificationsEnabled] = useState(initial.notificationsEnabled)
+  const [toastEnabled, setToastEnabled] = useState(initial.toastEnabled)
+  const [soundEnabled, setSoundEnabled] = useState(initial.soundEnabled)
+  const [toastPersistent, setToastPersistent] = useState(initial.toastPersistent)
+  const [soundRepeat, setSoundRepeat] = useState(initial.soundRepeat)
+  const [soundRepeatInterval, setSoundRepeatInterval] = useState(initial.soundRepeatInterval)
+  const [nativeNotifEnabled, setNativeNotifEnabled] = useState(initial.nativeNotifEnabled)
 
   useEffect(() => {
     setNotificationSettings({
@@ -31,8 +20,8 @@ export function useTaskTabNotifications() {
       toastPersistent,
       soundRepeat,
       soundRepeatInterval,
-      nativeNotifEnabled,
-    });
+      nativeNotifEnabled
+    })
   }, [
     notificationsEnabled,
     toastEnabled,
@@ -40,8 +29,8 @@ export function useTaskTabNotifications() {
     toastPersistent,
     soundRepeat,
     soundRepeatInterval,
-    nativeNotifEnabled,
-  ]);
+    nativeNotifEnabled
+  ])
 
   return {
     notificationsEnabled,
@@ -57,6 +46,6 @@ export function useTaskTabNotifications() {
     soundRepeatInterval,
     setSoundRepeatInterval,
     nativeNotifEnabled,
-    setNativeNotifEnabled,
-  };
+    setNativeNotifEnabled
+  }
 }

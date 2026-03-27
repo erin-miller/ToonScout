@@ -1,47 +1,47 @@
-import React, { useEffect, useState } from "react";
-import { StoredToonData } from "@/app/types";
+import React, { useEffect, useState } from 'react'
+import { StoredToonData } from '@/app/types'
 
 export type ExpContainerProps = {
-  track: string;
-  toonData: StoredToonData;
-};
+  track: string
+  toonData: StoredToonData
+}
 
 const ExpContainer: React.FC<ExpContainerProps> = ({ track, toonData }) => {
-  const trackData = toonData.data.data.gags[track];
-  const [progress, setProgress] = useState(0);
+  const trackData = toonData.data.data.gags[track]
+  const [progress, setProgress] = useState(0)
 
-  const formatExp = (track: string) => {
-    const curr = toonData.data.data.gags[track]?.experience.current;
-    const next = toonData.data.data.gags[track]?.experience.next;
-    const lvl = toonData.data.data.gags[track]?.gag.level;
+  const formatExp = (t: string) => {
+    const curr = toonData.data.data.gags[t]?.experience.current
+    const next = toonData.data.data.gags[t]?.experience.next
+    const lvl = toonData.data.data.gags[t]?.gag.level
 
     if (curr == null || next == null) {
-      return;
+      return
     }
 
     if (curr >= next) {
-      return `0 to go!`;
+      return '0 to go!'
     }
 
     if (lvl == 7) {
-      return `${next - curr} to go!`;
+      return `${next - curr} to go!`
     } else {
-      return `${curr} / ${next}`;
+      return `${curr} / ${next}`
     }
-  };
+  }
 
   const calculateProgress = () => {
-    const curr = toonData.data.data.gags[track]?.experience.current || 0;
-    const next = toonData.data.data.gags[track]?.experience.next || 1;
-    return Math.min((curr / next) * 100, 100);
-  };
+    const curr = toonData.data.data.gags[track]?.experience.current || 0
+    const next = toonData.data.data.gags[track]?.experience.next || 1
+    return Math.min((curr / next) * 100, 100)
+  }
 
   useEffect(() => {
-    setProgress(calculateProgress());
-  }, [track, toonData]);
+    setProgress(calculateProgress())
+  }, [track, toonData])
 
-  const trackBg = `bg-${track.toLowerCase()}`;
-  const trackText = `text-${track.toLowerCase()}`;
+  const trackBg = `bg-${track.toLowerCase()}`
+  const trackText = `text-${track.toLowerCase()}`
 
   return (
     <div
@@ -51,15 +51,13 @@ const ExpContainer: React.FC<ExpContainerProps> = ({ track, toonData }) => {
       <div
         className="absolute inset-0 z-0 h-full bg-gray-1400 opacity-20 rounded-lg"
         style={{
-          width: `${progress}%`,
+          width: `${progress}%`
         }}
       ></div>
 
       {/* Content */}
       <div className={`relative z-10 ${trackText}`}>
-        <div className="text-black opacity-90 rounded-lg">
-          {formatExp(track)}
-        </div>
+        <div className="text-black opacity-90 rounded-lg">{formatExp(track)}</div>
       </div>
 
       {/* Border for owned gags */}
@@ -67,12 +65,12 @@ const ExpContainer: React.FC<ExpContainerProps> = ({ track, toonData }) => {
         <div
           className="absolute inset-0 border-2 border-solid rounded-lg"
           style={{
-            borderColor: `rgba(0, 0, 0, 0.1)`,
+            borderColor: 'rgba(0, 0, 0, 0.1)'
           }}
         ></div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ExpContainer;
+export default ExpContainer

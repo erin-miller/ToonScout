@@ -1,28 +1,21 @@
-import React from "react";
-import { TabProps } from "./components/TabComponent";
-import AnimatedTabContent from "../../animations/AnimatedTab";
-import { golf_trophies } from "@/data/golf_trophies";
-import { race_trophies } from "@/data/race_trophies";
-import {
-  getGolfTrophies,
-  getRaceTrophies,
-  sumGolf,
-  sumRace,
-} from "../../../utils/tabUtils";
-import { FaCircle } from "react-icons/fa";
+import React from 'react'
+import { TabProps } from './components/TabComponent'
+import AnimatedTabContent from '../../animations/AnimatedTab'
+import { golf_trophies } from '@/data/golf_trophies'
+import { race_trophies } from '@/data/race_trophies'
+import { getGolfTrophies, getRaceTrophies, sumGolf, sumRace } from '../../../utils/tabUtils'
+import { FaCircle } from 'react-icons/fa'
 
 const ActivityTab: React.FC<TabProps> = ({ toon }) => {
   const trophyIcon = (earned: number) => {
-    const total = 3;
+    const total = 3
     return (
       <div className="flex space-x-2">
         {Array.from({ length: total }).map((_, index) => (
           <svg
             fill="currentColor"
             className={`w-10 h-10 ${
-              index < earned
-                ? "text-blue-900 dark:text-pink-400"
-                : "text-blue-300 dark:text-gray-900"
+              index < earned ? 'text-blue-900 dark:text-pink-400' : 'text-blue-300 dark:text-gray-900'
             }`}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -32,32 +25,30 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
           </svg>
         ))}
       </div>
-    );
-  };
+    )
+  }
 
   const renderStats = (
     data: { name: string; num: number }[],
-    trophyData: typeof golf_trophies | typeof race_trophies,
+    trophyData: typeof golf_trophies | typeof race_trophies
   ) => {
     return (
       <ul className="space-y-2">
         {data.map((item, index) => {
-          const trophy = trophyData.find(
-            (trophy) => trophy.description === item.name,
-          );
+          const trophy = trophyData.find(t => t.description === item.name)
 
-          let curr = item.num.toString();
-          let progress = 100;
-          let totalSteps = -1;
-          let currStep = -1;
+          let curr = item.num.toString()
+          let progress = 100
+          let _totalSteps = -1
+          let currStep = -1
           if (trophy) {
-            const target = trophy.values.find((value) => item.num < value);
+            const target = trophy.values.find(value => item.num < value)
 
             if (target) {
-              totalSteps = trophy.values.length
+              _totalSteps = trophy.values.length
               currStep = trophy.values.indexOf(target)
-              curr = `${item.num} / ${target}`;
-              progress = Math.min((item.num / target) * 100, 100);
+              curr = `${item.num} / ${target}`
+              progress = Math.min((item.num / target) * 100, 100)
             }
           }
 
@@ -69,7 +60,17 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
               ></div>
               <div className="flex flex-col text-xl w-full text-left z-50">
                 <div>{item.name}</div>
-                <div className="flex flex-row gap-1">{trophy && currStep > -1 && trophy.values.length > 1 && trophy.values.map((value, index) => (<FaCircle key={value} className={index <= currStep ? "w-3 h-3 text-blue-700" : "w-3 h-3 text-blue-100"} />))}</div>
+                <div className="flex flex-row gap-1">
+                  {trophy &&
+                    currStep > -1 &&
+                    trophy.values.length > 1 &&
+                    trophy.values.map((value, trophyIndex) => (
+                      <FaCircle
+                        key={value}
+                        className={trophyIndex <= currStep ? 'w-3 h-3 text-blue-700' : 'w-3 h-3 text-blue-100'}
+                      />
+                    ))}
+                </div>
               </div>
               <div
                 className="flex z-50 w-36 h-10 justify-center items-center rounded-full border-4
@@ -79,11 +80,11 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
                 <span className="truncate text-sm md:text-lg">{curr}</span>
               </div>
             </li>
-          );
+          )
         })}
       </ul>
-    );
-  };
+    )
+  }
 
   return (
     <AnimatedTabContent>
@@ -101,15 +102,9 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
               </svg>
               <p>{sumGolf(toon)} / 30</p>
             </div>
-            <div className="activity-header trophy-total">
-              {trophyIcon(getGolfTrophies(toon))}
-            </div>
+            <div className="activity-header trophy-total">{trophyIcon(getGolfTrophies(toon))}</div>
           </div>
-          {toon.data.data.golf ? (
-            renderStats(toon.data.data.golf, golf_trophies)
-          ) : (
-            <div>No golf data found.</div>
-          )}
+          {toon.data.data.golf ? renderStats(toon.data.data.golf, golf_trophies) : <div>No golf data found.</div>}
         </div>
 
         <div className="activity-container">
@@ -125,19 +120,13 @@ const ActivityTab: React.FC<TabProps> = ({ toon }) => {
               </svg>
               <p>{sumRace(toon)} / 30</p>
             </div>
-            <div className="activity-header trophy-total">
-              {trophyIcon(getRaceTrophies(toon))}
-            </div>
+            <div className="activity-header trophy-total">{trophyIcon(getRaceTrophies(toon))}</div>
           </div>
-          {toon.data.data.racing ? (
-            renderStats(toon.data.data.racing, race_trophies)
-          ) : (
-            <p>No racing data found.</p>
-          )}
+          {toon.data.data.racing ? renderStats(toon.data.data.racing, race_trophies) : <p>No racing data found.</p>}
         </div>
       </div>
     </AnimatedTabContent>
-  );
-};
+  )
+}
 
-export default ActivityTab;
+export default ActivityTab

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { FaBell, FaBellSlash, FaCog } from "react-icons/fa";
-import NotificationSettingsModal from "../../modals/NotificationSettingsModal";
-import { useTaskTabNotifications } from "./useTaskTabNotifications";
+import React, { useState, useEffect } from 'react'
+import { FaBell, FaBellSlash, FaCog } from 'react-icons/fa'
+import NotificationSettingsModal from '../../modals/NotificationSettingsModal'
+import { useTaskTabNotifications } from './useTaskTabNotifications'
 
 const TaskTabNotifications: React.FC = () => {
   const {
@@ -18,22 +18,18 @@ const TaskTabNotifications: React.FC = () => {
     soundRepeatInterval,
     setSoundRepeatInterval,
     nativeNotifEnabled,
-    setNativeNotifEnabled,
-  } = useTaskTabNotifications();
-  const [showSettings, setShowSettings] = useState(false);
-  const tooltip = "Receive invasion alerts for matching tasks if enabled.";
+    setNativeNotifEnabled
+  } = useTaskTabNotifications()
+  const [showSettings, setShowSettings] = useState(false)
+  const tooltip = 'Receive invasion alerts for matching tasks if enabled.'
 
   useEffect(() => {
-    if (
-      nativeNotifEnabled &&
-      typeof window !== "undefined" &&
-      "Notification" in window
-    ) {
-      if (Notification.permission === "default") {
-        Notification.requestPermission();
+    if (nativeNotifEnabled && typeof window !== 'undefined' && 'Notification' in window) {
+      if (Notification.permission === 'default') {
+        Notification.requestPermission()
       }
     }
-  }, [nativeNotifEnabled]);
+  }, [nativeNotifEnabled])
 
   return (
     <>
@@ -48,13 +44,9 @@ const TaskTabNotifications: React.FC = () => {
         </div>
         <button
           className="text-2xl p-2 focus:outline-none"
-          title={
-            notificationsEnabled
-              ? "Disable Notifications"
-              : "Enable Notifications"
-          }
+          title={notificationsEnabled ? 'Disable Notifications' : 'Enable Notifications'}
           onClick={() => {
-            setNotificationsEnabled((prev) => !prev);
+            setNotificationsEnabled(prev => !prev)
           }}
         >
           {notificationsEnabled ? (
@@ -88,7 +80,7 @@ const TaskTabNotifications: React.FC = () => {
         setNativeNotifEnabled={setNativeNotifEnabled}
       />
     </>
-  );
-};
+  )
+}
 
-export default TaskTabNotifications;
+export default TaskTabNotifications
