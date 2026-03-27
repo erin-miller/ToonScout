@@ -1,17 +1,17 @@
-"use client";
+'use client'
 
-import React from "react";
-import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
-import { MarkerPosition, LOCATION_MARKER_URL } from "@/app/utils/buildingMaps";
-import { motion } from "framer-motion";
+import React from 'react'
+import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa'
+import { MarkerPosition, LOCATION_MARKER_URL } from '@/app/utils/buildingMaps'
+import { motion } from 'framer-motion'
 
 interface MapImagePanelProps {
-  mapImageUrl: string;
-  buildingName: string;
-  wikiUrl?: string;
-  street?: string | null;
-  markerPosition?: MarkerPosition | null;
-  onBack: () => void;
+  mapImageUrl: string
+  buildingName: string
+  wikiUrl?: string
+  street?: string | null
+  markerPosition?: MarkerPosition | null
+  onBack: () => void
 }
 
 const MapImagePanel: React.FC<MapImagePanelProps> = ({
@@ -20,7 +20,7 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
   wikiUrl,
   street,
   markerPosition,
-  onBack,
+  onBack
 }) => {
   return (
     <motion.div
@@ -39,19 +39,14 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
           <FaArrowLeft size={18} />
         </button>
         <div className="flex-1 min-w-0">
-          <h3 className="text-white font-semibold text-base sm:text-lg truncate">
-            📍 {buildingName}
-          </h3>
+          <h3 className="text-white font-semibold text-base sm:text-lg truncate">📍 {buildingName}</h3>
           {street && <p className="text-pink-100 text-xs sm:text-sm truncate">{street}</p>}
         </div>
       </div>
 
       {/* Map Image with Marker */}
       <div className="flex-1 min-h-0 bg-gray-100 dark:bg-gray-800 p-2 sm:p-4 flex items-center justify-center overflow-hidden">
-        <motion.div
-          className="relative"
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        >
+        <motion.div className="relative" transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
           <img
             src={mapImageUrl}
             alt={`Map showing ${buildingName} location`}
@@ -67,12 +62,12 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
                 // Size as percentage so marker scales with image
                 top: `${(markerPosition.top / 512) * 100}%`,
                 left: `${(markerPosition.left / 512) * 100}%`,
-                width: "6%",
-                height: "auto",
+                width: '6%',
+                height: 'auto'
               }}
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ type: "spring", bounce: 0.4, delay: 0.2 }}
+              transition={{ type: 'spring', bounce: 0.4, delay: 0.2 }}
             />
           )}
         </motion.div>
@@ -93,7 +88,7 @@ const MapImagePanel: React.FC<MapImagePanelProps> = ({
         </div>
       )}
     </motion.div>
-  );
-};
+  )
+}
 
-export default MapImagePanel;
+export default MapImagePanel

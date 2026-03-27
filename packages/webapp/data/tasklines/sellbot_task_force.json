@@ -317,9 +317,7 @@
       {
         "order": 2,
         "objective": "Find Runaway Boots in a Hidden Location",
-        "details": [
-          "Located near the giant daisy in Daisy Gardens."
-        ]
+        "details": ["Located near the giant daisy in Daisy Gardens."]
       },
       {
         "order": 3,
@@ -354,9 +352,7 @@
       {
         "order": 6,
         "objective": "Find some Shoe Prints in a Hidden Location",
-        "details": [
-          "Located on top of a box near the fishing pond on Seaweed Street in Donald's Dock."
-        ]
+        "details": ["Located on top of a box near the fishing pond on Seaweed Street in Donald's Dock."]
       },
       {
         "order": 7,
@@ -371,9 +367,7 @@
       {
         "order": 9,
         "objective": "Find a Stick of Chalk in a Hidden Location",
-        "details": [
-          "Located near the First Fairway entrance in Bossbot Headquarters."
-        ]
+        "details": ["Located near the First Fairway entrance in Bossbot Headquarters."]
       },
       {
         "order": 10,
@@ -1537,9 +1531,7 @@
       {
         "order": 6,
         "objective": "Find a Business Plan in a Hidden Location",
-        "details": [
-          "Located inside the Cashbot Vault during the process of battling the Chief Financial Officer."
-        ]
+        "details": ["Located inside the Cashbot Vault during the process of battling the Chief Financial Officer."]
       },
       {
         "order": 7,
@@ -1726,9 +1718,7 @@
       {
         "order": 4,
         "objective": "Find some Spray Paint Cans in a Hidden Location",
-        "details": [
-          "Located at the Sellbot Towers in the middle of the area."
-        ]
+        "details": ["Located at the Sellbot Towers in the middle of the area."]
       },
       {
         "order": 5,
@@ -1815,9 +1805,7 @@
       {
         "order": 9,
         "objective": "Find an Antisillio Battery in a Hidden Location",
-        "details": [
-          "Located at the first speed booster in Goofy Speedway's Corkscrew Coliseum race track."
-        ]
+        "details": ["Located at the first speed booster in Goofy Speedway's Corkscrew Coliseum race track."]
       },
       {
         "order": 10,
@@ -2266,9 +2254,7 @@
       {
         "order": 7,
         "objective": "Find some High-Level Waterspout Intel in a Hidden Location",
-        "details": [
-          "Located at the geyser in Chip 'n Dale's Acorn Acres."
-        ]
+        "details": ["Located at the geyser in Chip 'n Dale's Acorn Acres."]
       },
       {
         "order": 8,
@@ -2609,9 +2595,7 @@
       {
         "order": 7,
         "objective": "Find some Spilled Lima Beans in a Hidden Location",
-        "details": [
-          "Located outside Spill the Beans."
-        ]
+        "details": ["Located outside Spill the Beans."]
       },
       {
         "order": 8,
@@ -2656,9 +2640,7 @@
       {
         "order": 12,
         "objective": "Find 2 Antisillion Batteries in a Hidden Location",
-        "details": [
-          "Located in the Blizzard Boulevard race track in Goofy Speedway."
-        ]
+        "details": ["Located in the Blizzard Boulevard race track in Goofy Speedway."]
       },
       {
         "order": 13,
@@ -3430,9 +3412,7 @@
       {
         "order": 5,
         "objective": "Find a Cog Antenna in a Hidden Location",
-        "details": [
-          "Located within the Stomper Room in Sellbot Field Offices. Complete the Cog battle first."
-        ]
+        "details": ["Located within the Stomper Room in Sellbot Field Offices. Complete the Cog battle first."]
       },
       {
         "order": 6,

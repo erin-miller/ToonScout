@@ -40,30 +40,26 @@ export const ToonProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }
 
   const addToon = (newToon: StoredToonData) => {
-    const sanitized: StoredToonData = JSON.parse(
-      sanitize(JSON.stringify(newToon)),
-    );
-    const normalized = normalizeToonData(sanitized);
+    const sanitized: StoredToonData = JSON.parse(sanitize(JSON.stringify(newToon)))
+    const normalized = normalizeToonData(sanitized)
 
     setToons(prevToons => {
       let newToons = [...prevToons]
 
-      const existingIndex = newToons.findIndex(
-        (toon) => toon?.data?.data.toon.id === normalized?.data?.data.toon?.id,
-      );
+      const existingIndex = newToons.findIndex(toon => toon?.data?.data.toon.id === normalized?.data?.data.toon?.id)
 
       if (existingIndex !== -1) {
         // toon exists
-        newToons[existingIndex] = normalized;
+        newToons[existingIndex] = normalized
       } else if (newToons.length < MAX_TOONS) {
         // toon doesnt exist; add to end
-        newToons.push(normalized);
+        newToons.push(normalized)
       } else {
         // toon doesnt exist but we're at max capacity; replace the oldest unlocked toon
         newToons = newToons.sort((a, b) => a.timestamp - b.timestamp)
         const oldest = newToons.findIndex(toon => !toon.locked)
         if (oldest !== -1) {
-          newToons[oldest] = normalized;
+          newToons[oldest] = normalized
         } else {
           console.warn('All toons are locked. Cannot add a new toon.')
           return prevToons
@@ -111,42 +107,42 @@ export const useToonContext = () => {
 }
 
 const normalizeToonData = (toon: StoredToonData): StoredToonData => {
-  const tasks = toon?.data?.data?.tasks;
+  const tasks = toon?.data?.data?.tasks
   if (!Array.isArray(tasks)) {
-    return toon;
+    return toon
   }
 
-  const normalizedTasks = tasks.map((task) => ({
+  const normalizedTasks = tasks.map(task => ({
     ...task,
     objective: {
       ...task?.objective,
-      text: task?.objective?.text ?? "",
-      where: task?.objective?.where ?? "",
+      text: task?.objective?.text ?? '',
+      where: task?.objective?.where ?? '',
       progress: {
         ...task?.objective?.progress,
-        text: task?.objective?.progress?.text ?? "",
+        text: task?.objective?.progress?.text ?? '',
         current: Number(task?.objective?.progress?.current) || 0,
-        target: Number(task?.objective?.progress?.target) || 0,
-      },
+        target: Number(task?.objective?.progress?.target) || 0
+      }
     },
     from: {
       ...task?.from,
-      name: task?.from?.name ?? "",
-      building: task?.from?.building ?? "",
-      zone: task?.from?.zone ?? "",
-      neighborhood: task?.from?.neighborhood ?? "",
+      name: task?.from?.name ?? '',
+      building: task?.from?.building ?? '',
+      zone: task?.from?.zone ?? '',
+      neighborhood: task?.from?.neighborhood ?? ''
     },
     to: {
       ...task?.to,
-      name: task?.to?.name ?? "",
-      building: task?.to?.building ?? "",
-      zone: task?.to?.zone ?? "",
-      neighborhood: task?.to?.neighborhood ?? "",
+      name: task?.to?.name ?? '',
+      building: task?.to?.building ?? '',
+      zone: task?.to?.zone ?? '',
+      neighborhood: task?.to?.neighborhood ?? ''
     },
-    reward: task?.reward ?? "",
+    reward: task?.reward ?? '',
     deletable: Boolean(task?.deletable),
-    type: task?.type ?? "",
-  }));
+    type: task?.type ?? ''
+  }))
 
   return {
     ...toon,
@@ -154,11 +150,11 @@ const normalizeToonData = (toon: StoredToonData): StoredToonData => {
       ...toon.data,
       data: {
         ...toon.data.data,
-        tasks: normalizedTasks,
-      },
-    },
-  };
-};
+        tasks: normalizedTasks
+      }
+    }
+  }
+}
 
 // sanitize JSON to remove invalid Unicode characters
 const sanitize = (data: string) => {

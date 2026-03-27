@@ -109,9 +109,24 @@
     "6": ["Donald's Dreamland", "Sellbot Task Force"]
   },
   "cogDisguiseProgression": [
-    { "department": "sellbot", "code": "s", "hasTaskline": false, "source": "Sellbot HQ (Factory/VP) - no taskline, available at any laff" },
+    {
+      "department": "sellbot",
+      "code": "s",
+      "hasTaskline": false,
+      "source": "Sellbot HQ (Factory/VP) - no taskline, available at any laff"
+    },
     { "department": "cashbot", "code": "m", "hasTaskline": true, "source": "Donald's Dreamland ToonTasks (12 parts)" },
-    { "department": "lawbot", "code": "l", "hasTaskline": true, "source": "Professor Flake ToonTasks (after Cashbot Disguise)" },
-    { "department": "bossbot", "code": "c", "hasTaskline": true, "source": "Shep Ahoy ToonTasks (after Lawbot Disguise)" }
+    {
+      "department": "lawbot",
+      "code": "l",
+      "hasTaskline": true,
+      "source": "Professor Flake ToonTasks (after Cashbot Disguise)"
+    },
+    {
+      "department": "bossbot",
+      "code": "c",
+      "hasTaskline": true,
+      "source": "Shep Ahoy ToonTasks (after Lawbot Disguise)"
+    }
   ]
 }

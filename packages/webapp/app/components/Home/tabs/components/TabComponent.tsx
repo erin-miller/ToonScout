@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import {
   InfoTab,
@@ -207,7 +207,7 @@ const TabContainer = () => {
                 {toon.data.data.laff.current} / {toon.data.data.laff.max} laff
               </p>
               {toon.overjoyed && (
-                <span 
+                <span
                   className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-200 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-100"
                   title="Toon data was captured during Overjoyed Laff Meters (+8 laff)"
                 >

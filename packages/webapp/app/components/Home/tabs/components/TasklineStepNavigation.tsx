@@ -1,15 +1,15 @@
-import React from "react";
-import { FaChevronLeft, FaChevronRight, FaUndo } from "react-icons/fa";
+import React from 'react'
+import { FaChevronLeft, FaChevronRight, FaUndo } from 'react-icons/fa'
 
 interface TasklineStepNavigationProps {
-  effectiveStepNumber: number;
-  totalSteps: number;
-  completedCount: number;
-  completionPercent: number;
-  hasUserOverride: boolean;
-  onPreviousStep: () => void;
-  onNextStep: () => void;
-  onResetOverride: () => void;
+  effectiveStepNumber: number
+  totalSteps: number
+  completedCount: number
+  completionPercent: number
+  hasUserOverride: boolean
+  onPreviousStep: () => void
+  onNextStep: () => void
+  onResetOverride: () => void
 }
 
 export const TasklineStepNavigation: React.FC<TasklineStepNavigationProps> = ({
@@ -20,7 +20,7 @@ export const TasklineStepNavigation: React.FC<TasklineStepNavigationProps> = ({
   hasUserOverride,
   onPreviousStep,
   onNextStep,
-  onResetOverride,
+  onResetOverride
 }) => {
   return (
     <>
@@ -74,5 +74,5 @@ export const TasklineStepNavigation: React.FC<TasklineStepNavigationProps> = ({
         </div>
       )}
     </>
-  );
-};
+  )
+}

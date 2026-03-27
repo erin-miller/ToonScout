@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import AnimatedTabContent from "@/app/components/animations/AnimatedTab";
+import React, { useEffect } from 'react'
+import AnimatedTabContent from '@/app/components/animations/AnimatedTab'
 
 interface ModalProps {
   isOpen: boolean
@@ -10,16 +10,16 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && isOpen) {
-        onClose();
+      if (event.key === 'Escape' && isOpen) {
+        onClose()
       }
-    };
+    }
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, onClose]);
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, onClose])
 
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <div
