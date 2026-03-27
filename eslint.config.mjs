@@ -52,9 +52,11 @@ export default defineConfig([{
         "max-nested-callbacks": ["error", { max: 4 }],
         "max-statements-per-line": ["error", { max: 2 }],
         "no-control-regex": "off",
+        "no-useless-escape": "warn",
 
         // TypeScript-specific
         "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/no-unused-vars": [
             "warn",
             { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }

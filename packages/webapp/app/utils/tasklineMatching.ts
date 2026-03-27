@@ -6,7 +6,7 @@ import {
   fromMatchesChainContext
 } from './tasklineProgress'
 import { getAllowedPlaygrounds, canConsiderCogDisguiseTaskline } from './tasklineAccessFilters'
-import { ChainContextWrapper, MatchCandidate, rankMatchCandidates, getConfidence } from './tasklineStepSignals'
+import { MatchCandidate, rankMatchCandidates, getConfidence } from './tasklineStepSignals'
 import { buildTaskObjectiveText } from './tasklineTextUtils'
 import { getTasklineCandidates } from './tasklineCandidateIndex'
 import { runTasklineFilterPipeline } from './tasklineFilterPipeline'

@@ -87,26 +87,28 @@ const connectWebSocket = () => {
         const overjoyed = sillyMeter?.isOverjoyedActive ?? false
         const localToon = { data: toon, timestamp, port, locked: false, overjoyed }
         const data = localStorage.getItem('toonData')
-        let curr = data ? JSON.parse(data) : []
+        const currData = data ? JSON.parse(data) : []
 
-        if (!curr || curr.length === 0) {
+        if (!currData || currData.length === 0) {
           debug(port, 'no existing toons, inserting')
         } else {
-          const toonIndex = curr.findIndex((stored: StoredToonData) => stored.data.data.toon.id == toon.data.toon.id)
+          const toonIndex = currData.findIndex(
+            (stored: StoredToonData) => stored.data.data.toon.id == toon.data.toon.id
+          )
 
           if (toonIndex !== -1) {
             debug(port, 'toon already exists, preserving lock state')
-            localToon.locked = curr[toonIndex].locked
+            localToon.locked = currData[toonIndex].locked
           }
 
-          const portIndex = curr.findIndex(
+          const portIndex = currData.findIndex(
             (stored: StoredToonData) => stored.port === port && stored.data.data.toon.id != toon.data.toon.id
           )
 
           if (portIndex !== -1) {
             debug(port, 'port reassigned from another toon')
-            curr[portIndex].port = null
-            addToon(curr[portIndex])
+            currData[portIndex].port = null
+            addToon(currData[portIndex])
           }
         }
         addToon(localToon)

@@ -57,8 +57,8 @@ export function getTasklineOverride(task: Task, toonId?: string | null): Tasklin
   const scopedKey = getOverrideKey(task, toonId)
   const overrides = loadOverrides()
 
-  let override = overrides.get(scopedKey)
-  let overrideKey = scopedKey
+  const override = overrides.get(scopedKey)
+  const overrideKey = scopedKey
 
   if (!override) return null
 

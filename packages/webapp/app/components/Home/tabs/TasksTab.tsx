@@ -105,7 +105,6 @@ const TasksTab: React.FC<TabProps> = ({ toon: toons }) => {
         const previousData = previousStepsRef.current.get(matchKey)
 
         if (previousData && previousData.tasklineId === tasklineId && previousData.stepNumber !== currentStepNumber) {
-          const toonId = toons.data.data.toon.id
           markStepCompleted(tasklineId, previousData.stepNumber, toonId)
           updateCurrentStep(tasklineId, currentStepNumber, false, toonId)
         }
